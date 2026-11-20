@@ -131,6 +131,7 @@ async function render() {
   main.innerHTML = adminHtml + (v.bare ? '' : header()) + flashHtml + v.html + (v.bare ? '' : footer());
   if (v.mount) cleanup = v.mount(main) || null;
   window.scrollTo(0, 0);
+  main.classList.remove('page-enter'); void main.offsetWidth; main.classList.add('page-enter');
   main.focus({ preventScroll: true });
 
   if (v.track) {
