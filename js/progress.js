@@ -1,8 +1,7 @@
 // Haladás, zárolás és százalékszámítás – egyetlen forrás minden nézet számára.
 
-import { course, media } from './data.js';
-import { getProgress, chapterState, moduleState } from './store.js';
-import { isAdmin } from './admin.js';
+import { course, media } from './data.js?v=7150738a';
+import { getProgress, saveProgress, chapterState, moduleState } from './store.js?v=7150738a';
 
 export const QUIZ_PASS = 0.6;
 export const VIDEO_PASS = 0.9;
@@ -62,22 +61,20 @@ export function canCloseChapter(ch) { return missingForClose(ch).length === 0; }
 
 // ---- Modulok ----
 export function moduleClosed(mod) { return !!moduleState(mod.id).lezarva; }
-export function moduleSkipped(mod) { return !!moduleState(mod.id).kihagyva && !moduleState(mod.id).lezarva; }
-export function moduleFinished(mod) { return moduleClosed(mod) || moduleSkipped(mod); }
+export function moduleFinished(mod) { return moduleClosed(mod); }
 
-export function moduleUnlocked(mod) {
-  if (isAdmin()) return true; // kezelő mód: minden nyitva
-  if (mod.index === 0) return true;
-  return moduleFinished(course.modulok[mod.index - 1]);
+// Semmi nincs zárolva: a sorrend csak ajánlás, a haladás számítását befolyásolja, a navigációt nem.
+export function chapterStarted(ch) {
+  const s = chapterState(ch.id);
+  return !!(s.kesz || s.olvasas || s.gyakorlat || (s.video && (s.video.done || (s.video.pos || 0) > 0)) || (s.kviz && (s.kviz.utolso != null || s.kviz.score != null)));
+}
+export function moduleStarted(mod) {
+  const ms = moduleState(mod.id);
+  return !!(ms.lezarva || (ms.kviz && (ms.kviz.utolso != null || ms.kviz.score != null)) || mod.fejezetek.some(chapterStarted));
 }
 
-export function chapterUnlocked(ch) {
-  if (isAdmin()) return true; // kezelő mód: minden nyitva
-  const mod = course.modulById[ch.modulId];
-  if (!moduleUnlocked(mod)) return false;
-  if (ch.index === 0) return true;
-  return !!chapterState(mod.fejezetek[ch.index - 1].id).kesz;
-}
+// A modul lezárásához minden fejezet kész és a modulkvíz megvan; a navigációt ez nem érinti.
+export function canCloseModule(mod) { return allChaptersDone(mod) && moduleQuizPassed(mod); }
 
 export function allChaptersDone(mod) { return mod.fejezetek.every((f) => chapterState(f.id).kesz); }
 
@@ -97,19 +94,26 @@ export function modulePct(mod) {
 
 export function moduleStatus(mod) {
   if (moduleClosed(mod)) return 'kesz';
-  if (moduleSkipped(mod)) return 'kihagyva';
-  if (!moduleUnlocked(mod)) return 'zarolt';
-  return 'folyamatban';
+  return moduleStarted(mod) ? 'folyamatban' : 'nincs';
 }
 
 export function chapterStatus(ch) {
   if (chapterState(ch.id).kesz) return 'kesz';
-  if (!chapterUnlocked(ch)) return 'zarolt';
-  return 'folyamatban';
+  return chapterStarted(ch) ? 'folyamatban' : 'nincs';
 }
 
 // ---- Kurzus ----
-function countedModules() { return course.modulok.filter((m) => !moduleSkipped(m)); }
+// 100%: minden modul lezárva és minden fejezet kész.
+export function isCourseComplete() {
+  return course.modulok.length > 0 && course.modulok.every((m) => moduleClosed(m) && allChaptersDone(m));
+}
+// A teljesítés dátumát az első 100%-nál mentjük; bővülő kurzusnál a már kiadott oklevél érvényes marad.
+export function markCompletionIfDone() {
+  const p = getProgress();
+  if (!p.completedAt && isCourseComplete()) { p.completedAt = new Date().toISOString(); saveProgress(); }
+}
+
+function countedModules() { return course.modulok; }
 
 export function coursePct() {
   const mods = countedModules();
@@ -121,16 +125,14 @@ export function modulesDone() {
   return { kesz: mods.filter(moduleClosed).length, osszes: mods.length };
 }
 
-// Hová vigyen a „Folytatás”: utoljára megnyitott, még nem kész fejezet, különben az első nyitott feladat.
+// Puha ajánlás (nem tilt semmit): a legutóbb megnyitott, még nem kész fejezet; különben az első nem kész fejezet.
 export function resumeTarget() {
   const p = getProgress();
-  if (p.aktualis && course.fejezetById[p.aktualis]) {
-    const ch = course.fejezetById[p.aktualis];
-    if (chapterUnlocked(ch) && !chapterState(ch.id).kesz) return { tipus: 'fejezet', ch };
+  if (p.aktualis && course.fejezetById[p.aktualis] && !chapterState(p.aktualis).kesz) {
+    return { tipus: 'fejezet', ch: course.fejezetById[p.aktualis] };
   }
   for (const mod of course.modulok) {
     if (moduleFinished(mod)) continue;
-    if (!moduleUnlocked(mod)) break;
     const ch = mod.fejezetek.find((f) => !chapterState(f.id).kesz);
     if (ch) return { tipus: 'fejezet', ch };
     return { tipus: 'zaro', mod };
@@ -138,8 +140,12 @@ export function resumeTarget() {
   return { tipus: 'kesz' };
 }
 
-export function currentModule() {
-  return course.modulok.find((m) => !moduleFinished(m) && moduleUnlocked(m)) || null;
+// Az „Ajánlott következő” jelzés modulja.
+export function recommendedModule() {
+  const t = resumeTarget();
+  if (t.tipus === 'fejezet') return course.modulById[t.ch.modulId];
+  if (t.tipus === 'zaro') return t.mod;
+  return null;
 }
 
 export function chapterHash(ch) { return '#/m/' + ch.modulId + '/f/' + encodeURIComponent(ch.id); }

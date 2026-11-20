@@ -1,11 +1,11 @@
 // Egyedi videólejátszó: ±10 mp, idővonal, hangerő, sebesség, felirat, teljes képernyő,
 // pozíciómentés, és csalásbiztos „megnézve” számítás a ténylegesen lejátszott idő alapján.
 
-import { media } from '../data.js';
-import { chapterState, saveProgress, getSettings } from '../store.js';
-import { markVideoUnavailable, VIDEO_PASS } from '../progress.js';
-import { esc, icon, fmtTime } from '../util.js';
-import { placeholder, placeholderInner } from './media.js';
+import { media } from '../data.js?v=7150738a';
+import { chapterState, saveProgress, getSettings } from '../store.js?v=7150738a';
+import { markVideoUnavailable, VIDEO_PASS } from '../progress.js?v=7150738a';
+import { esc, icon, fmtTime } from '../util.js?v=7150738a';
+import { placeholder, placeholderInner, DEV } from './media.js?v=7150738a';
 
 const SPEEDS = [0.75, 1, 1.25, 1.5];
 
@@ -33,6 +33,8 @@ export function renderPlayer(mediaId, chapterId) {
   const title = m ? m.cim || m.alt : 'Videó';
 
   if (!m || m.statusz !== 'kesz') {
+    // Hiányzó videó: élesben a szakasz meg sem jelenik; fejlesztői módban helyőrző.
+    if (!DEV) return { html: '', empty: true, mount() { return () => {}; } };
     return {
       html: '<div class="video-block"><figure class="media">' + placeholder(m, 'video', '16 / 9') + '</figure>' +
         '<p class="muted small">' + icon('video') + ' A videó még nem készült el, ezért a fejezet nélküle is lezárható. Az alábbi átiratban elolvashatod, miről szól majd.</p>' +
@@ -113,6 +115,12 @@ export function renderPlayer(mediaId, chapterId) {
       failed = true;
       markVideoUnavailable(m.id);
       const stage = wrap.querySelector('.player-stage');
+      if (!DEV) { // betölthetetlen videó: a szakasz eltűnik, a fejezet nélküle is lezárható
+        const sec = wrap.closest('.ch-sec');
+        if (sec) sec.hidden = true;
+        onProgress && onProgress();
+        return;
+      }
       stage.classList.add('ph');
       stage.innerHTML = placeholderInner(m, 'video');
       wrap.querySelector('.player-bar').remove();

@@ -1,5 +1,7 @@
 // Saját, kézzel rajzolt SVG ábrák (nem helyőrzők). A színeket CSS-osztályok adják, így sötét témában is olvashatók.
 
+import { course } from '../data.js?v=7150738a';
+
 function box(x, y, w, h, label, cls = 'd-box', sub = '') {
   return '<g><rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="12" class="' + cls + '"/>' +
     '<text x="' + (x + w / 2) + '" y="' + (y + h / 2 + (sub ? -4 : 6)) + '" text-anchor="middle" class="d-label">' + label + '</text>' +
@@ -25,15 +27,18 @@ const D = {
       if (i < 4) b += arrow(x + 130, 48, x + 150, 48);
     });
     b += '<text x="390" y="118" text-anchor="middle" class="d-sub">Egy fejezet lépései</text>';
-    for (let i = 0; i < 12; i++) {
-      const x = 40 + i * 60;
-      b += '<circle cx="' + x + '" cy="168" r="18" class="' + (i === 11 ? 'd-dot-accent' : 'd-dot') + '"/>' +
-        '<text x="' + x + '" y="174" text-anchor="middle" class="d-dot-label">' + (i === 11 ? 'Z' : i + 1) + '</text>';
-      if (i < 11) b += '<line x1="' + (x + 19) + '" y1="168" x2="' + (x + 41) + '" y2="168" class="d-line-soft"/>';
+    const n = course.modulok.length;
+    const gap = n > 1 ? Math.min(60, 700 / (n - 1)) : 0;
+    for (let i = 0; i < n; i++) {
+      const x = 40 + i * gap;
+      const last = i === n - 1;
+      b += '<circle cx="' + x + '" cy="168" r="18" class="' + (last ? 'd-dot-accent' : 'd-dot') + '"/>' +
+        '<text x="' + x + '" y="174" text-anchor="middle" class="d-dot-label">' + (last ? 'Z' : i + 1) + '</text>';
+      if (!last) b += '<line x1="' + (x + 19) + '" y1="168" x2="' + (x + gap - 19) + '" y2="168" class="d-line-soft"/>';
     }
-    b += '<text x="390" y="218" text-anchor="middle" class="d-sub">11 modul és a záró projekt, sorban nyílnak</text>';
+    b += '<text x="390" y="218" text-anchor="middle" class="d-sub">' + (n - 1) + ' modul és a záró projekt – bármelyiket megnyithatod, de a megadott sorrend ajánlott</text>';
     return svg('0 0 780 230', { id: 'felepites', text: 'A kurzus felépítése' },
-      'Egy fejezet öt lépése: olvasás, videó, gyakorlat, kvíz, lezárás. Alatta tizenegy modul és a záró projekt egymás után.', b);
+      'Egy fejezet öt lépése: olvasás, videó, gyakorlat, kvíz, lezárás. Alatta a modulok és a záró projekt egymás után.', b);
   },
 
   'prompt-elemek'() {

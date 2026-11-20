@@ -1,6 +1,6 @@
-import { getSettings, setSettings, getProfile, exportData, exportCode, importAny, resetAll, isPersistent } from '../store.js';
-import { esc, icon, toast, downloadFile } from '../util.js';
-import { go } from '../app.js';
+import { getSettings, setSettings, getProfile, exportData, exportCode, importAny, resetAll, isPersistent } from '../store.js?v=7150738a';
+import { esc, icon, toast, downloadFile } from '../util.js?v=7150738a';
+import { go } from '../app.js?v=7150738a';
 
 function radios(name, opts, cur) {
   return '<div class="choices choices-inline">' + opts.map(([v, l]) =>

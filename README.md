@@ -1,6 +1,6 @@
 # AI a hétköznapokban – interaktív kurzus
 
-Magyar nyelvű, önálló tanulásra épülő kurzusweboldal kezdő–haladó felnőtteknek: 11 modul, 35 fejezet és egy záró projekt (3 fejezet), mini kvízekkel, modulkvízekkel, gyakorlatokkal, interaktív elemekkel és nyomtatható oklevéllel.
+Magyar nyelvű, önálló tanulásra épülő kurzusweboldal kezdő–haladó felnőtteknek: modulokra és fejezetekre bontva (a pontos számot az oldal maga számolja a `data/` mappából), mini kvízekkel, modulkvízekkel, gyakorlatokkal, interaktív elemekkel és nyomtatható oklevéllel.
 
 - Tiszta HTML + CSS + JavaScript, **build-eszköz nélkül** – GitHub Pages-en közvetlenül fut.
 - Nincs bejelentkezés, szerver vagy adatbázis. A haladás a böngésző `localStorage`-ében mentődik (`aikurzus.v1.profil`, `aikurzus.v1.haladas`, `aikurzus.v1.beallitasok`), exportálható és importálható.
@@ -97,7 +97,7 @@ Minden szöveg a `data/tartalom/*.json` fájlokban van. Egy fejezet felépítés
 - **Kvíz:** `h` a helyes válasz sorszáma 0-tól. A továbblépéshez 60% kell, korlátlan újrapróbálkozással.
 - **Interaktív típusok** (`js/components/interactive.js`): `igazkitalalt`, `kovetkezoszo`, `epito` (prompt-, kép-, jelenet-, oldal-leíró, sablon- és egyedi utasítás-építő), `elotteutana`, `valasztos` (minden „melyiket választanád” jellegű feladat), `allitas`, `lepesek` (telefon-mockup), `ertekelo`, `ellenorzolista`, `agens`, `letoltes`, `osszevetes`, `otletlista`. Egy fejezetben tömbként több is megadható.
 - **Személyre szabás:** a `gyakorlat.javaslat` (vagy modulszinten a `javaslat`) a profilban megadott célok (`levelezes`, `dokumentumok`, `kutatas`, `kreativ`, `tanulas`) szerint mutat egy „Neked javasolt gyakorlat” dobozt.
-- **Új modul:** készíts egy új `data/tartalom/mXX.json`-t, és vedd fel a `data/kurzus.json` `modulok` listájába a kívánt helyre. Az `"opcionalis": true` modul kihagyható.
+- **Új modul:** készíts egy új `data/tartalom/mXX.json`-t, és vedd fel a `data/kurzus.json` `modulok` listájába a kívánt helyre. A megjelenő sorszám a lista sorrendjéből, az idő a fejezetek perceiből számolódik; az azonosítók (`m01`, `1.1`) a mentett haladás kulcsai, ezért ne változtasd őket. Szövegben a modulra és a fejezetre `{{mod:m09}}` és `{{fej:9.3}}` jelöléssel hivatkozz: betöltéskor a megjelenő sorszám kerül a helyére. A `"halado": true` csak „Haladó” jelzést ad.
 - A JSON-ok érvényességét így ellenőrizheted: `python3 -m json.tool data/tartalom/m01.json > /dev/null`.
 
 **Figyelem a haladásnál:** a mentett haladás a fejezetazonosítókhoz (`"1.1"` stb.) kötődik. Meglévő azonosítót ne nevezz át; új fejezetet a modul végére érdemes tenni. Ha a tárolás szerkezete változik, emeld a kulcsok verzióját (`aikurzus.v2.*` a `js/store.js`-ben).
@@ -123,13 +123,13 @@ Jelenleg **minden kép és videó helyőrzővel jelenik meg** – valódi fotót
 
 - **Egyetlen oldal hash-útvonalakkal.** A `/modulok/mXX` mappák helyett a leírás által ajánlott „egy sablon + JSON tartalom” megoldás készült; a `modulok/` mappa csak egy magyarázó README-t tartalmaz. Így a tartalom egy helyen van, és GitHub Pages-en extra beállítás nélkül működik.
 - **Tartalom modulonként külön JSON-ban.** A `data/kurzus.json` a sorrendet és a modulok adatait tartalmazza, a fejezetek szövege a `data/tartalom/` fájlokban van – így egy-egy modul könnyebben szerkeszthető.
-- **Haladó modulok (10–11).** Sorrend szerint zároltak, de „nem kötelezők”: a modul oldalán kihagyhatók. A kihagyott modul nem számít bele a százalékba és a „X / Y modul kész” számlálóba; később is elvégezhető, és lezárva beleszámít. A záró projekt a kihagyás után is megnyílik.
+- **Nincs zárolás.** Minden modul és fejezet megnyitható bármikor, közvetlen linkről is. A sorrend csak ajánlás (a „Folytatás” gomb és az „Ajánlott következő” jelzés). A lezárási feltételek (görgetés, gyakorlat, kvíz 60%) csak a haladás számolását érintik. Belépés nélkül megnyitott mélylink belépés után oda viszi vissza az embert.
 - **Olvasás feltétele.** A „legalább 90%-os görgetés” úgy teljesül, hogy a tanuló legörget a fejezet összefoglalójának végéig (ott egy láthatatlan jelző figyeli).
-- **Százalék.** Fejezet = a teljesített lépések aránya (olvasás, kötelező videó, gyakorlat, kvíz, lezárás) – lezáráskor 100%. Modul = a fejezetek átlaga + a modulzáró mint egy további tétel (lezáráskor 100%). Kurzus = a (nem kihagyott) modulok átlaga, a záró projekttel együtt 12 modul.
+- **Százalék.** Fejezet = a teljesített lépések aránya (olvasás, kötelező videó, gyakorlat, kvíz, lezárás) – lezáráskor 100%. Modul = a fejezetek átlaga + a modulzáró mint egy további tétel (lezáráskor 100%). Kurzus = a (nem kihagyott) modulok átlaga, a záró projekttel együtt.
 - **Gyakorlatok ideje.** A modulok gyakorlatai legfeljebb 10 percesek. A záró projekt megvalósítása (Z.2) természeténél fogva hosszabb (kb. 45 perc), ez részletekben is elvégezhető.
 - **Eszközök összehasonlítása (9. modul).** Árak nem szerepelnek, a funkciók általánosan és „2026. novemberi állapot – ellenőrizd a hivatalos oldalon” jelzéssel. A 9.2 gyakorló válaszai kitalált, betűjeles (A/B/C) szemléltetések, nem valódi eszközök kimenetei; a valódi összevetést a tanuló maga végzi el.
 - **Ábrák.** Ahol lehetett, saját SVG-ábra vagy CSS-animáció készült (kurzus-felépítés, következő szó jóslása, a jó kérés öt eleme, bizalmi mátrix, keresés vs. beszélgetés, kontextusablak, ágens-ciklus, telefon-mockupok, szimulált ágens-munkamenet).
-- **Oklevél.** Önellenőrzésen alapuló igazolás, nem hivatalos képesítés – ezt az oklevél maga is jelzi. Nyomtatható, vagy a nyomtatási ablakban PDF-be menthető.
+- **Oklevél (`#/oklevel`).** Csak 100%-nál: minden modul lezárva és minden fejezet kész. A teljesítés dátuma (`completedAt`) az első 100%-nál mentődik, és bővülő kurzusnál is érvényes marad. A „Név az oklevélen” külön mentődik (`oklevelNev`). Nyomtatás: böngészőből, A4 fekvő, külső szolgáltatás nélkül. Önellenőrzésen alapuló igazolás, nem hivatalos képesítés.
 - **Betűtípus.** Source Sans 3 a Google Fonts-ról; ha nem érhető el (offline), a rendszer sans-serif betűje lép a helyére.
 
 ---
@@ -144,7 +144,7 @@ A fejlesztés során a macOS beépített JavaScriptCore motorjával, utánzott b
 
 Valódi böngészőben ezeket érdemes végigpróbálni:
 
-- [ ] Zárolás: a `#/m/m02` vagy `#/m/m01/f/1.2` cím beírása kezdéskor visszavisz, rövid magyarázattal.
+- [ ] Nincs zárolás: a `#/m/m02` vagy `#/m/m12/f/12.7` cím beírása belépés után közvetlenül megnyitja az oldalt.
 - [ ] Haladás: egy fejezet lezárása után frissítés és a böngésző újranyitása után is megmarad.
 - [ ] Százalékok: a főképernyő, a modul oldal és a fejezet fejléce ugyanazt mutatja.
 - [ ] Videó: tegyél be egy próbavideót (bármilyen mp4-et, a `vid-1-2` nevén, és állítsd „kesz”-re), és próbáld ki a ±10 mp gombokat és a nyilakat, az idővonalat, a sebességet, a feliratot, a teljes képernyőt, és az újranyitáskori „Folytatás innen” ajánlatot. Előretekeréssel ne teljesüljön a 90%.
@@ -152,3 +152,21 @@ Valódi böngészőben ezeket érdemes végigpróbálni:
 - [ ] Mobilon és extra nagy betűmérettel (Beállítások) sem törik az elrendezés.
 - [ ] Export → Haladás törlése → Import visszaállítja a haladást.
 - [ ] Sötét téma, billentyűzetes használat (Tab, Enter, Esc a szakszó-buborékon).
+
+
+---
+
+## 9. Ellenőrző scriptek és közzététel előtt
+
+```bash
+python3 tools/check_numbers.py   # kézzel beírt „N modul / N óra” minták keresése (a számokat a getCourseStats() adja)
+python3 tools/media_check.py     # melyik képhez / videóhoz hiányzik a fájl (hiányzó fájl az oldalon nem látszik)
+python3 tools/media_todo.py      # MEDIA-TODO.md frissítése
+python3 tools/stamp.py           # gyorsítótár-verzió (?v=kivonat) a css/js hivatkozásokra – közzététel előtt futtasd
+```
+
+- **Haladás formátuma:** az exportált JSON `verzio: 2`. A régi (1-es) mentések importja és a böngészőben tárolt régi haladás automatikusan átalakul (`kurzusKesz` → `completedAt`, a „kihagyva” jelölés megszűnik); adat nem vész el.
+- **Szöveges hivatkozások:** `{{mod:m09}}` / `{{fej:9.3}}` – a megjelenő sorszám a modulok sorrendjéből számolódik.
+- **Összehasonlító (ChatGPT / Claude):** a mintaválaszok a `data/osszehasonlitas.json` fájlba kerülnek (üresen is hibátlan).
+- **Lépés-ábrák:** `data/lepesabrak.json`; a fejezetben `{ "lepesabra": "azonosító" }` blokkal hívhatók.
+- **Ne töltsd fel** a közzétett oldalra: `media-prompts/`, `Pictures/`, `BRIEF.md`, `valtoztatasok.md`.

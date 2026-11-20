@@ -1,7 +1,7 @@
-import { course } from '../data.js';
-import { getProfile, setProfile, isLoggedIn, login } from '../store.js';
-import { esc, icon, toast, moduleIcon } from '../util.js';
-import { go } from '../app.js';
+import { course, getCourseStats } from '../data.js?v=7150738a';
+import { getProfile, setProfile, isLoggedIn, login, takeReturnTo } from '../store.js?v=7150738a';
+import { esc, icon, toast, moduleIcon } from '../util.js?v=7150738a';
+import { go } from '../app.js?v=7150738a';
 
 export const CELOK = [
   { id: 'levelezes', label: 'Levelezés, e-mailek' },
@@ -29,7 +29,7 @@ const FEATURES = [
   { t: 'Lépésről lépésre', d: 'Rövid fejezetek, érthető magyarázatok, szakzsargon nélkül.', svg: '<path d="M4 18h5v-5h5V8h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="8" r="1.6" fill="currentColor"/>' },
   { t: 'Gyakorlatok és kvízek', d: 'Kipróbálod, amit tanulsz, és azonnal visszajelzést kapsz.', svg: '<rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 12.5l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>' },
   { t: 'Saját tempóban', d: 'Bármikor abbahagyhatod, a haladásod automatikusan mentődik.', svg: '<circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>' },
-  { t: 'Oklevél a végén', d: 'A záró projekt után letölthető, nyomtatható oklevelet kapsz.', svg: '<path d="M12 3.5l2.3 4.7 5.2.8-3.8 3.6.9 5.2-4.6-2.4-4.6 2.4.9-5.2-3.8-3.6 5.2-.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>' },
+  { t: 'Oklevél a végén', d: 'A kurzus teljes teljesítése után letölthető, nyomtatható oklevelet kapsz.', svg: '<path d="M12 3.5l2.3 4.7 5.2.8-3.8 3.6.9 5.2-4.6-2.4-4.6 2.4.9-5.2-3.8-3.6 5.2-.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>' },
 ];
 
 const STEPS = [
@@ -74,6 +74,7 @@ function landingHtml(moduleCount, hours, saved) {
     '<li><strong data-count="' + moduleCount + '">' + moduleCount + '</strong><span>modul</span></li>' +
     '<li><strong data-count="' + hours + '">' + hours + '</strong><span>óra tartalom</span></li>' +
     '<li><strong>0</strong><span>előképzettség kell</span></li></ul>' +
+    '<p class="lp-facts lp-rise" style="--d:.35s">' + esc(getCourseStats().label) + '</p>' +
     '</div>' +
     '<div class="lp-login lp-rise" style="--d:.25s">' + chatDemo +
     '<form id="login-form" class="landing-form" novalidate>' +
@@ -91,9 +92,9 @@ function landingHtml(moduleCount, hours, saved) {
 }
 
 export function viewIntro() {
-  const total = course.modulok.reduce((a, m) => a + m.ido, 0);
-  const hours = Math.round(total / 60);
-  const moduleCount = course.modulok.filter((m) => m.id !== 'zp').length;
+  const stats = getCourseStats();
+  const hours = stats.hours;
+  const moduleCount = stats.modules;
   const hasProfile = !!getProfile();
   const saved = getProfile();
   return {
@@ -133,11 +134,12 @@ export function viewIntro() {
           nev, celok: [], foglalkozas: '', tapasztalat: 'keveset', eszkoz: 'egyik', letrehozva: new Date().toISOString(),
         });
         login(form.emlekezz.checked);
+        const target = takeReturnTo() || '#/';
         const land = root.querySelector('.landing');
         if (land && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
           land.classList.add('landing-leave');
-          setTimeout(() => go('#/'), 520);
-        } else go('#/');
+          setTimeout(() => go(target), 520);
+        } else go(target);
       });
     },
   };
@@ -196,7 +198,7 @@ export function viewProfile() {
           letrehozva: p.letrehozva || new Date().toISOString(),
         });
         toast(isNew ? 'Profil elmentve. Jó tanulást!' : 'Profil elmentve.');
-        go(isNew ? '#/' : '#/beallitasok');
+        go(isNew ? (takeReturnTo() || '#/') : '#/beallitasok');
       });
     },
   };

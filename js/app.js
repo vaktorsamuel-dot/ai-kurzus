@@ -1,19 +1,20 @@
-// Belépési pont: betöltés, hash-alapú útválasztás, zárolási őr, közös keret.
+// Belépési pont: betöltés, hash-alapú útválasztás, közös keret. Nincs zárolás: minden oldal közvetlen linkről is megnyílik.
 
-import { loadCourse, course } from './data.js';
-import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings } from './store.js';
-import { chapterUnlocked, moduleUnlocked, allChaptersDone, resumeTarget, chapterHash, closingHash, moduleHash } from './progress.js';
-import { esc, icon, initGlobalHandlers, toast } from './util.js';
-import { isAdmin, enterAdmin, exitAdmin } from './admin.js';
-import { viewHome } from './views/home.js';
-import { viewIntro, viewProfile } from './views/onboarding.js';
-import { viewModule } from './views/module.js';
-import { viewChapter } from './views/chapter.js';
-import { viewClosing } from './views/closing.js';
-import { viewFinish } from './views/finish.js';
-import { viewSettings } from './views/settings.js';
-import { viewHelp, viewGlossary } from './views/help.js';
-import { fxPage, initFx } from './fx.js';
+import { loadCourse, course, getCourseStats } from './data.js?v=7150738a';
+import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings, setReturnTo } from './store.js?v=7150738a';
+import { moduleHash } from './progress.js?v=7150738a';
+import { esc, icon, initGlobalHandlers, toast } from './util.js?v=7150738a';
+import { viewHome } from './views/home.js?v=7150738a';
+import { viewIntro, viewProfile } from './views/onboarding.js?v=7150738a';
+import { viewModule } from './views/module.js?v=7150738a';
+import { viewChapter } from './views/chapter.js?v=7150738a';
+import { viewClosing } from './views/closing.js?v=7150738a';
+import { viewFinish } from './views/finish.js?v=7150738a';
+import { viewSettings } from './views/settings.js?v=7150738a';
+import { viewHelp, viewGlossary } from './views/help.js?v=7150738a';
+import { fxPage, initFx } from './fx.js?v=7150738a';
+import { initMediaZoom } from './components/media.js?v=7150738a';
+import { initStepFigures } from './components/stepfigure.js?v=7150738a';
 
 let flash = null;
 export function setFlash(msg) { flash = msg; }
@@ -45,7 +46,6 @@ function footer() {
     '<a href="#/beallitasok">Beállítások</a><a href="#/sugo">Súgó</a><a href="#/szoszedet">Szószedet</a>' +
     '<a href="#/beallitasok/haladas">Haladás exportálása / importálása</a>' +
     '</nav>' +
-    (isAdmin() ? '' : '<button type="button" class="admin-link" data-admin="enter">Kezelő</button>') +
     '</div></footer>';
 }
 
@@ -57,7 +57,11 @@ export function parse(hash) {
 export function resolve(parts) {
   const profil = getProfile();
   const open = ['bevezeto', 'sugo', 'szoszedet', 'beallitasok'];
-  if ((!profil || !isLoggedIn()) && !open.includes(parts[0])) return { redirect: '#/bevezeto' };
+  if ((!profil || !isLoggedIn()) && !open.includes(parts[0])) {
+    // Belépés nélkül megnyitott (mély)link: belépés után ide visszük vissza.
+    setReturnTo(location.hash);
+    return { redirect: '#/bevezeto' };
+  }
 
   if (!parts.length) return { view: viewHome };
   switch (parts[0]) {
@@ -66,36 +70,17 @@ export function resolve(parts) {
     case 'beallitasok': return { view: viewSettings, args: [parts[1]] };
     case 'sugo': return { view: viewHelp };
     case 'szoszedet': return { view: viewGlossary };
-    case 'kesz': {
-      if (!getProgress().kurzusKesz) {
-        setFlash('Az oklevél a záró projekt lezárása után nyílik meg.');
-        return { redirect: '#/' };
-      }
-      return { view: viewFinish };
-    }
+    case 'kesz': return { redirect: '#/oklevel' }; // régi cím
+    case 'oklevel': return { view: viewFinish };
     case 'm': {
       const mod = course.modulById[parts[1]];
       if (!mod) { setFlash('Ezt az oldalt nem találtam. Visszavittelek a főképernyőre.'); return { redirect: '#/' }; }
-      if (!moduleUnlocked(mod)) {
-        const prev = course.modulok[mod.index - 1];
-        setFlash('„' + mod.cim + '” még zárolt. Előbb fejezd be: ' + prev.sorszam + '. modul – ' + prev.cim + '.');
-        return { redirect: lockRedirect() };
-      }
       if (parts[2] === 'f') {
         const ch = course.fejezetById[parts[3]];
         if (!ch || ch.modulId !== mod.id) { setFlash('Ezt a fejezetet nem találtam.'); return { redirect: moduleHash(mod) }; }
-        if (!chapterUnlocked(ch)) {
-          const prev = mod.fejezetek[ch.index - 1];
-          setFlash('A(z) ' + ch.id + ' fejezet még zárolt. Előbb zárd le: ' + prev.id + ' ' + prev.cim + '.');
-          return { redirect: lockRedirect() };
-        }
         return { view: viewChapter, args: [ch] };
       }
       if (parts[2] === 'zaro') {
-        if (!allChaptersDone(mod) && !isAdmin()) {
-          setFlash('A modulzáró oldal akkor nyílik meg, ha a modul minden fejezetét lezártad.');
-          return { redirect: lockRedirect() };
-        }
         return { view: viewClosing, args: [mod] };
       }
       return { view: viewModule, args: [mod] };
@@ -104,13 +89,6 @@ export function resolve(parts) {
       setFlash('Ezt az oldalt nem találtam. Visszavittelek a főképernyőre.');
       return { redirect: '#/' };
   }
-}
-
-function lockRedirect() {
-  const t = resumeTarget();
-  if (t.tipus === 'fejezet') return chapterHash(t.ch);
-  if (t.tipus === 'zaro') return closingHash(t.mod);
-  return '#/';
 }
 
 let cleanup = null;
@@ -123,13 +101,9 @@ async function render() {
   const main = document.getElementById('main');
   const v = r.view(...(r.args || []));
   document.title = (v.title ? v.title + ' – ' : '') + 'AI a hétköznapokban';
-  const adminHtml = isAdmin()
-    ? '<div class="admin-bar no-print" role="status"><div class="wrap row-between"><span><strong>Kezelő mód aktív</strong> – minden modul nyitva, a haladás külön mentődik.</span>' +
-      '<button type="button" class="btn btn-small admin-exit" data-admin="exit">Kilépés a kezelő módból</button></div></div>'
-    : '';
   const flashHtml = flash ? '<div class="wrap"><div class="banner banner-info" role="alert">' + icon('lock') + '<span>' + esc(flash) + '</span></div></div>' : '';
   flash = null;
-  main.innerHTML = adminHtml + (v.bare ? '' : header()) + flashHtml + v.html + (v.bare ? '' : footer());
+  main.innerHTML = (v.bare ? '' : header()) + flashHtml + v.html + (v.bare ? '' : footer());
   if (v.mount) cleanup = v.mount(main) || null;
   window.scrollTo(0, 0);
   main.classList.remove('page-enter'); void main.offsetWidth; main.classList.add('page-enter');
@@ -146,25 +120,18 @@ async function render() {
 async function start() {
   applySettings();
   initGlobalHandlers();
+  initMediaZoom();
+  initStepFigures();
   initFx();
   document.addEventListener('click', (e) => {
-    if (e.target.closest('[data-logout]')) { logout(); go('#/bevezeto'); return; }
-    const b = e.target.closest('[data-admin]');
-    if (!b) return;
-    if (b.dataset.admin === 'enter') {
-      const pin = window.prompt('Kezelő mód – add meg a PIN-kódot:');
-      if (pin === null) return;
-      if (enterAdmin(pin)) location.reload();
-      else toast('Hibás PIN-kód.');
-    } else {
-      exitAdmin();
-      location.reload();
-    }
+    if (e.target.closest('[data-logout]')) { logout(); go('#/bevezeto'); }
   });
   if (!isPersistent()) showStorageWarning();
   document.addEventListener('storage-fallback', showStorageWarning);
   try {
     await loadCourse();
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', 'Interaktív, magyar nyelvű kurzus az AI magabiztos, okos és biztonságos hétköznapi használatához: ' + getCourseStats().label + '.');
   } catch (e) {
     document.getElementById('main').innerHTML =
       '<div class="wrap-narrow section"><h1>Nem sikerült betölteni a kurzust</h1>' +

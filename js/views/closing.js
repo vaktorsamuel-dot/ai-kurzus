@@ -1,11 +1,10 @@
 // Modulzáró oldal: összefoglalás, modulkvíz, lezárás, gratuláló kártya.
 
-import { course } from '../data.js';
-import { moduleState, saveProgress, getProgress } from '../store.js';
-import { moduleQuizPassed, moduleClosed, moduleHash } from '../progress.js';
-import { esc, md, icon } from '../util.js';
-import { isAdmin } from '../admin.js';
-import { renderQuiz } from '../components/quiz.js';
+import { course } from '../data.js?v=7150738a';
+import { moduleState, chapterState, saveProgress } from '../store.js?v=7150738a';
+import { moduleQuizPassed, moduleClosed, moduleHash, chapterHash, canCloseModule, markCompletionIfDone } from '../progress.js?v=7150738a';
+import { esc, md, icon } from '../util.js?v=7150738a';
+import { renderQuiz } from '../components/quiz.js?v=7150738a';
 
 export function viewClosing(mod) {
   const ms = moduleState(mod.id);
@@ -24,9 +23,9 @@ export function viewClosing(mod) {
   function congrats() {
     return '<div class="card congrats" tabindex="-1" id="congrats">' + icon('check', 'congrats-icon') +
       '<h2>' + (isFinal ? 'Elkészültél a kurzussal.' : 'A(z) ' + mod.sorszam + '. modult lezártad.') + '</h2>' +
-      '<p>' + (isFinal ? 'Az oklevelet kinyomtathatod vagy elmentheted PDF-ként.' : esc(mod.cim) + ' – kész. ' + (next ? 'Megnyílt a következő modul: ' + esc(next.cim) + '.' : '')) + '</p>' +
+      '<p>' + (isFinal ? 'Ha minden más modult is lezártál, megnyílik az oklevél.' : esc(mod.cim) + ' – kész. ' + (next ? 'Megnyílt a következő modul: ' + esc(next.cim) + '.' : '')) + '</p>' +
       '<div class="row">' +
-      (isFinal ? '<a class="btn btn-accent btn-lg" href="#/kesz">Az oklevelem' + icon('arrowRight') + '</a>'
+      (isFinal ? '<a class="btn btn-accent btn-lg" href="#/oklevel">Az oklevelem' + icon('arrowRight') + '</a>'
         : next ? '<a class="btn btn-accent btn-lg" href="' + moduleHash(next) + '">Tovább a következő modulra' + icon('arrowRight') + '</a>' : '') +
       '<a class="btn btn-ghost btn-lg" href="#/">' + icon('home') + 'Vissza a főképernyőre</a></div></div>';
   }
@@ -41,9 +40,13 @@ export function viewClosing(mod) {
       out.innerHTML = congrats();
       return;
     }
-    const ok = moduleQuizPassed(mod) || isAdmin(); // kezelő módban a kvíz nem akadály
+    const ok = canCloseModule(mod);
     btn.disabled = !ok;
-    out.innerHTML = ok ? '' : '<p class="small">A lezáráshoz érj el legalább 60%-ot a modulkvízen.</p>';
+    const missing = [];
+    const open = mod.fejezetek.filter((f) => !chapterState(f.id).kesz);
+    if (open.length) missing.push('Zárd le ezeket a fejezeteket: ' + open.map((f) => '<a href="' + chapterHash(f) + '">' + esc(f.label + ' ' + f.cim) + '</a>').join(', ') + '.');
+    if (!moduleQuizPassed(mod)) missing.push('Érj el legalább 60%-ot a modulkvízen.');
+    out.innerHTML = ok ? '' : '<p class="small"><strong>A lezáráshoz még hátravan:</strong></p><ul class="small">' + missing.map((m) => '<li>' + m + '</li>').join('') + '</ul>';
   }
 
   return {
@@ -64,11 +67,10 @@ export function viewClosing(mod) {
     mount(root) {
       if (quiz) quiz.mount(root);
       root.querySelector('#close-mod').addEventListener('click', () => {
-        if (!moduleQuizPassed(mod) && !isAdmin()) { refresh(); return; }
+        if (!canCloseModule(mod)) { refresh(); return; }
         ms.lezarva = true;
-        ms.kihagyva = false;
         ms.lezarasIdo = new Date().toISOString();
-        if (isFinal) getProgress().kurzusKesz = new Date().toISOString();
+        markCompletionIfDone();
         saveProgress();
         refresh();
         const c = root.querySelector('#congrats');

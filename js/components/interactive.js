@@ -2,8 +2,8 @@
 // Típusok: igazkitalalt, kovetkezoszo, epito, elotteutana, valasztos, allitas, lepesek, ertekelo,
 //          ellenorzolista, agens, letoltes, osszevetes, otletlista
 
-import { getProfile } from '../store.js';
-import { esc, md, icon, promptBox, downloadFile, toast } from '../util.js';
+import { getProfile } from '../store.js?v=7150738a';
+import { esc, md, icon, promptBox, promptActions, downloadFile, toast } from '../util.js?v=7150738a';
 
 let seq = 0;
 const uid = (p) => p + '-' + (++seq);
@@ -108,7 +108,7 @@ function epito(cfg, ctx) {
   const html = '<div class="builder" id="' + id + '"><div class="builder-fields">' + fields + '</div>' +
     '<div class="row"><button type="button" class="btn btn-ghost btn-small" data-minta>Kitöltés mintával</button><button type="button" class="btn btn-ghost btn-small" data-torles>Mezők törlése</button></div>' +
     '<div class="prompt-box builder-out"><div class="prompt-head"><span>' + esc(cfg.kimenetCim || 'Az összerakott kérés') + '</span>' +
-    '<button type="button" class="btn btn-small btn-ghost copy-btn" data-copy>' + icon('copy') + '<span>Másolás</span></button></div><pre class="prompt-text" aria-live="polite"></pre></div></div>';
+    '<button type="button" class="btn btn-small btn-ghost copy-btn" data-copy>' + icon('copy') + '<span>Másolás</span></button></div><pre class="prompt-text" aria-live="polite"></pre>' + promptActions() + '</div></div>';
   return {
     html,
     mount(root) {

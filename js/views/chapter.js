@@ -1,17 +1,33 @@
 // Fejezetoldal – a fő sablon (leírás 6. pontja).
 
-import { course } from '../data.js';
-import { chapterState, getProgress, saveProgress, getProfile } from '../store.js';
+import { course } from '../data.js?v=7150738a';
+import { chapterState, getProgress, saveProgress, getProfile } from '../store.js?v=7150738a';
 import {
   chapterPct, modulePct, missingForClose, canCloseChapter, chapterHash, moduleHash, closingHash, nextChapterOf, prevChapterOf, videoRequired,
-} from '../progress.js';
-import { esc, md, icon, progressBar, fmtMin, promptBox, toast } from '../util.js';
-import { image, bindImageFallbacks } from '../components/media.js';
-import { renderPlayer } from '../components/player.js';
-import { renderQuiz } from '../components/quiz.js';
-import { diagram } from '../components/diagrams.js';
-import { toolName } from './onboarding.js';
-import { isAdmin } from '../admin.js';
+} from '../progress.js?v=7150738a';
+import { esc, md, icon, progressBar, fmtMin, promptBox, toast } from '../util.js?v=7150738a';
+import { image, bindImageFallbacks } from '../components/media.js?v=7150738a';
+import { renderPlayer } from '../components/player.js?v=7150738a';
+import { renderQuiz } from '../components/quiz.js?v=7150738a';
+import { diagram } from '../components/diagrams.js?v=7150738a';
+import { stepFigure } from '../components/stepfigure.js?v=7150738a';
+import { renderCompare } from '../components/compare.js?v=7150738a';
+import { toolName } from './onboarding.js?v=7150738a';
+
+// Újrahasznosítható „Ellenőrizd!” figyelmeztető doboz (ikon + 1-2 mondat).
+export function ellenorizd(text) {
+  return '<aside class="check-box" role="note">' + icon('check', 'check-box-icon') + '<div><strong>Ellenőrizd!</strong> ' + md(text) + '</div></aside>';
+}
+
+// Nyomtatható, egyoldalas kártya (A4, csak a kártya nyomtatódik).
+function checkCard(c) {
+  return '<figure class="print-card-wrap"><article class="print-card" aria-label="' + esc(c.cim) + '">' +
+    '<header><p class="print-card-kicker">AI a hétköznapokban</p><h3>' + esc(c.cim) + '</h3>' + (c.alcim ? '<p class="print-card-sub">' + esc(c.alcim) + '</p>' : '') + '</header>' +
+    '<ol class="print-card-list">' + c.kerdesek.map((q) => '<li><span class="print-card-box" aria-hidden="true"></span><div><strong>' + esc(q.k) + '</strong><p>' + md(q.r) + '</p></div></li>').join('') + '</ol>' +
+    '<div class="print-card-notes"><p>Téma: ______________________________</p><p>Hol ellenőriztem: ______________________________</p></div>' +
+    (c.lab ? '<footer>' + esc(c.lab) + '</footer>' : '') +
+    '</article><div class="no-print"><button type="button" class="btn btn-primary" data-print-card>' + icon('print') + 'Kártya nyomtatása</button></div></figure>';
+}
 
 function block(b) {
   if (typeof b === 'string') return '<p>' + md(b) + '</p>';
@@ -20,6 +36,10 @@ function block(b) {
   if (b.tipp) return '<div class="callout callout-tip">' + icon('tip') + '<div><strong>Tipp</strong> ' + md(b.tipp) + '</div></div>';
   if (b.vigyazat) return '<div class="callout callout-warn">' + icon('warn') + '<div><strong>Vigyázat</strong> ' + md(b.vigyazat) + '</div></div>';
   if (b.abra) return '<figure class="figure">' + diagram(b.abra) + (b.felirat ? '<figcaption class="muted small">' + md(b.felirat) + '</figcaption>' : '') + '</figure>';
+  if (b.osszehasonlitas) return renderCompare();
+  if (b.lepesabra) return stepFigure(b.lepesabra);
+  if (b.ellenorizd) return ellenorizd(b.ellenorizd);
+  if (b.kartya) return checkCard(b.kartya);
   if (b.prompt) return promptBox(b.prompt, b.cim || 'Másolható kérés');
   if (b.pelda) return '<div class="example"><p class="example-label">' + esc(b.cim || 'Példa') + '</p>' + b.pelda.map((p) => '<p>' + md(p) + '</p>').join('') + '</div>';
   if (b.tabla) return '<div class="table-scroll"><table class="table"><thead><tr>' + b.tabla[0].map((h) => '<th scope="col">' + md(h) + '</th>').join('') + '</tr></thead><tbody>' +
@@ -47,7 +67,8 @@ export function viewChapter(ch) {
 
   const g = ch.gyakorlat;
   const tool = toolName((getProfile() || {}).eszkoz);
-  const player = ch.video ? renderPlayer(ch.video.media, ch.id) : null;
+  const player0 = ch.video ? renderPlayer(ch.video.media, ch.id) : null;
+  const player = player0 && !player0.empty ? player0 : null;
   const quiz = ch.kviz && ch.kviz.length ? renderQuiz(ch.kviz, {
     best: st.kviz,
     onResult(score, passed) {
@@ -93,9 +114,9 @@ export function viewChapter(ch) {
     '<nav class="row crumbs" aria-label="Morzsamenü"><a class="btn btn-ghost btn-small" href="' + moduleHash(mod) + '">' + icon('arrowLeft') + 'Vissza a modulra</a>' +
     '<a class="btn btn-ghost btn-small" href="#/">' + icon('home') + 'Főképernyő</a></nav>' +
     '<p class="eyebrow">' + (mod.id === 'zp' ? 'Záró projekt' : mod.sorszam + '. modul – ' + esc(mod.cim)) + '</p>' +
-    '<h1><span class="ch-id">' + esc(ch.id) + '</span> ' + esc(ch.cim) + '</h1>' +
-    '<div class="ch-bars">' + (isAdmin() ? '' : '<div><span class="small">Fejezet: <strong class="js-ch-pct">0%</strong></span><div class="js-ch-bar"></div></div>' +
-    '<div><span class="small">Modul: <strong class="js-mod-pct">0%</strong></span><div class="js-mod-bar"></div></div>') +
+    '<h1><span class="ch-id">' + esc(ch.label) + '</span> ' + esc(ch.cim) + '</h1>' +
+    '<div class="ch-bars"><div><span class="small">Fejezet: <strong class="js-ch-pct">0%</strong></span><div class="js-ch-bar"></div></div>' +
+    '<div><span class="small">Modul: <strong class="js-mod-pct">0%</strong></span><div class="js-mod-bar"></div></div>' +
     '<span class="meta">' + icon('clock') + fmtMin(ch.ido) + '</span></div>' +
     '</div></div>' +
     '<div class="wrap ch-layout">' + tocHtml + '<div class="ch-body">' +
@@ -121,12 +142,10 @@ export function viewChapter(ch) {
     const mp = modulePct(mod);
     const root = document.querySelector('.chapter');
     if (!root) return;
-    if (!isAdmin()) { // kezelő módban nincs százalékszámolás
-      root.querySelector('.js-ch-pct').textContent = cp + '%';
-      root.querySelector('.js-mod-pct').textContent = mp + '%';
-      root.querySelector('.js-ch-bar').innerHTML = progressBar(cp, 'Fejezet haladása');
-      root.querySelector('.js-mod-bar').innerHTML = progressBar(mp, 'Modul haladása');
-    }
+    root.querySelector('.js-ch-pct').textContent = cp + '%';
+    root.querySelector('.js-mod-pct').textContent = mp + '%';
+    root.querySelector('.js-ch-bar').innerHTML = progressBar(cp, 'Fejezet haladása');
+    root.querySelector('.js-mod-bar').innerHTML = progressBar(mp, 'Modul haladása');
     const btn = root.querySelector('#close-ch');
     const nx = root.querySelector('#next-ch');
     const miss = root.querySelector('.ch-missing');
@@ -145,8 +164,8 @@ export function viewChapter(ch) {
   }
 
   return {
-    title: ch.id + ' ' + ch.cim,
-    track: ch.id + ' ' + ch.cim,
+    title: ch.label + ' ' + ch.cim,
+    track: ch.label + ' ' + ch.cim,
     html,
     mount(root) {
       bindImageFallbacks(root);
@@ -183,7 +202,7 @@ export function viewChapter(ch) {
         st.keszIdo = new Date().toISOString();
         if (videoRequired(ch) === false && ch.video && !st.video) st.video = { ranges: [], pos: 0, duration: 0, done: true, hianyzott: true };
         saveProgress();
-        toast('Fejezet lezárva: ' + ch.id + ' ' + ch.cim);
+        toast('Fejezet lezárva: ' + ch.label + ' ' + ch.cim);
         refresh();
         const nx = root.querySelector('#next-ch');
         nx.focus();
