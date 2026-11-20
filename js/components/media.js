@@ -1,7 +1,7 @@
 // Képek és videók a manifesztből, arányos helyőrzővel hiányzó vagy betölthetetlen fájl esetén.
 
-import { media } from '../data.js?v=7150738a';
-import { esc, icon } from '../util.js?v=7150738a';
+import { media } from '../data.js?v=6dc27975';
+import { esc, icon } from '../util.js?v=6dc27975';
 
 export const DEV = new URLSearchParams(location.search).has('dev');
 

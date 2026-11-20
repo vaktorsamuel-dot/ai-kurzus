@@ -1,7 +1,7 @@
 // Haladás, zárolás és százalékszámítás – egyetlen forrás minden nézet számára.
 
-import { course, media } from './data.js?v=7150738a';
-import { getProgress, saveProgress, chapterState, moduleState } from './store.js?v=7150738a';
+import { course, media } from './data.js?v=6dc27975';
+import { getProgress, saveProgress, chapterState, moduleState } from './store.js?v=6dc27975';
 
 export const QUIZ_PASS = 0.6;
 export const VIDEO_PASS = 0.9;

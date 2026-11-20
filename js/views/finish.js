@@ -1,10 +1,10 @@
 // Oklevél: csak a kurzus teljes teljesítése után (minden modul és fejezet kész). A teljesítés dátuma a
 // haladásban tárolt completedAt; a név külön szerkeszthető (oklevelNev). Nyomtatás: A4 fekvő, böngészőből.
 
-import { course, getCourseStats } from '../data.js?v=7150738a';
-import { getProfile, getProgress, saveProgress } from '../store.js?v=7150738a';
-import { isCourseComplete, markCompletionIfDone, moduleHash, moduleClosed, allChaptersDone } from '../progress.js?v=7150738a';
-import { esc, icon, fmtDate, toast } from '../util.js?v=7150738a';
+import { course, getCourseStats } from '../data.js?v=6dc27975';
+import { getProfile, getProgress, saveProgress } from '../store.js?v=6dc27975';
+import { isCourseComplete, markCompletionIfDone, moduleHash, moduleClosed, allChaptersDone } from '../progress.js?v=6dc27975';
+import { esc, icon, fmtDate, toast } from '../util.js?v=6dc27975';
 
 // Mely modulok hiányoznak még (nincs lezárva, vagy van nem kész fejezet).
 export function missingModules() {

@@ -1,8 +1,8 @@
 // <StepFigure>: sematikus, kódból rajzolt lépés-ábra (nincs képfájl). NEM pontos felületmásolat:
 // a lépés logikáját mutatja (hol keresd, mit nyomj meg). A szöveges lépéslista a mérvadó.
 
-import { course } from '../data.js?v=7150738a';
-import { esc, md } from '../util.js?v=7150738a';
+import { course } from '../data.js?v=6dc27975';
+import { esc, md } from '../util.js?v=6dc27975';
 
 let seq = 0;
 

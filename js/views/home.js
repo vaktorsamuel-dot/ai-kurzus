@@ -1,19 +1,17 @@
-import { course } from '../data.js?v=7150738a';
-import { getProfile, getProgress } from '../store.js?v=7150738a';
+import { course } from '../data.js?v=6dc27975';
+import { getProfile, getProgress } from '../store.js?v=6dc27975';
 import {
   coursePct, modulesDone, modulePct, moduleStatus, resumeTarget, recommendedModule, chapterHash, closingHash, moduleHash, chapterPct,
-} from '../progress.js?v=7150738a';
-import { certificateAvailable, missingModules, missingList } from './finish.js?v=7150738a';
-import { esc, icon, statusBadge, progressBar, fmtDateTime, fmtMin, moduleIcon } from '../util.js?v=7150738a';
+} from '../progress.js?v=6dc27975';
+import { certificateAvailable } from './finish.js?v=6dc27975';
+import { esc, icon, statusBadge, progressBar, fmtDateTime, fmtMin, moduleIcon } from '../util.js?v=6dc27975';
 
 function certCard() {
   if (certificateAvailable()) {
     return '<div class="card cert-card cert-ready"><div>' + icon('star') + '<h2 class="h-small">Oklevél</h2><p>Mindent teljesítettél. Az oklevél megnyitható és nyomtatható.</p></div>' +
       '<a class="btn btn-accent btn-lg" href="#/oklevel">Az oklevelem' + icon('arrowRight') + '</a></div>';
   }
-  const n = missingModules().length;
-  return '<div class="card cert-card cert-locked" aria-disabled="true"><div>' + icon('lock') + '<h2 class="h-small">Oklevél</h2>' +
-    '<p>Az oklevél a kurzus teljes teljesítése után nyílik. Még <strong>' + n + ' modul</strong> van hátra.</p>' + missingList() + '</div></div>';
+  return ''; // Az oklevél csak a kurzus 100%-os teljesítése után jelenik meg.
 }
 
 export function viewHome() {

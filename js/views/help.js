@@ -1,6 +1,6 @@
-import { course, getCourseStats } from '../data.js?v=7150738a';
-import { getProfile } from '../store.js?v=7150738a';
-import { esc, icon, statusBadge } from '../util.js?v=7150738a';
+import { course, getCourseStats } from '../data.js?v=6dc27975';
+import { getProfile } from '../store.js?v=6dc27975';
+import { esc, icon, statusBadge } from '../util.js?v=6dc27975';
 
 function back() {
   return '<nav class="crumbs no-print"><a class="btn btn-ghost btn-small" href="' + (getProfile() ? '#/' : '#/bevezeto') + '">' + icon('arrowLeft') + 'Vissza</a></nav>';

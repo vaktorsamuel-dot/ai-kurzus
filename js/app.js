@@ -1,20 +1,20 @@
 // Belépési pont: betöltés, hash-alapú útválasztás, közös keret. Nincs zárolás: minden oldal közvetlen linkről is megnyílik.
 
-import { loadCourse, course, getCourseStats } from './data.js?v=7150738a';
-import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings, setReturnTo } from './store.js?v=7150738a';
-import { moduleHash } from './progress.js?v=7150738a';
-import { esc, icon, initGlobalHandlers, toast } from './util.js?v=7150738a';
-import { viewHome } from './views/home.js?v=7150738a';
-import { viewIntro, viewProfile } from './views/onboarding.js?v=7150738a';
-import { viewModule } from './views/module.js?v=7150738a';
-import { viewChapter } from './views/chapter.js?v=7150738a';
-import { viewClosing } from './views/closing.js?v=7150738a';
-import { viewFinish } from './views/finish.js?v=7150738a';
-import { viewSettings } from './views/settings.js?v=7150738a';
-import { viewHelp, viewGlossary } from './views/help.js?v=7150738a';
-import { fxPage, initFx } from './fx.js?v=7150738a';
-import { initMediaZoom } from './components/media.js?v=7150738a';
-import { initStepFigures } from './components/stepfigure.js?v=7150738a';
+import { loadCourse, course, getCourseStats } from './data.js?v=6dc27975';
+import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings, setReturnTo } from './store.js?v=6dc27975';
+import { moduleHash } from './progress.js?v=6dc27975';
+import { esc, icon, initGlobalHandlers, toast } from './util.js?v=6dc27975';
+import { viewHome } from './views/home.js?v=6dc27975';
+import { viewIntro, viewProfile } from './views/onboarding.js?v=6dc27975';
+import { viewModule } from './views/module.js?v=6dc27975';
+import { viewChapter } from './views/chapter.js?v=6dc27975';
+import { viewClosing } from './views/closing.js?v=6dc27975';
+import { viewFinish } from './views/finish.js?v=6dc27975';
+import { viewSettings } from './views/settings.js?v=6dc27975';
+import { viewHelp, viewGlossary } from './views/help.js?v=6dc27975';
+import { fxPage, initFx } from './fx.js?v=6dc27975';
+import { initMediaZoom } from './components/media.js?v=6dc27975';
+import { initStepFigures } from './components/stepfigure.js?v=6dc27975';
 
 let flash = null;
 export function setFlash(msg) { flash = msg; }

@@ -1,11 +1,11 @@
 // Egyedi videólejátszó: ±10 mp, idővonal, hangerő, sebesség, felirat, teljes képernyő,
 // pozíciómentés, és csalásbiztos „megnézve” számítás a ténylegesen lejátszott idő alapján.
 
-import { media } from '../data.js?v=7150738a';
-import { chapterState, saveProgress, getSettings } from '../store.js?v=7150738a';
-import { markVideoUnavailable, VIDEO_PASS } from '../progress.js?v=7150738a';
-import { esc, icon, fmtTime } from '../util.js?v=7150738a';
-import { placeholder, placeholderInner, DEV } from './media.js?v=7150738a';
+import { media } from '../data.js?v=6dc27975';
+import { chapterState, saveProgress, getSettings } from '../store.js?v=6dc27975';
+import { markVideoUnavailable, VIDEO_PASS } from '../progress.js?v=6dc27975';
+import { esc, icon, fmtTime } from '../util.js?v=6dc27975';
+import { placeholder, placeholderInner, DEV } from './media.js?v=6dc27975';
 
 const SPEEDS = [0.75, 1, 1.25, 1.5];
 

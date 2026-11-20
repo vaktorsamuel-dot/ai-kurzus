@@ -533,7 +533,7 @@ textarea.prompt-edit { display: block; width: 100%; border: 0; outline-offset: -
 @media print { .prompt-actions { display: none; } }
 
 /* „Ellenőrizd!” doboz */
-.check-box { display: flex; gap: .8rem; align-items: flex-start; margin: 1rem 0; padding: .9rem 1rem; border: 2px solid var(--c-primary); border-radius: var(--radius-sm); background: var(--c-blue-pale, var(--c-surface-2)); color: var(--c-text); }
+.check-box { display: flex; gap: .8rem; align-items: flex-start; margin: 1rem 0; padding: .9rem 1rem; border: 2px solid var(--c-primary); border-radius: var(--radius-sm); background: var(--c-surface-2); color: var(--c-text); }
 .check-box .icon { flex: none; width: 1.6rem; height: 1.6rem; color: var(--c-primary); margin-top: .1rem; }
 .check-box strong { color: var(--c-accent-text, var(--c-primary)); }
 .check-box p { margin: 0; }
