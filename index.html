@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI a hétköznapokban – kurzus</title>
+  <meta name="description" content="Interaktív, magyar nyelvű kurzus az AI magabiztos, okos és biztonságos hétköznapi használatához.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/player.css">
+  <script>
+    // Téma és betűméret beállítása még a rajzolás előtt, hogy ne villanjon.
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem('aikurzus.v1.beallitasok') || '{}');
+        var d = document.documentElement;
+        if (s.tema && s.tema !== 'rendszer') d.setAttribute('data-theme', s.tema);
+        if (s.betumeret) d.setAttribute('data-font', s.betumeret);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ugrás a tartalomra</a>
+  <div id="storage-warning" class="banner banner-warn" hidden role="status"></div>
+  <main id="main" tabindex="-1">
+    <div class="loading" role="status">Betöltés…</div>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p style="padding:2rem">A kurzushoz engedélyezni kell a JavaScriptet a böngészőben.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
