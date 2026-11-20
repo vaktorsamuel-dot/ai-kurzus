@@ -1,0 +1,638 @@
+{
+  "projekt": {
+    "cim": "Projekt létrehozása",
+    "sugo": {
+      "szoveg": "Projektek kezelése (hivatalos súgó)",
+      "url": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+    },
+    "lepesek": [
+      {
+        "szoveg": "Az oldalsávban (vagy a menüben) keresd meg a „Projektek” részt.",
+        "jelenet": {
+          "oldalsav": [
+            "Új beszélgetés",
+            "Projektek",
+            "Korábbi beszélgetések"
+          ],
+          "ki": "Projektek",
+          "fo": [],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Válaszd az új projekt létrehozását (a gomb neve lehet „Új projekt”).",
+        "jelenet": {
+          "oldalsav": [
+            "Új beszélgetés",
+            "Projektek",
+            "Korábbi beszélgetések"
+          ],
+          "ki": null,
+          "fo": [
+            {
+              "t": "cim",
+              "szoveg": "Projektek"
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Új projekt",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Adj nevet a projektnek, és írd meg az utasításokat.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "cim",
+              "szoveg": "Új projekt"
+            },
+            {
+              "t": "mezo",
+              "szoveg": "Név",
+              "ki": true
+            },
+            {
+              "t": "mezo",
+              "szoveg": "Utasítások",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Add hozzá a fájlokat („Fájl hozzáadása”), majd kezdj beszélgetést a projekten belül.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "cim",
+              "szoveg": "A projekt"
+            },
+            {
+              "t": "fajl",
+              "szoveg": "minta.pdf",
+              "ki": false
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Fájl hozzáadása",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Beszélgetés indítása",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      }
+    ]
+  },
+  "artifact": {
+    "cim": "Artifact megnyitása és szerkesztése",
+    "sugo": {
+      "szoveg": "Artifactok (hivatalos súgó)",
+      "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+    },
+    "lepesek": [
+      {
+        "szoveg": "Írd meg a kérésedet a beszélgetésben (például egy ellenőrző listát kérsz).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "mezo",
+              "szoveg": "Kérés a beszélgetésben",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Küldés",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "A válasz mellett külön panelen megnyílik az artifact.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "szoveg",
+              "szoveg": "Válasz a beszélgetésben"
+            },
+            {
+              "t": "panel",
+              "szoveg": "Artifact (önálló dokumentum)",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Kérj módosítást a beszélgetésben, vagy szerkeszd közvetlenül.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "mezo",
+              "szoveg": "Módosítás kérése",
+              "ki": true
+            },
+            {
+              "t": "panel",
+              "szoveg": "Artifact (frissített)"
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Mentsd el, töltsd le vagy oszd meg (a gombok neve és helye változhat).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "panel",
+              "szoveg": "Artifact"
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Letöltés / megosztás",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      }
+    ]
+  },
+  "fajl": {
+    "cim": "Fájl csatolása a kéréshez",
+    "sugo": {
+      "szoveg": "Fájlok feltöltése (hivatalos súgó)",
+      "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+    },
+    "lepesek": [
+      {
+        "szoveg": "Keresd meg a beviteli mező mellett a csatolás gombját (gemkapocs vagy „+” jel).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "mezo",
+              "szoveg": "Írj ide kérést…",
+              "ki": false
+            },
+            {
+              "t": "gomb",
+              "szoveg": "+  Csatolás",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Válaszd ki a fájlt az eszközödről (PDF, táblázat vagy kép).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "cim",
+              "szoveg": "Fájl kiválasztása"
+            },
+            {
+              "t": "fajl",
+              "szoveg": "dokumentum.pdf",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Írd meg a kérést a fájlról, és küldd el.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "fajl",
+              "szoveg": "dokumentum.pdf",
+              "ki": false
+            },
+            {
+              "t": "mezo",
+              "szoveg": "Foglald össze 5 pontban…",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Küldés",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Ellenőrizd a választ az eredeti fájlban, különösen a számokat.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "szoveg",
+              "szoveg": "Válasz"
+            },
+            {
+              "t": "fajl",
+              "szoveg": "dokumentum.pdf",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      }
+    ]
+  },
+  "beallitasok": {
+    "cim": "Beállítások: utasítások és memória",
+    "sugo": {
+      "szoveg": "Memória és előzmények (hivatalos súgó)",
+      "url": "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+    },
+    "lepesek": [
+      {
+        "szoveg": "Nyisd meg a profilod menüjét (a nevednél vagy a képednél).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "gomb",
+              "szoveg": "Profil menü",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Válaszd a „Beállítások” pontot.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "cim",
+              "szoveg": "Profil menü"
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Beállítások",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Kilépés",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Keresd meg a személyre szabás részt: itt adhatod meg az utasításaidat és itt kapcsolhatod a memóriát.",
+        "jelenet": {
+          "oldalsav": [
+            "Általános",
+            "Személyre szabás",
+            "Adatvédelem"
+          ],
+          "ki": "Személyre szabás",
+          "fo": [],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Írd be az utasításaidat, és döntsd el, hogy a memória be legyen-e kapcsolva.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "mezo",
+              "szoveg": "Utasítások",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Memória: be / ki",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Mentés",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      }
+    ]
+  },
+  "hangmod": {
+    "cim": "Hangos beszélgetés a telefonon",
+    "sugo": {
+      "szoveg": "Hangmód (hivatalos súgó)",
+      "url": "https://support.claude.com/en/articles/11101966-use-voice-mode"
+    },
+    "lepesek": [
+      {
+        "szoveg": "Nyisd meg az alkalmazást a telefonodon.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "cim",
+              "szoveg": "Alkalmazás"
+            },
+            {
+              "t": "mezo",
+              "szoveg": "Írj ide…",
+              "ki": false
+            }
+          ],
+          "telefon": true
+        }
+      },
+      {
+        "szoveg": "Keresd meg a beviteli mező mellett a hangos beszélgetés ikonját (hullámvonal).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "mezo",
+              "szoveg": "Írj ide…",
+              "ki": false
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Hullámvonal ikon",
+              "ki": true
+            }
+          ],
+          "telefon": true
+        }
+      },
+      {
+        "szoveg": "Ha kéri, engedélyezd a mikrofont.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "szoveg",
+              "szoveg": "Engedélyezed a mikrofont?"
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Engedélyezem",
+              "ki": true
+            }
+          ],
+          "telefon": true
+        }
+      },
+      {
+        "szoveg": "Beszélj természetesen, és hallgasd meg a választ.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "szoveg",
+              "szoveg": "Hallgat…"
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Vége",
+              "ki": true
+            }
+          ],
+          "telefon": true
+        }
+      }
+    ]
+  },
+  "githubpages": {
+    "cim": "Weboldal közzététele GitHub Pages-en",
+    "sugo": {
+      "szoveg": "GitHub Pages (hivatalos dokumentáció)",
+      "url": "https://docs.github.com/en/pages"
+    },
+    "lepesek": [
+      {
+        "szoveg": "Hozz létre egy tárolót (repository) a GitHubon, nyilvános beállítással.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "cim",
+              "szoveg": "Új tároló"
+            },
+            {
+              "t": "mezo",
+              "szoveg": "Név",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Létrehozás",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Töltsd fel a fájljaidat („Add file”, majd „Upload files”).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "gomb",
+              "szoveg": "Add file ▾",
+              "ki": true
+            },
+            {
+              "t": "fajl",
+              "szoveg": "index.html",
+              "ki": false
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Commit changes",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Nyisd meg a tároló „Settings” részét, ott a „Pages” pontot.",
+        "jelenet": {
+          "oldalsav": [
+            "General",
+            "Pages",
+            "Security"
+          ],
+          "ki": "Pages",
+          "fo": [],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Válaszd: Deploy from a branch, ág: main, mappa: / (root), majd Save.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "mezo",
+              "szoveg": "Source: Deploy from a branch",
+              "ki": false
+            },
+            {
+              "t": "mezo",
+              "szoveg": "Branch: main  /  (root)",
+              "ki": true
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Save",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Néhány perc múlva megjelenik a weboldalad címe.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "szoveg",
+              "szoveg": "Az oldalad elérhető itt:"
+            },
+            {
+              "t": "mezo",
+              "szoveg": "https://felhasznalonev.github.io/…",
+              "ki": false
+            }
+          ],
+          "telefon": false
+        }
+      }
+    ]
+  },
+  "claudecode": {
+    "cim": "Claude Code indítása (áttekintés)",
+    "sugo": {
+      "szoveg": "Claude Code (hivatalos dokumentáció)",
+      "url": "https://code.claude.com/docs/en/overview"
+    },
+    "lepesek": [
+      {
+        "szoveg": "Nyiss egy terminált (parancssort) a számítógépeden.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "terminal",
+              "szoveg": "$ _",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Lépj abba a mappába, amellyel dolgozni szeretnél (a „cd” paranccsal).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "terminal",
+              "szoveg": "$ cd ProjektMappa",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Indítsd el az eszközt a „claude” paranccsal (a telepítésről a hivatalos leírás szól).",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "terminal",
+              "szoveg": "$ claude",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      },
+      {
+        "szoveg": "Írd le a feladatot, és minden lépésnél te hagyod jóvá, amit csinál.",
+        "jelenet": {
+          "oldalsav": [],
+          "ki": null,
+          "fo": [
+            {
+              "t": "terminal",
+              "szoveg": "Mit szeretnél csinálni?"
+            },
+            {
+              "t": "gomb",
+              "szoveg": "Jóváhagyom",
+              "ki": true
+            }
+          ],
+          "telefon": false
+        }
+      }
+    ]
+  }
+}

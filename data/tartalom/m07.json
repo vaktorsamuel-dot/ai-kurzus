@@ -62,7 +62,7 @@
         {
           "cim": "Árulkodó jelek",
           "blokkok": [
-            "Hasznos tudni ezeket, hogy a hamisított videókat is könnyebben felismerd (8.3 fejezet):",
+            "Hasznos tudni ezeket, hogy a hamisított videókat is könnyebben felismerd ({{fej:8.3}} fejezet):",
             { "lista": [
               "Ujjak, fogak, fülek, ékszerek „átalakulnak”.",
               "Tárgyak a mozgás közben összeolvadnak vagy eltűnnek.",
@@ -122,7 +122,7 @@
         {
           "cim": "A jelenetleírás összetevői",
           "blokkok": [
-            "A képleírás öt összetevője (6.1) itt is érvényes, és két új jön hozzá: a **mozgás** és az **idő**.",
+            "A képleírás öt összetevője ({{fej:6.1}}) itt is érvényes, és két új jön hozzá: a **mozgás** és az **idő**.",
             { "lista": [
               "**Téma és környezet:** mi látható, hol.",
               "**Mozgás a jelenetben:** mi mozog és hogyan? „A falevelek lassan hullanak.”",

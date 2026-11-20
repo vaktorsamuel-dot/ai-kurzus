@@ -57,7 +57,8 @@
               "**Mások [[szemelyes-adat|személyes adatai]]:** ügyfelek, kollégák, családtagok neve, címe, telefonszáma, ügyei.",
               "**Munkahelyi titkok:** szerződések, belső számok, stratégiák – hacsak a munkahelyed kifejezetten nem engedélyezi az adott eszközt."
             ] },
-            "Az Európai Unióban a [[gdpr|GDPR]] szabályozza a személyes adatok kezelését. Ha munkában mások adatait másolod be egy nem engedélyezett eszközbe, az adatvédelmi szabálysértés is lehet."
+            "Az Európai Unióban a [[gdpr|GDPR]] szabályozza a személyes adatok kezelését. Ha munkában mások adatait másolod be egy nem engedélyezett eszközbe, az adatvédelmi szabálysértés is lehet.",
+            { "ellenorizd": "Jogi vagy adatvédelmi kérdésben az AI csak általános képet adhat. Konkrét helyzetben kérdezd meg a munkahelyi adatvédelmi felelőst vagy egy jogászt." }
           ]
         },
         {
@@ -228,7 +229,8 @@
               "**Titkolózás:** „Ne szólj senkinek”, „ez maradjon köztünk”.",
               "**Szokatlan csatorna vagy kérés:** a „főnököd” hirtelen üzenetben kér utalást; a „gyereked” új számról ír.",
               "**Túl szép vagy túl ijesztő:** nyeremény, befektetés garantált hozammal; baleset, letartóztatás."
-            ] }
+            ] },
+            { "ellenorizd": "Ha egy üzenet pénzt vagy adatot kér, ne az üzenet alapján döntsd el, hogy igaz-e. Hívd vissza az illetőt vagy a céget egy általad ismert számon, vagy nyisd meg a hivatalos oldalt saját magad." }
           ]
         },
         {

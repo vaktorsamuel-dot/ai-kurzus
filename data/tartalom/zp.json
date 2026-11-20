@@ -32,7 +32,7 @@
               "**Ellenőrizhető:** meg tudod ítélni, hogy jó lett-e.",
               "**Biztonságos:** nem kell hozzá személyes vagy bizalmas adatot kiadni (vagy anonimizálható)."
             ] },
-            "A legjobb projektek több modult is érintenek: például egy dokumentumot összefoglaltatsz (3. modul), utánanézel a benne lévő szabályoknak (4. modul), és levelet írsz belőle (3. modul)."
+            "A legjobb projektek több modult is érintenek: például egy dokumentumot összefoglaltatsz ({{mod:m03}}. modul), utánanézel a benne lévő szabályoknak ({{mod:m04}}. modul), és levelet írsz belőle ({{mod:m03}}. modul)."
           ]
         },
         {
@@ -70,7 +70,7 @@
           "kreativ": [
             "Egy rendezvény (születésnap, osztálytalálkozó) teljes programja, meghívóval és egy AI-illusztrációval (jelölve).",
             "Egy rövid saját szöveg (köszöntő, bejegyzéssorozat) megírása, stílusváltozatokkal.",
-            "Egy egyoldalas hobbi-weboldal elkészítése és közzététele (10. modul)."
+            "Egy egyoldalas hobbi-weboldal elkészítése és közzététele ({{mod:m10}}. modul)."
           ],
           "tanulas": [
             "Egy új téma megtanulása: magyarázat a te szintedre, öt ellenőrző kérdés, és egy egyoldalas jegyzet.",
@@ -90,7 +90,7 @@
         "lepesek": [
           "Válassz egy ötletet a listából, vagy írd le a sajátodat.",
           "Írd meg a jegyzetbe a három mondatot: mi a feladat, mikor kész, mire figyelsz.",
-          "Gondold végig, milyen adatok kellenek hozzá, és melyiket kell anonimizálnod vagy kihagynod (8.1).",
+          "Gondold végig, milyen adatok kellenek hozzá, és melyiket kell anonimizálnod vagy kihagynod ({{fej:8.1}}).",
           "Ha bizonytalan vagy, másold be a célodat az AI-ba a tervező kéréssel."
         ],
         "promptok": [
@@ -101,7 +101,7 @@
       "kviz": [
         { "k": "Melyik a jó záró projekt?", "v": ["Egy gyakorlófeladat, amire nincs szükséged.", "Egy valódi, 30–60 perc alatt elvégezhető, ellenőrizhető feladat.", "A cég teljes stratégiája.", "Bármi, ami hosszú."], "h": 1, "m": "Valódi, kezelhető, ellenőrizhető és biztonságos." },
         { "k": "Mit jelent a „kész” állapot megfogalmazása?", "v": ["Hogy mikor kezded.", "Hogy előre tudd, milyen eredmény esetén tekinted befejezettnek.", "Hogy hány órát dolgozol.", "Hogy ki ellenőrzi."], "h": 1, "m": "Enélkül könnyű a végtelenségig finomítani – vagy túl korán abbahagyni." },
-        { "k": "Mit tegyél a projektben szükséges személyes adatokkal?", "v": ["Másold be mindet.", "Hagyd ki vagy anonimizáld őket, és a valódi adatokat a végén, a saját gépeden írd vissza.", "Küldd el e-mailben az AI-nak.", "Tedd ki egy weboldalra."], "h": 1, "m": "A 8.1 szabályai a záró projektben is érvényesek." }
+        { "k": "Mit tegyél a projektben szükséges személyes adatokkal?", "v": ["Másold be mindet.", "Hagyd ki vagy anonimizáld őket, és a valódi adatokat a végén, a saját gépeden írd vissza.", "Küldd el e-mailben az AI-nak.", "Tedd ki egy weboldalra."], "h": 1, "m": "A {{fej:8.1}} szabályai a záró projektben is érvényesek." }
       ],
       "osszefoglalo": [
         "Válassz valódi, kezelhető, ellenőrizhető és biztonságos feladatot.",
@@ -125,13 +125,13 @@
           "blokkok": [
             { "szamozott": [
               "**Indítás:** új beszélgetés (vagy projekt), az egyedi utasításod bekapcsolva. Az első üzenetben írd le a célt és a „kész” állapotot.",
-              "**Lépésenként:** egyszerre egy lépést kérj. A jó kérés öt eleme (2.1) minden lépésnél segít.",
-              "**Finomítás:** konkrét visszajelzés (2.3). Ha elakadsz, kérd, hogy kérdezzen vissza.",
-              "**Ellenőrzés:** minden tényt, számot, dátumot, szabályt ellenőrizz megbízható forrásban (4.2).",
-              "**Rendrakás:** ha a beszélgetés hosszúra nyúlt, kérj átadó összefoglalót (8.2).",
+              "**Lépésenként:** egyszerre egy lépést kérj. A jó kérés öt eleme ({{fej:2.1}}) minden lépésnél segít.",
+              "**Finomítás:** konkrét visszajelzés ({{fej:2.3}}). Ha elakadsz, kérd, hogy kérdezzen vissza.",
+              "**Ellenőrzés:** minden tényt, számot, dátumot, szabályt ellenőrizz megbízható forrásban ({{fej:4.2}}).",
+              "**Rendrakás:** ha a beszélgetés hosszúra nyúlt, kérj átadó összefoglalót ({{fej:8.2}}).",
               "**Véglegesítés:** a kész anyagot vidd át oda, ahol használni fogod (dokumentum, levél, naptár), és ott írd vissza a valódi adatokat."
             ] },
-            { "tipp": "Ha a projekted része egy kép vagy weboldal, a 6. és a 10. modul lépéseit is használd – és jelöld az AI-tartalmat." }
+            { "tipp": "Ha a projekted része egy kép vagy weboldal, a {{mod:m06}}. és a {{mod:m10}}. modul lépéseit is használd – és jelöld az AI-tartalmat." }
           ]
         },
         {
@@ -141,7 +141,7 @@
               "**Túl nagy a feladat:** bontsd tovább, vagy szűkítsd a „kész” állapotot.",
               "**Nem jó a válasz:** nézd meg, melyik elem hiányzik a kérésből (cél, háttér, szerep, formátum, példa).",
               "**Bizonytalan vagy egy tényben:** kérj forrást, és nézz utána (4.2, 4.3).",
-              "**Nem tetszik az eszköz válasza:** próbáld ki egy másikban is (9.2)."
+              "**Nem tetszik az eszköz válasza:** próbáld ki egy másikban is ({{fej:9.2}})."
             ] }
           ]
         }
@@ -180,7 +180,7 @@
       "kviz": [
         { "k": "Miért jó egyszerre egy lépést kérni?", "v": ["Mert így lassabb.", "Mert így minden lépést ellenőrizni és finomítani tudsz, mielőtt továbblépsz.", "Mert az AI egyszerre csak egyet tud.", "Nincs jelentősége."], "h": 1, "m": "A kisebb lépések jobban kézben tarthatók." },
         { "k": "Hol írd vissza a valódi adatokat?", "v": ["Az AI-beszélgetésben.", "A végleges anyagban, a saját gépeden vagy fiókodban.", "Egy nyilvános weboldalon.", "Sehol."], "h": 1, "m": "Így a valódi adat nem kerül az AI-eszközbe." },
-        { "k": "Mit tegyél, ha egy válasz nem jó?", "v": ["Feladod a projektet.", "Megnézed, melyik elem hiányzott a kérésből, és konkrét visszajelzést adsz.", "Mindig új eszközt keresel.", "Elfogadod."], "h": 1, "m": "A 2. modul eszközei itt is működnek." }
+        { "k": "Mit tegyél, ha egy válasz nem jó?", "v": ["Feladod a projektet.", "Megnézed, melyik elem hiányzott a kérésből, és konkrét visszajelzést adsz.", "Mindig új eszközt keresel.", "Elfogadod."], "h": 1, "m": "A {{mod:m02}}. modul eszközei itt is működnek." }
       ],
       "osszefoglalo": [
         "Új beszélgetés, cél és kész állapot, egyszerre egy lépés.",

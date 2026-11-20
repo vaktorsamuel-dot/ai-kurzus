@@ -44,7 +44,8 @@
               "**Diktálás:** a telefon vagy az alkalmazás [[beszedfelismeres|beszédfelismerése]] szöveggé alakítja, amit mondasz. Ezt a szöveget küldöd el az AI-nak, mintha begépelted volna.",
               "**Hangos beszélgetés:** az AI hangosan válaszol, és te is hangosan reagálsz – mint egy telefonbeszélgetés."
             ] },
-            "A legtöbb AI-alkalmazásban mindkettőhöz van egy mikrofon vagy hullámvonal ikon a beviteli mező mellett. A pontos helye és neve alkalmazásonként eltér, és változhat is."
+            "A legtöbb AI-alkalmazásban mindkettőhöz van egy mikrofon vagy hullámvonal ikon a beviteli mező mellett. A pontos helye és neve alkalmazásonként eltér, és változhat is.",
+            { "lepesabra": "hangmod" }
           ]
         },
         {
@@ -64,7 +65,7 @@
           "blokkok": [
             { "lista": [
               "**Környezet:** nyilvános helyen mások is hallják, amit mondasz – és amit az AI válaszol.",
-              "**Hangfelvétel:** az alkalmazás a hangodat feldolgozza; nézd meg a beállításokban, mit tárol belőle (8. modul).",
+              "**Hangfelvétel:** az alkalmazás a hangodat feldolgozza; nézd meg a beállításokban, mit tárol belőle ({{mod:m08}}. modul).",
               "**Nevek és számok:** a beszédfelismerés a ritka neveket, számokat gyakran félrehallja. Mindig nézd át."
             ] }
           ]

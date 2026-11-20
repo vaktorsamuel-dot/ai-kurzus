@@ -1,11 +1,8 @@
 // Tárolás: localStorage verziózott kulcsokkal, memóriás tartalékkal.
 // Kulcsok: aikurzus.v1.profil, aikurzus.v1.haladas, aikurzus.v1.beallitasok
 
-import { isAdmin } from './admin.js';
-
 const PREFIX = 'aikurzus.v1.';
-// Kezelő módban a haladás külön kulcsra kerül, hogy a felhasználó mentése érintetlen maradjon.
-const storageKey = (name) => PREFIX + (name === 'haladas' && isAdmin() ? 'kezelo.haladas' : name);
+const storageKey = (name) => PREFIX + name;
 const KEYS = ['profil', 'haladas', 'beallitasok'];
 const memory = {};
 let persistent = true;
@@ -55,20 +52,41 @@ export const DEFAULT_SETTINGS = {
   feliratok: true,
 };
 
+// A mentett haladás formátumának verziója. 1: eredeti; 2: nincs „kihagyva”, completedAt, oklevelNev.
+export const DATA_VERSION = 2;
+
+// Régi (1-es verziójú) haladás átalakítása; adatot nem töröl, csak átnevez / elhagy elavult jelzőt.
+export function migrateProgress(h) {
+  const out = Object.assign({}, h);
+  if (!out.fejezetek) out.fejezetek = {};
+  if (!out.modulok) out.modulok = {};
+  if ((out.verzio || 1) < 2) {
+    if (out.kurzusKesz && !out.completedAt) out.completedAt = out.kurzusKesz;
+    delete out.kurzusKesz;
+    Object.keys(out.modulok).forEach((k) => { if (out.modulok[k]) delete out.modulok[k].kihagyva; });
+  }
+  if (out.completedAt === undefined) out.completedAt = null;
+  if (out.oklevelNev === undefined) out.oklevelNev = null;
+  out.verzio = DATA_VERSION;
+  return out;
+}
+
 function emptyProgress() {
   return {
+    verzio: DATA_VERSION,
     fejezetek: {},   // "1.1": { olvasas, video:{ranges,pos,duration,done}, gyakorlat, kviz:{best,passed}, kesz, keszIdo, szovegek:{} }
     modulok: {},     // "m01": { kviz:{best,passed}, lezarva, lezarasIdo, kihagyva }
     aktualis: null,  // utoljára megnyitott fejezet azonosítója
     utoljara: null,  // { ido, hash, cim }
-    kurzusKesz: null,
+    completedAt: null,  // amikor a haladás először érte el a 100%-ot (az oklevél dátuma)
+    oklevelNev: null,   // az oklevélen szereplő név (külön szerkeszthető)
     letrehozva: new Date().toISOString(),
   };
 }
 
 const state = {
   profil: read('profil', null),
-  haladas: Object.assign(emptyProgress(), read('haladas', {})),
+  haladas: migrateProgress(Object.assign(emptyProgress(), read('haladas', {}), { verzio: (read('haladas', {}) || {}).verzio || 1 })),
   beallitasok: Object.assign({}, DEFAULT_SETTINGS, read('beallitasok', {})),
 };
 
@@ -97,6 +115,21 @@ export function logout() {
   try { sessionStorage.removeItem(SESSION_KEY); localStorage.removeItem(REMEMBER_KEY); } catch (e) { /* nincs teendő */ }
 }
 
+// Belépés nélkül megnyitott mélylink megjegyzése: belépés után ide térünk vissza.
+const RETURN_KEY = PREFIX + 'vissza';
+let returnMem = null;
+export function setReturnTo(hash) {
+  if (!/^#\/(m\/|oklevel|beallitasok|sugo|szoszedet)/.test(hash || '')) return;
+  returnMem = hash;
+  try { sessionStorage.setItem(RETURN_KEY, hash); } catch (e) { /* memóriás tartalék */ }
+}
+export function takeReturnTo() {
+  let h = returnMem;
+  try { h = sessionStorage.getItem(RETURN_KEY) || h; sessionStorage.removeItem(RETURN_KEY); } catch (e) { /* nincs teendő */ }
+  returnMem = null;
+  return h || null;
+}
+
 export function getSettings() { return state.beallitasok; }
 export function setSettings(patch) {
   Object.assign(state.beallitasok, patch);
@@ -121,7 +154,7 @@ export function chapterState(id) {
 }
 export function moduleState(id) {
   const m = state.haladas.modulok;
-  if (!m[id]) m[id] = { kviz: null, lezarva: false, kihagyva: false };
+  if (!m[id]) m[id] = { kviz: null, lezarva: false };
   return m[id];
 }
 
@@ -129,7 +162,7 @@ export function moduleState(id) {
 export function exportData() {
   return {
     formatum: 'aikurzus-haladas',
-    verzio: 1,
+    verzio: DATA_VERSION,
     exportalva: new Date().toISOString(),
     profil: state.profil,
     haladas: state.haladas,
@@ -160,7 +193,7 @@ export function importAny(text) {
     throw new Error('Ez nem egy érvényes haladás-mentés.');
   }
   state.profil = obj.profil || null;
-  state.haladas = Object.assign(emptyProgress(), obj.haladas);
+  state.haladas = migrateProgress(Object.assign(emptyProgress(), obj.haladas, { verzio: obj.haladas.verzio || obj.verzio || 1 }));
   state.beallitasok = Object.assign({}, DEFAULT_SETTINGS, obj.beallitasok || {});
   KEYS.forEach((k) => write(k, state[k]));
   applySettings();

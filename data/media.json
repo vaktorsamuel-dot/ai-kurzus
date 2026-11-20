@@ -869,6 +869,94 @@
       "prompt_en": "Photorealistic photo of a person in their late thirties sitting in an armchair by a window, holding a coffee cup, an open notebook on their lap, with a content, reflective expression. Soft morning light, authentic, realistic skin and hands. 16:9.",
       "statusz": "kesz",
       "meret": "1600x900"
+    },
+    {
+      "id": "img-4-4",
+      "tipus": "kep",
+      "fajl": "m04-4-4-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "4.4 fejezet – hero kép",
+      "alt": "Egy férfi a konyhában számológéppel ellenőriz egy számot, miközben a telefonján egy válasz látszik.",
+      "prompt_hu": "Valósághű fotó: ötvenes éveiben járó férfi egy konyhaasztalnál ül, egyik kezében számológép, a másikban a telefonja, és megfontoltan, kissé mosolyogva ellenőrzi a látottakat. Természetes fény, hétköznapi, nyugodt hangulat, a kijelzőn nincs olvasható szöveg.",
+      "prompt_en": "Photorealistic, natural-light photo of a man in his fifties sitting at a kitchen table, holding a calculator in one hand and a phone in the other, double-checking something with a thoughtful, slightly smiling expression. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable screen content, no text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-12-1",
+      "tipus": "kep",
+      "fajl": "m12-12-1-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "12.1 fejezet – hero kép",
+      "alt": "Egy ember két laptop előtt ül, az egyiken ismerős, a másikon új csevegőfelület; kíváncsian, nyugodtan néz.",
+      "prompt_hu": "Valósághű fotó: Egy ember két laptop előtt ül, az egyiken ismerős, a másikon új csevegőfelület; kíváncsian, nyugodtan néz. Természetes fény, hétköznapi, nyugodt hangulat, nincs olvasható szöveg vagy márkajel.",
+      "prompt_en": "Photorealistic, natural-light photo: a photorealistic photo of a middle-aged person at a desk with two laptops side by side, comparing two generic chat windows with calm curiosity. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-12-2",
+      "tipus": "kep",
+      "fajl": "m12-12-2-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "12.2 fejezet – hero kép",
+      "alt": "Két telefon egymás mellett az asztalon, mindkét kijelzőn csevegőablak.",
+      "prompt_hu": "Valósághű fotó: Két telefon egymás mellett az asztalon, mindkét kijelzőn csevegőablak. Természetes fény, hétköznapi, nyugodt hangulat, nincs olvasható szöveg vagy márkajel.",
+      "prompt_en": "Photorealistic, natural-light photo: two smartphones side by side on a wooden table, each showing a blurred generic chat window, a hand pointing at one of them. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-12-3",
+      "tipus": "kep",
+      "fajl": "m12-12-3-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "12.3 fejezet – hero kép",
+      "alt": "Rendezett íróasztal mappákkal, jegyzetfüzettel és laptoppal.",
+      "prompt_hu": "Valósághű fotó: Rendezett íróasztal mappákkal, jegyzetfüzettel és laptoppal. Természetes fény, hétköznapi, nyugodt hangulat, nincs olvasható szöveg vagy márkajel.",
+      "prompt_en": "Photorealistic, natural-light photo: a tidy desk with labeled paper folders, a notebook and an open laptop with a blurred generic document list on screen. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-12-4",
+      "tipus": "kep",
+      "fajl": "m12-12-4-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "12.4 fejezet – hero kép",
+      "alt": "Egy nő kinyomtatott ellenőrző listát pipál ki a laptop mellett.",
+      "prompt_hu": "Valósághű fotó: Egy nő kinyomtatott ellenőrző listát pipál ki a laptop mellett. Természetes fény, hétköznapi, nyugodt hangulat, nincs olvasható szöveg vagy márkajel.",
+      "prompt_en": "Photorealistic, natural-light photo: a woman ticking items on a printed checklist next to an open laptop showing a blurred document, bright kitchen. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-12-5",
+      "tipus": "kep",
+      "fajl": "m12-12-5-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "12.5 fejezet – hero kép",
+      "alt": "Papírok és egy telefon, amivel dokumentumot fényképeznek.",
+      "prompt_hu": "Valósághű fotó: Papírok és egy telefon, amivel dokumentumot fényképeznek. Természetes fény, hétköznapi, nyugodt hangulat, nincs olvasható szöveg vagy márkajel.",
+      "prompt_en": "Photorealistic, natural-light photo: hands holding a phone above a paper document on a table, scanning it, soft natural light. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-12-6",
+      "tipus": "kep",
+      "fajl": "m12-12-6-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "12.6 fejezet – hero kép",
+      "alt": "Valaki költözködő dobozokat pakol, mellette laptop; az átállás szemléltetése.",
+      "prompt_hu": "Valósághű fotó: Valaki költözködő dobozokat pakol, mellette laptop; az átállás szemléltetése. Természetes fény, hétköznapi, nyugodt hangulat, nincs olvasható szöveg vagy márkajel.",
+      "prompt_en": "Photorealistic, natural-light photo: a person packing a cardboard box next to a laptop on a table, a calm and tidy move-in atmosphere. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-12-7",
+      "tipus": "kep",
+      "fajl": "m12-12-7-hero.webp",
+      "meret": "1600x900",
+      "statusz": "hianyzik",
+      "hova": "12.7 fejezet – hero kép",
+      "alt": "Egy férfi két ajtó között megy, nyugodtan mérlegel.",
+      "prompt_hu": "Valósághű fotó: Egy férfi két ajtó között megy, nyugodtan mérlegel. Természetes fény, hétköznapi, nyugodt hangulat, nincs olvasható szöveg vagy márkajel.",
+      "prompt_en": "Photorealistic, natural-light photo: a man standing at a fork between two paths in a sunny park, thinking calmly, no signs or text. Everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no readable text, no brand marks. 16:9."
     }
   ]
 }

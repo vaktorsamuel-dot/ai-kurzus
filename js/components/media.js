@@ -1,7 +1,7 @@
 // Képek és videók a manifesztből, arányos helyőrzővel hiányzó vagy betölthetetlen fájl esetén.
 
-import { media } from '../data.js';
-import { esc, icon } from '../util.js';
+import { media } from '../data.js?v=7150738a';
+import { esc, icon } from '../util.js?v=7150738a';
 
 export const DEV = new URLSearchParams(location.search).has('dev');
 
@@ -29,12 +29,14 @@ export function placeholder(m, kind, ratio) {
 export function image(id, variant = 'hero') {
   const m = media(id);
   const ratio = RATIOS[variant] || RATIOS.hero;
-  if (!m || m.statusz !== 'kesz') return '<figure class="media">' + placeholder(m, 'kep', ratio) + '</figure>';
+  // Hiányzó kép: élesben semmi nem látszik (se hibaikon, se üres keret); fejlesztői módban (?dev=1) helyőrző.
+  if (!m || m.statusz !== 'kesz') return DEV ? '<figure class="media">' + placeholder(m, 'kep', ratio) + '</figure>' : '';
   const base = 'assets/img/' + m.fajl.replace(/\.(webp|jpe?g|png)$/i, '');
   const [w, h] = (m.meret || '1600x900').split('x');
   return '<figure class="media"><div class="media-frame" style="aspect-ratio:' + ratio + '" data-media-id="' + esc(m.id) + '">' +
+    '<button type="button" class="media-zoom" data-zoom aria-label="Nagyítás: ' + esc(m.alt) + '">' +
     '<picture><source srcset="' + esc(base) + '.webp" type="image/webp">' +
-    '<img src="' + esc(base) + '.jpg" alt="' + esc(m.alt) + '" width="' + w + '" height="' + h + '" loading="lazy" decoding="async" data-ph-kind="kep"></picture></div>' +
+    '<img src="' + esc(base) + '.jpg" alt="' + esc(m.alt) + '" width="' + w + '" height="' + h + '" loading="lazy" decoding="async" data-ph-kind="kep"></picture></button></div>' +
     (m.felirat ? '<figcaption class="muted small">' + esc(m.felirat) + '</figcaption>' : '') + '</figure>';
 }
 
@@ -53,6 +55,7 @@ export function bindImageFallbacks(root) {
       }
       const frame = img.closest('.media-frame');
       if (!frame || frame.classList.contains('ph')) return;
+      if (!DEV) { const fig = frame.closest('figure'); (fig || frame).remove(); return; } // betölthetetlen kép: ne látsszon hibás elem
       const m = media(frame.dataset.mediaId);
       frame.classList.add('ph');
       frame.setAttribute('role', 'img');
@@ -65,3 +68,24 @@ export function bindImageFallbacks(root) {
 }
 
 export { placeholderInner };
+
+// Kattintásra nagyítás (egyszerű, billentyűzettel is zárható párbeszédablak).
+export function initMediaZoom() {
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-zoom]');
+    if (!b) return;
+    const img = b.querySelector('img');
+    if (!img) return;
+    const d = document.createElement('dialog');
+    d.className = 'media-lightbox';
+    d.setAttribute('aria-label', 'Nagyított kép');
+    d.innerHTML = '<button type="button" class="btn btn-ghost media-lightbox-close" aria-label="Bezárás">Bezárás</button>' +
+      '<img src="' + esc(img.currentSrc || img.src) + '" alt="' + esc(img.alt) + '">';
+    document.body.appendChild(d);
+    const close = () => { d.close(); d.remove(); b.focus(); };
+    d.addEventListener('click', (ev) => { if (ev.target === d || ev.target.closest('.media-lightbox-close')) close(); });
+    d.addEventListener('cancel', (ev) => { ev.preventDefault(); close(); });
+    if (d.showModal) d.showModal(); else d.setAttribute('open', '');
+    d.querySelector('.media-lightbox-close').focus();
+  });
+}

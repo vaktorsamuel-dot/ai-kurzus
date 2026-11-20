@@ -1,0 +1,910 @@
+{
+  "cel": "Ha úgy látod jónak, át tudsz térni a ChatGPT-ről Claude-ra, vagy tudatosan használod mindkettőt. Közben tudod, mi az, ami ugyanaz, mi az, ami más, és mit nézz meg a hivatalos súgóban.",
+  "utana": [
+    "Tudod, hogy a megszokott ChatGPT-funkciók hol találhatók Claude-ban.",
+    "Ki tudod próbálni ugyanazt a kérést mindkét eszközben, és össze tudod hasonlítani a válaszokat.",
+    "Tudsz projektet, artifactot és fájlfeltöltést használni, és megalapozottan döntöd el, maradsz-e vagy váltasz."
+  ],
+  "javaslat": {
+    "levelezes": "Hozz létre egy „Levelezés” projektet, és írass vele egy valódi választ.",
+    "dokumentumok": "Tölts fel egy kitalált vagy nyilvános dokumentumot, és kérj összefoglalót.",
+    "kutatas": "Kérdezz ugyanarra a kérdésre mindkét eszközben, és vesd össze a forrásokat.",
+    "kreativ": "Kérj egy artifactot (például egy tervet vagy listát), és szerkeszd át.",
+    "tanulas": "Hozz létre egy tanulási projektet a saját tananyagoddal."
+  },
+  "osszefoglalo": [
+    "Az átállás fokozatos, és te döntöd el, mikor és mennyit viszel át.",
+    "Projekt, artifact és fájlfeltöltés: ezek a leghasznosabb különbségek.",
+    "Utoljára ellenőrizve: 2026. november 20. Az alkalmazások változnak, a hivatalos súgó mindig frissebb."
+  ],
+  "kviz": [
+    {
+      "k": "Mi a projekt Claude-ban?",
+      "v": [
+        "Egy külön munkaterület egy témához saját utasítással és fájlokkal.",
+        "Egy képszerkesztő.",
+        "Egy jelszótár.",
+        "Egy fizetési mód."
+      ],
+      "h": 0,
+      "m": "A projekt egy téma köré szervezett munkaterület."
+    },
+    {
+      "k": "Mit tudsz a ChatGPT-adatok exportálásáról?",
+      "v": [
+        "Nincs ilyen lehetőség.",
+        "A hivatalos súgó szerint a beállításokban kérhető az export.",
+        "Csak telefonról.",
+        "Csak a fizetős csomagban."
+      ],
+      "h": 1,
+      "m": "A hivatalos súgó szerint a ChatGPT beállításaiban az adatkezelési résznél kérhető, de a lépések változhatnak."
+    },
+    {
+      "k": "Mire használhatod az artifactot?",
+      "v": [
+        "Dokumentum, ellenőrző lista vagy egyszerű kalkulátor készítésére.",
+        "Csak üzenetküldésre.",
+        "Csak képnézésre.",
+        "Semmire."
+      ],
+      "h": 0,
+      "m": "Az artifact önálló, szerkeszthető eszköz vagy dokumentum."
+    },
+    {
+      "k": "Mit tegyél, ha az alkalmazásban máshogy látod a funkciót, mint ahogy leírtuk?",
+      "v": [
+        "Hibásnak tekintem a kurzust.",
+        "A hivatalos súgót nézem meg, mert az frissebb.",
+        "Feladom.",
+        "Letörlöm az alkalmazást."
+      ],
+      "h": 1,
+      "m": "Az alkalmazások változnak, a hivatalos súgó a legfrissebb."
+    },
+    {
+      "k": "Melyik nem igaz Claude képességeire a súgó alapján?",
+      "v": [
+        "Képet néz és elemez.",
+        "Diagramot, grafikont rajzol.",
+        "Fotót és illusztrációt készít.",
+        "Fájlt fogad."
+      ],
+      "h": 2,
+      "m": "Claude nem készít fotót vagy illusztrációt."
+    },
+    {
+      "k": "Hová ellenőrizd az árakat?",
+      "v": [
+        "Egy régi cikkből.",
+        "A hivatalos árazási oldalról.",
+        "Az ismerősöktől.",
+        "Sehová."
+      ],
+      "h": 1,
+      "m": "Az árak gyakran változnak."
+    }
+  ],
+  "fejezetek": [
+    {
+      "id": "12.1",
+      "cim": "Mi ugyanaz, és mi más?",
+      "ido": 8,
+      "hero": "img-12-1",
+      "celok": [
+        "Tudod, hogy a ChatGPT-ben megszokott funkciók közül melyik hol található Claude-ban.",
+        "Tudod, mi az, ami Claude-ban másképp működik, vagy nincs meg.",
+        "Tudod, mit érdemes a következő fejezetekben kipróbálni."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Nem kell újratanulni mindent",
+          "blokkok": [
+            "Ha a ChatGPT-t már használod, a legtöbb dolgot Claude-ban is ismerősnek fogod találni: van egy beszélgetőablak, oldalt a korábbi beszélgetések listája, és a kérés megírásának ugyanazok a szabályai ([[prompt]]). A {{mod:m02}}. modulban tanult jó kérés mindkét eszközben jó kérés.",
+            "A különbség inkább a részletekben van: a funkciók neve, a helye a menüben, és az, hogy mi van meg az egyikben, a másikban pedig nincs. Az alábbi térkép ebben segít."
+          ]
+        },
+        {
+          "cim": "Térkép: hol találod?",
+          "blokkok": [
+            {
+              "tabla": [
+                [
+                  "Megszokott ChatGPT-ben",
+                  "Claude-ban",
+                  "Mire figyelj"
+                ],
+                [
+                  "Egyedi utasítások (custom instructions)",
+                  "A Beállításokban a profilod / személyes preferenciáid között",
+                  "A menü neve és helye változhat. Keresd a „Beállítások” részben."
+                ],
+                [
+                  "Memória",
+                  "Van memóriafunkció is, a Beállításokban kapcsolható és nézhető meg",
+                  "Nézd meg, mit jegyzett meg, és kapcsold ki, ha nem kéred."
+                ],
+                [
+                  "GPT-k és Projektek",
+                  "Projektek: közös utasítás és fájlok egy témához",
+                  "Saját „GPT” helyett Claude-ban a projekt a megfelelő. Lásd: {{fej:12.3}}."
+                ],
+                [
+                  "Canvas",
+                  "Artifactok: a válasz mellett megjelenő önálló dokumentum vagy kis eszköz",
+                  "Nem ugyanaz, de hasonló célra használható. Lásd: {{fej:12.4}}."
+                ],
+                [
+                  "Képgenerálás",
+                  "Claude nem készít fotót vagy illusztrációt",
+                  "Képet megnézni tud, diagramot és grafikont rajzolni is. Lásd: {{fej:12.7}}."
+                ],
+                [
+                  "Hangmód",
+                  "Hangos beszélgetés a mobilalkalmazásban",
+                  "A hangmód béta jellegű, a nyelvi támogatást ellenőrizd."
+                ],
+                [
+                  "Webes keresés",
+                  "Van webes keresés",
+                  "Lehet, hogy külön be kell kapcsolni, vagy magától keres. A súgóban nézd meg."
+                ]
+              ],
+              "forras": "Ez az összehasonlítás a hivatalos súgók alapján készült (Utoljára ellenőrizve: 2026. november 20.). A funkciók gyorsan változnak, ezért az alábbi fejezetekben is hivatkozunk a súgóra."
+            },
+            {
+              "ellenorizd": "Ebben a modulban minden funkcióról az áll, amit a hivatalos súgóban ellenőriztünk. Ha valami másképp látszik a te alkalmazásodban, a súgó mindig frissebb nálunk."
+            }
+          ]
+        },
+        {
+          "cim": "Mi lehet a legnagyobb különbség?",
+          "blokkok": [
+            "Három dolgot érdemes előre tudni:",
+            {
+              "lista": [
+                "**Nincs fotógenerálás.** Claude nem készít fotót vagy illusztrációt, de diagramokat, grafikonokat és interaktív ábrákat igen, és a feltöltött képeket megnézi.",
+                "**A projektek és az artifactok központi szerepet kapnak.** Ezekkel érdemes kezdeni.",
+                "**Az árazás és a határok más.** Ezeket nem írjuk ide, mert gyakran változnak. A hivatalos árazási oldalon nézd meg."
+              ]
+            }
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Térképezd fel a saját szokásaidat",
+        "ido": 5,
+        "bevezeto": "Mielőtt bármit átállítanál, írd le, mit használsz most a ChatGPT-ben. Ebből tudod meg, mi fontos neked.",
+        "lepesek": [
+          "Nyisd meg a ChatGPT-t, és nézd végig, mit használsz rendszeresen: utasítások, memória, projektek, fájlfeltöltés, hangmód, képgenerálás, keresés.",
+          "Írd fel a jegyzetedbe a három legfontosabbat.",
+          "Nézd meg a fenti térképen, hogy ezeknek mi felel meg Claude-ban."
+        ],
+        "jegyzetMinta": "Pl. leggyakrabban levelet írok és fájlt töltök fel; a képgenerálást ritkán használom."
+      },
+      "kviz": [
+        {
+          "k": "Melyik funkció felel meg nagyjából a ChatGPT „Canvas” szolgáltatásának Claude-ban?",
+          "v": [
+            "Artifactok",
+            "Hangmód",
+            "Webes keresés",
+            "Memória"
+          ],
+          "h": 0,
+          "m": "Az artifact a válasz mellett megjelenő önálló dokumentum vagy kis eszköz, amit külön szerkeszthetsz."
+        },
+        {
+          "k": "Mit tud Claude a képekkel kapcsolatban a hivatalos súgó szerint?",
+          "v": [
+            "Fotót és illusztrációt generál.",
+            "Megnézi a feltöltött képeket, és diagramokat is tud rajzolni, de nem készít fotót vagy illusztrációt.",
+            "Semmilyen képpel nem foglalkozik.",
+            "Csak GIF-et készít."
+          ],
+          "h": 1,
+          "m": "A hivatalos súgó szerint Claude nem készít fotót vagy illusztrációt, de diagramokat, grafikonokat készít, és a feltöltött képeket elemzi."
+        },
+        {
+          "k": "Honnan tudod meg biztosan, hogy egy funkció ma hol található?",
+          "v": [
+            "A régi tankönyvből.",
+            "A hivatalos súgóból.",
+            "Egy ismerős emlékeiből.",
+            "Sehonnan, mindig ugyanott van."
+          ],
+          "h": 1,
+          "m": "A funkciók és a menük változnak, a hivatalos súgó a legfrissebb forrás."
+        }
+      ],
+      "osszefoglalo": [
+        "A beszélgetés és a jó kérés szabályai mindkét eszközben ugyanazok.",
+        "A funkciók neve és helye eltér: egyedi utasítások, memória, projektek, artifactok.",
+        "Claude nem készít fotót vagy illusztrációt; a részleteket a hivatalos súgóban nézd meg."
+      ]
+    },
+    {
+      "id": "12.2",
+      "cim": "Ugyanaz a kérés mindkettőben: egymás mellett",
+      "ido": 12,
+      "hero": "img-12-2",
+      "celok": [
+        "Egymás mellett látod ugyanazt a kérést ChatGPT-ben és Claude-ban.",
+        "Megtanulod, mit érdemes összehasonlítani egy válaszban.",
+        "Egy gombnyomással kipróbálod a kérést mindkét eszközben."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Hogyan hasonlíts össze két eszközt?",
+          "blokkok": [
+            "Az AI nem ugyanazt a választ adja kétszer, ezért két eszköz összehasonlításánál nem az a kérdés, hogy melyik válasz „helyes”, hanem hogy **melyik illik jobban hozzád**. Nézd meg ezeket:",
+            {
+              "lista": [
+                "Eltalálta a hangnemet és a hosszt?",
+                "Pontos, amit állít? Különösen számoknál.",
+                "Érthető, egyszerű magyarsággal ír?",
+                "Mennyi utómunkát kér tőled?"
+              ]
+            },
+            {
+              "ellenorizd": "A mintaválaszokban és a saját próbáidban a számokat és a jogi tartalmat mindig ellenőrizd. Az ötödik példa éppen erről szól, és a {{fej:4.4}} fejezet is ezt gyakoroltatja."
+            }
+          ]
+        },
+        {
+          "cim": "Öt példa egymás mellett",
+          "blokkok": [
+            "Az alábbi öt kérést mindkét eszközben lefuttattuk. Minden példánál megtalálod a kérést, és ha már van mintaválasz, mellette a két eszköz válaszát. A „Próbáld ki te is” sávval megnyithatod mindkét eszközben.",
+            {
+              "osszehasonlitas": true
+            }
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Próbáld ki a saját kérdéseddel",
+        "ido": 8,
+        "bevezeto": "A legjobb összehasonlítás a saját, valódi feladatod.",
+        "lepesek": [
+          "Válassz egy feladatot, amit a héten amúgy is el kellene végezned (például egy e-mail vagy egy összefoglaló).",
+          "Másold be az alábbi kérést mindkét eszközbe. Cseréld ki a szögletes zárójeles részt.",
+          "Olvasd el a két választ, és jegyezd fel, melyik tetszett jobban és miért.",
+          "Ha számok vagy szabályok szerepelnek a válaszban, ellenőrizd őket."
+        ],
+        "promptok": [
+          {
+            "cim": "Saját feladat",
+            "szoveg": "Segíts ebben: [írd ide a saját feladatodat]. Válaszolj magyarul, egyszerű nyelven, és mondd meg, ha valamiben nem vagy biztos."
+          }
+        ],
+        "jegyzetMinta": "Pl. Claude válasza rövidebb volt, a ChatGPT-é részletesebb; a számokat számológéppel ellenőriztem."
+      },
+      "kviz": [
+        {
+          "k": "Mi a legjobb szempont két AI-eszköz összehasonlításához?",
+          "v": [
+            "Melyik válasza hosszabb.",
+            "Melyik illik jobban a te valódi feladatodhoz, és melyik ad kevesebb utómunkát.",
+            "Melyik nevét ismered jobban.",
+            "Melyik válaszol gyorsabban."
+          ],
+          "h": 1,
+          "m": "A saját feladatodon, a saját szempontjaid szerint érdemes összevetni."
+        },
+        {
+          "k": "Miért lehet más a te válaszod, mint a mintaválasz?",
+          "v": [
+            "Mert hibás a minta.",
+            "Mert az AI nem ugyanazt írja le kétszer.",
+            "Mert a másik eszköz rosszabb.",
+            "Mert más a gép."
+          ],
+          "h": 1,
+          "m": "Az AI válasza kérésről kérésre kicsit eltér, ezért a mintaválasz csak szemléltetés."
+        },
+        {
+          "k": "Egy válaszban számok szerepelnek. Mit teszel?",
+          "v": [
+            "Elhiszem, mert magabiztosan írta.",
+            "Számológéppel vagy táblázattal ellenőrzöm.",
+            "Megkérdezem tőle, hogy biztos-e.",
+            "Kihagyom a számokat."
+          ],
+          "h": 1,
+          "m": "A számokat külön ellenőrizd, ahogy a {{fej:4.4}} fejezet is tanítja."
+        }
+      ],
+      "osszefoglalo": [
+        "Két eszközt a saját feladatodon hasonlíts össze, ne általában.",
+        "A mintaválasz csak példa: a te válaszod más lehet.",
+        "Számokat és jogi tartalmat mindig ellenőrizz."
+      ]
+    },
+    {
+      "id": "12.3",
+      "cim": "Projektek",
+      "ido": 10,
+      "hero": "img-12-3",
+      "celok": [
+        "Érted, mi a projekt, és mikor érdemes használni.",
+        "Tudsz létrehozni egy projektet névvel, utasításokkal és fájlokkal.",
+        "Ismered a projektek korlátait."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Mi az a projekt?",
+          "blokkok": [
+            "A [[projekt]] egy külön munkaterület egy témához. Egy helyen van benne a beszélgetések, a feltöltött fájlok és az utasítások. A hivatalos súgó szerint a projekt saját beszélgetéselőzményekkel és tudásanyaggal rendelkezik, és az utasításai csak az adott projekt beszélgetéseire vonatkoznak. Nézz utána a hivatalos súgóban is: [Mik a projektek?](https://support.claude.com/en/articles/9517075-what-are-projects)",
+            "Akkor jó, ha egy téma **állandóan visszatér**:",
+            {
+              "lista": [
+                "**Levelezés:** ugyanazt a hangnemet és aláírást szeretnéd minden levélhez.",
+                "**Receptek:** a családod ízlése és az allergiák mindig ugyanazok.",
+                "**Tanulás:** egy nyelv vagy tantárgy anyagai együtt vannak."
+              ]
+            },
+            "Ha egyszeri kérdésed van, nem kell hozzá projekt. Elég egy új beszélgetés."
+          ]
+        },
+        {
+          "cim": "Hogyan állítsd be? Lépésről lépésre",
+          "blokkok": [
+            {
+              "szamozott": [
+                "Keresd meg a Projektek részt az alkalmazásban, és válaszd az új projekt létrehozását (a gomb neve lehet „Új projekt”).",
+                "Adj neki **nevet**, amiből később is tudod, mire való (például „Levelezés”).",
+                "Írd meg az **utasításokat**: kinek ír, milyen hangnemben, mire figyeljen.",
+                "Add hozzá a **fájlokat** (például egy régi levelet mintának, vagy egy listát). A gomb neve lehet „Fájl hozzáadása”.",
+                "Kezdj egy beszélgetést a projekten belül. A beállított utasítások és fájlok innentől minden beszélgetésben érvényesek."
+              ]
+            },
+            "Egy általános példa az utasításra:",
+            {
+              "cim": "Példa projekt-utasítás",
+              "prompt": "Ez a projekt a levelezésemhez készült. Írj udvarias, rövid, egyszerű magyar leveleket, tegező hangnemben, hacsak mást nem kérek. Az aláírás mindig: „Üdvözlettel”. Ha valamiből hiányzik információ, kérdezz vissza."
+            },
+            {
+              "lepesabra": "projekt"
+            },
+            {
+              "ellenorizd": "A projektbe feltöltött fájlokba ne tegyél jelszót, bankadatot vagy mások személyes adatát. A részleteket a {{mod:m08}}. modulban találod."
+            }
+          ]
+        },
+        {
+          "cim": "Mire figyelj?",
+          "blokkok": [
+            {
+              "lista": [
+                "A projekt a saját utasításait használja. Nem biztos, hogy ugyanaz érvényes benne, mint a profilodban megadott általános utasítás.",
+                "Az ingyenes fiókoknál a projektek számának korlátja lehet. Nézd meg a súgóban.",
+                "A projektben lévő fájlok mérete és mennyisége is korlátos. [Projektek kezelése](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects)"
+              ]
+            }
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Hozz létre egy kis projektet",
+        "ido": 10,
+        "bevezeto": "Egy általános, kitalált téma is elég a gyakorláshoz.",
+        "lepesek": [
+          "Hozz létre egy „Gyakorlás” nevű projektet.",
+          "Másold be az utasítás mezőbe az alábbi példát, és igazítsd a saját igényeidhez.",
+          "Nyiss egy beszélgetést a projektben, és kérj egy rövid levelet.",
+          "Nézd meg, hogy a válasz követi-e az utasítást."
+        ],
+        "promptok": [
+          {
+            "cim": "Példa projekt-utasítás",
+            "szoveg": "Rövid, udvarias, egyszerű magyar szövegeket írj, tegező hangnemben. Ha hiányzik valamilyen információ, kérdezz vissza, ne találj ki semmit."
+          }
+        ],
+        "jegyzetMinta": "Mit változtatott a válaszon az utasítás?"
+      },
+      "kviz": [
+        {
+          "k": "Mikor érdemes projektet használni?",
+          "v": [
+            "Minden egyszeri kérdéshez.",
+            "Ha egy téma állandóan visszatér, és ugyanazok az utasítások és fájlok kellenek.",
+            "Soha.",
+            "Csak képekhez."
+          ],
+          "h": 1,
+          "m": "A projekt az állandó témákhoz jó."
+        },
+        {
+          "k": "Mi tartozik egy projekthez?",
+          "v": [
+            "Név, utasítások és feltöltött fájlok.",
+            "Csak a név.",
+            "Csak egy kép.",
+            "Csak a jelszó."
+          ],
+          "h": 0,
+          "m": "A projektnek neve, utasításai és tudásanyaga (fájljai) van."
+        },
+        {
+          "k": "Mit ne tölts fel egy projektbe?",
+          "v": [
+            "Egy általános mintalevelet.",
+            "Jelszót, bankadatot vagy mások személyes adatát.",
+            "Egy recept listát.",
+            "Egy nyilvános szöveget."
+          ],
+          "h": 1,
+          "m": "Az érzékeny adatokat ne add át az AI-nak, erről a {{mod:m08}}. modul szól."
+        }
+      ],
+      "osszefoglalo": [
+        "A projekt állandó témákhoz jó: levelezés, receptek, tanulás.",
+        "Beállítása: név, utasítások, fájlok.",
+        "Érzékeny adatot ne tölts fel; a korlátokat a súgóban nézd meg."
+      ]
+    },
+    {
+      "id": "12.4",
+      "cim": "Artifactok",
+      "ido": 10,
+      "hero": "img-12-4",
+      "celok": [
+        "Érted, mi az artifact, és miben más, mint egy sima válasz.",
+        "Tudsz kérni egy dokumentumot, ellenőrző listát vagy egyszerű eszközt.",
+        "Tudod, hogyan szerkesztheted és mentheted."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Mi az artifact?",
+          "blokkok": [
+            "Az [[artifact]] egy önálló dokumentum, oldal vagy kis eszköz, ami a válasz mellett, külön nyílik meg. A hivatalos súgó szerint az artifactot szerkesztheted, később visszatérhetsz hozzá, és megoszthatod. Nézz utána a hivatalos súgóban is: [Mik az artifactok?](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)",
+            "Hasznos, mert a hosszabb, újrahasznosítható dolgok nem vesznek el a beszélgetés görgetésében:",
+            {
+              "lista": [
+                "**Egy ajánlat vagy levél,** amit többször átszerkesztesz.",
+                "**Egy ellenőrző lista,** amit kinyomtatsz.",
+                "**Egy egyszerű kalkulátor,** például egy áfaszámoló."
+              ]
+            },
+            {
+              "ellenorizd": "Ha az artifact számol (például egy kalkulátor), próbáld ki ismert számokkal, mielőtt megbízol benne."
+            }
+          ]
+        },
+        {
+          "cim": "Hogyan kérd?",
+          "blokkok": [
+            "Csak azt kell megfogalmaznod, mit szeretnél. Nem kell kódot írnod:",
+            {
+              "cim": "Példa: ellenőrző lista",
+              "prompt": "Készíts egy egyszerű, kinyomtatható ellenőrző listát egy költözéshez. Legyen benne szakaszokra bontva: előtte, a napján, utána. Legyen mellette négyzet minden tételhez."
+            },
+            {
+              "cim": "Példa: egyszerű kalkulátor",
+              "prompt": "Készíts egy egyszerű kalkulátort: beírok egy nettó árat és egy áfa-százalékot, és kiírja a bruttó árat. Magyarul, nagy betűkkel és gombokkal."
+            },
+            {
+              "lepesabra": "artifact"
+            },
+            "Ezután írd meg a módosítási kérésedet („tedd tömörebbé”, „adj hozzá egy sort”), vagy szerkeszd közvetlenül."
+          ]
+        },
+        {
+          "cim": "Szerkesztés és mentés",
+          "blokkok": [
+            "Az artifact a beszélgetés mellett nyílik meg. Kérhetsz módosítást, visszaléphetsz egy korábbi változatra, és letöltheted vagy megoszthatod. A pontos gombok neve és helye változhat, ezért a súgóban nézd meg.",
+            "A korábbi, csevegésben készült artifactokra vonatkozó szabályok is változtak. Az újabb súgó azt írja, hogy az új szolgáltatások más módon működnek, ezért ha valami nem úgy néz ki, ahogy leírtuk, a súgó az irányadó."
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Kérj egy ellenőrző listát",
+        "ido": 8,
+        "bevezeto": "Egy kinyomtatható lista kis feladat, de jól mutatja, mit tud az artifact.",
+        "lepesek": [
+          "Másold be az alábbi kérést Claude-ba.",
+          "Nézd meg, hol nyílt meg a lista (a válasz mellett vagy alatta).",
+          "Kérj egy módosítást: „add hozzá a számlák rendezését”.",
+          "Mentsd el vagy nyomtasd ki, ha a gomb megvan."
+        ],
+        "promptok": [
+          {
+            "cim": "Ellenőrző lista kérése",
+            "szoveg": "Készíts egy egyszerű, kinyomtatható ellenőrző listát egy hétvégi kiránduláshoz: előtte, útközben, hazaérkezés után. Minden tétel mellett legyen egy négyzet."
+          }
+        ],
+        "jegyzetMinta": "Hol nyílt meg, és mit tudtam rajta módosítani?"
+      },
+      "kviz": [
+        {
+          "k": "Mi az artifact?",
+          "v": [
+            "Egy jelszó.",
+            "Egy önálló dokumentum vagy kis eszköz a válasz mellett, amit szerkeszthetsz.",
+            "Egy képgenerátor.",
+            "Egy hangfájl."
+          ],
+          "h": 1,
+          "m": "Az artifact önálló, szerkeszthető dokumentum vagy kis eszköz."
+        },
+        {
+          "k": "Milyen kérés való artifactnak?",
+          "v": [
+            "Egy szó jelentése.",
+            "Egy ajánlat, egy ellenőrző lista vagy egy egyszerű kalkulátor.",
+            "Egy igen-nem kérdés.",
+            "Egy köszönés."
+          ],
+          "h": 1,
+          "m": "A hosszabb, újrahasznosítható és szerkeszthető dolgokhoz jó."
+        },
+        {
+          "k": "Mit teszel egy artifact-kalkulátorral, mielőtt megbízol benne?",
+          "v": [
+            "Semmit.",
+            "Kipróbálom ismert számokkal.",
+            "Átnevezem.",
+            "Kinyomtatom üresen."
+          ],
+          "h": 1,
+          "m": "Számoló eszközt mindig próbálj ki olyan számokkal, amelyeknek ismered az eredményét."
+        }
+      ],
+      "osszefoglalo": [
+        "Az artifact a válasz mellett megjelenő, szerkeszthető dokumentum vagy kis eszköz.",
+        "Jó ajánlathoz, ellenőrző listához, egyszerű kalkulátorhoz.",
+        "A számoló eszközöket ismert számokkal próbáld ki."
+      ]
+    },
+    {
+      "id": "12.5",
+      "cim": "Fájlok feltöltése és használata",
+      "ido": 8,
+      "hero": "img-12-5",
+      "celok": [
+        "Tudsz PDF-et, táblázatot és képet feltölteni.",
+        "Tudod, mire figyelj az adatvédelemnél.",
+        "Ismered a feltöltés korlátait."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Mit tölthetsz fel?",
+          "blokkok": [
+            "Claude-ban csatolhatsz fájlt a kérésedhez: PDF-et, szöveges dokumentumot, táblázatot és képet. Utána a fájlról kérdezhetsz: összefoglalást, magyarázatot, adatok kigyűjtését. Nézz utána a hivatalos súgóban is: [Fájlok feltöltése Claude-ba](https://support.claude.com/en/articles/8241126-upload-files-to-claude)",
+            {
+              "cim": "Példa kérés egy feltöltött fájlhoz",
+              "prompt": "A csatolt dokumentumot foglald össze 5 pontban egyszerű nyelven, és külön listázd a határidőket és az összegeket oldalszámmal."
+            },
+            {
+              "lepesabra": "fajl"
+            }
+          ]
+        },
+        {
+          "cim": "Mire figyelj?",
+          "blokkok": [
+            {
+              "lista": [
+                "**Adatvédelem:** ne tölts fel jelszót, bankadatot, azonosító számot vagy mások személyes adatát. A részleteket a {{mod:m08}}. modulban találod.",
+                "**Számok:** a fájlból kigyűjtött összegeket és dátumokat mindig vesd össze az eredeti fájllal.",
+                "**Méret és darabszám:** a súgó szerint a beszélgetéshez csatolható fájlok számának és méretének felső korlátja van, és ezek a korlátok a funkciótól és a csomagtól függnek (például más a beszélgetésnél és más a projektnél). A pontos, aktuális számokat a súgóban találod."
+              ]
+            },
+            {
+              "ellenorizd": "A feltöltött dokumentumból kiolvasott számokat, dátumokat és jogi jellegű kikötéseket mindig ellenőrizd az eredetiben. Bővebben: {{fej:4.4}}."
+            }
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Tölts fel egy kitalált vagy nyilvános dokumentumot",
+        "ido": 8,
+        "bevezeto": "Személyes dokumentumot ne használj. A {{fej:3.2}} fejezetben használt kitalált házirend is megfelel.",
+        "lepesek": [
+          "Keress egy nyilvános vagy kitalált, egy-két oldalas PDF-et vagy szöveget.",
+          "Csatold a kérésedhez Claude-ban.",
+          "Kérd az összefoglalót az alábbi kéréssel.",
+          "Ellenőrizd az összefoglaló két tételét az eredeti szövegben."
+        ],
+        "promptok": [
+          {
+            "cim": "Összefoglaló kérés",
+            "szoveg": "Foglald össze a csatolt dokumentumot 5 pontban egyszerű nyelven. Utána listázd külön a határidőket és az összegeket, oldalszámmal."
+          }
+        ],
+        "jegyzetMinta": "Pontos volt az összefoglaló? Mit kellett javítani?"
+      },
+      "kviz": [
+        {
+          "k": "Mit ne tölts fel egy AI-nak?",
+          "v": [
+            "Egy nyilvános szöveget.",
+            "Jelszót, bankadatot vagy mások személyes adatát.",
+            "Egy kitalált mintalevelet.",
+            "Egy recept listát."
+          ],
+          "h": 1,
+          "m": "Az érzékeny adatokat ne add ki."
+        },
+        {
+          "k": "Mit tegyél a feltöltött fájlból kiolvasott számokkal?",
+          "v": [
+            "Elhiszem őket.",
+            "Összevetem az eredeti fájllal.",
+            "Törlöm őket.",
+            "Megkérdezem a barátomat."
+          ],
+          "h": 1,
+          "m": "Az összegeket, dátumokat mindig ellenőrizd az eredetiben."
+        },
+        {
+          "k": "Honnan tudod meg a pontos fájlméret-határokat?",
+          "v": [
+            "Sehonnan.",
+            "A hivatalos súgóból.",
+            "Egy régi cikkből.",
+            "Kitalálom."
+          ],
+          "h": 1,
+          "m": "A korlátok változnak, a súgó az aktuális forrás."
+        }
+      ],
+      "osszefoglalo": [
+        "Claude-ban csatolhatsz PDF-et, táblázatot és képet a kéréshez.",
+        "Érzékeny adatot ne tölts fel.",
+        "A kigyűjtött számokat ellenőrizd, a korlátokat a súgóban nézd meg."
+      ]
+    },
+    {
+      "id": "12.6",
+      "cim": "Átállás lépésről lépésre",
+      "ido": 12,
+      "hero": "img-12-6",
+      "celok": [
+        "Tudod, milyen lépésekből áll egy átállás.",
+        "Tudod, hogyan nézd át a beállításokat Claude-ban.",
+        "Tudod, mi történhet a régi beszélgetésekkel, és mit érdemes a régi helyen hagyni."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Nem kell mindent átvinned",
+          "blokkok": [
+            "Az átállás nem „vagy-vagy”. Sokan egy ideig mindkét eszközt használják, és csak azt viszik át, ami tényleg fontos. Az alábbi sorrend a legkisebb kockázatú.",
+            {
+              "szamozott": [
+                "**Próbáld ki ingyen,** néhány valódi feladaton. A fejezetek gyakorlatai ehhez is jók.",
+                "**Hozz létre fiókot** a hivatalos oldalon, és nézd meg a Beállításokat.",
+                "**Add meg az egyedi utasításaidat** (lásd {{fej:9.3}}).",
+                "**Döntsd el, mi legyen a memóriával** (lásd lent).",
+                "**Vidd át a fontos dolgokat:** hozz létre projektet a visszatérő témáidhoz.",
+                "**A régi beszélgetéseket** szükség esetén mentsd ki a ChatGPT-ből.",
+                "**Maradhat a régi eszköz** ott, ahol jobb, és te döntöd el, mikor hagyod abba."
+              ]
+            },
+            {
+              "lepesabra": "beallitasok"
+            }
+          ]
+        },
+        {
+          "cim": "A beállítások",
+          "blokkok": [
+            "A beállítások a profilod menüjében találhatók. A „Beállítások” képernyő mindkét eszközben megvan, de a pontos felépítése és a menü neve eltér, és gyakran változik. Nézd át ezeket:",
+            {
+              "lista": [
+                "**Személyes preferenciák / utasítások:** amit mindig figyelembe vegyen.",
+                "**Memória:** a súgó szerint ki- és bekapcsolható, és megnézheted, mit jegyzett meg. Alapértelmezés szerint a személyes vagy érzékeny témákat nem tárolja, de ezt is ellenőrizd. [Memória a súgóban](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)",
+                "**Adatvédelem:** hogy mire használhatják a beszélgetéseidet. Ezt a {{mod:m08}}. modulban tárgyaltuk."
+              ]
+            }
+          ]
+        },
+        {
+          "cim": "A régi beszélgetések és a memória",
+          "blokkok": [
+            "**ChatGPT-adatexport:** a hivatalos súgó szerint a ChatGPT beállításaiban az adatkezelési részben kérheted az exportot, és e-mailben kapsz egy letöltési linket. Ez a link időkorlátos, és az export elkészülése időbe telhet. A lépések változhatnak, ezért kövesd a hivatalos oldalt: [ChatGPT-adatok exportálása](https://help.openai.com/en/articles/7260999-exporting-your-chatgpt-history-and-data)",
+            "**Claude-ba nem tölthető át a teljes beszélgetési előzmény.** A súgó szerint egyes AI-szolgáltatók memóriáját át lehet hozni egy kérés segítségével, de ez kísérleti, és csak a memóriára vonatkozik. [Memória importálása és exportálása](https://support.claude.com/en/articles/12123587-import-and-export-your-memory-from-claude)",
+            {
+              "ellenorizd": "Mielőtt a memóriádat átviszed, nézd át, nincs-e benne érzékeny adat. Amit nem szeretnél, töröld a szövegből."
+            },
+            "**Mit hagyj a régi helyen?** Amit csak ritkán nézel vissza, azt nyugodtan hagyd ott. Ha egy régi beszélgetésre szükséged van, a letöltött exportban is megtalálod.",
+            "**Árak:** itt nem írunk árat, mert gyakran változnak. Mindig a hivatalos árazási oldalt nézd meg (claude.com/pricing, illetve a ChatGPT árazási oldala)."
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Készíts átállási listát",
+        "ido": 10,
+        "bevezeto": "Az átállás egy kis terv, nem egy nap alatt elvégzendő feladat.",
+        "lepesek": [
+          "Másold be az alábbi kérést Claude-ba vagy ChatGPT-be.",
+          "Írd át a szögletes zárójeles részt a saját helyzetedre.",
+          "Olvasd át a listát, és húzd ki, ami neked nem kell.",
+          "Tűzz ki egy dátumot az első lépésre."
+        ],
+        "promptok": [
+          {
+            "cim": "Átállási terv",
+            "szoveg": "Szeretnék ChatGPT-ről Claude-ra átállni. A ChatGPT-ben ezt használom: [írd ide, mire használod]. Készíts egy egyszerű, 6 lépéses átállási tervet, tegező hangnemben, szakzsargon nélkül. Mondd meg, ha valamit a hivatalos súgóban kell megnéznem."
+          }
+        ],
+        "jegyzetMinta": "Pl. az első lépés: kipróbálom két valódi levélen."
+      },
+      "kviz": [
+        {
+          "k": "Átviheted-e a teljes ChatGPT beszélgetési előzményedet Claude-ba?",
+          "v": [
+            "Igen, egy gombbal.",
+            "A súgó szerint nem: legfeljebb a memória átvihető, és az is kísérleti.",
+            "Csak fizetéssel.",
+            "Csak telefonon."
+          ],
+          "h": 1,
+          "m": "A hivatalos súgó szerint a teljes előzmény nem importálható, csak a memória átvitele lehetséges, kísérleti jelleggel."
+        },
+        {
+          "k": "Honnan tudod meg az aktuális árakat?",
+          "v": [
+            "Egy régi cikkből.",
+            "A hivatalos árazási oldalról.",
+            "A kurzus fixen megadja őket.",
+            "Egy ismerőstől."
+          ],
+          "h": 1,
+          "m": "Az árak gyakran változnak, ezért a hivatalos árazási oldalt nézd meg."
+        },
+        {
+          "k": "Mit érdemes a régi helyen hagyni?",
+          "v": [
+            "Semmit sem.",
+            "Amit ritkán nézel vissza, vagy amiben a régi eszköz jobb.",
+            "Mindent törölni kell.",
+            "A jelszavakat."
+          ],
+          "h": 1,
+          "m": "Az átállás fokozatos is lehet, és nem kell mindent átvinni."
+        }
+      ],
+      "osszefoglalo": [
+        "Az átállás fokozatos: próbáld ki, állítsd be, vidd át a fontosat.",
+        "A teljes előzmény nem vihető át; az exportot a hivatalos súgó szerint kérheted.",
+        "Az árakat és a beállítások menüit a hivatalos oldalon nézd meg."
+      ]
+    },
+    {
+      "id": "12.7",
+      "cim": "Mikor maradj, mikor válts?",
+      "ido": 8,
+      "hero": "img-12-7",
+      "celok": [
+        "Tudod, miben jobb az egyik, miben a másik eszköz.",
+        "Átlátod, mit tud az egyik, és mit nem a másik.",
+        "Meg tudod hozni a saját döntésedet."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Őszinte összehasonlítás",
+          "blokkok": [
+            "A két eszköz sokban hasonlít, és a különbségek gyorsan változnak. Ezért ide nem „győztest” írunk, hanem azt, ami a hivatalos súgók alapján ma állítható (Utoljára ellenőrizve: 2026. november 20.).",
+            {
+              "tabla": [
+                [
+                  "Terület",
+                  "ChatGPT",
+                  "Claude"
+                ],
+                [
+                  "Képgenerálás",
+                  "A hivatalos súgó szerint van képkészítés.",
+                  "Nem készít fotót vagy illusztrációt; diagramokat és grafikonokat igen. [Súgó](https://support.claude.com/en/articles/9002504-can-claude-produce-images)"
+                ],
+                [
+                  "Hangos beszélgetés",
+                  "Van hangmód.",
+                  "Van hangmód béta jelleggel a mobilalkalmazásban. [Súgó](https://support.claude.com/en/articles/11101966-use-voice-mode)"
+                ],
+                [
+                  "Keresés a neten",
+                  "Van webes keresés.",
+                  "Van webes keresés; lehet, hogy be kell kapcsolni. [Súgó](https://support.claude.com/en/articles/10684626-enable-and-use-web-search)"
+                ],
+                [
+                  "Projektek",
+                  "Vannak projektek. [Súgó](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)",
+                  "Vannak projektek. [Súgó](https://support.claude.com/en/articles/9517075-what-are-projects)"
+                ],
+                [
+                  "Memória",
+                  "Van memória. [Súgó](https://help.openai.com/en/articles/8590148)",
+                  "Van memória. [Súgó](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)"
+                ],
+                [
+                  "Önálló dokumentum / eszköz a válasz mellett",
+                  "Canvas; a súgó szerint a rendelkezésre állása modellenként változhat.",
+                  "Artifactok. [Súgó](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)"
+                ]
+              ],
+              "forras": "Nézz utána a hivatalos súgóban: itt csak azt írtuk, amit ellenőrizni tudtunk."
+            }
+          ]
+        },
+        {
+          "cim": "Mikor maradj?",
+          "blokkok": [
+            {
+              "lista": [
+                "Ha rendszeresen **képet generálsz**, ez a ChatGPT-ben van, Claude-ban nincs.",
+                "Ha a jelenlegi eszközöd minden feladatodat jól megoldja, és nincs oka a váltásnak.",
+                "Ha a munkahelyed csak az egyik eszközt engedélyezi."
+              ]
+            }
+          ]
+        },
+        {
+          "cim": "Mikor érdemes kipróbálni a váltást?",
+          "blokkok": [
+            {
+              "lista": [
+                "Ha sok **hosszú szöveggel és fájllal** dolgozol, és a projektek jól jönnek.",
+                "Ha szeretnél **önálló dokumentumokat vagy kis eszközöket** készíttetni (artifactok).",
+                "Ha a válaszok stílusa jobban tetszik. Ezt csak te döntheted el, a saját feladataidon."
+              ]
+            },
+            "Végül: nem muszáj választanod. Sokan mindkettőt használják, és feladatonként döntenek."
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Döntési jegyzet",
+        "ido": 8,
+        "bevezeto": "Írd le a saját döntési szempontjaidat egy rövid jegyzetben.",
+        "lepesek": [
+          "Írd fel, mi a három legfontosabb szempontod (például képgenerálás, hang, projektek, ár).",
+          "Mindegyikhez nézd meg a táblázatot és a hivatalos súgót.",
+          "Írd le, hogy most maradsz, vagy kipróbálod a váltást, és mikor nézed át újra."
+        ],
+        "jegyzetMinta": "Pl. maradok, de a leveleimet Claude-ban is kipróbálom két hétig."
+      },
+      "kviz": [
+        {
+          "k": "Melyik igaz a hivatalos súgók alapján a képgenerálásra?",
+          "v": [
+            "Claude is ugyanúgy fotót készít.",
+            "Claude nem készít fotót vagy illusztrációt, de diagramokat és grafikonokat igen.",
+            "Egyik eszköz sem tud semmilyen képpel dolgozni.",
+            "Csak telefonon működik."
+          ],
+          "h": 1,
+          "m": "Claude nem készít fotót vagy illusztrációt; diagramokat, grafikonokat és interaktív vizuálokat igen."
+        },
+        {
+          "k": "Mi a legjobb módja a döntésnek?",
+          "v": [
+            "Az eszköz reklámja.",
+            "Saját, valódi feladatokon kipróbálni, és a hivatalos súgóból ellenőrizni a funkciókat.",
+            "A legdrágábbat választani.",
+            "Egy ismerős véleménye."
+          ],
+          "h": 1,
+          "m": "A saját feladat és a hivatalos információ számít."
+        },
+        {
+          "k": "Kötelező-e csak az egyik eszközt használnod?",
+          "v": [
+            "Igen.",
+            "Nem, feladatonként is dönthetsz.",
+            "Igen, a törvény miatt.",
+            "Csak az elsőt lehet."
+          ],
+          "h": 1,
+          "m": "Sokan mindkettőt használják."
+        }
+      ],
+      "osszefoglalo": [
+        "A két eszköz sokban hasonlít; a képgenerálás például eltér.",
+        "A döntést a saját feladataid és a hivatalos súgó alapján hozd meg.",
+        "Nem kötelező választani: feladatonként is dönthetsz."
+      ]
+    }
+  ]
+}

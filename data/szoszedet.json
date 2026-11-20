@@ -1,50 +1,292 @@
 {
   "fogalmak": [
-    { "id": "ai", "kifejezes": "Mesterséges intelligencia (AI)", "angol": "artificial intelligence", "magyarazat": "Olyan számítógépes program, amely olyan feladatokat old meg, amelyekhez korábban emberi gondolkodás kellett – például szöveget ír, képet ismer fel vagy kérdésre válaszol." },
-    { "id": "gepi-tanulas", "kifejezes": "Gépi tanulás", "angol": "machine learning", "magyarazat": "Az a módszer, amikor a programot nem szabályokkal írják meg, hanem rengeteg példából magától „tanulja meg” a mintázatokat." },
-    { "id": "nyelvi-modell", "kifejezes": "Nyelvi modell", "angol": "language model", "magyarazat": "Hatalmas mennyiségű szövegen betanított program, amely egy szöveg folytatását jósolja meg; erre épülnek a csevegő AI-eszközök." },
-    { "id": "llm", "kifejezes": "LLM (nagy nyelvi modell)", "angol": "large language model", "magyarazat": "Nagyon nagy, sok milliárd paraméteres nyelvi modell – ilyen dolgozik a ChatGPT, a Claude és a Gemini mögött." },
-    { "id": "generativ-ai", "kifejezes": "Generatív AI", "angol": "generative AI", "magyarazat": "Olyan AI, amely új tartalmat hoz létre – szöveget, képet, hangot vagy videót –, nem csak felismer vagy osztályoz." },
-    { "id": "chatbot", "kifejezes": "Csevegőrobot (chatbot)", "angol": "chatbot", "magyarazat": "Program, amellyel írásban (vagy hangban) beszélgetni lehet; az AI-asszisztensek ilyen felületen érhetők el." },
-    { "id": "prompt", "kifejezes": "Kérés (prompt)", "angol": "prompt", "magyarazat": "Az a szöveg, amit az AI-nak beírsz vagy bemondasz: kérdés, utasítás, háttérinformáció." },
-    { "id": "kimenet", "kifejezes": "Kimenet", "angol": "output", "magyarazat": "Az, amit az AI válaszként ad: szöveg, táblázat, kép vagy más tartalom." },
-    { "id": "tanitoadat", "kifejezes": "Tanítóadat", "angol": "training data", "magyarazat": "Az a rengeteg szöveg, kép vagy egyéb anyag, amelyből a modell a betanítás során a mintázatokat megtanulta." },
-    { "id": "tudashatar", "kifejezes": "Tudáshatár", "angol": "knowledge cutoff", "magyarazat": "Az az időpont, ameddig a modell tanítóadatai tartanak; az ennél frissebb eseményekről magától nem tud." },
-    { "id": "hallucinacio", "kifejezes": "Hallucináció", "angol": "hallucination", "magyarazat": "Amikor az AI magabiztosan állít valamit, ami nem igaz – például kitalált adatot, forrást vagy idézetet." },
-    { "id": "valoszinuseg", "kifejezes": "Valószínűség", "angol": "probability", "magyarazat": "Annak mértéke, mennyire várható valami; a nyelvi modell minden lehetséges következő szóhoz ilyen esélyt rendel." },
-    { "id": "token", "kifejezes": "Token", "angol": "token", "magyarazat": "Szódarab, amilyen egységekben a modell a szöveget feldolgozza; egy magyar szó gyakran 2–4 token." },
-    { "id": "kontextus", "kifejezes": "Kontextus", "angol": "context", "magyarazat": "Minden, amit a modell egy adott pillanatban „lát”: a beszélgetés eddigi üzenetei, a feltöltött fájlok és az utasítások." },
-    { "id": "kontextusablak", "kifejezes": "Kontextusablak", "angol": "context window", "magyarazat": "A kontextus legnagyobb mérete tokenben; ha a beszélgetés ennél hosszabb, a régebbi részek kieshetnek vagy elmosódhatnak." },
-    { "id": "szerep", "kifejezes": "Szerep megadása", "angol": "role prompting", "magyarazat": "Amikor megkéred az AI-t, hogy egy adott szakember vagy célközönség szemével válaszoljon, például „tapasztalt ügyfélszolgálatosként”." },
-    { "id": "sablon", "kifejezes": "Kérés-sablon", "angol": "prompt template", "magyarazat": "Újrahasználható kérés, amelyben csak néhány részt kell kicserélni, például a témát vagy a címzettet." },
-    { "id": "multimodalis", "kifejezes": "Multimodális", "angol": "multimodal", "magyarazat": "Olyan AI, amely többféle bemenetet is kezel: szöveget, képet, hangot, néha videót is." },
-    { "id": "ocr", "kifejezes": "Szövegfelismerés (OCR)", "angol": "optical character recognition", "magyarazat": "Amikor a program egy fényképen vagy szkennelt lapon lévő betűket szerkeszthető szöveggé alakítja." },
-    { "id": "beszedfelismeres", "kifejezes": "Beszédfelismerés", "angol": "speech recognition", "magyarazat": "Az a technológia, amely az élőszót írott szöveggé alakítja – ezen alapul a diktálás." },
-    { "id": "keresomotor", "kifejezes": "Keresőmotor", "angol": "search engine", "magyarazat": "Weboldalakat kereső szolgáltatás, amely kulcsszavakra találati listát ad linkekkel." },
-    { "id": "webes-kereses", "kifejezes": "Webes keresés az AI-ban", "angol": "web search / browsing", "magyarazat": "Olyan funkció, amellyel az AI a válasz előtt friss weboldalakat is megnéz, és általában meg is jelöli őket forrásként." },
-    { "id": "forras", "kifejezes": "Forrás", "angol": "source", "magyarazat": "Az a hely – weboldal, könyv, hivatalos dokumentum –, ahonnan egy állítás származik, és ahol ellenőrizni lehet." },
-    { "id": "elsodleges-forras", "kifejezes": "Elsődleges forrás", "angol": "primary source", "magyarazat": "Az eredeti forrás: például a hivatalos jogszabály, a kutatás maga vagy a gyártó oldala – nem egy róla szóló cikk." },
-    { "id": "kepgenerator", "kifejezes": "Képgenerátor", "angol": "image generator", "magyarazat": "AI-eszköz, amely szöveges leírásból képet készít." },
-    { "id": "keparany", "kifejezes": "Képarány", "angol": "aspect ratio", "magyarazat": "A kép szélességének és magasságának aránya, például 16:9 (fekvő), 1:1 (négyzet) vagy 9:16 (álló, telefonos)." },
-    { "id": "vizjel", "kifejezes": "Vízjel és tartalomjelölés", "angol": "watermark / content credentials", "magyarazat": "Látható vagy rejtett jelölés, amely elárulja, hogy egy képet vagy videót AI készített vagy módosított." },
-    { "id": "deepfake", "kifejezes": "Deepfake (mélyhamisítvány)", "angol": "deepfake", "magyarazat": "AI-val készült hamis kép, hang vagy videó, amelyen valaki olyat mond vagy tesz, amit valójában soha." },
-    { "id": "adathalaszat", "kifejezes": "Adathalászat", "angol": "phishing", "magyarazat": "Csalás, amelyben megtévesztő üzenettel próbálják rávenni az áldozatot, hogy jelszót, kártyaadatot adjon meg vagy pénzt utaljon." },
-    { "id": "szemelyes-adat", "kifejezes": "Személyes adat", "angol": "personal data", "magyarazat": "Minden információ, amely alapján egy élő ember azonosítható: név, cím, telefonszám, azonosító szám, egészségügyi adat és hasonlók." },
-    { "id": "gdpr", "kifejezes": "GDPR", "angol": "General Data Protection Regulation", "magyarazat": "Az Európai Unió adatvédelmi rendelete, amely szabályozza, hogyan lehet személyes adatokat kezelni." },
-    { "id": "ketlepcsos", "kifejezes": "Kétlépcsős azonosítás", "angol": "two-factor authentication", "magyarazat": "Bejelentkezés jelszó mellett egy második lépéssel is, például a telefonra küldött kóddal; sokkal nehezebb feltörni." },
-    { "id": "egyedi-utasitas", "kifejezes": "Egyedi utasítás", "angol": "custom instructions", "magyarazat": "Állandó beállítás, amelyben leírod magadról és a kívánt válaszstílusról, amit az AI minden beszélgetésben figyelembe vesz." },
-    { "id": "memoria", "kifejezes": "Memória (AI-eszközben)", "angol": "memory", "magyarazat": "Funkció, amellyel az eszköz beszélgetéseken át megjegyez rólad dolgokat; általában megnézhető és törölhető." },
-    { "id": "projekt", "kifejezes": "Projekt (AI-eszközben)", "angol": "project", "magyarazat": "Mappa-szerű munkaterület, ahol egy témához tartozó beszélgetések, fájlok és utasítások együtt vannak." },
-    { "id": "html", "kifejezes": "HTML", "angol": "HyperText Markup Language", "magyarazat": "A weboldalak alapnyelve: ez írja le, mi van az oldalon (cím, bekezdés, kép, link)." },
-    { "id": "css", "kifejezes": "CSS", "angol": "Cascading Style Sheets", "magyarazat": "A weboldalak megjelenését leíró nyelv: színek, betűk, elrendezés." },
-    { "id": "github", "kifejezes": "GitHub", "angol": "GitHub", "magyarazat": "Webes szolgáltatás fájlok és kódok tárolására, verziókövetésére és megosztására." },
-    { "id": "repo", "kifejezes": "Tároló (repository)", "angol": "repository", "magyarazat": "Egy projekt fájljainak gyűjteménye a GitHubon, a változások teljes történetével." },
-    { "id": "github-pages", "kifejezes": "GitHub Pages", "angol": "GitHub Pages", "magyarazat": "A GitHub ingyenes szolgáltatása, amellyel egy tároló fájljaiból nyilvános weboldal lesz." },
-    { "id": "tarhely", "kifejezes": "Tárhely (hosting)", "angol": "hosting", "magyarazat": "Szolgáltatás, amely a weboldal fájljait tárolja, és mindenki számára elérhetővé teszi az interneten." },
-    { "id": "agens", "kifejezes": "AI-ágens", "angol": "AI agent", "magyarazat": "Olyan AI, amely nem csak válaszol, hanem eszközöket használva lépéseket is végrehajt – például fájlokat olvas, ír vagy parancsokat futtat –, jó esetben a te jóváhagyásoddal." },
-    { "id": "terminal", "kifejezes": "Terminál", "angol": "terminal", "magyarazat": "Szöveges ablak, amelyben parancsok begépelésével lehet a számítógépet vezérelni." },
-    { "id": "claude-code", "kifejezes": "Claude Code", "angol": "Claude Code", "magyarazat": "Az Anthropic AI-ágense, amely a terminálban (és más felületeken) fájlokon és kódon dolgozik a felhasználó kérése és jóváhagyása alapján." },
-    { "id": "jovahagyas", "kifejezes": "Jóváhagyás", "angol": "approval / permission", "magyarazat": "Az a lépés, amikor az ágens megkérdez, mielőtt valamit megváltoztat, és csak a te igenedre folytatja." },
-    { "id": "parameter", "kifejezes": "Paraméter", "angol": "parameter", "magyarazat": "A modell belső, betanítás során beállított számai; minél több van, általában annál összetettebb mintázatokat tud megtanulni." }
+    {
+      "id": "ai",
+      "kifejezes": "Mesterséges intelligencia (AI)",
+      "angol": "artificial intelligence",
+      "magyarazat": "Olyan számítógépes program, amely olyan feladatokat old meg, amelyekhez korábban emberi gondolkodás kellett – például szöveget ír, képet ismer fel vagy kérdésre válaszol."
+    },
+    {
+      "id": "gepi-tanulas",
+      "kifejezes": "Gépi tanulás",
+      "angol": "machine learning",
+      "magyarazat": "Az a módszer, amikor a programot nem szabályokkal írják meg, hanem rengeteg példából magától „tanulja meg” a mintázatokat."
+    },
+    {
+      "id": "nyelvi-modell",
+      "kifejezes": "Nyelvi modell",
+      "angol": "language model",
+      "magyarazat": "Hatalmas mennyiségű szövegen betanított program, amely egy szöveg folytatását jósolja meg; erre épülnek a csevegő AI-eszközök."
+    },
+    {
+      "id": "llm",
+      "kifejezes": "LLM (nagy nyelvi modell)",
+      "angol": "large language model",
+      "magyarazat": "Nagyon nagy, sok milliárd paraméteres nyelvi modell – ilyen dolgozik a ChatGPT, a Claude és a Gemini mögött."
+    },
+    {
+      "id": "generativ-ai",
+      "kifejezes": "Generatív AI",
+      "angol": "generative AI",
+      "magyarazat": "Olyan AI, amely új tartalmat hoz létre – szöveget, képet, hangot vagy videót –, nem csak felismer vagy osztályoz."
+    },
+    {
+      "id": "chatbot",
+      "kifejezes": "Csevegőrobot (chatbot)",
+      "angol": "chatbot",
+      "magyarazat": "Program, amellyel írásban (vagy hangban) beszélgetni lehet; az AI-asszisztensek ilyen felületen érhetők el."
+    },
+    {
+      "id": "prompt",
+      "kifejezes": "Kérés (prompt)",
+      "angol": "prompt",
+      "magyarazat": "Az a szöveg, amit az AI-nak beírsz vagy bemondasz: kérdés, utasítás, háttérinformáció."
+    },
+    {
+      "id": "kimenet",
+      "kifejezes": "Kimenet",
+      "angol": "output",
+      "magyarazat": "Az, amit az AI válaszként ad: szöveg, táblázat, kép vagy más tartalom."
+    },
+    {
+      "id": "tanitoadat",
+      "kifejezes": "Tanítóadat",
+      "angol": "training data",
+      "magyarazat": "Az a rengeteg szöveg, kép vagy egyéb anyag, amelyből a modell a betanítás során a mintázatokat megtanulta."
+    },
+    {
+      "id": "tudashatar",
+      "kifejezes": "Tudáshatár",
+      "angol": "knowledge cutoff",
+      "magyarazat": "Az az időpont, ameddig a modell tanítóadatai tartanak; az ennél frissebb eseményekről magától nem tud."
+    },
+    {
+      "id": "hallucinacio",
+      "kifejezes": "Hallucináció",
+      "angol": "hallucination",
+      "magyarazat": "Amikor az AI magabiztosan állít valamit, ami nem igaz – például kitalált adatot, forrást vagy idézetet."
+    },
+    {
+      "id": "valoszinuseg",
+      "kifejezes": "Valószínűség",
+      "angol": "probability",
+      "magyarazat": "Annak mértéke, mennyire várható valami; a nyelvi modell minden lehetséges következő szóhoz ilyen esélyt rendel."
+    },
+    {
+      "id": "token",
+      "kifejezes": "Token",
+      "angol": "token",
+      "magyarazat": "Szódarab, amilyen egységekben a modell a szöveget feldolgozza; egy magyar szó gyakran 2–4 token."
+    },
+    {
+      "id": "kontextus",
+      "kifejezes": "Kontextus",
+      "angol": "context",
+      "magyarazat": "Minden, amit a modell egy adott pillanatban „lát”: a beszélgetés eddigi üzenetei, a feltöltött fájlok és az utasítások."
+    },
+    {
+      "id": "kontextusablak",
+      "kifejezes": "Kontextusablak",
+      "angol": "context window",
+      "magyarazat": "A kontextus legnagyobb mérete tokenben; ha a beszélgetés ennél hosszabb, a régebbi részek kieshetnek vagy elmosódhatnak."
+    },
+    {
+      "id": "szerep",
+      "kifejezes": "Szerep megadása",
+      "angol": "role prompting",
+      "magyarazat": "Amikor megkéred az AI-t, hogy egy adott szakember vagy célközönség szemével válaszoljon, például „tapasztalt ügyfélszolgálatosként”."
+    },
+    {
+      "id": "sablon",
+      "kifejezes": "Kérés-sablon",
+      "angol": "prompt template",
+      "magyarazat": "Újrahasználható kérés, amelyben csak néhány részt kell kicserélni, például a témát vagy a címzettet."
+    },
+    {
+      "id": "multimodalis",
+      "kifejezes": "Multimodális",
+      "angol": "multimodal",
+      "magyarazat": "Olyan AI, amely többféle bemenetet is kezel: szöveget, képet, hangot, néha videót is."
+    },
+    {
+      "id": "ocr",
+      "kifejezes": "Szövegfelismerés (OCR)",
+      "angol": "optical character recognition",
+      "magyarazat": "Amikor a program egy fényképen vagy szkennelt lapon lévő betűket szerkeszthető szöveggé alakítja."
+    },
+    {
+      "id": "beszedfelismeres",
+      "kifejezes": "Beszédfelismerés",
+      "angol": "speech recognition",
+      "magyarazat": "Az a technológia, amely az élőszót írott szöveggé alakítja – ezen alapul a diktálás."
+    },
+    {
+      "id": "keresomotor",
+      "kifejezes": "Keresőmotor",
+      "angol": "search engine",
+      "magyarazat": "Weboldalakat kereső szolgáltatás, amely kulcsszavakra találati listát ad linkekkel."
+    },
+    {
+      "id": "webes-kereses",
+      "kifejezes": "Webes keresés az AI-ban",
+      "angol": "web search / browsing",
+      "magyarazat": "Olyan funkció, amellyel az AI a válasz előtt friss weboldalakat is megnéz, és általában meg is jelöli őket forrásként."
+    },
+    {
+      "id": "forras",
+      "kifejezes": "Forrás",
+      "angol": "source",
+      "magyarazat": "Az a hely – weboldal, könyv, hivatalos dokumentum –, ahonnan egy állítás származik, és ahol ellenőrizni lehet."
+    },
+    {
+      "id": "elsodleges-forras",
+      "kifejezes": "Elsődleges forrás",
+      "angol": "primary source",
+      "magyarazat": "Az eredeti forrás: például a hivatalos jogszabály, a kutatás maga vagy a gyártó oldala – nem egy róla szóló cikk."
+    },
+    {
+      "id": "kepgenerator",
+      "kifejezes": "Képgenerátor",
+      "angol": "image generator",
+      "magyarazat": "AI-eszköz, amely szöveges leírásból képet készít."
+    },
+    {
+      "id": "keparany",
+      "kifejezes": "Képarány",
+      "angol": "aspect ratio",
+      "magyarazat": "A kép szélességének és magasságának aránya, például 16:9 (fekvő), 1:1 (négyzet) vagy 9:16 (álló, telefonos)."
+    },
+    {
+      "id": "vizjel",
+      "kifejezes": "Vízjel és tartalomjelölés",
+      "angol": "watermark / content credentials",
+      "magyarazat": "Látható vagy rejtett jelölés, amely elárulja, hogy egy képet vagy videót AI készített vagy módosított."
+    },
+    {
+      "id": "deepfake",
+      "kifejezes": "Deepfake (mélyhamisítvány)",
+      "angol": "deepfake",
+      "magyarazat": "AI-val készült hamis kép, hang vagy videó, amelyen valaki olyat mond vagy tesz, amit valójában soha."
+    },
+    {
+      "id": "adathalaszat",
+      "kifejezes": "Adathalászat",
+      "angol": "phishing",
+      "magyarazat": "Csalás, amelyben megtévesztő üzenettel próbálják rávenni az áldozatot, hogy jelszót, kártyaadatot adjon meg vagy pénzt utaljon."
+    },
+    {
+      "id": "szemelyes-adat",
+      "kifejezes": "Személyes adat",
+      "angol": "personal data",
+      "magyarazat": "Minden információ, amely alapján egy élő ember azonosítható: név, cím, telefonszám, azonosító szám, egészségügyi adat és hasonlók."
+    },
+    {
+      "id": "gdpr",
+      "kifejezes": "GDPR",
+      "angol": "General Data Protection Regulation",
+      "magyarazat": "Az Európai Unió adatvédelmi rendelete, amely szabályozza, hogyan lehet személyes adatokat kezelni."
+    },
+    {
+      "id": "ketlepcsos",
+      "kifejezes": "Kétlépcsős azonosítás",
+      "angol": "two-factor authentication",
+      "magyarazat": "Bejelentkezés jelszó mellett egy második lépéssel is, például a telefonra küldött kóddal; sokkal nehezebb feltörni."
+    },
+    {
+      "id": "egyedi-utasitas",
+      "kifejezes": "Egyedi utasítás",
+      "angol": "custom instructions",
+      "magyarazat": "Állandó beállítás, amelyben leírod magadról és a kívánt válaszstílusról, amit az AI minden beszélgetésben figyelembe vesz (Claude-ban a személyes preferenciák között keresd)."
+    },
+    {
+      "id": "memoria",
+      "kifejezes": "Memória (AI-eszközben)",
+      "angol": "memory",
+      "magyarazat": "Funkció, amellyel az eszköz beszélgetéseken át megjegyez rólad dolgokat. Általában megnézhető, szerkeszthető, kikapcsolható és törölhető."
+    },
+    {
+      "id": "projekt",
+      "kifejezes": "Projekt (AI-eszközben)",
+      "angol": "project",
+      "magyarazat": "Külön munkaterület egy témához: saját utasításokkal és feltöltött fájlokkal, amelyek az adott projekt minden beszélgetésére érvényesek."
+    },
+    {
+      "id": "html",
+      "kifejezes": "HTML",
+      "angol": "HyperText Markup Language",
+      "magyarazat": "A weboldalak alapnyelve: ez írja le, mi van az oldalon (cím, bekezdés, kép, link)."
+    },
+    {
+      "id": "css",
+      "kifejezes": "CSS",
+      "angol": "Cascading Style Sheets",
+      "magyarazat": "A weboldalak megjelenését leíró nyelv: színek, betűk, elrendezés."
+    },
+    {
+      "id": "github",
+      "kifejezes": "GitHub",
+      "angol": "GitHub",
+      "magyarazat": "Webes szolgáltatás fájlok és kódok tárolására, verziókövetésére és megosztására."
+    },
+    {
+      "id": "repo",
+      "kifejezes": "Tároló (repository)",
+      "angol": "repository",
+      "magyarazat": "Egy projekt fájljainak gyűjteménye a GitHubon, a változások teljes történetével."
+    },
+    {
+      "id": "github-pages",
+      "kifejezes": "GitHub Pages",
+      "angol": "GitHub Pages",
+      "magyarazat": "A GitHub ingyenes szolgáltatása, amellyel egy tároló fájljaiból nyilvános weboldal lesz."
+    },
+    {
+      "id": "tarhely",
+      "kifejezes": "Tárhely (hosting)",
+      "angol": "hosting",
+      "magyarazat": "Szolgáltatás, amely a weboldal fájljait tárolja, és mindenki számára elérhetővé teszi az interneten."
+    },
+    {
+      "id": "agens",
+      "kifejezes": "AI-ágens",
+      "angol": "AI agent",
+      "magyarazat": "Olyan AI, amely nem csak válaszol, hanem eszközöket használva lépéseket is végrehajt – például fájlokat olvas, ír vagy parancsokat futtat –, jó esetben a te jóváhagyásoddal."
+    },
+    {
+      "id": "terminal",
+      "kifejezes": "Terminál",
+      "angol": "terminal",
+      "magyarazat": "Szöveges ablak, amelyben parancsok begépelésével lehet a számítógépet vezérelni."
+    },
+    {
+      "id": "claude-code",
+      "kifejezes": "Claude Code",
+      "angol": "Claude Code",
+      "magyarazat": "Az Anthropic AI-ágense, amely a terminálban (és más felületeken) fájlokon és kódon dolgozik a felhasználó kérése és jóváhagyása alapján."
+    },
+    {
+      "id": "jovahagyas",
+      "kifejezes": "Jóváhagyás",
+      "angol": "approval / permission",
+      "magyarazat": "Az a lépés, amikor az ágens megkérdez, mielőtt valamit megváltoztat, és csak a te igenedre folytatja."
+    },
+    {
+      "id": "parameter",
+      "kifejezes": "Paraméter",
+      "angol": "parameter",
+      "magyarazat": "A modell belső, betanítás során beállított számai; minél több van, általában annál összetettebb mintázatokat tud megtanulni."
+    },
+    {
+      "id": "artifact",
+      "kifejezes": "Artifact",
+      "angol": "artifact",
+      "magyarazat": "A válasz mellett külön megnyíló, önálló dokumentum, oldal vagy kis eszköz (például ajánlat, ellenőrző lista, kalkulátor), amit szerkeszthetsz és elmenthetsz."
+    },
+    {
+      "id": "fajlfeltoltes",
+      "kifejezes": "Fájlfeltöltés",
+      "angol": "file upload",
+      "magyarazat": "Amikor a kérésedhez egy fájlt (PDF-et, táblázatot, képet) csatolsz, hogy az AI abból dolgozzon. Érzékeny adatot ne tölts fel."
+    }
   ]
 }

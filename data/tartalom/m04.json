@@ -3,7 +3,8 @@
   "utana": [
     "Tudod, mikor jobb egy keresőmotor, és mikor egy AI-beszélgetés.",
     "Forrást kérsz, és meg is tudod ítélni, hogy megbízható-e.",
-    "Felismered a bizonytalan válaszokat, és tudod, hogyan kérj második véleményt."
+    "Felismered a bizonytalan válaszokat, és tudod, hogyan kérj második véleményt.",
+    "Tudod, mikor ne higgyél az AI-nak, és használod a 3 kérdéses ellenőrzést."
   ],
   "javaslat": {
     "levelezes": "Kutass utána egy levelezési kérdésnek, amivel mostanában találkoztál (például meddig kell megőrizni egy számlát) – forrással.",
@@ -15,7 +16,8 @@
   "osszefoglalo": [
     "A keresőmotor forrásokat ad, az AI megfogalmazott választ – a kettő együtt a legerősebb.",
     "Kérj forrást, nyisd meg, és nézd meg, ki írta, mikor és miért.",
-    "Ha bizonytalan a válasz, kérdezz vissza, kérj ellenérvet, és nézd meg máshol is."
+    "Ha bizonytalan a válasz, kérdezz vissza, kérj ellenérvet, és nézd meg máshol is.",
+    "Számnál, jogi és egészségügyi kérdésnél, friss adatnál és forrásnál mindig ellenőrizz: a magabiztos hang nem bizonyíték."
   ],
   "kviz": [
     { "k": "Mi a fő különbség a keresőmotor és az AI-beszélgetés között?", "v": ["Nincs különbség.", "A keresőmotor linkeket ad, amiket te olvasol; az AI kész választ fogalmaz, amelynek a forrása nem mindig látszik.", "Az AI mindig pontosabb.", "A keresőmotor nem működik telefonon."], "h": 1, "m": "Mindkettőnek megvan a helye: a keresőmotor a forrásokhoz visz, az AI megfogalmaz és összefoglal." },
@@ -42,7 +44,7 @@
           "cim": "Két különböző eszköz",
           "blokkok": [
             "A [[keresomotor]] kulcsszavak alapján weboldalakat talál, és listát ad róluk. A választ neked kell kiolvasnod, de mindig látod, honnan származik.",
-            "Az AI-beszélgetés kész, megfogalmazott választ ad. Kényelmes, de a válasz mögötti [[forras]] nem mindig látszik – és ahogy az 1. modulban láttad, a válasz lehet pontatlan is.",
+            "Az AI-beszélgetés kész, megfogalmazott választ ad. Kényelmes, de a válasz mögötti [[forras]] nem mindig látszik – és ahogy az {{mod:m01}}. modulban láttad, a válasz lehet pontatlan is.",
             { "abra": "kereses-beszelgetes", "felirat": "A keresőnél te olvasod a forrást; az AI-nál a válasz kész, de neked kell ellenőrizned." }
           ]
         },
@@ -230,7 +232,7 @@
           "blokkok": [
             { "lista": [
               "**Más forrás:** egy független, hivatalos vagy szakmai oldal.",
-              "**Más eszköz:** ugyanaz a kérdés egy másik AI-ban (a 9. modulban ezt részletesen is kipróbálod).",
+              "**Más eszköz:** ugyanaz a kérdés egy másik AI-ban (a {{mod:m09}}. modulban ezt részletesen is kipróbálod).",
               "**Új beszélgetés:** előzmények nélkül, semlegesen megfogalmazva, hogy ne vezesd rá a válaszra.",
               "**Szakember:** egészség, jog, pénz, biztonság kérdésében ez nem opció, hanem szabály."
             ] }
@@ -272,6 +274,183 @@
         "Kérdezz rá a gyenge pontokra és az ellenérvekre, ne csak arra, hogy „biztos-e”.",
         "Második vélemény: más forrás, más eszköz, új beszélgetés – fontos ügyben szakember."
       ]
-    }
+    },
+    {
+        "id": "4.4",
+        "cim": "Mikor ne higgyél az AI-nak",
+        "ido": 15,
+        "hero": "img-4-4",
+        "celok": [
+          "Tudod, hogy az AI magabiztosan is tévedhet, és a hangneme nem bizonyíték.",
+          "Felismered azt a hat helyzetet, ahol a leggyakrabban hibázik, és tudod, mit tegyél ilyenkor.",
+          "Használni tudod a 3 kérdéses ellenőrzést, és ki is tudod nyomtatni."
+        ],
+        "szakaszok": [
+          {
+            "cim": "Az alapelv: a magabiztos hang nem bizonyíték",
+            "blokkok": [
+              "Az AI ugyanolyan nyugodt, folyékony hangon ír egy helyes és egy téves választ. Nem hezitál, nem pirul el, és általában nem jelzi, ha nem biztos a dolgában. Ezért a válasz **hangneme semmit nem árul el** arról, hogy igaz-e.",
+              "Ez nem azt jelenti, hogy ne használd. Azt jelenti, hogy ahol a tévedésnek ára van, ott te vagy az utolsó ellenőrzési pont. Az alábbi hat helyzetben különösen érdemes résen lenni.",
+              {
+                "ellenorizd": "Minél fontosabb a téma, és minél pontosabb a válasz (szám, dátum, név, szabály), annál inkább nézd meg máshol is, mielőtt felhasználod."
+              }
+            ]
+          },
+          {
+            "cim": "Hat tipikus hibatípus",
+            "blokkok": [
+              "**1. Számok és számolás.** Százalék, áfa, összeg, átváltás: az AI szövegként dolgozik, ezért a számolásban akkor is eltévedhet, ha a válasz rendezett és magabiztos.",
+              {
+                "cim": "Hétköznapi példa",
+                "pelda": [
+                  "Egy bolti ár áfás összegét kérdezed meg. A válasz szépen, lépésekkel jön, de a végén egy rosszul kerekített vagy elcsúszott szám áll. Első ránézésre minden rendben lévőnek látszik."
+                ]
+              },
+              "**Mit tegyél?** Számold ki számológéppel vagy táblázattal. Az AI-tól inkább a képletet vagy a számolás menetét kérd, az eredményt te ellenőrizd. (A következő fejezet gyakorlata erre épül, és a {{fej:12.2}} fejezetben is láthatsz egy ilyen példát.)",
+              "**2. Jogi, adózási, szerződéses kérdések.** Az AI jól elmagyarázza, mit jelent egy kifejezés, vagy mire érdemes figyelni egy szerződésben. De a te konkrét helyzeted részleteitől függ a válasz, és a szabályok változnak.",
+              {
+                "cim": "Hétköznapi példa",
+                "pelda": [
+                  "Megkérdezed, mit tehetsz, ha egy vállalkozó nem fizet. A válasz általánosan hangzik jól, de nem tudja, mit írtál alá, és mikor."
+                ]
+              },
+              "**Mit tegyél?** Használd megértésre és a kérdéseid előkészítésére. Fontos döntés vagy aláírás előtt kérdezz meg jogászt vagy könyvelőt. Ha az AI szabályra vagy jogszabályra hivatkozik, ne fogadd el szó szerint, kérj forrást, és nézd meg a hivatalos helyen.",
+              "**3. Egészség.** Az AI nem orvos. Általános tájékozódásra jó (mit jelent egy szó a leleten, milyen kérdéseket tegyél fel az orvosnak), de a diagnózisra és az adagolásra nem.",
+              {
+                "cim": "Hétköznapi példa",
+                "pelda": [
+                  "Leírsz néhány tünetet, és az AI határozottan megnevez egy betegséget, esetleg gyógyszert is javasol. Nem látott, nem vizsgált meg, és nem ismeri a kórtörténetedet."
+                ]
+              },
+              "**Mit tegyél?** Tájékozódásra használd, a döntést bízd orvosra vagy gyógyszerészre. Ha sürgős vagy komoly a panasz, ne az AI-t kérdezd, hanem hívd az orvost vagy az ügyeletet.",
+              "**4. Friss vagy változó információ.** Árak, nyitvatartás, szabályok, határidők, hírek: az AI tudása egy bizonyos időpontig tart, és előfordulhat, hogy a válasz már elavult. A webes kereséssel dolgozó eszközök is tévedhetnek.",
+              {
+                "cim": "Hétköznapi példa",
+                "pelda": [
+                  "Megkérdezed, meddig nyitva egy üzlet ma, vagy mennyibe kerül egy szolgáltatás. A válasz pontosnak hangzik, de lehet, hogy egy régi állapotot ír le."
+                ]
+              },
+              "**Mit tegyél?** Kérj forrást, és nyisd is meg. Változó adatnál (ár, nyitvatartás, határidő) a hivatalos oldalt nézd meg.",
+              "**5. Kitalált források és hivatkozások.** Az AI néha létező forrásnak látszó, de nem létező könyvcímet, cikket vagy linket ír le, hihető szerzővel és évszámmal.",
+              {
+                "cim": "Hétköznapi példa",
+                "pelda": [
+                  "Forrást kérsz, és kapsz három hivatkozást. Az egyik oldal nem létezik, a másik cikknek más a tartalma, mint amit az AI állít."
+                ]
+              },
+              "**Mit tegyél?** Mindig nyisd meg a linket, vagy keresd meg a címet. Ha nem találod, ne hivatkozz rá.",
+              "**6. Hízelgő egyetértés.** Az AI hajlamos egyetérteni veled, dicsérni a tervedet, és megerősíteni azt, amit mondasz. Ez kellemes, de nem segít a jó döntésben.",
+              {
+                "cim": "Hétköznapi példa",
+                "pelda": [
+                  "Elmeséled a tervedet, és megkérdezed: „ugye jó ötlet?” A válasz lelkes, és szinte semmi kockázatot nem említ."
+                ]
+              },
+              "**Mit tegyél?** Kérj kifejezetten ellenvéleményt. Például:",
+              {
+                "cim": "Ellenvélemény kérése",
+                "prompt": "Írd le a legerősebb érveket a tervem ellen, és azt, hogy mi mehet félre. Ne értsd velem egyet automatikusan, és ne szépítsd a választ."
+              }
+            ]
+          },
+          {
+            "cim": "A 3 kérdéses ellenőrzés",
+            "blokkok": [
+              "Mielőtt egy AI-választ felhasználsz, tedd fel magadnak ezt a három kérdést. Alább egy egyoldalas kártya, amit kinyomtathatsz, és az asztalod mellé tehetsz.",
+              {
+                "kartya": {
+                  "cim": "3 kérdéses ellenőrzés",
+                  "alcim": "Mielőtt felhasználod, amit az AI írt",
+                  "kerdesek": [
+                    {
+                      "k": "Fontos a téma?",
+                      "r": "Ha egy tévedés pénzbe, egészségbe, jogi helyzetbe vagy más emberekbe kerülhet, akkor igen."
+                    },
+                    {
+                      "k": "Van benne szám, jog vagy egészség?",
+                      "r": "Összeg, százalék, dátum, szabály, szerződés, gyógyszer, panasz: ezeket mindig nézd meg külön."
+                    },
+                    {
+                      "k": "Ellenőriztem egy másik helyen?",
+                      "r": "Számológép, hivatalos oldal, szakember vagy egy másik, független forrás. Ha az első két kérdésre igen volt a válasz, ez a harmadik nem maradhat ki."
+                    }
+                  ],
+                  "lab": "Az AI jó segéd és rossz utolsó szó. Az utolsó szó a tiéd."
+                }
+              }
+            ]
+          }
+        ],
+        "gyakorlat": {
+          "cim": "Kérdezd meg, majd számold ki magad",
+          "ido": 5,
+          "bevezeto": "Ez a gyakorlat nem a „lebuktatásról” szól. Azt a szokást szeretnénk megerősíteni, hogy egy számot egy másik módszerrel is megnézel.",
+          "lepesek": [
+            "Másold be az alábbi kérést a kedvenc AI-eszközödbe.",
+            "Olvasd el a választ, de még ne hidd el.",
+            "Nyisd meg a telefonod számológépét, és számold ki magad: 3 490 × 1,27.",
+            "Vesd össze a két eredményt. A helyes bruttó ár 4 432,3 Ft, kerekítve 4 432 Ft. Egyezik az AI válaszával?",
+            "Írd le a jegyzetedbe egy mondatban, mit tapasztaltál."
+          ],
+          "promptok": [
+            {
+              "cim": "Számolós kérés",
+              "szoveg": "Egy étel ára 3 490 Ft + 27% áfa. Mennyi a bruttó ár? Számold ki lépésenként."
+            }
+          ],
+          "jegyzetMinta": "Pl. egyezett, és a lépések is jók voltak; vagy: más számot írt, és számológéppel derült ki."
+        },
+        "kviz": [
+          {
+            "k": "Az AI nagyon magabiztosan, szépen megfogalmazva válaszol. Mit jelent ez a válasz helyességéről?",
+            "v": [
+              "Biztosan igaz, mert olyan határozott.",
+              "Semmit: a hangneme nem bizonyíték.",
+              "Azt, hogy hosszú a válasz.",
+              "Azt, hogy a keresőből másolta."
+            ],
+            "h": 1,
+            "m": "Az AI helyes és téves állításokat is ugyanolyan magabiztos hangon ír. Az igazságot nem a hangnemből, hanem az ellenőrzésből tudod meg."
+          },
+          {
+            "k": "Az AI forrásként megad egy cikkcímet és egy linket. Mit teszel, mielőtt hivatkozol rá?",
+            "v": [
+              "Semmit, hiszen forrás.",
+              "Megkérdezem tőle, hogy biztos-e.",
+              "Megnyitom a linket, és megnézem, valóban létezik-e, és azt írja-e, amit az AI állít.",
+              "Elég, ha a cím jól hangzik."
+            ],
+            "h": 2,
+            "m": "Az AI néha létező forrásnak látszó, de nem létező hivatkozást ír. A „biztos?” kérdésre is magabiztosan válaszolhat, ezért a forrást magadnak kell megnyitni."
+          },
+          {
+            "k": "Egy szerződés fontos pontjáról az AI egyértelmű választ ad. Mi a legjobb lépés?",
+            "v": [
+              "Aláírom, hiszen egyértelmű volt.",
+              "Megértésre használom, a döntés előtt jogásszal vagy könyvelővel egyeztetek.",
+              "Kérek tőle még egy hosszabb választ.",
+              "Megkérdezem egy másik ismerősömet, aki nem ért hozzá."
+            ],
+            "h": 1,
+            "m": "Az AI segíthet megérteni, de a te helyzetedet és a pontos szabályokat nem ismeri. Fontos döntés előtt szakember kell."
+          },
+          {
+            "k": "Melyik kérés segít a „hízelgő egyetértés” ellen?",
+            "v": [
+              "„Ugye jó a tervem?”",
+              "„Írd le a legerősebb érveket a tervem ellen.”",
+              "„Mondd, hogy igazam van.”",
+              "„Röviden válaszolj.”"
+            ],
+            "h": 1,
+            "m": "Az AI hajlamos egyetérteni veled. Ha kifejezetten ellenvéleményt kérsz, kevésbé szépíti a választ."
+          }
+        ],
+        "osszefoglalo": [
+          "Az AI magabiztosan is tévedhet: a hangneme nem bizonyíték, az ellenőrzés az.",
+          "Hat gyakori hibatípus: számok, jogi kérdések, egészség, friss információ, kitalált források, hízelgő egyetértés.",
+          "A 3 kérdéses ellenőrzés: fontos-e a téma, van-e benne szám, jog vagy egészség, és ellenőriztem-e máshol."
+        ]
+      }
   ]
 }

@@ -41,7 +41,7 @@
         {
           "cim": "Miért számít a kérés?",
           "blokkok": [
-            "Az 1. modulban láttad: a modell az általad írt szöveget folytatja. A [[prompt|kérés]] tehát nem csak egy kérdés – ez az a kiindulópont, amelyből az egész válasz kinő.",
+            "Az {{mod:m01}}. modulban láttad: a modell az általad írt szöveget folytatja. A [[prompt|kérés]] tehát nem csak egy kérdés – ez az a kiindulópont, amelyből az egész válasz kinő.",
             "Képzeld el, hogy egy új, nagyon ügyes kollégának adsz feladatot, aki semmit nem tud rólad, a munkádról vagy a helyzetről. Mit mondanál el neki? Pontosan ezt kell az AI-nak is."
           ]
         },
@@ -169,7 +169,7 @@
         "ido": 9,
         "lepesek": [
           "Válassz egyet az alábbi rossz kérések közül.",
-          "Írd át az öt elem segítségével (a 2.1-es prompt-építőt is használhatod).",
+          "Írd át az öt elem segítségével (a {{fej:2.1}}-es prompt-építőt is használhatod).",
           "Próbáld ki élő eszközben előbb a rossz, aztán a jó változatot – két külön beszélgetésben.",
           "Hasonlítsd össze a két választ: melyik használható azonnal?"
         ],
@@ -229,7 +229,7 @@
             "Néha te sem tudod pontosan, mit kell megadnod. Ilyenkor fordítsd meg a helyzetet: kérd meg az AI-t, hogy **előbb kérdezzen**.",
             { "prompt": "Segíts megtervezni egy hétvégi családi programot. Mielőtt bármit javasolnál, tegyél fel nekem legfeljebb 5 kérdést, ami alapján személyre szabhatod a tervet. Várd meg a válaszaimat.", "cim": "Másolható kérés" },
             "Ez különösen jól működik összetettebb feladatoknál: tervezés, döntés-előkészítés, hosszabb szöveg.",
-            { "tipp": "Ha egy beszélgetés már nagyon hosszú, és az AI kezdi „elfelejteni” a korábbi kéréseidet, kérj egy összefoglalót, és azzal kezdj új beszélgetést. Ennek okáról a 8. modulban lesz szó." }
+            { "tipp": "Ha egy beszélgetés már nagyon hosszú, és az AI kezdi „elfelejteni” a korábbi kéréseidet, kérj egy összefoglalót, és azzal kezdj új beszélgetést. Ennek okáról a {{mod:m08}}. modulban lesz szó." }
           ]
         }
       ],
@@ -301,7 +301,7 @@
           "blokkok": [
             { "lista": [
               "Egy egyszerű jegyzetben a telefonodon vagy a gépeden.",
-              "Az AI-eszköz saját funkcióiban (például [[projekt|projektekben]] vagy mentett utasításokban) – erről a 9. modulban lesz szó.",
+              "Az AI-eszköz saját funkcióiban (például [[projekt|projektekben]] vagy mentett utasításokban) – erről a {{mod:m09}}. modulban lesz szó.",
               "A legjobbakat érdemes megosztani a kollégákkal is."
             ] },
             { "vigyazat": "A sablonba soha ne írj be fixen személyes adatot vagy jelszót. A változó részeket mindig az adott helyzetben töltsd ki, és ott is csak annyit, amennyi szükséges." }

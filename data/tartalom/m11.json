@@ -9,7 +9,7 @@
     "levelezes": "Fogalmazz meg ágensnek egy feladatot: egy mappányi, kitalált levélvázlatból készítsen egységes sablont.",
     "dokumentumok": "Fogalmazz meg ágensnek egy feladatot: egy mappa dokumentumait nevezze át egységes, dátumos formára.",
     "kutatas": "Fogalmazz meg ágensnek egy feladatot: egy mappa jegyzetfájljaiból készítsen összesítő táblázatot.",
-    "kreativ": "Fogalmazz meg ágensnek egy feladatot: a 10. modul weboldaladhoz adjon hozzá egy galériaszakaszt.",
+    "kreativ": "Fogalmazz meg ágensnek egy feladatot: a {{mod:m10}}. modul weboldaladhoz adjon hozzá egy galériaszakaszt.",
     "tanulas": "Fogalmazz meg ágensnek egy feladatot: a jegyzeteidből készítsen egy egyszerű, kérdés-válasz kártyás tanulóoldalt."
   },
   "osszefoglalo": [
@@ -55,7 +55,8 @@
           "blokkok": [
             "A [[claude-code|Claude Code]] az Anthropic AI-ágense. Leggyakrabban a [[terminal|terminálban]] használják, de más felületeken (például fejlesztői programokban, asztali és webes alkalmazásban) is elérhető (2026. novemberi állapot).",
             "Elsősorban programozási és fájlokkal kapcsolatos munkára készült: kódot ír és javít, fájlokat rendez, weboldalt épít, hibát keres. A te gépeden vagy egy kijelölt munkakörnyezetben dolgozik, és a változtatások előtt engedélyt kér – ennek szigorúsága beállítható.",
-            { "tipp": "Ehhez a modulhoz nem kell semmit telepítened. A 11.2-ben egy szimulációban nézzük meg, hogyan zajlik egy munkamenet." }
+            { "tipp": "Ehhez a modulhoz nem kell semmit telepítened. A {{fej:11.2}}-ben egy szimulációban nézzük meg, hogyan zajlik egy munkamenet." },
+            { "lepesabra": "claudecode" }
           ]
         },
         {
@@ -73,7 +74,7 @@
         "esetek": [
           { "kontextus": "Egy e-mail megfogalmazása.", "helyes": 0, "magyarazat": "Szöveg kell, amit te küldesz el – ehhez nem kell ágens." },
           { "kontextus": "Egy 200 fényképet tartalmazó mappa átnevezése dátum szerint, egységes formára.", "helyes": 1, "magyarazat": "Sok fájlon végzett, ismétlődő művelet – tipikus ágens-feladat (előbb próbamappán!)." },
-          { "kontextus": "A 10. modulban készült weboldalhoz egy új szakasz hozzáadása, kipróbálással.", "helyes": 1, "magyarazat": "Fájl módosítása és ellenőrzése – az ágens ezt közvetlenül el tudja végezni. Csevegéssel is megoldható, de több másolgatással." },
+          { "kontextus": "A {{mod:m10}}. modulban készült weboldalhoz egy új szakasz hozzáadása, kipróbálással.", "helyes": 1, "magyarazat": "Fájl módosítása és ellenőrzése – az ágens ezt közvetlenül el tudja végezni. Csevegéssel is megoldható, de több másolgatással." },
           { "kontextus": "Egy fogalom megértése.", "helyes": 0, "magyarazat": "Magyarázat kell, nem cselekvés." }
         ]
       },
@@ -112,7 +113,7 @@
         {
           "cim": "A helyzet",
           "blokkok": [
-            "A 10. modulban készített, kitalált kertész-bemutatkozó oldalhoz (`index.html`) szeretnénk egy „Gyakori kérdések” szakaszt. Az alábbi szimuláció azt mutatja, hogyan zajlana ez egy ágenssel. **Nem kell hozzá semmit telepíteni, és semmi nem változik a gépeden.**",
+            "A {{mod:m10}}. modulban készített, kitalált kertész-bemutatkozó oldalhoz (`index.html`) szeretnénk egy „Gyakori kérdések” szakaszt. Az alábbi szimuláció azt mutatja, hogyan zajlana ez egy ágenssel. **Nem kell hozzá semmit telepíteni, és semmi nem változik a gépeden.**",
             "Figyeld meg a lépéseket: a kérést, ahogy az ágens körülnéz, a tervet, a jóváhagyási pontokat és az ellenőrzést."
           ]
         }
@@ -195,7 +196,7 @@
         {
           "cim": "Jó ágens-feladat írása",
           "blokkok": [
-            "Ugyanazok az elvek, mint a 2. modulban – plusz néhány ágens-specifikus elem:",
+            "Ugyanazok az elvek, mint a {{mod:m02}}. modulban – plusz néhány ágens-specifikus elem:",
             { "lista": [
               "**Hol dolgozzon?** „Csak ebben a mappában.”",
               "**Mi a cél, és mi a kész állapot?** „Kész, ha minden fájlnév ÉÉÉÉ-HH-NN formájú.”",

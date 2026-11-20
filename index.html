@@ -8,11 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/player.css">
-  <link rel="stylesheet" href="css/landing.css">
-  <link rel="stylesheet" href="css/fx.css">
+  <link rel="stylesheet" href="css/base.css?v=7150738a">
+  <link rel="stylesheet" href="css/components.css?v=7150738a">
+  <link rel="stylesheet" href="css/player.css?v=7150738a">
+  <link rel="stylesheet" href="css/landing.css?v=7150738a">
+  <link rel="stylesheet" href="css/fx.css?v=7150738a">
   <script>
     // Téma és betűméret beállítása még a rajzolás előtt, hogy ne villanjon.
     (function () {
@@ -29,10 +29,14 @@
   <a class="skip-link" href="#main">Ugrás a tartalomra</a>
   <div id="storage-warning" class="banner banner-warn" hidden role="status"></div>
   <main id="main" tabindex="-1">
-    <div class="loading" role="status">Betöltés…</div>
+    <div class="loading" role="status" aria-live="polite">
+      <img class="loading-logo" src="assets/img/logo.png" alt="" width="120" height="120">
+      <p class="loading-text">Betöltés<span class="loading-dots" aria-hidden="true"><i></i><i></i><i></i></span></p>
+      <span class="visually-hidden">Az AI kurzus betöltése folyamatban van.</span>
+    </div>
   </main>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <noscript><p style="padding:2rem">A kurzushoz engedélyezni kell a JavaScriptet a böngészőben.</p></noscript>
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/app.js?v=7150738a"></script>
 </body>
 </html>

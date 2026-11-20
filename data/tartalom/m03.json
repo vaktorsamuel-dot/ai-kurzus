@@ -18,7 +18,7 @@
     "Táblázatnál, fordításnál, stílusjavításnál add meg a célt és a közönséget – és ne másolj be személyes adatot."
   ],
   "kviz": [
-    { "k": "Mit tegyél, mielőtt egy valódi levelet bemásolsz az AI-ba?", "v": ["Semmit, mindegy.", "Vedd ki vagy írd át a neveket, címeket, számlaszámokat és egyéb személyes adatokat.", "Fordítsd le angolra.", "Tedd csupa nagybetűssé."], "h": 1, "m": "Személyes és ügyféladat nem való AI-eszközbe, hacsak a munkahelyed kifejezetten nem engedi. Erről a 8. modul szól részletesen." },
+    { "k": "Mit tegyél, mielőtt egy valódi levelet bemásolsz az AI-ba?", "v": ["Semmit, mindegy.", "Vedd ki vagy írd át a neveket, címeket, számlaszámokat és egyéb személyes adatokat.", "Fordítsd le angolra.", "Tedd csupa nagybetűssé."], "h": 1, "m": "Személyes és ügyféladat nem való AI-eszközbe, hacsak a munkahelyed kifejezetten nem engedi. Erről a {{mod:m08}}. modul szól részletesen." },
     { "k": "Mit ellenőrizz feltétlenül egy AI-összefoglalóban?", "v": ["A betűtípust.", "A számokat, dátumokat, határidőket és neveket – az eredeti szövegben.", "Hogy elég hosszú-e.", "Semmit."], "h": 1, "m": "Az összefoglalás erősség, de a konkrétumok elcsúszhatnak vagy kimaradhatnak." },
     { "k": "Melyik kérés ad jobb táblázatképletet?", "v": ["„Adj képletet.”", "„Excelben az A oszlopban dátumok, a B-ben összegek vannak (2–200. sor). Kérek képletet, ami összeadja a márciusi összegeket, és magyarázd el, mit csinál.”", "„Számold ki nekem.”", "„Excel képlet kell gyorsan.”"], "h": 1, "m": "Megadja a programot, az adatok helyét és a célt, és magyarázatot is kér – így ellenőrizni is tudod." },
     { "k": "Mire figyelj, ha AI-val fordíttatsz egy hivatalos dokumentumot?", "v": ["Semmire, a gépi fordítás hibátlan.", "Hivatalos, jogi célra hiteles fordító kell; az AI-fordítás megértéshez és vázlathoz jó.", "Csak a címet kell ellenőrizni.", "Az AI csak angolra tud fordítani."], "h": 1, "m": "Megértéshez és munkavázlathoz kiváló, de hivatalos vagy jogi célra nem helyettesíti a hiteles fordítást." },
@@ -119,7 +119,7 @@
             { "lista": [
               "**Feltöltés:** a legtöbb eszközben van egy gemkapocs vagy „+” ikon, amellyel PDF-et, Word- vagy szövegfájlt csatolhatsz.",
               "**Bemásolás:** rövidebb szöveget egyszerűen beilleszthetsz a beviteli mezőbe.",
-              "**Fotó:** papírdokumentumot le is fényképezhetsz – erről az 5. modulban lesz szó."
+              "**Fotó:** papírdokumentumot le is fényképezhetsz – erről az {{mod:m05}}. modulban lesz szó."
             ] },
             "A feltöltött fájl a beszélgetés [[kontextus|kontextusának]] része lesz: az AI ezt „látja”, amikor válaszol.",
             { "vigyazat": "Mielőtt feltöltesz egy dokumentumot, gondold végig, van-e benne személyes adat, ügyféladat vagy bizalmas információ. Ha igen, ne töltsd fel – vagy csak akkor, ha a munkahelyed kifejezetten engedélyezi az adott eszközt erre." }
@@ -146,7 +146,8 @@
               "**Kimaradt kivételek** – az összefoglaló gyakran elhagyja a „kivéve, ha…” részeket.",
               "**Hozzáadott tartalom** – előfordul, hogy olyat is „összefoglal”, ami nincs a dokumentumban.",
               "**Nagyon hosszú dokumentum** – ha túl hosszú, az eszköz egy részét figyelmen kívül hagyhatja. Darabold fejezetenként."
-            ] }
+            ] },
+            { "ellenorizd": "Ha az összefoglalóban összeg, határidő vagy jogi jellegű kikötés szerepel, nézd meg az eredeti szövegben is. Szerződésnél fontos döntés előtt kérdezz meg szakembert. Bővebben: {{fej:4.4}}." }
           ]
         }
       ],
@@ -183,7 +184,7 @@
         "jegyzetMinta": "Talált-e minden számot? Kimaradt-e valami?"
       },
       "kviz": [
-        { "k": "Mi történik egy feltöltött dokumentummal a beszélgetésben?", "v": ["Az AI kinyomtatja.", "A beszélgetés kontextusának része lesz, az AI ebből dolgozik.", "Automatikusan nyilvános lesz.", "Az AI megjegyzi örökre minden felhasználó számára."], "h": 1, "m": "A dokumentum a beszélgetés része lesz. Hogy az eszköz mit tárol belőle és meddig, az eszköz adatkezelési beállításain múlik – erről a 8. modulban lesz szó." },
+        { "k": "Mi történik egy feltöltött dokumentummal a beszélgetésben?", "v": ["Az AI kinyomtatja.", "A beszélgetés kontextusának része lesz, az AI ebből dolgozik.", "Automatikusan nyilvános lesz.", "Az AI megjegyzi örökre minden felhasználó számára."], "h": 1, "m": "A dokumentum a beszélgetés része lesz. Hogy az eszköz mit tárol belőle és meddig, az eszköz adatkezelési beállításain múlik – erről a {{mod:m08}}. modulban lesz szó." },
         { "k": "Mi a leggyakoribb hiba az összefoglalókban?", "v": ["Túl szép a megfogalmazás.", "Elcsúszott vagy kimaradt számok, kivételek.", "Túl kevés emoji.", "Mindig hosszabb az eredetinél."], "h": 1, "m": "Ezért ellenőrizd mindig a konkrétumokat az eredetiben." },
         { "k": "Mit tegyél egy nagyon hosszú dokumentummal?", "v": ["Töltsd fel egyben, és bízz benne.", "Darabold fejezetenként, és fejezetenként kérj összefoglalót.", "Csak az első oldalt töltsd fel.", "Nyomtasd ki."], "h": 1, "m": "A túl hosszú szöveg egy része kieshet a figyelemből. Darabolva pontosabb az eredmény." },
         { "k": "Miért jó kérni, hogy az összefoglaló írja oda az oldalszámot vagy bekezdést?", "v": ["Hogy hosszabb legyen.", "Hogy gyorsan ellenőrizhesd az eredetiben.", "Mert enélkül nem működik.", "Hogy szebb legyen."], "h": 1, "m": "Így minden állítást pillanatok alatt visszakereshetsz." }
@@ -228,7 +229,8 @@
           "cim": "Számolás: bízz, de ellenőrizz",
           "blokkok": [
             "A nyelvi modellek szövegként dolgoznak, ezért a fejben végzett számolásban – különösen hosszú számsoroknál – tévedhetnek. Sok eszköz ma már tud valódi számítást is futtatni a háttérben, de ezt nem mindig látod.",
-            { "vigyazat": "Fontos összegeknél (számla, költségvetés, adó) a végeredményt a táblázatkezelő képletével számold ki, ne az AI fejszámolására hagyatkozz. Az AI-tól a képletet kérd, ne az eredményt." }
+            { "vigyazat": "Fontos összegeknél (számla, költségvetés, adó) a végeredményt a táblázatkezelő képletével számold ki, ne az AI fejszámolására hagyatkozz. Az AI-tól a képletet kérd, ne az eredményt." },
+            { "ellenorizd": "Számolj utána számológéppel vagy táblázattal: áfánál, százaléknál és összegzésnél egy rosszul kerekített szám is elcsúszhat. Bővebben: {{fej:4.4}}." }
           ]
         }
       ],

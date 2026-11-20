@@ -125,7 +125,7 @@
                 "Mindhárom egy nagy nyelvi modellre épülő csevegő asszisztens, böngészőből és mobilalkalmazásból is elérhető.",
                 "Mindháromnak van ingyenes használati lehetősége korlátozott kerettel, és fizetős csomagjai bővebb kerettel és funkciókkal.",
                 "Mindhárom kezel szöveget és képet, és mindháromban van valamilyen hangos használat.",
-                "Mindhárom tud tévedni – az 1. és 4. modul szabályai mindegyikre ugyanúgy érvényesek."
+                "Mindhárom tud tévedni – az {{mod:m01}}. és {{mod:m04}}. modul szabályai mindegyikre ugyanúgy érvényesek."
               ]
             }
           ]
@@ -173,7 +173,7 @@
                 "**A te feladataid:** melyik válaszol jobban arra, amit te a leggyakrabban csinálsz? (Ezt a 9.2-ben kipróbálod.)",
                 "**Meglévő szolgáltatások:** milyen levelezőt, dokumentumkezelőt, telefont használsz már?",
                 "**Munkahelyi szabály:** van-e engedélyezett eszköz?",
-                "**Adatvédelem:** milyen beállításokat kínál (8.1)?",
+                "**Adatvédelem:** milyen beállításokat kínál ({{fej:8.1}})?",
                 "**Költség:** elég-e az ingyenes keret, vagy megéri-e előfizetni?"
               ]
             },
@@ -186,7 +186,7 @@
       "interaktiv": {
         "tipus": "ellenorzolista",
         "cim": "A saját döntési szempontjaim",
-        "bevezeto": "Pipáld ki, amelyik szempont számít neked. Ezeket használd a 9.2 összehasonlításánál.",
+        "bevezeto": "Pipáld ki, amelyik szempont számít neked. Ezeket használd a {{fej:9.2}} összehasonlításánál.",
         "tetelek": [
           "Pontos, ellenőrizhető válaszok",
           "Jó magyar nyelvű fogalmazás",
@@ -348,7 +348,7 @@
         "ido": 10,
         "bevezeto": "Ha csak egy eszközhöz van fiókod, a másikhoz sok esetben ingyenesen is regisztrálhatsz – vagy kérd meg egy ismerősödet, hogy futtassa le neked a kérést (adatmentes feladattal).",
         "lepesek": [
-          "Válassz egy valódi, adatmentes feladatot (használhatod a 2.4-es sablonjaidat).",
+          "Válassz egy valódi, adatmentes feladatot (használhatod a {{fej:2.4}}-es sablonjaidat).",
           "Írd meg a kérést egyszer, és másold be szó szerint mindkét eszközbe, új beszélgetésben.",
           "Olvasd el mindkét választ, ellenőrizd a tényeket, és töltsd ki a fenti értékelő táblázatot.",
           "Írd le a táblázat alatti megjegyzésbe, melyiket választanád erre a feladatra, és miért."
@@ -438,7 +438,7 @@
             "Ami rendszeresen visszatér, annak legyen állandó helye:",
             {
               "lista": [
-                "**Sablon** egy jegyzetben vagy a projekt utasításai között (2.4).",
+                "**Sablon** egy jegyzetben vagy a projekt utasításai között ({{fej:2.4}}).",
                 "**Projekt** a feladathoz, a szükséges háttéranyagokkal.",
                 "**Ütemezés:** egyes eszközök tudnak ismétlődő vagy ütemezett feladatot is – ha a tiéd igen, kipróbálhatod; ha nem, egy naptáremlékeztető is megteszi."
               ]

@@ -428,7 +428,7 @@
             {
               "szamozott": [
                 "Regisztrálj a github.com oldalon (ingyenes fiók). Válassz olyan felhasználónevet, amelyet szívesen látsz a webcímben – a címed `felhasznalonev.github.io/...` formájú lesz.",
-                "Kapcsold be a fiókodon a kétlépcsős azonosítást (8.1).",
+                "Kapcsold be a fiókodon a kétlépcsős azonosítást ({{fej:8.1}}).",
                 "Kattints a jobb felső sarokban a **+** jelre › **New repository**. Adj neki rövid nevet (például `bemutatkozas`), válaszd a **Public** lehetőséget, és kattints a **Create repository** gombra.",
                 "A tároló oldalán válaszd az **Add file › Upload files** lehetőséget (vagy az „uploading an existing file” linket), húzd be az `index.html` fájlt, és kattints a **Commit changes** gombra.",
                 "Nyisd meg a tároló **Settings** (Beállítások) fülét, a bal oldali menüben a **Pages** pontot.",
@@ -438,7 +438,8 @@
             },
             {
               "tipp": "A menük neve és helye változhat. Ha valamit nem találsz, kérdezd meg az AI-t („Hol találom a GitHubon a Pages beállítást?”), vagy nézd meg a GitHub hivatalos súgóját."
-            }
+            },
+            { "lepesabra": "githubpages" }
           ]
         },
         {

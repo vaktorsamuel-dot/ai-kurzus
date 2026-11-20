@@ -1,6 +1,6 @@
 // Közös segédfüggvények: HTML-építés, szövegjelölés, formázás, ikonok, értesítés, másolás.
 
-import { course } from './data.js';
+import { course } from './data.js?v=7150738a';
 
 export function esc(s) {
   return String(s == null ? '' : s)
@@ -13,6 +13,8 @@ let termSeq = 0;
 export function md(text) {
   let s = esc(text);
   s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // Hivatkozás: [szöveg](https://...) – csak https, új lapon nyílik
+  s = s.replace(/\[([^\]\[]+)\]\((https:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1<span class="visually-hidden"> (új lapon nyílik)</span></a>');
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
   s = s.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (m, id, label) => {
@@ -79,6 +81,7 @@ const ICONS = {
   fullscreen: '<path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
   phone: '<rect x="6.5" y="2.5" width="11" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
   print: '<path d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>',
+  circle: '<circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>',
   user: '<circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
 };
 export function icon(name, cls = '') {
@@ -88,8 +91,7 @@ export function icon(name, cls = '') {
 export const STATUS = {
   kesz: { label: 'Kész', icon: 'check' },
   folyamatban: { label: 'Folyamatban', icon: 'progress' },
-  zarolt: { label: 'Zárolt', icon: 'lock' },
-  kihagyva: { label: 'Kihagyva', icon: 'skip' },
+  nincs: { label: 'Nincs elkezdve', icon: 'circle' },
 };
 export function statusBadge(status, extra = '') {
   const s = STATUS[status];
@@ -130,11 +132,49 @@ export async function copyText(text) {
   }
 }
 
-// Másolható prompt-doboz
-export function promptBox(text, title = 'Másolható kérés') {
-  return '<div class="prompt-box"><div class="prompt-head"><span>' + esc(title) + '</span>' +
+// ---- Másolható prompt-doboz + Másolás / Megnyitás gombok (a közös komponens) ----
+// Az előtöltő címek változhatnak; ha az eszköz nem tölti be magától a kérést, a vágólapra másolt szöveget kell beilleszteni.
+export const MAX_URL_PROMPT = 1800; // a kódolt kérés ennél hosszabb esetén nem kerül a címbe
+const AI_TOOLS = {
+  claude: { label: 'Megnyitás Claude-ban', short: 'Claude', url: 'https://claude.ai/new', q: 'q' },
+  chatgpt: { label: 'Megnyitás ChatGPT-ben', short: 'ChatGPT', url: 'https://chatgpt.com/', q: 'q' },
+  gemini: { label: 'Megnyitás Gemini-ben', short: 'Gemini', url: 'https://gemini.google.com/app', q: null },
+};
+const PLACEHOLDER = /\[[^\]\n]+\]/;
+
+export function hasPlaceholder(text) { return PLACEHOLDER.test(text || ''); }
+
+// Megnyitási cím egy eszközhöz; { href, prefilled }.
+export function openUrl(tool, text) {
+  const t = AI_TOOLS[tool];
+  const enc = encodeURIComponent(text || '');
+  if (!t.q || !text || enc.length > MAX_URL_PROMPT) return { href: t.url, prefilled: false };
+  return { href: t.url + '?' + t.q + '=' + enc, prefilled: true };
+}
+
+export function promptActions(label) {
+  return '<div class="prompt-actions no-print">' + (label ? '<p class="prompt-try"><strong>' + esc(label) + '</strong></p>' : '') + '<div class="prompt-open">' +
+    Object.keys(AI_TOOLS).map((k) => '<a class="btn btn-ghost btn-open" href="' + AI_TOOLS[k].url + '" target="_blank" rel="noopener" data-open="' + k + '">' + icon('arrowRight') + '<span>' + AI_TOOLS[k].label + '</span></a>').join('') +
+    '</div><p class="small muted prompt-note">Ha nem vagy bejelentkezve, előbb jelentkezz be, utána illeszd be a kérést.</p></div>';
+}
+
+let boxSeq = 0;
+export function promptBox(text, title = 'Másolható kérés', tryLabel = '') {
+  const edit = hasPlaceholder(text);
+  const id = 'pb-' + (++boxSeq);
+  const body = edit
+    ? '<p class="prompt-edit-note" id="' + id + '-n"><strong>Előbb írd át a szögletes zárójeles részt.</strong></p>' +
+      '<textarea class="prompt-text prompt-edit" id="' + id + '" rows="' + Math.min(14, Math.max(4, String(text).split('\n').length + 1)) + '" aria-describedby="' + id + '-n" spellcheck="false">' + esc(text) + '</textarea>'
+    : '<pre class="prompt-text">' + esc(text) + '</pre>';
+  return '<div class="prompt-box' + (edit ? ' prompt-editable' : '') + '"><div class="prompt-head"><span>' + esc(title) + '</span>' +
     '<button type="button" class="btn btn-small btn-ghost copy-btn" data-copy>' + icon('copy') + '<span>Másolás</span></button></div>' +
-    '<pre class="prompt-text">' + esc(text) + '</pre></div>';
+    body + promptActions(tryLabel) + '</div>';
+}
+
+function promptTextOf(box) {
+  const src = box.querySelector('.prompt-text');
+  if (!src) return '';
+  return (src.tagName === 'TEXTAREA' ? src.value : src.textContent) || '';
 }
 
 // Delegált események: szakszó-buborék és másolás gombok
@@ -151,11 +191,37 @@ export function initGlobalHandlers() {
       pop.hidden = !open;
       return;
     }
+    const printBtn = e.target.closest('[data-print-card]');
+    if (printBtn) {
+      const card = printBtn.closest('.print-card-wrap').querySelector('.print-card');
+      card.classList.add('print-target');
+      document.body.classList.add('printing-card');
+      const done = () => { card.classList.remove('print-target'); document.body.classList.remove('printing-card'); window.removeEventListener('afterprint', done); };
+      window.addEventListener('afterprint', done);
+      window.print();
+      return;
+    }
+    const open = e.target.closest('[data-open]');
+    if (open) {
+      // A natív megnyitást nem állítjuk meg: a címet most, kattintáskor állítjuk be az aktuális szövegből.
+      const text = promptTextOf(open.closest('.prompt-box'));
+      const tool = open.dataset.open;
+      const u = openUrl(tool, text);
+      open.href = u.href;
+      if (!text.trim()) { toast('A kérés mező üres, ezért csak megnyitom az eszközt.'); return; }
+      copyText(text).then((ok) => {
+        toast(!ok ? 'A másolás nem sikerült. Jelöld ki és másold ki kézzel a kérést, majd illeszd be: Ctrl+V (Mac-en Cmd+V).'
+          : u.prefilled ? 'A kérést a vágólapra is átmásoltam. Ha nem töltődött be magától, illeszd be: Ctrl+V (Mac-en Cmd+V).'
+            : 'Átmásoltam a kérést. Illeszd be: Ctrl+V (Mac-en Cmd+V).', 6000);
+      });
+      return;
+    }
     const copy = e.target.closest('[data-copy]');
     if (copy) {
       const box = copy.closest('.prompt-box');
       const src = copy.dataset.copySource ? document.getElementById(copy.dataset.copySource) : box.querySelector('.prompt-text');
       const text = 'value' in src && src.tagName !== 'PRE' ? src.value : src.textContent;
+      if (!text.trim()) { toast('Nincs mit másolni: a kérés mező üres.'); return; }
       const ok = await copyText(text);
       const label = copy.querySelector('span');
       const old = label.textContent;
@@ -211,6 +277,8 @@ const MODULE_ICONS = {
   m10: '<rect x="3" y="4" width="18" height="16" rx="2" ' + S + '/><path d="M3 8.5h18M6 6.3h.01M8.5 6.3h.01M7 13h6M7 16h10" ' + S + '/>',
   // 11. AI-ágensek – terminál
   m11: '<rect x="3" y="4.5" width="18" height="15" rx="2" ' + S + '/><path d="M7 10l3 2.5L7 15M12.5 15.5H17" ' + S + '/>',
+  // Átállás ChatGPT-ről Claude-ra – két nyíl
+  m12: '<path d="M4 8h13M13 4l4 4-4 4M20 16H7M11 12l-4 4 4 4" ' + S + '/>',
   // Záró projekt – zászló
   zp: '<path d="M5 21V4M5 4.5h11l-2 3.5 2 3.5H5" ' + S + '/>',
 };

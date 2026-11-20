@@ -122,3 +122,5 @@ main.page-enter > .landing { animation: fx-in .4s both; }
   .lp-block, .lp-mod { opacity: 1 !important; transform: none !important; }
   .lp-fl, .lp-blob, .lp-cta::after { animation: none !important; }
 }
+
+.lp-facts { margin: .75rem 0 0; font-weight: 600; opacity: .9; }

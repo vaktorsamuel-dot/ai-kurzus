@@ -1,0 +1,60 @@
+{
+  "megjegyzes": "A mintaválaszokat Samu futtatja le mindkét eszközben, és másolja be a chatgpt_valasz és claude_valasz mezőbe. Töltsd ki a futtatva (dátum), modell_chatgpt, modell_claude és jegyzet mezőt is. Üres válasznál az oldal csak a kérést és a gombokat mutatja.",
+  "peldak": [
+    {
+      "id": "p1",
+      "cim": "Udvarias e-mail a szállítónak",
+      "kerdes": "Írj rövid, udvarias e-mailt a szállítónak, hogy a tegnapi szállítás két órát késett. Kérj tőle visszajelzést, hogy hogyan előzhető meg.",
+      "chatgpt_valasz": "",
+      "claude_valasz": "",
+      "futtatva": "",
+      "modell_chatgpt": "",
+      "modell_claude": "",
+      "jegyzet": ""
+    },
+    {
+      "id": "p2",
+      "cim": "Összefoglalás 3 pontban",
+      "kerdes": "Foglald össze 3 pontban ezt a szöveget, egyszerű nyelven: Tisztelt Ügyfelünk! Tájékoztatjuk, hogy a Kékfenyő Szolgáltató ügyfélszolgálata november 3-tól új nyitvatartással várja Önt. Hétfőtől csütörtökig 8 és 16 óra között, pénteken 8 és 13 óra között tartunk személyes ügyfélfogadást. Telefonos ügyintézésre hétköznapokon 7 és 18 óra között van lehetőség. Kérjük, hogy számlával kapcsolatos kérdése esetén tartsa kéznél az ügyfélszámát, amely a számla jobb felső sarkában található. Panaszát írásban a honlapunkon elérhető űrlapon vagy levélben is megteheti; a beérkezett panaszokra legkésőbb tizenöt napon belül válaszolunk. Az első fél évben a papír alapú számla helyett elektronikus számlát is kérhet, amelyért semmilyen díjat nem számítunk fel. Az ügyfélportálon keresztül a mérőóra állását is bejelentheti, a készpénzes befizetés pedig pénteken csak 12 óráig lehetséges. Ha a honlapon nem találja a keresett űrlapot, kérjük, keresse ügyfélszolgálatunkat telefonon vagy e-mailben, és kollégáink segítenek. Megértésüket köszönjük.",
+      "chatgpt_valasz": "",
+      "claude_valasz": "",
+      "futtatva": "",
+      "modell_chatgpt": "",
+      "modell_claude": "",
+      "jegyzet": ""
+    },
+    {
+      "id": "p3",
+      "cim": "Bruttó és nettó ár",
+      "kerdes": "Mi a különbség a bruttó és a nettó ár között? Magyarázd el egy konkrét példával, ne használj szakszót.",
+      "chatgpt_valasz": "",
+      "claude_valasz": "",
+      "futtatva": "",
+      "modell_chatgpt": "",
+      "modell_claude": "",
+      "jegyzet": ""
+    },
+    {
+      "id": "p4",
+      "cim": "Karácsonyi ajándékötletek",
+      "kerdes": "Adj 10 ötletet egy kis céges karácsonyi ajándékra, fejenként 5 000 Ft alatt.",
+      "chatgpt_valasz": "",
+      "claude_valasz": "",
+      "futtatva": "",
+      "modell_chatgpt": "",
+      "modell_claude": "",
+      "jegyzet": ""
+    },
+    {
+      "id": "p5",
+      "cim": "Áfa kiszámolása",
+      "kerdes": "Egy étel ára 3 490 Ft + 27% áfa. Mennyi a bruttó ár? Számold ki lépésenként.",
+      "chatgpt_valasz": "",
+      "claude_valasz": "",
+      "futtatva": "",
+      "modell_chatgpt": "",
+      "modell_claude": "",
+      "jegyzet": "Ez a példa a számok ellenőrzéséről szól: a helyes bruttó ár 4 432,3 Ft (kerekítve 4 432 Ft). Lásd a Mikor ne higgyél az AI-nak fejezetet."
+    }
+  ]
+}

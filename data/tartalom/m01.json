@@ -150,7 +150,7 @@
               "**Gördülékeny szöveg:** a modell nagyon jó abban, hogy természetesen hangzó mondatokat írjon.",
               "**Nem ellenőriz:** a „valószínű” nem ugyanaz, mint az „igaz”. Ha egy hamis állítás jól hangzik, az is kijöhet.",
               "**Minden válasz kicsit más:** ugyanarra a kérdésre kétszer kicsit eltérő választ kaphatsz, mert a modell nem mindig a legvalószínűbb szót választja.",
-              "**A kérésed számít:** amit beírsz, az a szöveg eleje, amit folytat. Minél pontosabb az eleje, annál jobb a folytatás. Ezzel foglalkozik a 2. modul."
+              "**A kérésed számít:** amit beírsz, az a szöveg eleje, amit folytat. Minél pontosabb az eleje, annál jobb a folytatás. Ezzel foglalkozik a {{mod:m02}}. modul."
             ] },
             { "tipp": "Hasznos gondolatkísérlet: képzeld el az AI-t egy nagyon olvasott, gyors segítőnek, aki mindenre válaszol, de nem mindig nézi meg, hogy jól emlékszik-e." }
           ]
