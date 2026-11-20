@@ -138,7 +138,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-2-3",
@@ -225,7 +225,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-3-3",
@@ -308,7 +308,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-4-3",
@@ -380,7 +380,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-5-3",
@@ -452,7 +452,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-6-3",
@@ -524,7 +524,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-7-3",
@@ -596,7 +596,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-8-3",
@@ -672,7 +672,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-9-3",
@@ -748,7 +748,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-10-3",
@@ -824,7 +824,7 @@
           }
         ]
       },
-      "statusz": "hianyzik"
+      "statusz": "kesz"
     },
     {
       "id": "img-11-3",
@@ -856,7 +856,7 @@
       "alt": "Egy férfi a laptopján dolgozik, mellette kinyomtatott ellenőrzőlista, amelyen már több pont ki van pipálva.",
       "prompt_hu": "Valósághű fotó: ötvenes férfi otthoni asztalnál laptopon dolgozik, mellette kinyomtatott ellenőrzőlista, több sora tollal kipipálva. Délutáni fény, koncentrált, nyugodt hangulat.",
       "prompt_en": "Photorealistic photo of a man in his fifties working on a laptop at a home desk, a printed checklist beside him with several lines ticked off in pen. Afternoon light, focused and calm mood, realistic hands, no readable text or logos. 16:9.",
-      "statusz": "hianyzik",
+      "statusz": "kesz",
       "meret": "1600x900"
     },
     {
@@ -867,7 +867,7 @@
       "alt": "Egy ember az ablak mellett ülve egy csésze kávéval a kezében elégedetten néz egy füzetet.",
       "prompt_hu": "Valósághű fotó: harmincas-negyvenes ember egy ablak melletti fotelben ül, kezében kávé, az ölében nyitott füzet; elégedett, elgondolkodó arckifejezés. Lágy reggeli fény.",
       "prompt_en": "Photorealistic photo of a person in their late thirties sitting in an armchair by a window, holding a coffee cup, an open notebook on their lap, with a content, reflective expression. Soft morning light, authentic, realistic skin and hands. 16:9.",
-      "statusz": "hianyzik",
+      "statusz": "kesz",
       "meret": "1600x900"
     }
   ]

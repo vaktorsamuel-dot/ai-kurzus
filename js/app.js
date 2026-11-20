@@ -13,6 +13,7 @@ import { viewClosing } from './views/closing.js';
 import { viewFinish } from './views/finish.js';
 import { viewSettings } from './views/settings.js';
 import { viewHelp, viewGlossary } from './views/help.js';
+import { fxPage, initFx } from './fx.js';
 
 let flash = null;
 export function setFlash(msg) { flash = msg; }
@@ -132,6 +133,7 @@ async function render() {
   if (v.mount) cleanup = v.mount(main) || null;
   window.scrollTo(0, 0);
   main.classList.remove('page-enter'); void main.offsetWidth; main.classList.add('page-enter');
+  fxPage(main);
   main.focus({ preventScroll: true });
 
   if (v.track) {
@@ -144,6 +146,7 @@ async function render() {
 async function start() {
   applySettings();
   initGlobalHandlers();
+  initFx();
   document.addEventListener('click', (e) => {
     if (e.target.closest('[data-logout]')) { logout(); go('#/bevezeto'); return; }
     const b = e.target.closest('[data-admin]');

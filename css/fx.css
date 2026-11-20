@@ -1,0 +1,56 @@
+/* ===== Effektek minden továbblépéshez (fejezet, modul, záró, kvíz) ===== */
+@keyframes fx-slide-r { from { opacity: 0; transform: translateX(36px); } to { opacity: 1; transform: none; } }
+@keyframes fx-zoom { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes fx-check { 0% { transform: scale(0) rotate(-30deg); } 60% { transform: scale(1.25) rotate(6deg); } 100% { transform: none; } }
+@keyframes fx-pulse { 0% { box-shadow: 0 0 0 0 rgba(59,130,246,.55); } 100% { box-shadow: 0 0 0 18px rgba(59,130,246,0); } }
+@keyframes fx-shine { 40%, 100% { transform: translateX(120%); } }
+@keyframes fx-bar { from { background-position: 0 0; } to { background-position: 28px 0; } }
+@keyframes fx-fall { 0% { transform: translate(0,0) rotate(0); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); opacity: 0; } }
+@keyframes fx-shake { 20%, 60% { transform: translateX(-5px); } 40%, 80% { transform: translateX(5px); } }
+
+/* Fejezet / modul / záró oldal: oldalról becsúszó belépés, a részek egymás után */
+main.page-enter > .chapter { animation: fx-slide-r .5s cubic-bezier(.2,.7,.2,1) both; }
+main.page-enter .ch-header h1 { animation: fx-up .6s .1s cubic-bezier(.2,.7,.2,1) both; }
+main.page-enter .ch-header .eyebrow { animation: fx-up .5s .05s both; }
+main.page-enter .ch-toc li { animation: fx-up .4s both; animation-delay: calc(var(--i, 0) * 50ms + .2s); }
+main.page-enter .closing { animation: fx-zoom .5s cubic-bezier(.2,.7,.2,1) both; }
+main.page-enter .mod-hero, main.page-enter .module-head { animation: fx-zoom .5s both; }
+
+/* Görgetéskor megjelenő részek */
+.fx-reveal { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
+.fx-reveal.fx-in { opacity: 1; transform: none; }
+.ch-toc a { transition: background .25s, color .25s, transform .25s; }
+.ch-toc a.is-active { transform: translateX(4px); }
+.ch-toc a.is-active .toc-n { animation: fx-pop .4s both; }
+
+/* Haladássáv: mozgó csíkozás, amíg nincs kész */
+.pbar > span:not([style*="100%"]) { background-image: linear-gradient(135deg, rgba(255,255,255,.28) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.28) 50%, rgba(255,255,255,.28) 75%, transparent 75%); background-size: 28px 28px; animation: fx-bar 1s linear infinite; }
+
+/* Lezárás: a Következő gomb kiemelése, pipa-animáció, konfetti */
+#next-ch:not([hidden]) { position: relative; overflow: hidden; animation: fx-pop .6s both, fx-pulse 1.6s .6s 3; }
+#next-ch:not([hidden])::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.45) 50%, transparent 70%); transform: translateX(-120%); animation: fx-shine 2.6s 1s infinite; pointer-events: none; }
+.ch-missing .fb-ok { animation: fx-up .4s both; }
+.ch-missing .fb-ok > .icon, .congrats-icon { animation: fx-check .6s .1s both; }
+.congrats { animation: fx-pop .7s cubic-bezier(.2,.8,.2,1) both; }
+.fb-no { animation: fx-shake .4s; }
+.fb-ok { animation: fx-up .35s both; }
+.quiz-fold[open] .quiz-fold-body { animation: fx-up .4s both; }
+.exercise.card, .goals.card { transition: box-shadow .3s, transform .3s; }
+.exercise.card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.ch-sec-card { transition: box-shadow .3s; }
+.ch-sec-card:hover { box-shadow: var(--shadow-hover); }
+
+/* Kattintási hullám */
+.btn { position: relative; overflow: hidden; }
+.fx-ripple { position: absolute; border-radius: 50%; background: rgba(255,255,255,.55); transform: scale(0); animation: fx-rip .6s ease-out forwards; pointer-events: none; }
+@keyframes fx-rip { to { transform: scale(4); opacity: 0; } }
+
+/* Konfetti */
+.fx-confetti { position: fixed; left: 0; top: 0; width: 0; height: 0; z-index: 60; pointer-events: none; }
+.fx-confetti i { position: absolute; width: 9px; height: 14px; border-radius: 2px; animation: fx-fall 1.5s cubic-bezier(.15,.7,.3,1) forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-reveal { opacity: 1; transform: none; transition: none; }
+  main.page-enter > .chapter, main.page-enter .closing, #next-ch:not([hidden]), .congrats, .pbar > span { animation: none !important; }
+  .fx-confetti { display: none; }
+}
