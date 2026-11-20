@@ -1,0 +1,363 @@
+{
+  "cel": "Felgyorsítod a mindennapi írásbeli munkát: levelek, összefoglalók, táblázatok és fordítás – úgy, hogy a minőség is megmaradjon.",
+  "utana": [
+    "Gyorsan írsz, rövidítesz és válaszolsz e-mailekre a megfelelő hangnemben.",
+    "Hosszú dokumentumokból megbízható összefoglalót kérsz, és tudod, mit kell ellenőrizni benne.",
+    "Táblázatokhoz képletet és értelmezést kérsz, szövegeket fordíttatsz és javíttatsz."
+  ],
+  "javaslat": {
+    "levelezes": "Vegyél elő egy valódi, de név- és adatmentesített levelet a postafiókodból, és kérj rá három különböző hangnemű válaszvázlatot.",
+    "dokumentumok": "Válassz egy hosszabb, nyilvános dokumentumot (például egy használati útmutatót vagy egy hivatalos tájékoztatót), és kérj belőle összefoglalót teendőkkel.",
+    "kutatas": "Válassz egy nyilvános tanulmányt vagy cikket, és kérd az összefoglalót úgy, hogy a fő állítások mellé írja oda, a szöveg melyik részéből származnak.",
+    "kreativ": "Vegyél egy saját, rövid szöveget (bejegyzés, köszöntő), és kérd három stílusban átírva.",
+    "tanulas": "Vegyél egy tankönyvi fejezetet vagy jegyzetet, és kérj belőle összefoglalót, majd öt ellenőrző kérdést."
+  },
+  "osszefoglalo": [
+    "Levelezésben az AI vázlatot ad: hangnemet, rövidítést, válaszlehetőségeket – az elküldés előtt mindig olvasd át.",
+    "Dokumentumnál kérj szerkezett összefoglalót, és ellenőrizd a számokat, határidőket, neveket az eredetiben.",
+    "Táblázatnál, fordításnál, stílusjavításnál add meg a célt és a közönséget – és ne másolj be személyes adatot."
+  ],
+  "kviz": [
+    { "k": "Mit tegyél, mielőtt egy valódi levelet bemásolsz az AI-ba?", "v": ["Semmit, mindegy.", "Vedd ki vagy írd át a neveket, címeket, számlaszámokat és egyéb személyes adatokat.", "Fordítsd le angolra.", "Tedd csupa nagybetűssé."], "h": 1, "m": "Személyes és ügyféladat nem való AI-eszközbe, hacsak a munkahelyed kifejezetten nem engedi. Erről a 8. modul szól részletesen." },
+    { "k": "Mit ellenőrizz feltétlenül egy AI-összefoglalóban?", "v": ["A betűtípust.", "A számokat, dátumokat, határidőket és neveket – az eredeti szövegben.", "Hogy elég hosszú-e.", "Semmit."], "h": 1, "m": "Az összefoglalás erősség, de a konkrétumok elcsúszhatnak vagy kimaradhatnak." },
+    { "k": "Melyik kérés ad jobb táblázatképletet?", "v": ["„Adj képletet.”", "„Excelben az A oszlopban dátumok, a B-ben összegek vannak (2–200. sor). Kérek képletet, ami összeadja a márciusi összegeket, és magyarázd el, mit csinál.”", "„Számold ki nekem.”", "„Excel képlet kell gyorsan.”"], "h": 1, "m": "Megadja a programot, az adatok helyét és a célt, és magyarázatot is kér – így ellenőrizni is tudod." },
+    { "k": "Mire figyelj, ha AI-val fordíttatsz egy hivatalos dokumentumot?", "v": ["Semmire, a gépi fordítás hibátlan.", "Hivatalos, jogi célra hiteles fordító kell; az AI-fordítás megértéshez és vázlathoz jó.", "Csak a címet kell ellenőrizni.", "Az AI csak angolra tud fordítani."], "h": 1, "m": "Megértéshez és munkavázlathoz kiváló, de hivatalos vagy jogi célra nem helyettesíti a hiteles fordítást." },
+    { "k": "Mit érdemes megadni egy stílusjavításnál?", "v": ["Csak azt, hogy „javítsd”.", "Kinek szól a szöveg, milyen hangnemet szeretnél, és mi nem változhat benne.", "A szöveg betűszámát.", "Semmit, a stílus mindegy."], "h": 1, "m": "A közönség, a hangnem és a megtartandó tartalom nélkül az AI a saját ízlése szerint írja át." },
+    { "k": "Hogyan kérj, ha egy hosszú szövegből csak a teendők érdekelnek?", "v": ["„Foglald össze.”", "„Gyűjtsd ki a teendőket felelőssel és határidővel, táblázatban. Ha valamelyik nem derül ki, írd oda: nincs megadva.”", "„Mi a lényeg?”", "„Rövidebben.”"], "h": 1, "m": "Pontos kimenetet kérsz, és azt is, hogy jelezze a hiányt – így nem talál ki határidőt." },
+    { "k": "Melyik állítás igaz az AI által írt e-mail-válaszokra?", "v": ["Átolvasás nélkül elküldhetők.", "Vázlatként kiválóak, de a felelősség a tiéd, ezért elküldés előtt olvasd át.", "Mindig hosszabbak, mint kellene, ezért nem érdemes használni.", "Csak angolul jók."], "h": 1, "m": "Az AI gyorsít, de a levél a te nevedben megy el." }
+  ],
+  "fejezetek": [
+    {
+      "id": "3.1",
+      "cim": "Levelek és e-mailek: hangnem, rövidítés, válasz",
+      "ido": 11,
+      "hero": "img-3-1",
+      "celok": [
+        "Jegyzetből vagy pontokból kész levelet kérsz a megfelelő hangnemben.",
+        "Egy hosszú, kusza levelet rövid és világos szöveggé alakíttatsz.",
+        "Egy kapott levélre több válaszlehetőséget kérsz, és kiválasztod a legjobbat."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Pontokból levél",
+          "blokkok": [
+            "A leggyakoribb és leghasznosabb felhasználás: te tudod, mit akarsz mondani, az AI megfogalmazza.",
+            { "prompt": "Írj ebből egy udvarias, rövid e-mailt a lakóközösség tagjainak, magázó hangnemben:\n- jövő szombaton 9–13 között lépcsőházi takarítás\n- a lábtörlőket kérjük felvenni\n- a lift ez idő alatt nem működik\n- kérdés esetén a közös képviselőt lehet keresni", "cim": "Példa: pontokból levél" },
+            { "tipp": "Ha van egy korábbi leveled, aminek a hangneme tetszik, másold be mintának (személyes adatok nélkül): „Ilyen stílusban írd.”" }
+          ]
+        },
+        {
+          "cim": "Hangnem: ugyanaz, másképp",
+          "blokkok": [
+            "A hangnem a levél fele. Néhány hasznos kérés:",
+            { "lista": [
+              "„Legyen udvariasabb, de határozott.”",
+              "„Legyen barátságosabb, kevésbé hivatalos.”",
+              "„Írd át úgy, hogy ne tűnjön sértettnek, de egyértelmű legyen, hogy nem fogadom el.”",
+              "„Írd meg magázó és tegező változatban is.”"
+            ] }
+          ]
+        },
+        {
+          "cim": "Rövidítés és válasz",
+          "blokkok": [
+            "Hosszú, szerteágazó levelet is rendbe tehetsz: „Rövidítsd a felére. A kérés és a határidő legyen az első két mondatban.”",
+            "Kapott levélre is kérhetsz válaszlehetőségeket:",
+            { "prompt": "Az alábbi levélre írj három rövid válaszvázlatot: 1) elfogadom, 2) udvariasan elutasítom, 3) más időpontot javaslok. Magázó hangnem, mindegyik legfeljebb 4 mondat.\n\n[a kapott levél szövege, nevek és adatok nélkül]", "cim": "Válaszlehetőségek" },
+            { "vigyazat": "A levelet a saját neveden küldöd el. Olvasd át: illik-e hozzád a hangnem, és nem írt-e bele az AI olyan ígéretet vagy tényt, ami nem igaz." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Mit kérnél?",
+        "bevezeto": "Melyik kérés vezet a legjobb eredményhez a helyzetben?",
+        "esetek": [
+          { "kontextus": "Egy ügyfél harmadszor kérdezi ugyanazt. Ingerült vagy, de udvarias választ akarsz küldeni.", "kerdes": "Melyik kérés a legjobb?", "opciok": ["„Írj választ.”", "„Írj egy türelmes, udvarias választ, amely röviden újra elmagyarázza a lényeget pontokba szedve, és felajánl egy rövid telefonos egyeztetést. Ne tűnjön ingerültnek.”", "„Írd meg neki, hogy olvassa el a korábbi levelemet.”"], "helyes": 1, "magyarazat": "Megadja a hangnemet, a szerkezetet és a megoldást is – és kifejezetten kéri, hogy az ingerültség ne érződjön." },
+          { "kontextus": "Egy 600 szavas levelet írtál, de érzed, hogy senki nem fogja végigolvasni.", "kerdes": "Melyik kérés a legjobb?", "opciok": ["„Rövidítsd 150 szóra. A kérésem és a határidő legyen az elején, a háttér a végén, röviden.”", "„Legyen jobb.”", "„Fordítsd angolra.”"], "helyes": 0, "magyarazat": "Konkrét hossz és szerkezet: a fontos rész előre kerül." },
+          { "kontextus": "Meghívást kaptál egy eseményre, amire nem tudsz elmenni, de a kapcsolatot fontosnak tartod.", "kerdes": "Melyik kérés a legjobb?", "opciok": ["„Mondd le.”", "„Írj egy meleg, rövid lemondó választ, amelyben megköszönöm a meghívást, sajnálatomat fejezem ki, és felajánlom, hogy a következő alkalommal szívesen ott leszek.”", "„Írj egy hosszú bocsánatkérő levelet.”"], "helyes": 1, "magyarazat": "A cél (lemondás) mellett a kapcsolat ápolása is benne van a kérésben – ettől lesz jó a hangnem." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Egy levél három hangnemben",
+        "ido": 8,
+        "lepesek": [
+          "Gondolj egy levélre, amit mostanában meg kell írnod. Írd le pontokba, mit kell tartalmaznia – nevek és személyes adatok nélkül.",
+          "Másold be a sablont, és illeszd be a pontjaidat.",
+          "Válaszd ki a legjobb változatot, és kérj rajta egy utolsó finomítást (hossz, hangnem).",
+          "Olvasd át: van-e benne olyan állítás vagy ígéret, ami nem igaz?"
+        ],
+        "promptok": [
+          { "cim": "Sablon", "szoveg": "Írj ebből a vázlatból egy e-mailt három változatban: 1) hivatalos, 2) barátságos, 3) nagyon rövid. Mindegyikhez írj tárgysort is.\n\nCímzett: [kinek, milyen a viszonyotok]\nPontok:\n- [1. pont]\n- [2. pont]\n- [3. pont]" }
+        ]
+      },
+      "kviz": [
+        { "k": "Mi a leghasznosabb első lépés egy AI-val írt levélnél?", "v": ["Pontokba szedni, mit akarsz mondani.", "Kitalálni egy jó tárgysort.", "Megkérni az AI-t, hogy találja ki a tartalmat.", "Bemásolni a címzett telefonszámát."], "h": 0, "m": "Te tudod a tartalmat, az AI a megfogalmazásban segít." },
+        { "k": "Mit érdemes megadni a válaszlevél kérésekor?", "v": ["A kívánt kimenetelt (elfogad, elutasít, mást javasol) és a hangnemet.", "Csak azt, hogy „válaszolj”.", "A saját jelszavadat.", "A címzett lakcímét."], "h": 0, "m": "A kimenetel és a hangnem a két legfontosabb döntés – ezt neked kell megadnod." },
+        { "k": "Mire figyelj elküldés előtt?", "v": ["Hogy elég hosszú-e.", "Hogy nem írt-e bele az AI valótlan tényt vagy ígéretet, és illik-e hozzád a hangnem.", "Hogy van-e benne emoji.", "Semmire."], "h": 1, "m": "A levél a te nevedben megy el – a tartalmáért te felelsz." }
+      ],
+      "osszefoglalo": [
+        "Te adod a tartalmat pontokban, az AI megfogalmazza.",
+        "A hangnemet egy mondattal bármikor átállíthatod; a rövidítésnél mondd meg, mi legyen elöl.",
+        "Válaszvázlatot kérj többféle kimenetellel, és elküldés előtt mindig olvasd át."
+      ]
+    },
+    {
+      "id": "3.2",
+      "cim": "Dokumentum beolvasása és összefoglalása",
+      "ido": 12,
+      "hero": "img-3-2",
+      "celok": [
+        "Tudod, hogyan adhatsz át az AI-nak PDF-et, Word-fájlt vagy hosszú szöveget.",
+        "Szerkezett, célzott összefoglalót kérsz egy dokumentumból.",
+        "Tudod, mit kell az eredetiben ellenőrizned."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Hogyan kerül be a dokumentum?",
+          "blokkok": [
+            { "lista": [
+              "**Feltöltés:** a legtöbb eszközben van egy gemkapocs vagy „+” ikon, amellyel PDF-et, Word- vagy szövegfájlt csatolhatsz.",
+              "**Bemásolás:** rövidebb szöveget egyszerűen beilleszthetsz a beviteli mezőbe.",
+              "**Fotó:** papírdokumentumot le is fényképezhetsz – erről az 5. modulban lesz szó."
+            ] },
+            "A feltöltött fájl a beszélgetés [[kontextus|kontextusának]] része lesz: az AI ezt „látja”, amikor válaszol.",
+            { "vigyazat": "Mielőtt feltöltesz egy dokumentumot, gondold végig, van-e benne személyes adat, ügyféladat vagy bizalmas információ. Ha igen, ne töltsd fel – vagy csak akkor, ha a munkahelyed kifejezetten engedélyezi az adott eszközt erre." }
+          ]
+        },
+        {
+          "cim": "Jó összefoglaló-kérések",
+          "blokkok": [
+            "Az „Foglald össze” működik, de célzottan sokkal jobb:",
+            { "lista": [
+              "„Foglald össze 5 pontban egy laikus olvasónak.”",
+              "„Mi a három legfontosabb dolog, amit egy bérlőnek tudnia kell ebből?”",
+              "„Gyűjtsd ki a határidőket, összegeket és kötelezettségeket táblázatban, oldalszámmal.”",
+              "„Mi az, ami ebből a dokumentumból NEM derül ki, de érdemes lenne megkérdezni?”"
+            ] },
+            { "tipp": "Kérd, hogy az összefoglaló pontjai mellé írja oda, melyik oldalon vagy bekezdésben szerepelnek. Így gyorsan ellenőrizheted." }
+          ]
+        },
+        {
+          "cim": "Mit ellenőrizz?",
+          "blokkok": [
+            { "lista": [
+              "**Számok, dátumok, összegek** – ezek a leggyakoribb hibaforrások.",
+              "**Kimaradt kivételek** – az összefoglaló gyakran elhagyja a „kivéve, ha…” részeket.",
+              "**Hozzáadott tartalom** – előfordul, hogy olyat is „összefoglal”, ami nincs a dokumentumban.",
+              "**Nagyon hosszú dokumentum** – ha túl hosszú, az eszköz egy részét figyelmen kívül hagyhatja. Darabold fejezetenként."
+            ] }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-3-2",
+        "kotelezo": true,
+        "bevezeto": "Képernyőfelvétel: egy kitalált dokumentum feltöltése és célzott összefoglalása."
+      },
+      "interaktiv": {
+        "tipus": "letoltes",
+        "cim": "Gyakorló mintadokumentum",
+        "bevezeto": "Töltsd le ezt a kitalált házirendet, és használd a gyakorlathoz. Nincs benne valós adat, nyugodtan feltöltheted bármelyik AI-eszközbe.",
+        "fajlok": [
+          {
+            "nev": "minta-hazirend-napfeny-utca.txt",
+            "leiras": "Kitalált társasházi házirend, kb. 1 oldal. Van benne határidő, összeg és kivétel is – jó gyakorlásra.",
+            "tartalom": "HÁZIREND – Napfény utca 12. (kitalált társasház)\nÉrvényes: 2026. január 1-jétől\n\n1. Csendes pihenő\nHétköznap 22:00 és 7:00 között, hétvégén és ünnepnapokon 22:00 és 9:00 között kérjük a csendet. Kivétel: előre, legalább 3 nappal a lépcsőházi hirdetőtáblán jelzett felújítási munkák hétköznap 8:00 és 17:00 között.\n\n2. Közös helyiségek\nA kerékpártároló kulcsát a közös képviselőtől lehet igényelni, a kaució 3 000 Ft. A mosókonyha használata időpont-foglalással történik a földszinti füzetben; egy lakás hetente legfeljebb két alkalmat foglalhat.\n\n3. Hulladék\nA szelektív hulladékot (papír, műanyag, üveg) a kijelölt gyűjtőkbe kell tenni. A lomtalanítás évente egyszer, tavasszal van; az időpontot legalább két héttel előre kihirdetjük. Lomot a lépcsőházban tárolni tilos.\n\n4. Háziállatok\nKutyát a közös területeken pórázon kell vezetni. A kertben a kutya csak a kijelölt sávban sétáltatható; a szennyeződést a gazda köteles azonnal eltakarítani.\n\n5. Közös költség\nA közös költséget minden hónap 10. napjáig kell befizetni. Késedelmes befizetés esetén a második hónaptól havi 1 000 Ft késedelmi díjat számítunk fel. Részletfizetési kérelmet a közös képviselőnél lehet benyújtani írásban.\n\n6. Bejelentések\nHibát (csőtörés, lift, világítás) a közös képviselő telefonszámán vagy e-mailben kell jelezni. Vészhelyzetben a hirdetőtáblán szereplő ügyeleti számot kell hívni.\n\n7. Módosítás\nA házirendet a közgyűlés egyszerű többséggel módosíthatja. A módosítást a hirdetőtáblán és e-mailben is közzé kell tenni."
+          }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "A mintadokumentum összefoglalása",
+        "ido": 9,
+        "lepesek": [
+          "Töltsd le a fenti mintadokumentumot, és töltsd fel az AI-eszközödbe (vagy másold be a szövegét).",
+          "Kérj egy rövid összefoglalót az első kéréssel.",
+          "Kérd ki a második kéréssel a határidőket és összegeket.",
+          "Ellenőrizd a választ a dokumentumban: megvan-e minden szám, és nem maradt-e ki kivétel (például a felújítási munkáké)?"
+        ],
+        "promptok": [
+          { "cim": "1. kérés", "szoveg": "Foglald össze ezt a házirendet 5 pontban egy új lakó számára, közérthetően." },
+          { "cim": "2. kérés", "szoveg": "Gyűjtsd ki táblázatba a dokumentumból az összes határidőt, időpontot és pénzösszeget, a hozzájuk tartozó szabállyal. Ha valahol kivétel van, azt is írd oda. Ne tegyél hozzá semmit, ami nincs a szövegben." }
+        ],
+        "jegyzetMinta": "Talált-e minden számot? Kimaradt-e valami?"
+      },
+      "kviz": [
+        { "k": "Mi történik egy feltöltött dokumentummal a beszélgetésben?", "v": ["Az AI kinyomtatja.", "A beszélgetés kontextusának része lesz, az AI ebből dolgozik.", "Automatikusan nyilvános lesz.", "Az AI megjegyzi örökre minden felhasználó számára."], "h": 1, "m": "A dokumentum a beszélgetés része lesz. Hogy az eszköz mit tárol belőle és meddig, az eszköz adatkezelési beállításain múlik – erről a 8. modulban lesz szó." },
+        { "k": "Mi a leggyakoribb hiba az összefoglalókban?", "v": ["Túl szép a megfogalmazás.", "Elcsúszott vagy kimaradt számok, kivételek.", "Túl kevés emoji.", "Mindig hosszabb az eredetinél."], "h": 1, "m": "Ezért ellenőrizd mindig a konkrétumokat az eredetiben." },
+        { "k": "Mit tegyél egy nagyon hosszú dokumentummal?", "v": ["Töltsd fel egyben, és bízz benne.", "Darabold fejezetenként, és fejezetenként kérj összefoglalót.", "Csak az első oldalt töltsd fel.", "Nyomtasd ki."], "h": 1, "m": "A túl hosszú szöveg egy része kieshet a figyelemből. Darabolva pontosabb az eredmény." },
+        { "k": "Miért jó kérni, hogy az összefoglaló írja oda az oldalszámot vagy bekezdést?", "v": ["Hogy hosszabb legyen.", "Hogy gyorsan ellenőrizhesd az eredetiben.", "Mert enélkül nem működik.", "Hogy szebb legyen."], "h": 1, "m": "Így minden állítást pillanatok alatt visszakereshetsz." }
+      ],
+      "osszefoglalo": [
+        "Dokumentumot feltöltéssel, bemásolással vagy fotóval adhatsz át – személyes adat nélkül.",
+        "Célzott összefoglalót kérj: kinek, hány pontban, mire figyelve, hivatkozással.",
+        "A számokat, dátumokat és kivételeket mindig ellenőrizd az eredetiben."
+      ]
+    },
+    {
+      "id": "3.3",
+      "cim": "Táblázatok és Excel: értelmezés, képlet, összesítés",
+      "ido": 11,
+      "hero": "img-3-3",
+      "celok": [
+        "Táblázatos adatokból értelmezést és összesítést kérsz.",
+        "Képletet kérsz úgy, hogy azonnal működjön, és értsd is.",
+        "Tudod, miért kell az AI számításait ellenőrizni."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Az AI mint táblázat-segéd",
+          "blokkok": [
+            "Három dologban segít különösen jól:",
+            { "lista": [
+              "**Képlet:** leírod, mit szeretnél kiszámolni, és megkapod a képletet magyarázattal.",
+              "**Értelmezés:** bemásolsz egy kis táblázatot, és megkérdezed, mi látszik belőle.",
+              "**Átalakítás:** rendezetlen listából táblázatot csinál, oszlopokat szétválaszt, formátumot egységesít."
+            ] }
+          ]
+        },
+        {
+          "cim": "Hogyan kérj képletet?",
+          "blokkok": [
+            "Négy dolgot adj meg: **melyik program** (Excel, Google Táblázatok, LibreOffice), **hol vannak az adatok**, **mit szeretnél kapni**, és hogy **magyar vagy angol** nyelvű-e a programod (a függvénynevek eltérnek, például SZUM és SUM).",
+            { "prompt": "Magyar nyelvű Excelt használok. Az A oszlopban dátumok vannak (A2:A200), a B oszlopban kiadások forintban, a C oszlopban kategóriák (pl. élelmiszer, rezsi). Kérek egy képletet, ami kiszámolja az élelmiszer-kiadások összegét 2026 márciusában. Magyarázd el lépésenként, mit csinál a képlet.", "cim": "Példa képletkérés" },
+            { "tipp": "Ha a képlet hibát ad, másold vissza a hibaüzenetet az AI-nak: „Ezt a hibát kapom: …”. Általában egy-két kör alatt megjavítja." }
+          ]
+        },
+        {
+          "cim": "Számolás: bízz, de ellenőrizz",
+          "blokkok": [
+            "A nyelvi modellek szövegként dolgoznak, ezért a fejben végzett számolásban – különösen hosszú számsoroknál – tévedhetnek. Sok eszköz ma már tud valódi számítást is futtatni a háttérben, de ezt nem mindig látod.",
+            { "vigyazat": "Fontos összegeknél (számla, költségvetés, adó) a végeredményt a táblázatkezelő képletével számold ki, ne az AI fejszámolására hagyatkozz. Az AI-tól a képletet kérd, ne az eredményt." }
+          ]
+        }
+      ],
+      "interaktiv": [
+        {
+          "tipus": "letoltes",
+          "cim": "Gyakorló táblázat",
+          "bevezeto": "Egy kitalált háztartás kéthavi kiadásai CSV-fájlban. Bármelyik táblázatkezelő megnyitja, és AI-eszközbe is feltöltheted.",
+          "fajlok": [
+            {
+              "nev": "minta-haztartasi-kiadasok.csv",
+              "leiras": "Kitalált adatok, 24 sor: dátum, kategória, leírás, összeg (Ft).",
+              "tartalom": "Dátum;Kategória;Leírás;Összeg (Ft)\n2026.03.02;élelmiszer;heti bevásárlás;18450\n2026.03.03;rezsi;villanyszámla;14200\n2026.03.05;közlekedés;bérlet;9500\n2026.03.07;élelmiszer;piac;6200\n2026.03.10;szabadidő;mozi;4800\n2026.03.12;élelmiszer;heti bevásárlás;21300\n2026.03.15;rezsi;gázszámla;11800\n2026.03.18;egészség;gyógyszertár;3650\n2026.03.19;élelmiszer;pékség;2400\n2026.03.22;szabadidő;könyv;5990\n2026.03.26;élelmiszer;heti bevásárlás;19870\n2026.03.29;rezsi;internet;7990\n2026.04.02;élelmiszer;heti bevásárlás;20150\n2026.04.03;rezsi;villanyszámla;13100\n2026.04.05;közlekedés;bérlet;9500\n2026.04.08;egészség;fogorvos;15000\n2026.04.09;élelmiszer;piac;7300\n2026.04.13;élelmiszer;heti bevásárlás;17640\n2026.04.15;rezsi;gázszámla;9400\n2026.04.18;szabadidő;színház;8800\n2026.04.21;élelmiszer;pékség;2150\n2026.04.24;élelmiszer;heti bevásárlás;22480\n2026.04.27;rezsi;internet;7990\n2026.04.29;közlekedés;taxi;4200"
+            }
+          ]
+        },
+        {
+          "tipus": "valasztos",
+          "cim": "Mit kérnél?",
+          "esetek": [
+            { "kontextus": "Tudni szeretnéd, mennyit költött a háztartás élelmiszerre áprilisban.", "kerdes": "Melyik a legmegbízhatóbb út?", "opciok": ["Megkérdezed az AI-t, és elfogadod a számot.", "Képletet kérsz az AI-tól (például SZUMHATÖBB), és a táblázatkezelőben számolod ki.", "Fejben összeadod."], "helyes": 1, "magyarazat": "A képletet a táblázatkezelő pontosan számolja ki; az AI-tól a képlet megírását és magyarázatát kéred." },
+            { "kontextus": "Látni szeretnéd, melyik kategóriában nőtt leginkább a kiadás márciusról áprilisra.", "kerdes": "Mit kérsz?", "opciok": ["„Mi a helyzet?”", "„Készíts kategóriánként összesítő táblázatot márciusra és áprilisra, a különbséggel. Írd le, melyik kategóriában nőtt a legjobban, és mutasd meg a számítást.”", "„Rajzolj egy szép grafikont.”"], "helyes": 1, "magyarazat": "Pontos kimenetet kérsz, és a számítás megmutatását is – így ellenőrizni tudod." }
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Képlet és értelmezés a mintatáblán",
+        "ido": 10,
+        "lepesek": [
+          "Nyisd meg a mintatáblázatot a táblázatkezelődben.",
+          "Kérj képletet az élelmiszer-kiadások havi összegére (használd a sablont, és add meg a programod nevét és nyelvét).",
+          "Írd be a képletet, és nézd meg, működik-e. Ha nem, másold vissza a hibaüzenetet.",
+          "Töltsd fel a fájlt az AI-ba, és kérdezd meg: „Mi a három legfontosabb dolog, ami ebből a két hónapból látszik?” Vesd össze a számait a saját képleted eredményével."
+        ],
+        "promptok": [
+          { "cim": "Képletkérés sablon", "szoveg": "[Program neve és nyelve, pl. magyar Excel] programot használok. Az adataim: [melyik oszlopban mi van, hányadik sortól hányadikig]. Ezt szeretném kiszámolni: [cél]. Adj egy képletet, és magyarázd el lépésenként, mit csinál." }
+        ],
+        "jegyzetMinta": "Egyezett az AI száma a képlet eredményével?"
+      },
+      "kviz": [
+        { "k": "Mit adj meg képletkéréskor?", "v": ["Csak a végeredményt, amit szeretnél.", "A programot és nyelvét, az adatok helyét és a célt.", "A számítógéped típusát.", "A táblázat színét."], "h": 1, "m": "A függvénynevek programonként és nyelvenként eltérnek, és az AI-nak tudnia kell, hol vannak az adatok." },
+        { "k": "Fontos költségvetésnél mit kérj az AI-tól?", "v": ["A végeredményt.", "A képletet, amivel a táblázatkezelő kiszámolja.", "Egy becslést.", "Semmit."], "h": 1, "m": "A képletet a program pontosan számolja; az AI fejszámolása tévedhet." },
+        { "k": "Mit tegyél, ha a képlet hibát ad?", "v": ["Feladod.", "Visszamásolod a hibaüzenetet az AI-nak.", "Újraindítod a gépet.", "Másik programot veszel."], "h": 1, "m": "A hibaüzenetből az AI általában rájön, mi a gond – például elírt függvénynév vagy rossz elválasztó." }
+      ],
+      "osszefoglalo": [
+        "Képletnél add meg a programot, a nyelvet, az adatok helyét és a célt.",
+        "Az AI jól értelmez és átalakít, de fontos számokat a táblázatkezelő számoljon.",
+        "Hibaüzenetet másold vissza – egy-két kör alatt javítható."
+      ]
+    },
+    {
+      "id": "3.4",
+      "cim": "Fordítás, átfogalmazás, stílusjavítás",
+      "ido": 10,
+      "hero": "img-3-4",
+      "celok": [
+        "Célzott fordítást kérsz, amely a közönséghez és a helyzethez illik.",
+        "Egy szöveget a tartalom megtartásával más stílusba íratsz át.",
+        "Tudod, mikor nem elég az AI-fordítás."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Fordítás, ami nem szó szerinti",
+          "blokkok": [
+            "A modern AI-eszközök jól fordítanak, mert nem szóról szóra dolgoznak, hanem a jelentést adják vissza. Még jobb lesz, ha megmondod, **kinek** és **milyen célra** fordít.",
+            { "prompt": "Fordítsd le ezt a rövid szöveget angolra egy külföldi szállásadónak. Udvarias, de közvetlen hangnemben, egyszerű mondatokkal. Ha valami a magyar szövegben kétértelmű, jelezd.\n\n[szöveg]", "cim": "Célzott fordítás" },
+            { "tipp": "Ha nem beszéled jól a célnyelvet, kérj „visszafordítást” is: „Fordítsd vissza magyarra, hogy ellenőrizni tudjam, ugyanazt jelenti-e.”" }
+          ]
+        },
+        {
+          "cim": "Átfogalmazás és stílusjavítás",
+          "blokkok": [
+            "Ugyanaz a tartalom többféle közönségnek: egy belső jegyzetből ügyféltájékoztató, egy szakmai szövegből közérthető magyarázat.",
+            { "lista": [
+              "„Írd át közérthetően, idegen szavak nélkül, egy idősebb olvasónak.”",
+              "„Javítsd a helyesírást és a központozást, de a stílusomon ne változtass. A javításokat sorold fel külön.”",
+              "„Tedd gördülékenyebbé, de a tartalom és a hossz maradjon.”"
+            ] },
+            { "tipp": "Kérd, hogy a változtatásokat sorolja fel. Így látod, mit írt át, és visszautasíthatod, ami nem tetszik." }
+          ]
+        },
+        {
+          "cim": "Mikor nem elég?",
+          "blokkok": [
+            { "lista": [
+              "**Hivatalos és jogi iratok:** anyakönyvi kivonat, bizonyítvány, szerződés hiteles fordítása – ehhez hivatalos fordító kell.",
+              "**Egészségügyi utasítások:** gyógyszer-tájékoztató, lelet – a megértéshez segíthet, de a döntést orvossal hozd meg.",
+              "**Fontos üzleti szöveg idegen nyelven:** érdemes anyanyelvi olvasóval átnézetni."
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "elotteutana",
+        "cim": "Ugyanaz, más közönségnek",
+        "bevezeto": "Egy kitalált belső jegyzet, és ugyanaz ügyfeleknek átírva.",
+        "elotteCim": "Belső jegyzet",
+        "utanaCim": "Ügyféltájékoztató",
+        "elotte": [
+          "„Jövő hét K–Sze rendszercsere, ügyfélportál kb. 36 órán át nem elérhető. Telefonos ügyfélszolgálat megy, de lassabb lesz. Számlák kiküldése csúszik 2 napot, késedelmi díjat ebben az időszakban nem terhelünk. Kommunikációt Bea viszi.”"
+        ],
+        "utana": [
+          "„Kedves Ügyfelünk! Jövő kedden és szerdán fejlesztjük rendszereinket, ezért az ügyfélportál körülbelül másfél napig nem lesz elérhető. Telefonos ügyfélszolgálatunk ez idő alatt is várja hívását, de kérjük, számítson hosszabb várakozásra. A havi számlák két nappal később érkeznek; az emiatti késedelmes befizetésért természetesen nem számítunk fel díjat. Köszönjük türelmét!”"
+        ],
+        "megjegyzes": "A belső információk (ki intézi a kommunikációt) kimaradtak, a rövidítések teljes szavak lettek, a hangnem ügyfélbarát."
+      },
+      "gyakorlat": {
+        "cim": "Fordítás visszaellenőrzéssel",
+        "ido": 8,
+        "lepesek": [
+          "Írj egy 3–4 mondatos, hétköznapi üzenetet magyarul (például szállásfoglalás, kérdés egy webáruháznak) – kitalált adatokkal.",
+          "Fordíttasd le egy általad választott nyelvre a célzott fordítás sablonjával.",
+          "Kérj visszafordítást magyarra, és vesd össze az eredetivel.",
+          "Végül kérj stílusjavítást a magyar eredetidre, a változtatások felsorolásával."
+        ],
+        "promptok": [
+          { "cim": "Visszafordítás", "szoveg": "Fordítsd vissza a fordításodat magyarra szó szerint, hogy ellenőrizni tudjam, ugyanazt jelenti-e, mint az eredeti. Ha eltérés van, jelöld." }
+        ]
+      },
+      "kviz": [
+        { "k": "Mitől lesz jobb egy AI-fordítás?", "v": ["Ha megadod a közönséget és a célt.", "Ha nagyon hosszú a szöveg.", "Ha csupa nagybetűvel írod.", "Semmitől, mindig ugyanolyan."], "h": 0, "m": "Kinek, milyen hangnemben, milyen célra – ettől lesz a fordítás természetes." },
+        { "k": "Mire jó a visszafordítás?", "v": ["Hogy ellenőrizd, ugyanazt jelenti-e a fordítás, ha nem beszéled jól a célnyelvet.", "Hogy hosszabb legyen.", "Hogy kétszer fizess.", "Semmire."], "h": 0, "m": "Nem tökéletes ellenőrzés, de a nagy félreértéseket kiszűri." },
+        { "k": "Mikor kell hiteles, hivatalos fordító?", "v": ["Egy nyaralási üzenetnél.", "Egy anyakönyvi kivonat vagy szerződés hivatalos célú fordításánál.", "Egy recept fordításánál.", "Soha."], "h": 1, "m": "Hivatalos célra csak hiteles fordítás fogadható el." }
+      ],
+      "osszefoglalo": [
+        "Fordításnál add meg a közönséget és a célt, és kérj visszafordítást, ha bizonytalan vagy.",
+        "Átfogalmazásnál mondd meg, mi maradjon, és kérd a változtatások listáját.",
+        "Hivatalos és egészségügyi szövegnél az AI a megértést segíti, nem helyettesíti a szakembert."
+      ]
+    }
+  ]
+}

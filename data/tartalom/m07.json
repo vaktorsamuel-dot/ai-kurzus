@@ -1,0 +1,284 @@
+{
+  "cel": "Reális elvárásokkal állsz a mesterséges videókhoz: tudod, mire jók ma, hogyan írj le egy jelenetet, és milyen korlátokkal, költséggel és etikai kérdésekkel jár.",
+  "utana": [
+    "Tudod, milyen feladatra használható ma az AI-videó, és mire nem.",
+    "Jelenetleírást írsz kamerával, mozgással, fénnyel és hosszal.",
+    "Ismered a korlátokat, a költséget és az etikai szabályokat."
+  ],
+  "javaslat": {
+    "levelezes": "Írj egy rövid, szöveg nélküli háttérjelenetet egy videós üdvözlethez (például gyertyafény egy asztalon).",
+    "dokumentumok": "Írj egy 5 másodperces nyitójelenetet egy belső bemutatóhoz, emberek nélkül.",
+    "kutatas": "Figyeld meg egy generált videón, hol sérül a fizika (víz, árnyék, mozgás), és jegyezd fel.",
+    "kreativ": "Írj egy hangulatos, 8 másodperces jelenetet egy saját történet nyitóképéhez.",
+    "tanulas": "Írj egy egyszerű szemléltető jelenetet (például egy mag kicsírázása gyorsítva), és nézd meg, mennyire pontos."
+  },
+  "osszefoglalo": [
+    "Az AI-videó ma rövid, hangulatos jelenetekre jó; hosszú, pontos, szereplőkre építő történetre kevésbé.",
+    "Egy jelenetleírás: téma, kamera, mozgás, fény, hossz – egy jelenet, egy fő mozgás.",
+    "Drága, lassú, korlátozott – és valódi személyekről vagy megtévesztésre nem szabad használni."
+  ],
+  "kviz": [
+    { "k": "Mire jó ma leginkább az AI-videó?", "v": ["Egész estés filmre.", "Rövid, néhány másodperces hangulatos jelenetekre, háttérképekre.", "Híradós felvételek pótlására.", "Hivatalos bizonyítéknak."], "h": 1, "m": "A rövid, hangulatos jelenet a legmegbízhatóbb felhasználás." },
+    { "k": "Mi a jó jelenetleírás alapszabálya?", "v": ["Minél több esemény egy jelenetben.", "Egy jelenet, egy fő mozgás, pontos kamera és fény.", "Csak a hangulatot írd le.", "Csak a hosszt add meg."], "h": 1, "m": "Az egyszerű, egyértelmű jelenet sikerül a legjobban." },
+    { "k": "Mit jelent a „lassú kamerakocsizás előre”?", "v": ["A kamera áll.", "A kamera lassan, egyenletesen halad a téma felé.", "A kamera körbeforog.", "A kép elsötétül."], "h": 1, "m": "Ez egy alap kameramozgás – megadása sokat javít az eredményen." },
+    { "k": "Miért nem érdemes egy jelenetbe sok szereplőt és párbeszédet tenni?", "v": ["Mert tilos.", "Mert a mai eszközök ebben a leggyengébbek: arcok, kezek, szájmozgás, folytonosság sérül.", "Mert túl rövid lesz.", "Mert nem lesz színes."], "h": 1, "m": "A kevesebb szereplő és mozgás megbízhatóbb eredményt ad." },
+    { "k": "Mi igaz a költségre?", "v": ["Mindig ingyenes.", "A videógenerálás általában kreditet vagy előfizetést igényel, és sokszor korlátozott a napi mennyiség.", "Csak a hang kerül pénzbe.", "Egy videó mindig egy fillér."], "h": 1, "m": "A pontos árak eszközönként eltérnek és gyorsan változnak – a hivatalos oldalon nézd meg." },
+    { "k": "Készíthetsz-e AI-videót egy valódi politikusról, amint olyat mond, amit soha nem mondott?", "v": ["Igen, ha vicces.", "Nem: ez megtévesztő deepfake, sértheti a jogait, és a legtöbb eszköz tiltja.", "Igen, ha rövid.", "Igen, ha fekete-fehér."], "h": 1, "m": "Valódi személyekről megtévesztő videót soha ne készíts és ne terjessz." }
+  ],
+  "fejezetek": [
+    {
+      "id": "7.1",
+      "cim": "Mire jó ma, és mire nem",
+      "ido": 10,
+      "hero": "img-7-1",
+      "celok": [
+        "Ismered az AI-videó tipikus, jól működő felhasználásait.",
+        "Tudod, hol vannak ma a gyenge pontjai.",
+        "Felismered a generált videó árulkodó jeleit."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Mit tud?",
+          "blokkok": [
+            "A videógenerátorok szöveges leírásból (vagy egy állóképből kiindulva) rövid mozgóképet készítenek, ma tipikusan néhány másodperctől néhány tízmásodpercig terjedő hosszban (2026. novemberi állapot – eszközönként eltér).",
+            { "lista": [
+              "**Jól megy:** hangulatos tájak, természeti jelenetek, tárgyak lassú mozgása, absztrakt hátterek, egyszerű kameramozgások.",
+              "**Hasznos lehet:** prezentáció nyitóképe, háttérvideó weboldalra, közösségi bejegyzés hangulatképe, ötletvázlat egy forgatás előtt."
+            ] }
+          ]
+        },
+        {
+          "cim": "Mit nem tud (még) jól?",
+          "blokkok": [
+            { "lista": [
+              "**Hosszú, összefüggő történet:** a jelenetek között a szereplők, ruhák, helyszínek gyakran megváltoznak.",
+              "**Pontos fizika:** víz, tűz, kezek, tárgyak egymáshoz érése gyakran furcsa.",
+              "**Szöveg és logó a képen:** torzul vagy értelmetlen.",
+              "**Pontos utasítások:** „pontosan három lépés, aztán megáll” – gyakran nem teljesül.",
+              "**Valós események:** nem dokumentál semmit; amit mutat, az kitalált."
+            ] }
+          ]
+        },
+        {
+          "cim": "Árulkodó jelek",
+          "blokkok": [
+            "Hasznos tudni ezeket, hogy a hamisított videókat is könnyebben felismerd (8.3 fejezet):",
+            { "lista": [
+              "Ujjak, fogak, fülek, ékszerek „átalakulnak”.",
+              "Tárgyak a mozgás közben összeolvadnak vagy eltűnnek.",
+              "Túl tökéletes, „csillogó” felületek és fények.",
+              "A háttérben lévő szövegek értelmetlenek.",
+              "A hang és a szájmozgás nincs szinkronban."
+            ] },
+            { "vigyazat": "Az eszközök gyorsan fejlődnek, ezért ezek a jelek egyre kevésbé megbízhatók. Egy gyanús videónál fontosabb a forrás ellenőrzése, mint a képi hibák keresése." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Jó feladat AI-videónak?",
+        "opciok": ["Jó választás", "Nem jó választás"],
+        "esetek": [
+          { "kontextus": "6 másodperces háttérvideó egy prezentáció nyitóképéhez: köd egy erdő felett, lassú kameramozgás.", "helyes": 0, "magyarazat": "Rövid, hangulatos, emberek nélküli jelenet – ebben a mai eszközök erősek." },
+          { "kontextus": "Egy 10 perces oktatóvideó, amelyben ugyanaz a kitalált tanár végig magyaráz és táblára ír.", "helyes": 1, "magyarazat": "Hosszú, egy szereplőre épülő, folytonos videó, szöveggel a táblán – ez ma a leggyengébb terület." },
+          { "kontextus": "Felvétel arról, hogyan zajlott a tavalyi falunap, mert nem készült videó.", "helyes": 1, "magyarazat": "Ez valós esemény hamis dokumentálása lenne. Az AI-videó nem pótolja a valódi felvételt." },
+          { "kontextus": "Ötletvázlat egy rövidfilmhez: hogyan nézne ki a nyitójelenet hangulata.", "helyes": 0, "magyarazat": "Vázlatként, a hangulat kipróbálására kiváló – a végleges film más kérdés." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Nézz meg és elemezz generált videókat",
+        "ido": 7,
+        "bevezeto": "Ehhez a gyakorlathoz nem kell videót generálnod.",
+        "lepesek": [
+          "Keress rá egy videómegosztón vagy egy videógeneráló eszköz hivatalos bemutatóoldalán AI-val készült példavideókra.",
+          "Nézz meg legalább hármat figyelmesen.",
+          "Mindegyiknél keress legalább egy árulkodó jelet a listából.",
+          "Írd le, melyik videó tűnt a legvalósághűbbnek, és miért."
+        ],
+        "jegyzetMinta": "Milyen árulkodó jeleket találtam?"
+      },
+      "kviz": [
+        { "k": "Melyik feladat illik ma a legjobban az AI-videóhoz?", "v": ["Egy rövid, hangulatos tájjelenet.", "Egy hosszú interjú.", "Egy valós esemény dokumentálása.", "Egy pontos használati útmutató videó."], "h": 0, "m": "Rövid, hangulatos, emberek nélküli jelenet – ez a biztos terep." },
+        { "k": "Melyik árulkodó jele egy generált videónak?", "v": ["Éles kép.", "Ujjak, tárgyak, amelyek mozgás közben átalakulnak.", "Jó hangminőség.", "Fekvő képarány."], "h": 1, "m": "A testrészek és tárgyak „átalakulása” tipikus hiba." },
+        { "k": "Mi a legmegbízhatóbb módja egy gyanús videó ellenőrzésének?", "v": ["Képi hibák keresése.", "A forrás ellenőrzése: ki tette közzé, hol jelent meg máshol is.", "A videó hosszának megnézése.", "A hangerő."], "h": 1, "m": "A képi jelek egyre kevésbé megbízhatók, a forrás viszont ellenőrizhető." }
+      ],
+      "osszefoglalo": [
+        "Rövid, hangulatos jelenetekre jó; hosszú, folytonos történetre és valós eseményekre nem.",
+        "Gyenge pontok: fizika, kezek, szöveg, folytonosság.",
+        "Gyanús videónál a forrás ellenőrzése fontosabb a képi hibák keresésénél."
+      ]
+    },
+    {
+      "id": "7.2",
+      "cim": "Jelenet leírása: kamera, mozgás, fény, hossz",
+      "ido": 13,
+      "hero": "img-7-2",
+      "celok": [
+        "Ismered a jelenetleírás összetevőit.",
+        "Megnevezel néhány alap kameramozgást.",
+        "Megírod egy 5–10 másodperces jelenet leírását."
+      ],
+      "szakaszok": [
+        {
+          "cim": "A jelenetleírás összetevői",
+          "blokkok": [
+            "A képleírás öt összetevője (6.1) itt is érvényes, és két új jön hozzá: a **mozgás** és az **idő**.",
+            { "lista": [
+              "**Téma és környezet:** mi látható, hol.",
+              "**Mozgás a jelenetben:** mi mozog és hogyan? „A falevelek lassan hullanak.”",
+              "**Kamera:** honnan nézünk, és mozog-e a kamera?",
+              "**Fény és hangulat:** napszak, időjárás, színek.",
+              "**Hossz és tempó:** „8 másodperc, lassú, nyugodt tempó.”",
+              "**Stílus:** „valósághű”, „animációs”, „régi filmes hatás”."
+            ] }
+          ]
+        },
+        {
+          "cim": "Alap kameramozgások",
+          "blokkok": [
+            { "tabla": [
+              ["Kifejezés", "Mit jelent?"],
+              ["Álló kamera", "A kamera nem mozdul, csak a jelenet mozog."],
+              ["Kocsizás előre / hátra", "A kamera egyenletesen halad a téma felé vagy távolodik tőle."],
+              ["Pásztázás", "A kamera egy helyben fordul el balra vagy jobbra."],
+              ["Daru fel / le", "A kamera függőlegesen emelkedik vagy süllyed."],
+              ["Körbefordulás", "A kamera lassan körbemegy a téma körül."],
+              ["Közeli / totál", "Közel a témához / az egész helyszín látszik."]
+            ] },
+            { "tipp": "Egy jelenet = egy fő mozgás. Ha a kamera is mozog, a szereplő is fut, és közben még a fény is változik, az eredmény gyakran zavaros." }
+          ]
+        },
+        {
+          "cim": "Példa",
+          "blokkok": [
+            { "pelda": ["„Kora reggeli köd egy tó felett, a víz tükörsima. A kamera lassan kocsizik előre a víz felett, alacsonyan. Halvány rózsaszín és kék színek, a nap épp felkel a fák mögött. 8 másodperc, nagyon nyugodt tempó. Valósághű, filmszerű kép, 16:9, emberek nélkül.”"], "cim": "Jó jelenetleírás" }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-7-2",
+        "kotelezo": true,
+        "bevezeto": "Rövid bemutató: ugyanaz a jelenet háromféle kameramozgással."
+      },
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Jelenetleíró sablon",
+        "bevezeto": "Töltsd ki, és másold ki a kész jelenetleírást.",
+        "kimenetCim": "A jelenetleírásod",
+        "elvalaszto": " ",
+        "mezok": [
+          { "id": "tema", "cimke": "Téma és környezet", "minta": "pl. egy kis kávézó terasza esőben", "mintaErtek": "Egy üres kávézóterasz esős estén, a kockaköveken tükröződnek a lámpák fényei." },
+          { "id": "mozgas", "cimke": "Mozgás a jelenetben", "minta": "pl. az esőcseppek a pocsolyába hullanak", "mintaErtek": "Az esőcseppek apró köröket rajzolnak a pocsolyákba, egy napernyő szélén lassan csöpög a víz.", "utotag": "" },
+          { "id": "kamera", "cimke": "Kamera", "opciok": ["álló kamera", "lassú kocsizás előre", "lassú pásztázás balról jobbra", "lassú daru fel", "lassú körbefordulás"], "elotag": "Kamera:", "utotag": ".", "mintaErtek": "lassú kocsizás előre, alacsony nézőpont" },
+          { "id": "feny", "cimke": "Fény és hangulat", "opciok": ["kora reggel", "aranyóra", "esti lámpafény", "borús nappal", "éjszaka, holdfény"], "elotag": "Fény:", "utotag": ".", "mintaErtek": "esti, meleg lámpafény, nyugodt, kicsit melankolikus" },
+          { "id": "hossz", "cimke": "Hossz és tempó", "opciok": ["5 másodperc", "8 másodperc", "10 másodperc"], "elotag": "Hossz:", "utotag": ", nyugodt tempó.", "mintaErtek": "8 másodperc" },
+          { "id": "stilus", "cimke": "Stílus és arány", "opciok": ["valósághű, filmszerű, 16:9", "animációs, 16:9", "valósághű, 9:16 álló"], "elotag": "Stílus:", "utotag": ", emberek nélkül.", "mintaErtek": "valósághű, filmszerű, 16:9" }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Egy 5–10 másodperces jelenet",
+        "ido": 10,
+        "bevezeto": "Ha van hozzáférésed videógeneráló eszközhöz (néhány csevegő AI-ban beépítve, vagy külön szolgáltatásként), próbáld is ki. Ha nincs, a leírás megírása is teljes értékű gyakorlat: kérd meg a szöveges AI-t, hogy értékelje.",
+        "lepesek": [
+          "Írj egy jelenetleírást a sablonnal – emberek és valódi helyszínek nélkül.",
+          "Ha tudod, generáld le. Ha nem, másold be a szöveges AI-ba az értékelő kéréssel.",
+          "Nézd meg (vagy olvasd el), mi lehet a gyenge pont, és javíts egyet a leíráson.",
+          "Írd le a jegyzetbe a végleges leírást."
+        ],
+        "promptok": [
+          { "cim": "Értékelő kérés", "szoveg": "Ezt a jelenetleírást szeretném egy AI-videógenerátorral elkészíttetni. Értékeld: mennyire egyértelmű, mi lehet benne nehéz a mai eszközöknek, és hogyan egyszerűsítenéd, hogy jobb eredményt adjon?\n\n[jelenetleírás]" }
+        ]
+      },
+      "kviz": [
+        { "k": "Mit jelent a pásztázás?", "v": ["A kamera egy helyben fordul el oldalra.", "A kamera előre halad.", "A kamera felemelkedik.", "A kép elhalványul."], "h": 0, "m": "A pásztázásnál a kamera helye nem változik, csak az iránya." },
+        { "k": "Mi két új összetevő a képleíráshoz képest?", "v": ["Szín és betűtípus.", "Mozgás és idő (hossz, tempó).", "Fájlméret és formátum.", "Hang és zene."], "h": 1, "m": "A videóban a mozgás és az időtartam is a leírás része." },
+        { "k": "Miért jó egy jelenetben egy fő mozgás?", "v": ["Mert így olcsóbb.", "Mert az egyszerű jelenet megbízhatóbb, kevésbé lesz zavaros.", "Mert így hosszabb.", "Mert a több mozgás tilos."], "h": 1, "m": "A sok egyszerre történő mozgás a mai eszközöket összezavarja." }
+      ],
+      "osszefoglalo": [
+        "Jelenetleírás: téma, mozgás, kamera, fény, hossz, stílus.",
+        "Alap kameramozgások: álló, kocsizás, pásztázás, daru, körbefordulás.",
+        "Egy jelenet, egy fő mozgás – egyszerűen és pontosan."
+      ]
+    },
+    {
+      "id": "7.3",
+      "cim": "Korlátok, költség, idő és etika",
+      "ido": 10,
+      "hero": "img-7-3",
+      "celok": [
+        "Reálisan felméred a videógenerálás idő- és pénzigényét.",
+        "Ismered a legfontosabb etikai és jogi szabályokat.",
+        "Döntést tudsz hozni: AI-videó, saját felvétel vagy stockvideó."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Költség és idő",
+          "blokkok": [
+            "A videógenerálás sokkal erőforrás-igényesebb, mint a szöveg vagy a kép. Ezért (2026. novemberi állapot szerint, eszközönként eltérően):",
+            { "lista": [
+              "általában **fizetős csomag** vagy **kredit** kell hozzá, az ingyenes keret – ha van – kicsi;",
+              "egy rövid klip elkészülése **perceket** vehet igénybe;",
+              "egy használható eredményhez gyakran **több próbálkozás** kell, ami a keretet is fogyasztja."
+            ] },
+            { "tipp": "Az árak és a keretek gyorsan változnak. Ne a kurzusban, hanem az eszköz hivatalos oldalán nézd meg, mielőtt előfizetsz." }
+          ]
+        },
+        {
+          "cim": "Etika és jog",
+          "blokkok": [
+            { "lista": [
+              "**Valódi személyek:** ne készíts videót felismerhető emberről a beleegyezése nélkül, és soha ne olyat, amelyben olyat mond vagy tesz, amit valójában nem.",
+              "**Megtévesztés:** ne mutass AI-videót valós eseményként, termékbemutatóként vagy bizonyítékként.",
+              "**Jelölés:** jelöld, ha a videó AI-val készült. Egyes platformok ezt kötelezővé is teszik.",
+              "**Jogok:** védett karaktert, zenét, logót ne használj; nézd meg az eszköz felhasználási feltételeit."
+            ] },
+            { "vigyazat": "Valódi személyről – különösen gyerekről – készített megtévesztő vagy intim AI-videó súlyos jogsértés, és bűncselekmény is lehet." }
+          ]
+        },
+        {
+          "cim": "AI-videó, saját felvétel vagy stock?",
+          "blokkok": [
+            { "tabla": [
+              ["Helyzet", "Javaslat"],
+              ["Valós termék, helyszín, esemény", "Saját felvétel"],
+              ["Általános hangulatkép (pl. város éjjel)", "Stockvideó vagy AI"],
+              ["Nem létező, kitalált jelenet", "AI-videó (jelölve)"],
+              ["Emberek, akik beszélnek", "Saját felvétel, a szereplők beleegyezésével"]
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Mit választanál?",
+        "opciok": ["AI-videó (jelölve)", "Saját felvétel", "Inkább semmi videó"],
+        "esetek": [
+          { "kontextus": "Egy kis pékség új kenyerét szeretnéd bemutatni a közösségi oldalán.", "helyes": 1, "magyarazat": "Valós termékről valós felvétel tisztességes – egy AI-kenyér megtévesztené a vásárlókat." },
+          { "kontextus": "Egy mesekönyv-felolvasás háttereként egy varázslatos, kitalált erdőt szeretnél mutatni.", "helyes": 0, "magyarazat": "Kitalált, nem létező jelenet – ideális AI-videó, jelöléssel." },
+          { "kontextus": "Egy ismerősöd születésnapjára olyan videót akarsz, amelyben egy híres színész felköszönti őt.", "helyes": 2, "magyarazat": "Valódi személy hangja és arca a beleegyezése nélkül – ezt ne készítsd el. Egy saját, személyes videó többet is ér." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Döntési lista egy saját ötletre",
+        "ido": 7,
+        "lepesek": [
+          "Gondolj egy helyzetre, ahol videóra lenne szükséged (munka, család, hobbi).",
+          "Döntsd el a táblázat alapján, AI-videó, saját felvétel vagy stock illik-e hozzá.",
+          "Ha AI-videó: nézd meg egy eszköz hivatalos oldalán, mennyibe kerülne és milyen keretek vannak.",
+          "Írd le a döntésedet és az indoklást."
+        ],
+        "jegyzetMinta": "A döntésem és az indoklás:"
+      },
+      "kviz": [
+        { "k": "Miért kerül általában pénzbe a videógenerálás?", "v": ["Mert a videó szebb.", "Mert sokkal több számítási erőforrást igényel, mint a szöveg vagy a kép.", "Mert minden videót ember néz át.", "Nem kerül pénzbe."], "h": 1, "m": "A mozgókép előállítása nagyon erőforrás-igényes." },
+        { "k": "Mit válassz egy valós termék bemutatásához?", "v": ["AI-videót.", "Saját felvételt.", "Egy híresség deepfake-jét.", "Bármit."], "h": 1, "m": "Valós termékről valós felvétel a tisztességes." },
+        { "k": "Hol nézd meg a videógenerálás aktuális árát?", "v": ["A kurzusban.", "Az eszköz hivatalos oldalán.", "Egy régi fórumon.", "Sehol."], "h": 1, "m": "Az árak gyorsan változnak – mindig a hivatalos, aktuális forrás számít." }
+      ],
+      "osszefoglalo": [
+        "A videógenerálás drága, lassú, és több próbálkozást igényel.",
+        "Valódi személyről, megtévesztésre ne készíts videót, és jelöld az AI-tartalmat.",
+        "Valós dologhoz saját felvétel, kitalált jelenethez AI-videó."
+      ]
+    }
+  ]
+}

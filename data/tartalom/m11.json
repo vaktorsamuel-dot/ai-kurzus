@@ -1,0 +1,248 @@
+{
+  "cel": "Megérted, mi az AI-ágens, miben más, mint a csevegés, és mikor érdemes – vagy nem érdemes – használni.",
+  "utana": [
+    "El tudod magyarázni, miben különbözik egy AI-ágens egy csevegő asszisztenstől.",
+    "Ismered egy ágenses munkamenet lépéseit: kérés, terv, jóváhagyás, végrehajtás, ellenőrzés.",
+    "Tudod, mire figyelj: biztonság, költség, ellenőrzés, jóváhagyás."
+  ],
+  "javaslat": {
+    "levelezes": "Fogalmazz meg ágensnek egy feladatot: egy mappányi, kitalált levélvázlatból készítsen egységes sablont.",
+    "dokumentumok": "Fogalmazz meg ágensnek egy feladatot: egy mappa dokumentumait nevezze át egységes, dátumos formára.",
+    "kutatas": "Fogalmazz meg ágensnek egy feladatot: egy mappa jegyzetfájljaiból készítsen összesítő táblázatot.",
+    "kreativ": "Fogalmazz meg ágensnek egy feladatot: a 10. modul weboldaladhoz adjon hozzá egy galériaszakaszt.",
+    "tanulas": "Fogalmazz meg ágensnek egy feladatot: a jegyzeteidből készítsen egy egyszerű, kérdés-válasz kártyás tanulóoldalt."
+  },
+  "osszefoglalo": [
+    "Az ágens nem csak válaszol, hanem eszközöket használva lépéseket hajt végre – fájlokat olvas, ír, parancsot futtat.",
+    "A jó munkamenet: világos kérés, terv, a te jóváhagyásod, végrehajtás, közös ellenőrzés.",
+    "Kis, visszafordítható feladattal kezdj, mindig olvasd el, mit hagysz jóvá, és tartsd szem előtt a költséget."
+  ],
+  "kviz": [
+    { "k": "Mi a fő különbség egy csevegő asszisztens és egy AI-ágens között?", "v": ["Nincs különbség.", "Az ágens eszközöket használva lépéseket is végrehajt (például fájlokat szerkeszt), nem csak szöveget ír.", "Az ágens csak angolul tud.", "Az ágens soha nem téved."], "h": 1, "m": "Az ágens cselekszik a gépeden vagy egy rendszerben – ezért kell a jóváhagyás." },
+    { "k": "Mi a Claude Code?", "v": ["Egy képszerkesztő.", "Az Anthropic AI-ágense, amely a felhasználó kérésére és jóváhagyásával fájlokon és kódon dolgozik.", "Egy jelszókezelő.", "Egy programozási nyelv."], "h": 1, "m": "Leggyakrabban a terminálban használják, de más felületeken is elérhető (2026. novemberi állapot)." },
+    { "k": "Mit tegyél, mielőtt jóváhagysz egy ágens által javasolt lépést?", "v": ["Semmit, gyorsan jóváhagyod.", "Elolvasod, mit fog csinálni, és ha nem érted, rákérdezel.", "Kikapcsolod a gépet.", "Megadod a jelszavadat."], "h": 1, "m": "A jóváhagyás a te felelősséged: csak azt engedd, amit értesz." },
+    { "k": "Melyik feladattal érdemes kezdeni?", "v": ["A cég teljes számlázási rendszerének átírásával.", "Egy kicsi, visszafordítható feladattal egy próbamappában.", "Az összes fájl törlésével.", "Egy éles weboldal azonnali módosításával."], "h": 1, "m": "Kicsi, biztonságos, ellenőrizhető feladaton tanulod meg, hogyan dolgozik az ágens." },
+    { "k": "Miért kell figyelni a költségre?", "v": ["Mert az ágensek ingyenesek.", "Mert az ágensek sok lépésben, sok szöveget dolgoznak fel, ami előfizetési keretet vagy díjat fogyaszt.", "Mert minden lépés után fizetni kell készpénzben.", "Nem kell figyelni."], "h": 1, "m": "A pontos feltételeket a szolgáltató hivatalos oldalán nézd meg." },
+    { "k": "Mi a „terv” lépés haszna?", "v": ["Időhúzás.", "Még a változtatások előtt látod, mit akar csinálni az ágens, és javíthatsz rajta.", "Hogy hosszabb legyen a munkamenet.", "Semmi."], "h": 1, "m": "A terv olcsó és biztonságos pont a félreértések kiszűrésére." }
+  ],
+  "fejezetek": [
+    {
+      "id": "11.1",
+      "cim": "Mi ez, miben más, mint a csevegés",
+      "ido": 13,
+      "hero": "img-11-1",
+      "celok": [
+        "El tudod magyarázni, mi az AI-ágens.",
+        "Tudod, mi a Claude Code, és hol használják.",
+        "Érted, miért kulcsfontosságú a jóváhagyás."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Csevegés vs. ágens",
+          "blokkok": [
+            "Eddig az AI-val **beszélgettél**: te kérdeztél, ő szöveget írt, és te döntötted el, mit kezdesz vele.",
+            "Egy [[agens|AI-ágens]] egy lépéssel tovább megy: **eszközöket használ**. Megnyithat és átírhat fájlokat, parancsokat futtathat, kereshet a weben – a te kérésedre és jó esetben a te [[jovahagyas|jóváhagyásoddal]].",
+            { "tabla": [
+              ["", "Csevegő asszisztens", "AI-ágens"],
+              ["Mit ad?", "Szöveget, kódot, javaslatot", "Elvégzett lépéseket: módosított fájlokat, lefuttatott feladatokat"],
+              ["Ki hajtja végre?", "Te másolod át és használod", "Az ágens, a te jóváhagyásoddal"],
+              ["Mire figyelj?", "A válasz pontosságára", "A válaszra és arra is, hogy mit változtat"]
+            ] }
+          ]
+        },
+        {
+          "cim": "Mi a Claude Code?",
+          "blokkok": [
+            "A [[claude-code|Claude Code]] az Anthropic AI-ágense. Leggyakrabban a [[terminal|terminálban]] használják, de más felületeken (például fejlesztői programokban, asztali és webes alkalmazásban) is elérhető (2026. novemberi állapot).",
+            "Elsősorban programozási és fájlokkal kapcsolatos munkára készült: kódot ír és javít, fájlokat rendez, weboldalt épít, hibát keres. A te gépeden vagy egy kijelölt munkakörnyezetben dolgozik, és a változtatások előtt engedélyt kér – ennek szigorúsága beállítható.",
+            { "tipp": "Ehhez a modulhoz nem kell semmit telepítened. A 11.2-ben egy szimulációban nézzük meg, hogyan zajlik egy munkamenet." }
+          ]
+        },
+        {
+          "cim": "Az ágens munkaciklusa",
+          "blokkok": [
+            { "abra": "agens-ciklus", "felirat": "A jóváhagyás a te kezedben van: ez választja el a javaslatot a cselekvéstől." },
+            "Minél nagyobb a feladat, annál fontosabb a terv és a jóváhagyás. Kis feladatnál a ciklus pár perc, nagyobbnál többször is ismétlődik."
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Csevegés vagy ágens?",
+        "opciok": ["Elég a csevegés", "Ágens való rá"],
+        "esetek": [
+          { "kontextus": "Egy e-mail megfogalmazása.", "helyes": 0, "magyarazat": "Szöveg kell, amit te küldesz el – ehhez nem kell ágens." },
+          { "kontextus": "Egy 200 fényképet tartalmazó mappa átnevezése dátum szerint, egységes formára.", "helyes": 1, "magyarazat": "Sok fájlon végzett, ismétlődő művelet – tipikus ágens-feladat (előbb próbamappán!)." },
+          { "kontextus": "A 10. modulban készült weboldalhoz egy új szakasz hozzáadása, kipróbálással.", "helyes": 1, "magyarazat": "Fájl módosítása és ellenőrzése – az ágens ezt közvetlenül el tudja végezni. Csevegéssel is megoldható, de több másolgatással." },
+          { "kontextus": "Egy fogalom megértése.", "helyes": 0, "magyarazat": "Magyarázat kell, nem cselekvés." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Gondold végig a saját feladataidat",
+        "ido": 7,
+        "lepesek": [
+          "Írj le három számítógépes feladatot, amit rendszeresen, kézzel végzel (fájlok rendezése, átnevezése, táblázatok összefésülése, weboldal frissítése).",
+          "Mindegyiknél döntsd el: elég lenne csevegés, vagy ágens való rá?",
+          "Melyik lenne kicsi és visszafordítható annyira, hogy elsőként kipróbáld?"
+        ],
+        "jegyzetMinta": "Három feladatom, és melyikkel kezdeném:"
+      },
+      "kviz": [
+        { "k": "Mit jelent, hogy az ágens „eszközöket használ”?", "v": ["Kalapácsot fog.", "Fájlokat olvas és ír, parancsokat futtat, kereshet – vagyis cselekszik.", "Szebb szöveget ír.", "Képet rajzol."], "h": 1, "m": "Ez teszi hasznossá – és ezért kell a jóváhagyás." },
+        { "k": "Hol használják leggyakrabban a Claude Code-ot?", "v": ["A terminálban (és más felületeken is).", "Csak telefonon.", "Csak nyomtatón.", "Táblázatkezelőben."], "h": 0, "m": "A terminál a leggyakoribb, de más felületek is vannak." },
+        { "k": "Melyik lépés választja el a javaslatot a cselekvéstől?", "v": ["A kérés.", "A jóváhagyás.", "Az ellenőrzés.", "A terv."], "h": 1, "m": "A jóváhagyásod nélkül egy jól beállított ágens nem változtat." }
+      ],
+      "osszefoglalo": [
+        "A csevegő asszisztens szöveget ad, az ágens eszközökkel cselekszik.",
+        "A Claude Code az Anthropic ágense, főleg fájlokon és kódon dolgozik, engedélyt kér.",
+        "A ciklus: kérés, terv, jóváhagyás, végrehajtás, ellenőrzés."
+      ]
+    },
+    {
+      "id": "11.2",
+      "cim": "Egy rövid munkamenet bemutatása",
+      "ido": 16,
+      "hero": "img-11-2",
+      "celok": [
+        "Végigkövetsz egy teljes ágenses munkamenetet.",
+        "Látod, hol és miért kér jóváhagyást az ágens.",
+        "Tudod, hogyan ellenőrizd az eredményt."
+      ],
+      "szakaszok": [
+        {
+          "cim": "A helyzet",
+          "blokkok": [
+            "A 10. modulban készített, kitalált kertész-bemutatkozó oldalhoz (`index.html`) szeretnénk egy „Gyakori kérdések” szakaszt. Az alábbi szimuláció azt mutatja, hogyan zajlana ez egy ágenssel. **Nem kell hozzá semmit telepíteni, és semmi nem változik a gépeden.**",
+            "Figyeld meg a lépéseket: a kérést, ahogy az ágens körülnéz, a tervet, a jóváhagyási pontokat és az ellenőrzést."
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-11-2",
+        "kotelezo": true,
+        "bevezeto": "Képernyőfelvétel: ugyanez a munkamenet valódi Claude Code-ban, egy próbamappán."
+      },
+      "interaktiv": {
+        "tipus": "agens",
+        "cim": "Szimulált munkamenet",
+        "bevezeto": "Kattints végig a lépéseken. A jóváhagyási pontokon te döntesz – próbáld ki a „nem” választ is.",
+        "lepesek": [
+          { "szerep": "te", "szoveg": ["A mappában lévő index.html a kertész-bemutatkozó oldalam. Adj hozzá egy „Gyakori kérdések” szakaszt 4 kérdéssel (árak helyett „egyeztetés alapján”), a meglévő stílushoz illően, az elérhetőség elé. Mielőtt bármit módosítasz, mutasd meg a tervet."] },
+          { "szerep": "rendszer", "szoveg": ["Az ágens beolvassa a fájlt: `index.html` (olvasás – ehhez nem kell engedély ebben a mappában)."] },
+          { "szerep": "agens", "szoveg": ["Megnéztem az index.html-t. Négy szakasza van: fejléc, rólam, szolgáltatások, elérhetőség. A stílus zöld–homokszín, kártyás elrendezés.", "**Terv:**", "1. Új `<section>` a szolgáltatások és az elérhetőség közé, „Gyakori kérdések” címmel.", "2. Négy kérdés lenyitható elemekkel (kattintásra nyílnak): Mekkora kertet vállalok? Mikor érek rá? Hozok-e saját eszközt? Mennyibe kerül? – az utolsónál: „egyeztetés alapján”.", "3. A meglévő kártyastílust használom, új szín nem kerül bele.", "4. Más részhez nem nyúlok."], "jovahagyas": { "kerdes": "Jóváhagyod a tervet?", "igen": "Igen, mehet.", "nem": "Nem, a kérdések közül a „Hozok-e saját eszközt?” helyett legyen: „Elszállítom-e a zöldhulladékot?”", "nemValasz": ["Rendben, a tervet módosítottam: a harmadik kérdés „Elszállítom-e a zöldhulladékot?” lesz. Minden más változatlan. Jóváhagyod így?"] }, "utana": ["Köszönöm, elkezdem."] },
+          { "szerep": "agens", "szoveg": ["Módosítani szeretném az `index.html` fájlt:", "`+ 38 sor` – új „Gyakori kérdések” szakasz a 142. sor után", "`+ 6 sor` – a lenyitható elemek stílusa a meglévő CSS végén", "Más sor nem változik."], "jovahagyas": { "kerdes": "Engedélyezed a fájl módosítását?", "igen": "Igen, engedélyezem.", "nem": "Előbb mutasd meg a pontos szöveget.", "nemValasz": ["Íme a négy kérdés és a válaszok pontos szövege: … (a szimulációban rövidítve). Ha így rendben van, engedélyezed a módosítást?"] }, "utana": ["Kész: a szakaszt hozzáadtam."] },
+          { "szerep": "agens", "szoveg": ["**Ellenőrzés:** újraolvastam a fájlt. A szakasz az elérhetőség előtt van, a négy kérdés lenyitható, a stílus a meglévő kártyákat használja. A HTML szerkezete érvényes.", "Nyisd meg az oldalt a böngészőben, és nézd meg telefonos nézetben is. Ha szeretnéd, a régi változatot visszaállíthatom."] },
+          { "szerep": "te", "szoveg": ["Megnéztem, jól néz ki, telefonon is. Köszönöm!"] }
+        ],
+        "zaras": "Ennyi egy munkamenet: kérés → körülnézés → terv → jóváhagyás → végrehajtás → ellenőrzés. Figyeld meg: kétszer is te döntöttél, mielőtt bármi megváltozott."
+      },
+      "gyakorlat": {
+        "cim": "Elemezd a munkamenetet",
+        "ido": 7,
+        "lepesek": [
+          "Kattints végig a szimuláción kétszer: egyszer mindent jóváhagyva, egyszer a „nem” válaszokkal.",
+          "Írd le, melyik ponton döntöttél, és mi történt volna, ha nem kér engedélyt.",
+          "Mi tette jóvá a kezdő kérést? (Cél, hely, korlát, „előbb mutasd meg a tervet”.)"
+        ],
+        "jegyzetMinta": "Mitől lett jó a kezdő kérés?"
+      },
+      "kviz": [
+        { "k": "Miért kérte a felhasználó, hogy „előbb mutasd meg a tervet”?", "v": ["Hogy lassabb legyen.", "Hogy még a módosítás előtt lássa és javíthassa, mit fog csinálni az ágens.", "Mert az ágens enélkül nem működik.", "Udvariasságból."], "h": 1, "m": "A terv a legolcsóbb pont a félreértések kijavítására." },
+        { "k": "Mi történt, amikor a felhasználó „nem”-et mondott a tervre?", "v": ["Az ágens mégis végrehajtotta.", "Az ágens módosította a tervet, és újra jóváhagyást kért.", "A munkamenet véget ért.", "Az ágens törölte a fájlt."], "h": 1, "m": "Így kell működnie: a te döntésed az irányadó." },
+        { "k": "Mi az utolsó lépés, amit az ágens nem tud helyetted megtenni?", "v": ["A fájl olvasása.", "Hogy te magad megnézd az eredményt, és eldöntsd, megfelel-e.", "A terv megírása.", "A szakasz hozzáadása."], "h": 1, "m": "Az ágens ellenőriz, de a végső szót te mondod ki." }
+      ],
+      "osszefoglalo": [
+        "Egy munkamenet: kérés, körülnézés, terv, jóváhagyás, végrehajtás, ellenőrzés.",
+        "A „nem” is válasz: az ágens a te döntésed szerint módosít.",
+        "A végén te nézed meg az eredményt."
+      ]
+    },
+    {
+      "id": "11.3",
+      "cim": "Mikor érdemes, mire figyelj",
+      "ido": 14,
+      "hero": "img-11-3",
+      "celok": [
+        "Tudod, milyen feladatra érdemes ágenst használni.",
+        "Ismered a négy figyelmeztető területet: biztonság, költség, ellenőrzés, jóváhagyás.",
+        "Megfogalmazol egy jó ágens-feladatot – végrehajtás nélkül."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Mikor érdemes?",
+          "blokkok": [
+            { "lista": [
+              "**Ismétlődő, sok lépéses munka:** sok fájl átnevezése, rendezése, átalakítása.",
+              "**Kód és weboldal:** építés, javítás, kiegészítés.",
+              "**Összefésülés:** több fájl adataiból egy összesítés.",
+              "**Amikor érted az eredményt:** meg tudod ítélni, hogy jó-e."
+            ] },
+            "Kevésbé érdemes: ha egy csevegés is elég; ha nem tudod ellenőrizni az eredményt; ha a hiba következménye súlyos és nehezen visszafordítható."
+          ]
+        },
+        {
+          "cim": "Négy dolog, amire figyelj",
+          "blokkok": [
+            { "lista": [
+              "**Biztonság:** az ágens a géped fájljaihoz férhet hozzá. Adj neki egy külön, kijelölt mappát. Ne adj meg jelszót, és ne engedd, hogy érzékeny adatokat (pénzügyi, egészségügyi, mások adatai) olvasson, ha nem muszáj. Csak megbízható forrásból telepítsd.",
+              "**Költség:** az ágensek sok lépésben, sok szöveget dolgoznak fel. A Claude Code használatához jellemzően fizetős előfizetés vagy használatalapú díj kell (2026. novemberi állapot – ellenőrizd a hivatalos oldalon), és egy hosszú munkamenet a keretet is gyorsan fogyaszthatja.",
+              "**Ellenőrzés:** az ágens is tévedhet – néha magabiztosan állítja, hogy kész, pedig nem. Mindig nézd meg az eredményt.",
+              "**Jóváhagyás:** olvasd el, mit hagysz jóvá. Ha nem érted, kérdezz rá: „Mit csinál pontosan ez a parancs?” A „mindent automatikusan engedélyezek” beállítás kényelmes, de kezdőként ne használd."
+            ] },
+            { "vigyazat": "Fontos fájlokról legyen biztonsági mentésed, mielőtt ágenssel dolgozol rajtuk. Az első próbálkozásokhoz használj másolatot vagy egy próbamappát." }
+          ]
+        },
+        {
+          "cim": "Jó ágens-feladat írása",
+          "blokkok": [
+            "Ugyanazok az elvek, mint a 2. modulban – plusz néhány ágens-specifikus elem:",
+            { "lista": [
+              "**Hol dolgozzon?** „Csak ebben a mappában.”",
+              "**Mi a cél, és mi a kész állapot?** „Kész, ha minden fájlnév ÉÉÉÉ-HH-NN formájú.”",
+              "**Mit ne csináljon?** „Ne törölj semmit. Más fájlhoz ne nyúlj.”",
+              "**Előbb terv:** „Mielőtt bármit módosítasz, mutasd meg a tervet.”",
+              "**Ellenőrzés:** „A végén sorold fel, mit változtattál.”"
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Ágens-feladat sablon",
+        "bevezeto": "Fogalmazz meg egy apró feladatot ágensnek. Most csak megírjuk – nem hajtjuk végre.",
+        "kimenetCim": "Az ágens-feladatod",
+        "elvalaszto": "\n",
+        "mezok": [
+          { "id": "cel", "cimke": "Cél", "elotag": "Feladat:", "minta": "pl. nevezd át a fotókat dátum szerint", "mintaErtek": "A „proba-fotok” mappában lévő fényképeket nevezd át a készítés dátuma szerint." },
+          { "id": "hely", "cimke": "Hol dolgozzon?", "elotag": "Hely:", "minta": "pl. csak a proba-fotok mappában", "mintaErtek": "csak a „proba-fotok” mappában, más mappához ne nyúlj." },
+          { "id": "kesz", "cimke": "Mikor kész?", "elotag": "Kész, ha:", "minta": "pl. minden fájlnév ÉÉÉÉ-HH-NN formájú", "mintaErtek": "minden fájlnév ÉÉÉÉ-HH-NN_sorszám.jpg formájú." },
+          { "id": "tilos", "cimke": "Mit ne csináljon?", "elotag": "Tilos:", "minta": "pl. ne törölj semmit", "mintaErtek": "semmit ne törölj, és ne módosítsd a képek tartalmát." },
+          { "id": "terv", "cimke": "Terv és ellenőrzés", "elotag": "Menet:", "opciok": ["Mielőtt bármit módosítasz, mutasd meg a tervet és 3 példát. A végén sorold fel, mit változtattál."], "mintaErtek": "Mielőtt bármit módosítasz, mutasd meg a tervet és 3 példát. A végén sorold fel, mit változtattál." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Egy apró feladat megfogalmazása ágensnek",
+        "ido": 8,
+        "bevezeto": "Ez tervezési gyakorlat: nem kell semmit telepítened vagy végrehajtanod.",
+        "lepesek": [
+          "Válaszd ki a 11.1 gyakorlatából a legkisebb, legbiztonságosabb feladatot.",
+          "Írd meg az ágens-feladat sablonnal.",
+          "Másold be egy csevegő AI-ba ezzel a kéréssel: „Ezt a feladatot egy AI-ágensnek adnám. Értékeld: egyértelmű-e, mi lehet benne kockázatos, és mit pontosítanál?”",
+          "Javítsd a feladatleírást a visszajelzés alapján, és mentsd el a jegyzetbe."
+        ],
+        "jegyzetMinta": "A végleges ágens-feladatom:"
+      },
+      "kviz": [
+        { "k": "Mikor NEM érdemes ágenst használni?", "v": ["Sok fájl ismétlődő átnevezésénél.", "Ha nem tudod ellenőrizni az eredményt, és a hiba nehezen visszafordítható.", "Egy weboldal kiegészítésénél.", "Egy próbamappán."], "h": 1, "m": "Ha nem tudod megítélni az eredményt, nem tudod felelősen jóváhagyni sem." },
+        { "k": "Mi a legjobb biztonsági gyakorlat kezdőként?", "v": ["Az ágens hozzáférhet minden fájlhoz.", "Külön próbamappa, biztonsági mentés, és nincs automatikus jóváhagyás.", "Megadod neki a jelszavaidat.", "Mindent automatikusan engedélyezel."], "h": 1, "m": "Kicsi, elkülönített, visszafordítható környezetben tanulj." },
+        { "k": "Mit írj bele egy jó ágens-feladatba?", "v": ["Csak a célt.", "Célt, helyet, kész állapotot, tiltásokat, és hogy előbb tervet kérsz.", "A jelszavadat.", "Semmit, az ágens kitalálja."], "h": 1, "m": "Minél világosabbak a keretek, annál biztonságosabb és pontosabb a munka." },
+        { "k": "Elég, ha az ágens azt mondja, kész?", "v": ["Igen.", "Nem, nézd meg magad az eredményt.", "Igen, ha kétszer mondja.", "Csak éjjel."], "h": 1, "m": "Az ágens is tévedhet – az ellenőrzés a te dolgod." }
+      ],
+      "osszefoglalo": [
+        "Ismétlődő, sok lépéses, ellenőrizhető munkára érdemes ágenst használni.",
+        "Biztonság, költség, ellenőrzés, jóváhagyás – kezdőként próbamappa és mentés.",
+        "Jó feladat: cél, hely, kész állapot, tiltások, előbb terv, a végén lista a változásokról."
+      ]
+    }
+  ]
+}

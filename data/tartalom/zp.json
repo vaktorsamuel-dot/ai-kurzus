@@ -1,0 +1,261 @@
+{
+  "cel": "Egy saját, valódi feladatot oldasz meg AI-val az elejétől a végéig – a kurzusban tanultakat egyben használva.",
+  "utana": [
+    "Kiválasztasz és pontosan megfogalmazol egy saját feladatot.",
+    "Lépésről lépésre megoldod: kérés, finomítás, ellenőrzés, biztonság.",
+    "Értékeled az eredményt, és megtervezed a következő három lépésedet."
+  ],
+  "osszefoglalo": [
+    "Egy valódi feladaton végigmentél a teljes folyamaton: cél, kérés, finomítás, ellenőrzés, biztonság.",
+    "Tudod, mi működött nálad jól, és mit csinálnál legközelebb másképp.",
+    "Van egy tervezett következő három lépésed – az AI-használat innentől a te szokásod."
+  ],
+  "kviz": [],
+  "fejezetek": [
+    {
+      "id": "Z.1",
+      "cim": "Válaszd ki a saját feladatodat",
+      "ido": 15,
+      "hero": "img-z-1",
+      "celok": [
+        "Kiválasztasz egy valódi, 30–60 perc alatt elvégezhető feladatot.",
+        "Megfogalmazod a célt és a „kész” állapotot.",
+        "Végiggondolod, milyen adatok kellenek, és melyik nem adható ki."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Mitől jó egy záró projekt?",
+          "blokkok": [
+            { "lista": [
+              "**Valódi:** tényleg szükséged van rá – nem gyakorlófeladat.",
+              "**Kezelhető méretű:** 30–60 perc alatt elkészül.",
+              "**Ellenőrizhető:** meg tudod ítélni, hogy jó lett-e.",
+              "**Biztonságos:** nem kell hozzá személyes vagy bizalmas adatot kiadni (vagy anonimizálható)."
+            ] },
+            "A legjobb projektek több modult is érintenek: például egy dokumentumot összefoglaltatsz (3. modul), utánanézel a benne lévő szabályoknak (4. modul), és levelet írsz belőle (3. modul)."
+          ]
+        },
+        {
+          "cim": "Fogalmazd meg a célt",
+          "blokkok": [
+            "Három mondat elég:",
+            { "szamozott": [
+              "**Mi a feladat?** „Elkészítem a családi nyaralás tervét és költségvetését.”",
+              "**Mikor kész?** „Kész, ha van egy napokra bontott programom, egy költségtáblám és egy csomagolási listám.”",
+              "**Mire figyelek?** „Az árakat és nyitvatartásokat hivatalos oldalon ellenőrzöm; személyes adatot nem adok meg.”"
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "otletlista",
+        "cim": "Ötletlista a profilod alapján",
+        "bevezeto": "A profilodban megadott célok alapján válogattunk. Választhatsz egyet, vagy leírhatod a saját feladatodat.",
+        "otletek": {
+          "levelezes": [
+            "Egy hónapja halogatott, kényes levél megírása három hangnemben, a legjobb kiválasztásával és finomításával.",
+            "Saját levélsablon-gyűjtemény (5 sablon) a leggyakoribb leveleidhez, kipróbálva.",
+            "A postafiókod rendezési szabályainak és válaszsablonjainak megtervezése."
+          ],
+          "dokumentumok": [
+            "Egy hosszabb nyilvános dokumentum (például szerződésminta, tájékoztató) összefoglalása, teendőlistával és ellenőrzéssel.",
+            "Egy háztartási vagy munkahelyi táblázat rendbetétele képletekkel és egy havi összesítővel.",
+            "Egy ismétlődő jelentés sablonjának elkészítése és első kitöltése."
+          ],
+          "kutatas": [
+            "Egy vásárlási döntés (például háztartási gép) kutatása forrásokkal, összehasonlító táblázattal.",
+            "Egy ügyintézési folyamat lépéseinek összegyűjtése hivatalos forrásokból, ellenőrzőlistává alakítva.",
+            "Egy téma áttekintése három megbízható forrással és egy egyoldalas összefoglalóval."
+          ],
+          "kreativ": [
+            "Egy rendezvény (születésnap, osztálytalálkozó) teljes programja, meghívóval és egy AI-illusztrációval (jelölve).",
+            "Egy rövid saját szöveg (köszöntő, bejegyzéssorozat) megírása, stílusváltozatokkal.",
+            "Egy egyoldalas hobbi-weboldal elkészítése és közzététele (10. modul)."
+          ],
+          "tanulas": [
+            "Egy új téma megtanulása: magyarázat a te szintedre, öt ellenőrző kérdés, és egy egyoldalas jegyzet.",
+            "Egy nyelvi gyakorló beszélgetéssorozat hangon, javításokkal és szólistával.",
+            "Egy tanulási terv négy hétre, heti feladatokkal és önellenőrzéssel."
+          ],
+          "egyeb": [
+            "Heti menüterv és bevásárlólista négy főre, kerettel és maradékfelhasználással.",
+            "Egy nyaralás vagy kirándulás terve napokra bontva, költségvetéssel és csomagolási listával.",
+            "A saját AI-asszisztensed beállítása: egyedi utasítás, három sablon, egy projekt."
+          ]
+        }
+      },
+      "gyakorlat": {
+        "cim": "Rögzítsd a projektedet",
+        "ido": 10,
+        "lepesek": [
+          "Válassz egy ötletet a listából, vagy írd le a sajátodat.",
+          "Írd meg a jegyzetbe a három mondatot: mi a feladat, mikor kész, mire figyelsz.",
+          "Gondold végig, milyen adatok kellenek hozzá, és melyiket kell anonimizálnod vagy kihagynod (8.1).",
+          "Ha bizonytalan vagy, másold be a célodat az AI-ba a tervező kéréssel."
+        ],
+        "promptok": [
+          { "cim": "Tervező kérés", "szoveg": "Ez a záró projektem egy AI-kurzus végén: [feladat]. Kész, ha [kész állapot]. Segíts 4–6 lépésre bontani. Mindegyik lépéshez írd le, mit kérjek az AI-tól, és mit kell nekem ellenőriznem. Ha valami nem egyértelmű, kérdezz vissza." }
+        ],
+        "jegyzetMinta": "Feladat: … Kész, ha: … Figyelek arra, hogy: …"
+      },
+      "kviz": [
+        { "k": "Melyik a jó záró projekt?", "v": ["Egy gyakorlófeladat, amire nincs szükséged.", "Egy valódi, 30–60 perc alatt elvégezhető, ellenőrizhető feladat.", "A cég teljes stratégiája.", "Bármi, ami hosszú."], "h": 1, "m": "Valódi, kezelhető, ellenőrizhető és biztonságos." },
+        { "k": "Mit jelent a „kész” állapot megfogalmazása?", "v": ["Hogy mikor kezded.", "Hogy előre tudd, milyen eredmény esetén tekinted befejezettnek.", "Hogy hány órát dolgozol.", "Hogy ki ellenőrzi."], "h": 1, "m": "Enélkül könnyű a végtelenségig finomítani – vagy túl korán abbahagyni." },
+        { "k": "Mit tegyél a projektben szükséges személyes adatokkal?", "v": ["Másold be mindet.", "Hagyd ki vagy anonimizáld őket, és a valódi adatokat a végén, a saját gépeden írd vissza.", "Küldd el e-mailben az AI-nak.", "Tedd ki egy weboldalra."], "h": 1, "m": "A 8.1 szabályai a záró projektben is érvényesek." }
+      ],
+      "osszefoglalo": [
+        "Válassz valódi, kezelhető, ellenőrizhető és biztonságos feladatot.",
+        "Három mondat: mi a feladat, mikor kész, mire figyelsz.",
+        "Gondold végig előre az adatokat: mi anonimizálandó, mi hagyható ki."
+      ]
+    },
+    {
+      "id": "Z.2",
+      "cim": "Valósítsd meg lépésről lépésre",
+      "ido": 45,
+      "hero": "img-z-2",
+      "celok": [
+        "A projektedet lépésekre bontva elvégzed.",
+        "Minden lépésnél alkalmazod a jó kérés, a finomítás és az ellenőrzés szabályait.",
+        "Az ellenőrzőlistával meggyőződsz róla, hogy semmi nem maradt ki."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Az útmutató",
+          "blokkok": [
+            { "szamozott": [
+              "**Indítás:** új beszélgetés (vagy projekt), az egyedi utasításod bekapcsolva. Az első üzenetben írd le a célt és a „kész” állapotot.",
+              "**Lépésenként:** egyszerre egy lépést kérj. A jó kérés öt eleme (2.1) minden lépésnél segít.",
+              "**Finomítás:** konkrét visszajelzés (2.3). Ha elakadsz, kérd, hogy kérdezzen vissza.",
+              "**Ellenőrzés:** minden tényt, számot, dátumot, szabályt ellenőrizz megbízható forrásban (4.2).",
+              "**Rendrakás:** ha a beszélgetés hosszúra nyúlt, kérj átadó összefoglalót (8.2).",
+              "**Véglegesítés:** a kész anyagot vidd át oda, ahol használni fogod (dokumentum, levél, naptár), és ott írd vissza a valódi adatokat."
+            ] },
+            { "tipp": "Ha a projekted része egy kép vagy weboldal, a 6. és a 10. modul lépéseit is használd – és jelöld az AI-tartalmat." }
+          ]
+        },
+        {
+          "cim": "Ha elakadsz",
+          "blokkok": [
+            { "lista": [
+              "**Túl nagy a feladat:** bontsd tovább, vagy szűkítsd a „kész” állapotot.",
+              "**Nem jó a válasz:** nézd meg, melyik elem hiányzik a kérésből (cél, háttér, szerep, formátum, példa).",
+              "**Bizonytalan vagy egy tényben:** kérj forrást, és nézz utána (4.2, 4.3).",
+              "**Nem tetszik az eszköz válasza:** próbáld ki egy másikban is (9.2)."
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "ellenorzolista",
+        "cim": "Projekt-ellenőrzőlista",
+        "bevezeto": "Pipáld ki menet közben. A lista mentődik, bármikor folytathatod.",
+        "tetelek": [
+          { "szoveg": "Leírtam a célt és a „kész” állapotot az első üzenetben." },
+          { "szoveg": "A projekt lépésekre van bontva, és egyszerre egy lépést kértem." },
+          { "szoveg": "Legalább egyszer **finomítottam** egy választ konkrét visszajelzéssel." },
+          { "szoveg": "Minden **tényt, számot, dátumot** ellenőriztem megbízható forrásban." },
+          { "szoveg": "**Nem adtam meg** személyes vagy bizalmas adatot (vagy anonimizáltam)." },
+          { "szoveg": "Ha volt AI-kép vagy -videó, **jelöltem**." },
+          { "szoveg": "A kész anyagot átvittem oda, ahol használni fogom, és ott **átolvastam**." },
+          { "szoveg": "Az eredmény megfelel a „kész” állapotnak." }
+        ],
+        "lezaro": "A projekted kész. Jöhet az értékelés (Z.3)."
+      },
+      "gyakorlat": {
+        "cim": "A projekt elvégzése",
+        "ido": 45,
+        "bevezeto": "Ez a kurzus leghosszabb gyakorlata. Nyugodtan oszd több részre – a haladásod és a jegyzeted mentődik.",
+        "lepesek": [
+          "Nyiss új beszélgetést, és add meg a célt és a „kész” állapotot (a Z.1 jegyzetedből).",
+          "Haladj végig a lépéseken az útmutató szerint.",
+          "Menet közben pipáld ki a projekt-ellenőrzőlistát.",
+          "Ha kész, írd le a jegyzetbe röviden, mi lett az eredmény, és hol található."
+        ],
+        "promptok": [
+          { "cim": "Indító kérés", "szoveg": "A következő feladaton dolgozunk együtt: [feladat]. Kész, ha [kész állapot]. Haladjunk lépésenként: mindig csak a következő lépést csináljuk meg, és a végén kérdezd meg, mehetünk-e tovább. Ha valamiben bizonytalan vagy, jelezd, és ha adatra van szükséged, kérdezz – de személyes adatot ne kérj." }
+        ],
+        "jegyzetMinta": "Az eredmény és hol található:"
+      },
+      "kviz": [
+        { "k": "Miért jó egyszerre egy lépést kérni?", "v": ["Mert így lassabb.", "Mert így minden lépést ellenőrizni és finomítani tudsz, mielőtt továbblépsz.", "Mert az AI egyszerre csak egyet tud.", "Nincs jelentősége."], "h": 1, "m": "A kisebb lépések jobban kézben tarthatók." },
+        { "k": "Hol írd vissza a valódi adatokat?", "v": ["Az AI-beszélgetésben.", "A végleges anyagban, a saját gépeden vagy fiókodban.", "Egy nyilvános weboldalon.", "Sehol."], "h": 1, "m": "Így a valódi adat nem kerül az AI-eszközbe." },
+        { "k": "Mit tegyél, ha egy válasz nem jó?", "v": ["Feladod a projektet.", "Megnézed, melyik elem hiányzott a kérésből, és konkrét visszajelzést adsz.", "Mindig új eszközt keresel.", "Elfogadod."], "h": 1, "m": "A 2. modul eszközei itt is működnek." }
+      ],
+      "osszefoglalo": [
+        "Új beszélgetés, cél és kész állapot, egyszerre egy lépés.",
+        "Finomíts konkrétan, ellenőrizd a tényeket, védd az adatokat.",
+        "A kész anyagot vidd a helyére, és ott olvasd át."
+      ]
+    },
+    {
+      "id": "Z.3",
+      "cim": "Értékeld és tervezd meg a folytatást",
+      "ido": 15,
+      "hero": "img-z-3",
+      "celok": [
+        "Őszintén értékeled, mi működött és mi nem.",
+        "Felismered, melyik készségedet használtad a legjobban, és melyiken érdemes még dolgozni.",
+        "Megtervezed a következő három lépésedet."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Miért fontos az értékelés?",
+          "blokkok": [
+            "Egy-egy jó próbálkozás még nem szokás. Az értékelésből derül ki, mit érdemes megtartanod, és mit kell legközelebb másképp csinálnod.",
+            "Három kérdés elég: **Mi működött? Mi nem? Mi a következő három lépés?**"
+          ]
+        },
+        {
+          "cim": "Segítő kérdések",
+          "blokkok": [
+            { "lista": [
+              "Mennyi időt vett igénybe a projekt? Mennyi lett volna AI nélkül?",
+              "Melyik kérésed működött elsőre? Miért?",
+              "Hol kellett a legtöbbet javítanod?",
+              "Találtál tévedést? Hogyan vetted észre?",
+              "Mit csinálnál legközelebb másképp?",
+              "Milyen hasonló feladatod van még, amire ugyanezt használhatnád?"
+            ] }
+          ]
+        },
+        {
+          "cim": "Ha szeretnéd, az AI is segít",
+          "blokkok": [
+            { "prompt": "Most fejeztem be egy AI-kurzus záró projektjét. Az értékelésem: [mi működött, mi nem]. Tegyél fel nekem 3 kérdést, amelyek segítenek mélyebben átgondolni a tapasztalataimat, majd javasolj három konkrét következő lépést a következő hónapra, mindegyiket legfeljebb 15 perc/hét ráfordítással.", "cim": "Értékelő beszélgetés" }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Az értékelésem",
+        "bevezeto": "Töltsd ki – minden mentődik, és a végén ki is másolhatod magadnak.",
+        "kimenetCim": "Záró projekt – értékelés",
+        "elvalaszto": "\n\n",
+        "mezok": [
+          { "id": "projekt", "cimke": "A projektem", "elotag": "Projekt:", "minta": "pl. heti menüterv és bevásárlólista" },
+          { "id": "mukodott", "cimke": "Mi működött?", "elotag": "Mi működött:", "minta": "pl. a sablonos kérés elsőre jó listát adott" },
+          { "id": "nem", "cimke": "Mi nem működött, mit csinálnék másképp?", "elotag": "Mi nem működött:", "minta": "pl. az árakat rosszul becsülte, ezeket külön kellett ellenőrizni" },
+          { "id": "lepes1", "cimke": "1. következő lépés", "elotag": "1.", "minta": "pl. minden pénteken AI-val tervezem a következő hét menüjét" },
+          { "id": "lepes2", "cimke": "2. következő lépés", "elotag": "2.", "minta": "pl. beállítok egy projektet a családi ügyeknek" },
+          { "id": "lepes3", "cimke": "3. következő lépés", "elotag": "3.", "minta": "pl. megmutatom a csalásfelismerő feladatot a szüleimnek" }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Az értékelés kitöltése",
+        "ido": 10,
+        "lepesek": [
+          "Töltsd ki a fenti értékelést a segítő kérdések alapján.",
+          "Ha szeretnéd, folytass egy értékelő beszélgetést az AI-val a fenti kéréssel.",
+          "Másold ki az értékelést, és tedd el oda, ahol egy hónap múlva újra elolvasod.",
+          "Tegyél a naptáradba egy emlékeztetőt egy hónap múlvára: „Hogy állok a három lépéssel?”"
+        ]
+      },
+      "osszefoglalo": [
+        "Az értékelés teszi a próbálkozásból szokássá: mi működött, mi nem, mi a következő lépés.",
+        "Három konkrét, kicsi következő lépés többet ér egy nagy tervnél.",
+        "Egy hónap múlva nézd meg újra – és zárd le a kurzust az oklevéllel."
+      ]
+    }
+  ]
+}

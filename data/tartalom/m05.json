@@ -1,0 +1,266 @@
+{
+  "cel": "Telefonról is magabiztosan használod az AI-t: beszélsz hozzá, fotót mutatsz neki, és gyorsan rögzíted vele a gondolataidat.",
+  "utana": [
+    "Hangon beszélgetsz az AI-val, és diktálással írsz gyorsan.",
+    "Fotóról kérsz elemzést: dokumentum, étlap, tárgy, tábla, kézírás.",
+    "Kialakítasz egy egyszerű rendszert jegyzetek, ötletek és emlékeztetők rögzítésére."
+  ],
+  "javaslat": {
+    "levelezes": "Diktálj el egy levélvázlatot séta vagy főzés közben, és kérd, hogy formázza meg rendes e-maillé.",
+    "dokumentumok": "Fényképezz le egy (személyes adatot nem tartalmazó) papírt, például egy használati útmutató oldalát, és kérd belőle a lépéseket.",
+    "kutatas": "Fényképezz le egy tárgyat vagy növényt, és kérd az azonosítását – majd ellenőrizd egy megbízható forrásban.",
+    "kreativ": "Mondd el hangosan egy ötletedet, és kérd, hogy rendezze vázlattá.",
+    "tanulas": "Fényképezz le egy táblára vagy papírra írt jegyzetet, és kérd, hogy gépelje be és magyarázza el."
+  },
+  "osszefoglalo": [
+    "Hangon természetesen beszélgethetsz, diktálással pedig sokkal gyorsabban írhatsz, mint gépelve.",
+    "A fotóelemzés dokumentumon, étlapon, tárgyon, kézíráson is működik – de a fontos részleteket ellenőrizd.",
+    "Ne fényképezz le személyes adatot, és figyelj, kit és mit rögzítesz."
+  ],
+  "kviz": [
+    { "k": "Mire jó a diktálás?", "v": ["Csak hosszú szövegekhez.", "Gyors szövegbevitelre beszéddel; utána az AI meg is formázhatja.", "Csak telefonhíváshoz.", "Semmire, mindig hibás."], "h": 1, "m": "A beszéd gyorsabb a gépelésnél; az AI a rendezetlen, élőbeszédszerű szöveget is szépen formázza." },
+    { "k": "Mit érdemes megadni egy fotó elemzésekor?", "v": ["Semmit, az AI kitalálja.", "Hogy mit szeretnél megtudni a képből (például: gépeld be, fordítsd le, mi ez a tárgy).", "A fotó fájlméretét.", "A telefon típusát."], "h": 1, "m": "Ugyanaz a fotó sokféle kérdésre adhat választ – mondd meg, melyikre vagy kíváncsi." },
+    { "k": "Melyik fotót NE töltsd fel?", "v": ["Egy étlapot.", "Egy virágot a kertben.", "A személyi igazolványodat vagy egy orvosi leletet a nevedre.", "Egy használati útmutató oldalát."], "h": 2, "m": "Személyazonosító iratot, egészségügyi adatot, bankkártyát ne fotózz le AI-nak." },
+    { "k": "Mi a teendő, ha az AI egy kézírásos jegyzetből gépelt be szöveget?", "v": ["Elfogadod.", "Átolvasod és összeveted az eredetivel, mert a kézírás-felismerés tévedhet.", "Kidobod az eredetit.", "Lefordíttatod angolra."], "h": 1, "m": "A szövegfelismerés jó, de a nehezen olvasható szavaknál, számoknál hibázhat." },
+    { "k": "Mire figyelj, ha más embert is lefényképezel?", "v": ["Semmire.", "Kérj engedélyt, és ne tölts fel AI-ba mások arcát vagy adatait a beleegyezésük nélkül.", "Csak a háttérre.", "Csak hogy éles legyen a kép."], "h": 1, "m": "Mások képe és adatai is személyes adatnak számítanak." },
+    { "k": "Mi a jó módszer ötletek gyors rögzítésére?", "v": ["Mindent fejben tartani.", "Egy állandó helyre hangon elmondani, majd az AI-val rendszerezni.", "Minden ötletet új beszélgetésben, rendszer nélkül.", "Csak papíron, soha nem digitálisan."], "h": 1, "m": "Az állandó hely és a rendszeres összegzés a lényeg – hogy ez melyik eszközben van, az már a te döntésed." }
+  ],
+  "fejezetek": [
+    {
+      "id": "5.1",
+      "cim": "Hangos beszélgetés és diktálás",
+      "ido": 11,
+      "hero": "img-5-1",
+      "celok": [
+        "Elindítasz egy hangos beszélgetést az AI-val.",
+        "Diktálással írsz, és megformáztatod az eredményt.",
+        "Tudod, mire figyelj nyilvános helyen és mások jelenlétében."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Kétféle hangos használat",
+          "blokkok": [
+            { "lista": [
+              "**Diktálás:** a telefon vagy az alkalmazás [[beszedfelismeres|beszédfelismerése]] szöveggé alakítja, amit mondasz. Ezt a szöveget küldöd el az AI-nak, mintha begépelted volna.",
+              "**Hangos beszélgetés:** az AI hangosan válaszol, és te is hangosan reagálsz – mint egy telefonbeszélgetés."
+            ] },
+            "A legtöbb AI-alkalmazásban mindkettőhöz van egy mikrofon vagy hullámvonal ikon a beviteli mező mellett. A pontos helye és neve alkalmazásonként eltér, és változhat is."
+          ]
+        },
+        {
+          "cim": "Mire jó?",
+          "blokkok": [
+            { "lista": [
+              "**Ha jár a kezed:** főzés, autóvezetés utáni parkolás, séta közben.",
+              "**Hosszabb gondolatmenethez:** elmondani gyorsabb, mint begépelni.",
+              "**Nyelvgyakorláshoz:** beszélgetés idegen nyelven, javításokkal.",
+              "**Ha nehezen gépelsz:** kis képernyő, fáradt szem, mozgáskorlátozottság."
+            ] },
+            { "tipp": "Diktálásnál ne aggódj a „hümmögés” és az ismétlések miatt. Kérd utána: „Formázd meg ezt rendes, tagolt szöveggé, a tartalmon ne változtass.”" }
+          ]
+        },
+        {
+          "cim": "Mire figyelj?",
+          "blokkok": [
+            { "lista": [
+              "**Környezet:** nyilvános helyen mások is hallják, amit mondasz – és amit az AI válaszol.",
+              "**Hangfelvétel:** az alkalmazás a hangodat feldolgozza; nézd meg a beállításokban, mit tárol belőle (8. modul).",
+              "**Nevek és számok:** a beszédfelismerés a ritka neveket, számokat gyakran félrehallja. Mindig nézd át."
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "lepesek",
+        "cim": "Lépésenként: hangos beszélgetés telefonon",
+        "lepesek": [
+          { "cim": "Nyisd meg az alkalmazást", "leiras": "Indítsd el az AI-alkalmazást a telefonodon, és kezdj egy új beszélgetést.", "fejlec": "Új beszélgetés", "kepernyo": [{ "tipus": "szoveg", "szoveg": "Miben segíthetek?" }, { "tipus": "gomb", "szoveg": "Írj üzenetet…   🎤" }] },
+          { "cim": "Keresd meg a mikrofont", "leiras": "A beviteli mező mellett általában egy **mikrofon** (diktálás) és egy **hullámvonal** vagy fejhallgató ikon (hangos beszélgetés) van. Koppints a hangos beszélgetés ikonjára.", "fejlec": "Új beszélgetés", "kepernyo": [{ "tipus": "gomb", "szoveg": "🎤 Diktálás" }, { "tipus": "gomb", "szoveg": "〰 Hangos beszélgetés", "kiemelt": true }] },
+          { "cim": "Engedélyezd a mikrofont", "leiras": "Első alkalommal a telefon engedélyt kér a mikrofon használatához. Ezt meg kell adnod, különben nem hall.", "fejlec": "Engedély", "kepernyo": [{ "tipus": "szoveg", "szoveg": "Az alkalmazás hozzá szeretne férni a mikrofonhoz." }, { "tipus": "gomb", "szoveg": "Engedélyezés", "kiemelt": true }, { "tipus": "gomb", "szoveg": "Tiltás" }] },
+          { "cim": "Beszélj természetesen", "leiras": "Mondd el a kérdésed úgy, mintha egy emberhez beszélnél. Várd meg, amíg befejezi a választ, vagy szólj közbe, ha más irányba vinnéd.", "fejlec": "Hangos beszélgetés", "kepernyo": [{ "tipus": "mikrofon", "szoveg": "Hallgatlak…" }] },
+          { "cim": "Nézd meg az átiratot", "leiras": "A beszélgetés végén a legtöbb alkalmazás szövegként is megmutatja, mit mondtatok. Itt ellenőrizheted a neveket, számokat.", "fejlec": "Beszélgetés", "kepernyo": [{ "tipus": "buborek-en", "szoveg": "Mit főzzek ma este 20 perc alatt?" }, { "tipus": "buborek-ai", "szoveg": "Három gyors ötlet: …" }] }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Diktálj, aztán formáztass",
+        "ido": 7,
+        "lepesek": [
+          "Nyisd meg az AI-alkalmazást a telefonodon, és kapcsold be a diktálást (mikrofon ikon).",
+          "Mondj el egy kb. egyperces gondolatmenetet: például mit kell elintézned a héten, rendezetlenül, ahogy eszedbe jut.",
+          "Küldd el, majd másold be (vagy mondd el) a formázó kérést.",
+          "Próbáld ki a hangos beszélgetést is egy rövid kérdéssel."
+        ],
+        "promptok": [
+          { "cim": "Formázó kérés", "szoveg": "Az előző üzenetemet diktáltam. Rendezd tagolt teendőlistává, csoportosítsd témák szerint, és jelöld, ha valami határidős. A tartalmon ne változtass, csak a formán." }
+        ],
+        "jegyzetMinta": "Mennyire értette meg a diktálást? Mit hallott félre?"
+      },
+      "kviz": [
+        { "k": "Mi a különbség a diktálás és a hangos beszélgetés között?", "v": ["Nincs különbség.", "Diktálásnál a beszédből szöveg lesz, amit elküldesz; hangos beszélgetésnél az AI is hangosan válaszol.", "A diktálás csak angolul működik.", "A hangos beszélgetés csak számítógépen megy."], "h": 1, "m": "A diktálás szövegbevitel, a hangos beszélgetés oda-vissza beszéd." },
+        { "k": "Mit hall félre leggyakrabban a beszédfelismerés?", "v": ["A gyakori szavakat.", "A ritka neveket és a számokat.", "A kötőszavakat.", "Semmit."], "h": 1, "m": "Ezért a neveket, számokat mindig nézd át." },
+        { "k": "Mire figyelj nyilvános helyen?", "v": ["Hogy elég hangos legyen.", "Hogy mások is hallják, amit mondasz és amit az AI válaszol.", "Hogy legyen térerő.", "Semmire."], "h": 1, "m": "Személyes ügyeket inkább ne hangosan, nyilvános helyen intézz." }
+      ],
+      "osszefoglalo": [
+        "Diktálással beszéddel írsz, hangos beszélgetésben az AI is beszél.",
+        "A rendezetlen diktálást az AI tagolt szöveggé formázza.",
+        "Figyelj a környezetre, és nézd át a neveket, számokat."
+      ]
+    },
+    {
+      "id": "5.2",
+      "cim": "Fotó elemzése: dokumentum, étlap, tárgy, tábla, kézírás",
+      "ido": 13,
+      "hero": "img-5-2",
+      "celok": [
+        "Fotót csatolsz, és célzott kérdést teszel fel róla.",
+        "Ismered a leghasznosabb fotós felhasználásokat.",
+        "Tudod, mit ne fényképezz le, és mit kell ellenőrizni."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Az AI „lát”",
+          "blokkok": [
+            "A mai AI-eszközök többsége [[multimodalis]]: nemcsak szöveget, hanem képet is értelmez. Lefényképezel valamit, csatolod, és kérdezel róla.",
+            "Papírról a betűket is kiolvassa – ezt hívják [[ocr|szövegfelismerésnek]] –, de ennél többet is tud: értelmez, fordít, összefoglal, magyaráz."
+          ]
+        },
+        {
+          "cim": "Öt hasznos helyzet",
+          "blokkok": [
+            { "tabla": [
+              ["Mit fotózol?", "Mit kérdezhetsz?"],
+              ["Dokumentum (levél, tájékoztató)", "„Gépeld be, és foglald össze, mi a teendőm.”"],
+              ["Étlap külföldön", "„Fordítsd le, és jelöld, melyik étel vegetáriánus.”"],
+              ["Tárgy, növény, alkatrész", "„Mi lehet ez, és mire használják? Ha nem vagy biztos, mondd.”"],
+              ["Tábla, prezentáció", "„Gépeld be rendezett jegyzetként.”"],
+              ["Kézírás", "„Gépeld be. Ahol nem tudod kiolvasni, jelöld [?]-lel.”"]
+            ] },
+            { "tipp": "Jó fotó = jó eredmény: egyenesen, jó fényben, árnyék nélkül fényképezz, és a lényeg töltse ki a képet." }
+          ]
+        },
+        {
+          "cim": "Amit ne fotózz le – és amit ellenőrizz",
+          "blokkok": [
+            { "vigyazat": "Ne tölts fel személyazonosító iratot, bankkártyát, orvosi leletet a neveddel, mások arcát vagy adatait engedély nélkül. Ha egy dokumentumon van név vagy szám, takard le, vagy vágd le a képről feltöltés előtt." },
+            { "lista": [
+              "**Azonosítás:** gombát, gyógynövényt, gyógyszert soha ne fogyassz AI-azonosítás alapján.",
+              "**Számok:** a beolvasott összegeket, dátumokat vesd össze az eredetivel.",
+              "**Kézírás:** a nehezen olvasható részeket az AI kitalálhatja – kérd, hogy jelölje."
+            ] }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-5-2",
+        "kotelezo": true,
+        "bevezeto": "Telefonos képernyőfelvétel: egy kitalált étlap és egy kézírásos jegyzet elemzése."
+      },
+      "interaktiv": {
+        "tipus": "lepesek",
+        "cim": "Lépésenként: fotó elemzése telefonon",
+        "lepesek": [
+          { "cim": "Csatolás", "leiras": "A beviteli mező mellett koppints a **+** vagy **kamera** ikonra.", "fejlec": "Új beszélgetés", "kepernyo": [{ "tipus": "gomb", "szoveg": "＋  Fotó / fájl", "kiemelt": true }, { "tipus": "gomb", "szoveg": "Írj üzenetet…" }] },
+          { "cim": "Fotó készítése", "leiras": "Válaszd a **kamerát**, és fényképezd le a papírt egyenesen, jó fényben. (Vagy válassz egy meglévő képet a galériából.)", "fejlec": "Kamera", "kepernyo": [{ "tipus": "foto", "szoveg": "Kitalált étlap: Gulyásleves · Lecsó · Túrós csusza" }, { "tipus": "gomb", "szoveg": "◉", "kiemelt": true }] },
+          { "cim": "Ellenőrizd a képet", "leiras": "Mielőtt elküldöd, nézd meg: éles-e, és **nincs-e rajta személyes adat**. Ha van, vágd le vagy takard ki.", "fejlec": "Előnézet", "kepernyo": [{ "tipus": "foto", "szoveg": "Étlap – nincs rajta név vagy szám ✓" }, { "tipus": "gomb", "szoveg": "Használom", "kiemelt": true }] },
+          { "cim": "Írd mellé a kérdést", "leiras": "Ne csak a képet küldd el: írd mellé, mit szeretnél megtudni.", "fejlec": "Új beszélgetés", "kepernyo": [{ "tipus": "foto", "szoveg": "📷 csatolt kép" }, { "tipus": "buborek-en", "szoveg": "Fordítsd le angolra, és jelöld, melyik vegetáriánus." }] },
+          { "cim": "Olvasd el és ellenőrizd", "leiras": "Nézd át a választ. Ha valamit rosszul olvasott ki, mondd meg neki, és javítja.", "fejlec": "Beszélgetés", "kepernyo": [{ "tipus": "buborek-ai", "szoveg": "Goulash soup · Lecsó (vegetarian*) · Pasta with cottage cheese (vegetarian)" }, { "tipus": "szoveg", "szoveg": "*a lecsó készülhet kolbásszal is – kérdezz rá" }] }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Fényképezz le valamit, és kérd az elemzését",
+        "ido": 8,
+        "lepesek": [
+          "Válassz egy tárgyat vagy egy papírt, amelyen nincs személyes adat: egy termék címkéje, egy recept, egy használati útmutató oldala, egy növény.",
+          "Fényképezd le az AI-alkalmazásban (vagy csatolj egy meglévő fotót).",
+          "Írd mellé a sablont a saját kérdéseddel.",
+          "Ellenőrizd a választ: egyeznek a számok, nevek? Ha azonosítást kértél, nézz utána egy megbízható forrásban."
+        ],
+        "promptok": [
+          { "cim": "Sablon", "szoveg": "A képen [mi látható]. Szeretném, ha [mit csináljon: begépelné / lefordítaná / elmagyarázná / azonosítaná]. Ahol nem vagy biztos, vagy nem tudod kiolvasni, jelezd." }
+        ]
+      },
+      "kviz": [
+        { "k": "Mit jelent, hogy egy AI multimodális?", "v": ["Több nyelven beszél.", "Szöveg mellett képet (és esetleg hangot) is értelmez.", "Több telefonon fut.", "Több modellből áll."], "h": 1, "m": "Így tud egy fotóról is kérdésekre válaszolni." },
+        { "k": "Mit tegyél, ha a lefényképezett dokumentumon a neved szerepel?", "v": ["Semmit.", "Vágd le vagy takard ki a képről feltöltés előtt.", "Írd rá kézzel, hogy titkos.", "Küldd el kétszer."], "h": 1, "m": "Csak annyi adatot adj át, amennyi a feladathoz feltétlenül kell." },
+        { "k": "Elfogyaszthatsz egy gombát, ha az AI a fotó alapján ehetőnek mondja?", "v": ["Igen.", "Nem, gombát csak gombaszakellenőr vizsgálata után.", "Igen, ha kétszer is ezt mondja.", "Csak megfőzve."], "h": 1, "m": "Életveszélyes tévedés lehet. Az AI-azonosítás itt legfeljebb érdekesség." },
+        { "k": "Hogyan kérd egy kézírás begépelését?", "v": ["„Gépeld be.”", "„Gépeld be, és ahol nem tudod kiolvasni, jelöld [?]-lel.”", "„Javítsd ki a hibáimat.”", "„Fordítsd le.”"], "h": 1, "m": "Így nem találja ki a nehezen olvasható részeket, hanem jelzi őket." }
+      ],
+      "osszefoglalo": [
+        "Fotózz, csatolj, és írd mellé, mit szeretnél megtudni.",
+        "Dokumentum, étlap, tárgy, tábla, kézírás – mindegyiknél más kérdés a hasznos.",
+        "Személyes adatot ne fotózz; azonosítást és számokat ellenőrizz."
+      ]
+    },
+    {
+      "id": "5.3",
+      "cim": "Jegyzetek, ötletek, emlékeztetők gyors rögzítése",
+      "ido": 10,
+      "hero": "img-5-3",
+      "celok": [
+        "Kialakítasz egy egyszerű rögzítési szokást hanggal és fotóval.",
+        "A rendezetlen jegyzetekből az AI-val rendszert csinálsz.",
+        "Tudod, mit bízhatsz az AI-ra emlékeztetőként, és mit nem."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Rögzíts gyorsan, rendezz később",
+          "blokkok": [
+            "Az ötletek rossz időpontban jönnek: bevásárlás közben, autóban, este. A lényeg, hogy **gyorsan** és **mindig ugyanoda** rögzítsd őket.",
+            { "lista": [
+              "Egy állandó AI-beszélgetés vagy [[projekt]] „Ötletek” néven, ahova diktálsz.",
+              "A telefon jegyzetalkalmazása vagy hangjegyzete, amelyet hetente egyszer bemásolsz az AI-ba.",
+              "Fotó a tábláról, papírcetliről, amit később begépeltetsz."
+            ] }
+          ]
+        },
+        {
+          "cim": "A heti rendrakás",
+          "blokkok": [
+            "Hetente egyszer gyűjtsd össze a jegyzeteidet, és kérd az AI-t, hogy rendszerezze:",
+            { "prompt": "Itt vannak az elmúlt hét jegyzetei, rendezetlenül. Csoportosítsd őket: 1) teendők (határidővel, ha van), 2) ötletek későbbre, 3) kérdések, amiknek utána kell néznem. A végén írd le, mi az a három dolog, amivel érdemes a jövő hetet kezdeni.\n\n[jegyzetek]", "cim": "Heti rendrakás" }
+          ]
+        },
+        {
+          "cim": "Emlékeztetők: mire számíthatsz?",
+          "blokkok": [
+            "Egyes AI-eszközök tudnak emlékeztetőt vagy ütemezett feladatot beállítani, mások nem; ez eszközönként és csomagonként eltér, és gyorsan változik (2026. novemberi állapot – ellenőrizd az eszközöd súgójában).",
+            { "vigyazat": "Fontos határidőt (orvos, hivatal, számla) ne csak az AI-ra bízz. Tedd be a telefonod naptárába vagy emlékeztetőjébe is, amelynek működésében biztos vagy." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "ellenorzolista",
+        "cim": "Az én rögzítési rendszerem",
+        "bevezeto": "Pipáld ki, amit már beállítottál – a lista mentődik, később is visszanézheted.",
+        "tetelek": [
+          { "szoveg": "Kiválasztottam **egy állandó helyet** az ötleteimnek.", "miert": "Ha mindig máshova kerül, nem találod meg." },
+          { "szoveg": "Tudom, hol van a **diktálás** gomb a telefonomon." },
+          { "szoveg": "Kipróbáltam egy **fotós jegyzetet** (tábla, cetli) begépeltetve." },
+          { "szoveg": "Beírtam a naptáramba a **heti rendrakás** idejét.", "miert": "Pl. péntek délután 10 perc." },
+          { "szoveg": "A fontos határidőket **a naptáramba is** beteszem, nem csak az AI-ba." }
+        ],
+        "lezaro": "Kész a rendszered. Egy hónap múlva nézd meg, mennyi ötlet nem veszett el."
+      },
+      "gyakorlat": {
+        "cim": "Az első heti rendrakás",
+        "ido": 8,
+        "lepesek": [
+          "Gyűjts össze 5–10 jegyzetet, ötletet vagy teendőt a fejedből vagy a telefonodról (személyes adatok nélkül).",
+          "Diktáld vagy gépeld be őket egyben, rendezetlenül.",
+          "Másold be a heti rendrakás kérését.",
+          "A határidős teendőket tedd be a naptáradba is."
+        ]
+      },
+      "kviz": [
+        { "k": "Mi a jó rögzítési szokás lényege?", "v": ["Minden ötletet máshova írni.", "Gyorsan és mindig ugyanoda rögzíteni, és rendszeresen rendezni.", "Csak a fontos ötleteket felírni.", "Mindent megjegyezni."], "h": 1, "m": "Az állandó hely és a rendszeres rendrakás teszi működővé." },
+        { "k": "Rábízhatsz egy fontos orvosi időpontot kizárólag az AI-ra?", "v": ["Igen.", "Nem, tedd a naptáradba is, amelynek működésében biztos vagy.", "Igen, ha megígérte.", "Csak ha hangosan mondtad."], "h": 1, "m": "Az AI-eszközök emlékeztető-funkciói eltérnek és változnak; a fontos dolgokat tedd egy megbízható naptárba is." },
+        { "k": "Mire jó a heti rendrakás kérése?", "v": ["Törli a jegyzeteket.", "Csoportosítja a jegyzeteket teendőkre, ötletekre és kérdésekre, és prioritást javasol.", "Elküldi őket a főnöködnek.", "Lefordítja őket."], "h": 1, "m": "A rendetlen jegyzetekből áttekinthető lista lesz." }
+      ],
+      "osszefoglalo": [
+        "Rögzíts gyorsan hanggal vagy fotóval, mindig ugyanoda.",
+        "Hetente egyszer rendszereztesd az AI-val: teendő, ötlet, kérdés.",
+        "Fontos határidő mindig kerüljön a naptáradba is."
+      ]
+    }
+  ]
+}

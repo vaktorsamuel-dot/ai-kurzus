@@ -1,0 +1,560 @@
+{
+  "cel": "Tudatosan választasz az AI-eszközök között, és a választott eszközt a saját igényeidre szabod.",
+  "utana": [
+    "Tárgyilagosan el tudod mondani, miben hasonlít és miben különbözik a ChatGPT, a Claude és a Gemini.",
+    "Saját szempontok szerint összehasonlítasz két eszközt egy valódi feladaton.",
+    "Beállítod az egyedi utasításaidat, és tudod, mire jó a projekt és a memória."
+  ],
+  "javaslat": {
+    "levelezes": "Hasonlítsd össze két eszközt egy válaszlevél megírásán: melyik találja el jobban a hangnemedet?",
+    "dokumentumok": "Hasonlítsd össze két eszközt ugyanannak a (nyilvános vagy kitalált) dokumentumnak az összefoglalásán.",
+    "kutatas": "Hasonlítsd össze két eszközt egy forrásigényes kérdésen: melyik ad jobban ellenőrizhető forrásokat?",
+    "kreativ": "Hasonlítsd össze két eszközt egy kreatív feladaton: tíz ötlet egy rendezvényhez vagy egy rövid szöveg.",
+    "tanulas": "Hasonlítsd össze két eszközt egy fogalom elmagyarázásán a te szintedre."
+  },
+  "osszefoglalo": [
+    "A főbb eszközök alapjaiban hasonlóak; a különbség a részletekben, a kapcsolódó szolgáltatásokban és a te feladataidon múlik.",
+    "Ne a hírnév, hanem a saját, valódi feladataidon végzett összehasonlítás döntsön.",
+    "Egyedi utasítással, projektekkel és memóriával a választott eszköz a saját asszisztenseddé válik."
+  ],
+  "kviz": [
+    {
+      "k": "Mi a legjobb módja annak, hogy eldöntsd, melyik AI-eszköz való neked?",
+      "v": [
+        "Megkérdezed az egyik AI-t, melyik a legjobb.",
+        "Kipróbálod őket a saját, valódi feladataidon, saját szempontok szerint.",
+        "A legdrágábbat választod.",
+        "Azt, amelyikről a legtöbb reklámot láttad."
+      ],
+      "h": 1,
+      "m": "A különbségek feladatfüggők – a saját tesztelésed a legmegbízhatóbb."
+    },
+    {
+      "k": "Hol ellenőrizd egy AI-eszköz aktuális árait és funkcióit?",
+      "v": [
+        "Egy egy évvel ezelőtti cikkben.",
+        "Az eszköz hivatalos oldalán.",
+        "Az AI-tól magától.",
+        "Egy fórumon."
+      ],
+      "h": 1,
+      "m": "Az árak és funkciók gyakran változnak; a hivatalos, aktuális oldal a megbízható forrás."
+    },
+    {
+      "k": "Mi az egyedi utasítás?",
+      "v": [
+        "Egy egyszeri kérés.",
+        "Állandó beállítás arról, ki vagy és milyen válaszokat szeretnél; minden beszélgetésben érvényes.",
+        "A jelszavad.",
+        "Egy fizetős funkció neve."
+      ],
+      "h": 1,
+      "m": "Ezzel nem kell minden beszélgetésben újra elmondanod az alapokat."
+    },
+    {
+      "k": "Mire jó egy projekt egy AI-eszközben?",
+      "v": [
+        "Videók szerkesztésére.",
+        "Egy témához tartozó beszélgetések, fájlok és utasítások együtt tartására.",
+        "A számítógép gyorsítására.",
+        "Semmire."
+      ],
+      "h": 1,
+      "m": "Ismétlődő, összetett munkánál sok időt spórol."
+    },
+    {
+      "k": "Mit tegyél a memória funkcióval?",
+      "v": [
+        "Soha ne nézd meg.",
+        "Időnként nézd át, mit jegyzett meg rólad, és töröld, ami nem kell vagy túl személyes.",
+        "Mondd el neki a jelszavaidat, hogy megjegyezze.",
+        "Kapcsold be, és felejtsd el."
+      ],
+      "h": 1,
+      "m": "A memória kényelmes, de neked kell kézben tartanod, mi van benne."
+    },
+    {
+      "k": "Melyik szempont NEM tartozik egy tárgyilagos összehasonlításhoz?",
+      "v": [
+        "Pontosság.",
+        "Érthetőség.",
+        "Melyik logó tetszik jobban.",
+        "Mennyire követte a kérést."
+      ],
+      "h": 2,
+      "m": "A tartalmi szempontok számítanak, nem a külsőségek."
+    },
+    {
+      "k": "Miért érdemes ugyanazt a feladatot két eszközben kipróbálni?",
+      "v": [
+        "Hogy kétszer fizess.",
+        "Mert látod a különbségeket, és második véleményt is kapsz.",
+        "Mert az egyik mindig hibás.",
+        "Nincs értelme."
+      ],
+      "h": 1,
+      "m": "A két válasz összevetése a minőségről és a megbízhatóságról is sokat elárul."
+    }
+  ],
+  "fejezetek": [
+    {
+      "id": "9.1",
+      "cim": "A főbb szereplők: ChatGPT, Claude, Gemini",
+      "ido": 15,
+      "hero": "img-9-1",
+      "celok": [
+        "Tudod, ki fejleszti a három legismertebb eszközt, és mi bennük a közös.",
+        "Ismered a jellemző különbségeket, amelyeket érdemes kipróbálni.",
+        "Tudod, hogyan ellenőrizd a friss információkat (árak, funkciók)."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Előbb egy fontos megjegyzés",
+          "blokkok": [
+            {
+              "vigyazat": "Ez a fejezet 2026. novemberi állapotot tükröz, és szándékosan általános. Az AI-eszközök funkciói, csomagjai és árai hónapról hónapra változnak. Árakat ezért nem írunk – mielőtt döntesz vagy előfizetsz, mindig a hivatalos oldalon ellenőrizd."
+            },
+            "A kurzus nem ajánl egyetlen eszközt sem. A cél, hogy tudd, mire figyelj, és magad dönts."
+          ]
+        },
+        {
+          "cim": "Ami közös bennük",
+          "blokkok": [
+            {
+              "lista": [
+                "Mindhárom egy nagy nyelvi modellre épülő csevegő asszisztens, böngészőből és mobilalkalmazásból is elérhető.",
+                "Mindháromnak van ingyenes használati lehetősége korlátozott kerettel, és fizetős csomagjai bővebb kerettel és funkciókkal.",
+                "Mindhárom kezel szöveget és képet, és mindháromban van valamilyen hangos használat.",
+                "Mindhárom tud tévedni – az 1. és 4. modul szabályai mindegyikre ugyanúgy érvényesek."
+              ]
+            }
+          ]
+        },
+        {
+          "cim": "Jellemző különbségek – tárgyilagosan",
+          "blokkok": [
+            {
+              "tabla": [
+                [
+                  "",
+                  "ChatGPT",
+                  "Claude",
+                  "Gemini"
+                ],
+                [
+                  "Fejlesztő",
+                  "OpenAI",
+                  "Anthropic",
+                  "Google"
+                ],
+                [
+                  "Amiről általában ismert",
+                  "Az egyik legelterjedtebb, sokféle beépített funkcióval (például képgenerálás)",
+                  "Hosszabb szövegek és dokumentumok feldolgozása, írási feladatok",
+                  "Szoros kapcsolat a Google szolgáltatásaival (például levelezés, dokumentumok, keresés)"
+                ],
+                [
+                  "Mit érdemes kipróbálni?",
+                  "Hogyan kezeli a vegyes feladatokat (szöveg + kép)",
+                  "Hogyan bánik egy hosszabb dokumentummal és a hangnemmel",
+                  "Hogyan működik együtt a már használt Google-szolgáltatásaiddal"
+                ]
+              ],
+              "forras": "Általános, 2026. novemberi jellemzés, nem teljes körű és nem rangsor. A funkciók csomagonként eltérnek és változnak – ellenőrizd a hivatalos oldalakon."
+            },
+            "A „melyik a legjobb” kérdésre nincs általános válasz: a modellek folyamatosan frissülnek, és ami egy feladatban jobb, egy másikban gyengébb lehet."
+          ]
+        },
+        {
+          "cim": "Mi dönthet nálad?",
+          "blokkok": [
+            {
+              "lista": [
+                "**A te feladataid:** melyik válaszol jobban arra, amit te a leggyakrabban csinálsz? (Ezt a 9.2-ben kipróbálod.)",
+                "**Meglévő szolgáltatások:** milyen levelezőt, dokumentumkezelőt, telefont használsz már?",
+                "**Munkahelyi szabály:** van-e engedélyezett eszköz?",
+                "**Adatvédelem:** milyen beállításokat kínál (8.1)?",
+                "**Költség:** elég-e az ingyenes keret, vagy megéri-e előfizetni?"
+              ]
+            },
+            {
+              "tipp": "Sokan két eszközt használnak párhuzamosan: egy fő eszközt, és egy másikat második véleménynek."
+            }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "ellenorzolista",
+        "cim": "A saját döntési szempontjaim",
+        "bevezeto": "Pipáld ki, amelyik szempont számít neked. Ezeket használd a 9.2 összehasonlításánál.",
+        "tetelek": [
+          "Pontos, ellenőrizhető válaszok",
+          "Jó magyar nyelvű fogalmazás",
+          "Hosszabb dokumentumok kezelése",
+          "Képgenerálás",
+          "Hangos használat telefonon",
+          "Kapcsolódás a már használt szolgáltatásaimhoz",
+          "Erős adatvédelmi beállítások",
+          "Elég az ingyenes keret"
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Nézz utána a hivatalos oldalakon",
+        "ido": 10,
+        "lepesek": [
+          "Nyisd meg két eszköz hivatalos oldalát (keresd meg a keresőben a nevüket, és a hivatalos domaint nyisd meg, ne hirdetést).",
+          "Nézd meg: mit tud az ingyenes változat, és mit ad a legolcsóbb fizetős csomag?",
+          "Nézd meg az adatvédelmi tájékoztatóban: használják-e a beszélgetéseket a modell fejlesztésére, és ki lehet-e kapcsolni?",
+          "Írd le a dátummal együtt, amit találtál."
+        ],
+        "jegyzetMinta": "Dátum: … – amit a két eszközről találtam:"
+      },
+      "kviz": [
+        {
+          "k": "Melyik cég fejleszti a Claude-ot?",
+          "v": [
+            "OpenAI",
+            "Google",
+            "Anthropic",
+            "Microsoft"
+          ],
+          "h": 2,
+          "m": "A ChatGPT-t az OpenAI, a Geminit a Google, a Claude-ot az Anthropic fejleszti."
+        },
+        {
+          "k": "Miért nem közöl a kurzus árakat?",
+          "v": [
+            "Mert titkosak.",
+            "Mert gyakran változnak; a hivatalos oldalon kell ellenőrizni.",
+            "Mert mind ingyenes.",
+            "Mert mind egyformán drága."
+          ],
+          "h": 1,
+          "m": "Egy elavult ár félrevezető lenne."
+        },
+        {
+          "k": "Melyik igaz mindhárom eszközre?",
+          "v": [
+            "Soha nem tévednek.",
+            "Tévedhetnek, ezért az ellenőrzés szabályai mindegyikre érvényesek.",
+            "Csak angolul működnek.",
+            "Csak számítógépen érhetők el."
+          ],
+          "h": 1,
+          "m": "A hallucináció és az elavult tudás mindegyiknél előfordulhat."
+        }
+      ],
+      "osszefoglalo": [
+        "A ChatGPT (OpenAI), a Claude (Anthropic) és a Gemini (Google) alapjaiban hasonló, tévedni mindegyik tud.",
+        "A különbségek a részletekben és a kapcsolódó szolgáltatásokban vannak – és folyamatosan változnak.",
+        "Árat, funkciót mindig a hivatalos oldalon, dátummal ellenőrizz."
+      ]
+    },
+    {
+      "id": "9.2",
+      "cim": "Ugyanaz a feladat három eszközben",
+      "ido": 18,
+      "hero": "img-9-2",
+      "celok": [
+        "Ismered a válaszok értékelésének szempontjait.",
+        "Egymás mellett értékelsz különböző válaszokat.",
+        "Egy valódi feladaton saját pontozással hasonlítasz össze két eszközt."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Hogyan hasonlíts össze tisztességesen?",
+          "blokkok": [
+            {
+              "szamozott": [
+                "**Ugyanaz a kérés, szó szerint** – másold be pontosan ugyanazt.",
+                "**Új beszélgetés mindenhol** – előzmények nélkül.",
+                "**Valódi feladat** – olyan, amit tényleg el kell végezned.",
+                "**Előre rögzített szempontok** – mielőtt elolvasod a válaszokat.",
+                "**Több próba** – egy válasz lehet szerencse vagy balszerencse; ha teheted, próbálj ki két-három feladatot."
+              ]
+            }
+          ]
+        },
+        {
+          "cim": "Értékelési szempontok",
+          "blokkok": [
+            {
+              "lista": [
+                "**Pontosság:** igazak-e az állítások? (Ellenőrizd!)",
+                "**Követte-e a kérést:** hossz, formátum, hangnem?",
+                "**Érthetőség:** könnyű-e olvasni és felhasználni?",
+                "**Hasznosság:** mennyit kellett még rajta javítani?",
+                "**Őszinteség:** jelezte-e, ha valamiben bizonytalan?"
+              ]
+            }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-9-2",
+        "kotelezo": true,
+        "bevezeto": "Képernyőfelvétel: ugyanaz a kérés három eszközben, egymás mellett, az értékelési szempontokkal."
+      },
+      "interaktiv": [
+        {
+          "tipus": "osszevetes",
+          "cim": "Gyakorló értékelés: A, B és C válasz",
+          "bevezeto": "Három szemléltető válasz ugyanarra a kérésre. Értékeld őket a fenti szempontok szerint, mielőtt elolvasod a megfigyeléseket.",
+          "feladat": "Írj egy legfeljebb 4 mondatos, udvarias üzenetet a lakóközösség csoportjába, hogy szombaton 10 és 14 óra között a kerékpártárolót kitakarítják, ezért addig vigyék el a bicikliket, vagy vegyék tudomásul, hogy félre lesznek téve.",
+          "valaszok": [
+            {
+              "cim": "A válasz",
+              "szoveg": [
+                "Kedves Lakótársak! Szombaton 10 és 14 óra között kitakarítjuk a kerékpártárolót. Kérjük, addig vigyétek el a kerékpárjaitokat; amelyik marad, azt óvatosan félretesszük a tároló bejárata mellé. Köszönjük a megértést!"
+              ],
+              "megjegyzes": "Négy mondat, követi a kérést, egyértelmű. A tegezés a csoport stílusától függ – a kérés nem határozta meg."
+            },
+            {
+              "cim": "B válasz",
+              "szoveg": [
+                "Tisztelt Lakók! Örömmel értesítjük Önöket, hogy közösségünk elkötelezett a tiszta és rendezett környezet iránt. Ennek jegyében a kerékpártároló alapos takarítására kerül sor szombaton. A takarítás ideje alatt kérjük, gondoskodjanak kerékpárjaikról. Amennyiben ez nem lehetséges, a kerékpárokat munkatársaink biztonságos helyre helyezik. Köszönjük együttműködésüket, és kellemes hétvégét kívánunk!"
+              ],
+              "megjegyzes": "Túl hosszú (6 mondat), hiányzik az időpont (10–14), és kitalált részletet tett hozzá („munkatársaink”)."
+            },
+            {
+              "cim": "C válasz",
+              "szoveg": [
+                "Szombaton 10–14 kerékpártároló-takarítás. Vigyétek el a bicikliket, a maradékot félretesszük."
+              ],
+              "megjegyzes": "Pontos és rövid, de kevésbé udvarias, mint amit a kérés kért."
+            }
+          ],
+          "figyelmeztetes": "Ezek kitalált, szemléltető válaszok, nem valódi eszközök kimenetei – a betűjelek nem egy-egy konkrét eszközt jelentenek. A valódi különbségeket a saját próbád mutatja meg."
+        },
+        {
+          "tipus": "ertekelo",
+          "cim": "Személyes értékelő táblázat",
+          "bevezeto": "Írd be a két (vagy három) eszköz nevét az oszlopfejlécekbe, majd pontozz 1–5-ig. Az összegek automatikusan számolódnak, és minden mentődik.",
+          "oszlopok": [
+            "1. eszköz",
+            "2. eszköz"
+          ],
+          "szempontok": [
+            "Pontosság",
+            "Követte a kérést",
+            "Érthetőség",
+            "Hasznosság (kevés javítás kellett)",
+            "Őszinteség (jelezte a bizonytalanságot)"
+          ]
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Egy valódi feladat két eszközben",
+        "ido": 10,
+        "bevezeto": "Ha csak egy eszközhöz van fiókod, a másikhoz sok esetben ingyenesen is regisztrálhatsz – vagy kérd meg egy ismerősödet, hogy futtassa le neked a kérést (adatmentes feladattal).",
+        "lepesek": [
+          "Válassz egy valódi, adatmentes feladatot (használhatod a 2.4-es sablonjaidat).",
+          "Írd meg a kérést egyszer, és másold be szó szerint mindkét eszközbe, új beszélgetésben.",
+          "Olvasd el mindkét választ, ellenőrizd a tényeket, és töltsd ki a fenti értékelő táblázatot.",
+          "Írd le a táblázat alatti megjegyzésbe, melyiket választanád erre a feladatra, és miért."
+        ]
+      },
+      "kviz": [
+        {
+          "k": "Miért kell új beszélgetést kezdeni minden eszközben?",
+          "v": [
+            "Hogy az előzmények ne befolyásolják a választ.",
+            "Mert így olcsóbb.",
+            "Mert a régi beszélgetések törlődnek.",
+            "Nincs jelentősége."
+          ],
+          "h": 0,
+          "m": "Csak így egyenlők a feltételek."
+        },
+        {
+          "k": "Mi volt a B válasz fő hibája a gyakorló értékelésben?",
+          "v": [
+            "Túl rövid volt.",
+            "Túl hosszú volt, kimaradt az időpont, és kitalált részletet tett hozzá.",
+            "Angol volt.",
+            "Nem volt benne köszönés."
+          ],
+          "h": 1,
+          "m": "A szép megfogalmazás mögött tartalmi hibák voltak – ezért kell szempontok szerint olvasni."
+        },
+        {
+          "k": "Miért jó előre rögzíteni a szempontokat?",
+          "v": [
+            "Hogy ne a válasz stílusa vagy első benyomása vezessen félre.",
+            "Hogy hosszabb legyen az értékelés.",
+            "Mert kötelező.",
+            "Nincs értelme."
+          ],
+          "h": 0,
+          "m": "A tetszetős, de pontatlan válasz könnyen elcsábít – a szempontok ebben segítenek."
+        }
+      ],
+      "osszefoglalo": [
+        "Ugyanaz a kérés, új beszélgetés, valódi feladat, előre rögzített szempontok.",
+        "Pontosság, a kérés követése, érthetőség, hasznosság, őszinteség.",
+        "A saját pontozásod a te feladataidra érvényes döntést ad."
+      ]
+    },
+    {
+      "id": "9.3",
+      "cim": "Saját beállítások: egyedi utasítások, projektek, memória, ismétlődő feladatok",
+      "ido": 15,
+      "hero": "img-9-3",
+      "celok": [
+        "Megírod és beállítod a saját egyedi utasításaidat.",
+        "Tudod, mire jó a projekt és a memória, és hogyan tartod kézben.",
+        "Ismétlődő feladataidhoz kialakítasz egy egyszerű rendszert."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Egyedi utasítások",
+          "blokkok": [
+            "Az [[egyedi-utasitas|egyedi utasítás]] egy állandó szöveg, amelyet az eszköz minden beszélgetésben figyelembe vesz. Érdemes két részből felépíteni: **ki vagy** és **milyen válaszokat szeretnél**.",
+            "A neve és helye eszközönként eltér (például személyre szabás, beállítások, profil – 2026. novemberi állapot). Keresd a beállításokban.",
+            {
+              "prompt": "Rólam: [foglalkozás általánosan, pl. irodai munkatárs], főleg [mire használod] használom az AI-t. Kezdő/haladó szinten vagyok.\n\nVálaszaid legyenek: magyarul, tömören, felsorolással, ha lehet. Szakszót magyarázz meg egy mondatban. Ha bizonytalan vagy, mondd ki. Ha a kérésem nem egyértelmű, kérdezz vissza, mielőtt hosszan válaszolsz.",
+              "cim": "Egyedi utasítás – minta"
+            },
+            {
+              "vigyazat": "Az egyedi utasításba ne írj személyes azonosító adatot, lakcímet, egészségügyi adatot vagy munkahelyi titkot. Általános leírás elég."
+            }
+          ]
+        },
+        {
+          "cim": "Projektek és memória",
+          "blokkok": [
+            {
+              "lista": [
+                "**[[projekt|Projekt]]:** egy mappa-szerű munkaterület egy témához – saját utasításokkal és fájlokkal. Például „Lakásfelújítás” vagy „Heti jelentések”. Ami benne van, azt a projekten belüli minden beszélgetés látja.",
+                "**[[memoria|Memória]]:** az eszköz beszélgetéseken át megjegyez dolgokat rólad (például hogy vegetáriánus vagy). Kényelmes, de nézd át rendszeresen, és töröld, ami nem kell."
+              ]
+            },
+            "Hogy melyik eszközben melyik funkció érhető el, és melyik csomagban, az változik – a súgóban nézd meg."
+          ]
+        },
+        {
+          "cim": "Ismétlődő feladatok",
+          "blokkok": [
+            "Ami rendszeresen visszatér, annak legyen állandó helye:",
+            {
+              "lista": [
+                "**Sablon** egy jegyzetben vagy a projekt utasításai között (2.4).",
+                "**Projekt** a feladathoz, a szükséges háttéranyagokkal.",
+                "**Ütemezés:** egyes eszközök tudnak ismétlődő vagy ütemezett feladatot is – ha a tiéd igen, kipróbálhatod; ha nem, egy naptáremlékeztető is megteszi."
+              ]
+            },
+            {
+              "tipp": "Havonta egyszer nézd át: a beállításaid még illenek-e hozzád? Mit jegyzett meg rólad az eszköz?"
+            }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Egyedi utasítás építő",
+        "bevezeto": "Töltsd ki, és másold be az eszközöd személyre szabási beállításaiba.",
+        "kimenetCim": "Az egyedi utasításod",
+        "elvalaszto": "\n",
+        "mezok": [
+          {
+            "id": "rolam",
+            "cimke": "Rólam (általánosan)",
+            "elotag": "Rólam:",
+            "minta": "pl. irodai munkatárs vagyok, sok e-maillel dolgozom",
+            "mintaErtek": "Irodai munkatárs vagyok, sokat levelezek és összefoglalókat készítek."
+          },
+          {
+            "id": "cel",
+            "cimke": "Mire használom leginkább?",
+            "elotag": "Leginkább erre használom:",
+            "minta": "pl. levelezés, dokumentumok, tanulás",
+            "mintaErtek": "e-mailek megfogalmazása, dokumentumok összefoglalása, új dolgok megértése."
+          },
+          {
+            "id": "szint",
+            "cimke": "Tapasztalatom",
+            "opciok": [
+              "kezdő vagyok",
+              "keveset használom",
+              "rendszeresen használom"
+            ],
+            "elotag": "Az AI-használatban",
+            "utotag": ".",
+            "mintaErtek": "kezdő vagyok"
+          },
+          {
+            "id": "stilus",
+            "cimke": "Milyen válaszokat szeretnék?",
+            "opciok": [
+              "tömör, felsorolással",
+              "részletes, példákkal",
+              "barátságos, közvetlen",
+              "hivatalos, pontos"
+            ],
+            "elotag": "Válaszaid legyenek:",
+            "utotag": ".",
+            "mintaErtek": "magyarul, tömören, felsorolással"
+          },
+          {
+            "id": "szabalyok",
+            "cimke": "Állandó szabályok",
+            "elotag": "Szabályok:",
+            "minta": "pl. ha bizonytalan vagy, mondd ki",
+            "mintaErtek": "A szakszavakat magyarázd meg egy mondatban. Ha bizonytalan vagy, mondd ki. Ha nem egyértelmű a kérésem, kérdezz vissza."
+          }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Állítsd be a saját asszisztensedet",
+        "ido": 10,
+        "lepesek": [
+          "Írd meg az egyedi utasításodat az építővel.",
+          "Keresd meg az eszközöd beállításaiban a személyre szabás / egyedi utasítás részt, és illeszd be.",
+          "Nyiss egy új beszélgetést, és kérdezz valamit: érződik a válaszon az utasítás?",
+          "Ha van projekt vagy memória funkció, nézd meg, mi van benne, és döntsd el, mit szeretnél vele kezdeni."
+        ],
+        "jegyzetMinta": "Mit változtatott a válaszokon az egyedi utasítás?"
+      },
+      "kviz": [
+        {
+          "k": "Milyen két részből érdemes felépíteni az egyedi utasítást?",
+          "v": [
+            "Jelszó és felhasználónév.",
+            "Ki vagy, és milyen válaszokat szeretnél.",
+            "Név és lakcím.",
+            "Kedvenc szín és étel."
+          ],
+          "h": 1,
+          "m": "Általános önleírás + a kívánt válaszstílus."
+        },
+        {
+          "k": "Mi a különbség a projekt és a memória között?",
+          "v": [
+            "Nincs különbség.",
+            "A projekt egy témához tartozó munkaterület; a memória beszélgetéseken átívelően jegyez meg rólad dolgokat.",
+            "A memória fizetős, a projekt nem.",
+            "A projekt videó, a memória kép."
+          ],
+          "h": 1,
+          "m": "A projekt témához köt, a memória hozzád."
+        },
+        {
+          "k": "Mit tegyél rendszeresen a memóriával?",
+          "v": [
+            "Semmit.",
+            "Nézd át, és töröld, ami nem kell vagy túl személyes.",
+            "Írd tele jelszavakkal.",
+            "Kapcsold be-ki naponta."
+          ],
+          "h": 1,
+          "m": "Így kézben tartod, mit tud rólad az eszköz."
+        }
+      ],
+      "osszefoglalo": [
+        "Az egyedi utasítás minden beszélgetésben érvényes: ki vagy és milyen válaszokat szeretnél – személyes adat nélkül.",
+        "A projekt témához tartja együtt a munkát, a memória rólad jegyez meg dolgokat; nézd át rendszeresen.",
+        "Ismétlődő feladathoz legyen sablon, projekt vagy ütemezés – és havi átnézés."
+      ]
+    }
+  ]
+}

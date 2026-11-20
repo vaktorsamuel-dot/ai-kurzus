@@ -1,0 +1,565 @@
+{
+  "cel": "Elkészítesz egy egyszerű, egyoldalas weboldalt AI segítségével – az ötlettől a közzétételig, programozási tudás nélkül.",
+  "utana": [
+    "Világos leírást adsz az AI-nak arról, milyen oldalt szeretnél.",
+    "Lépésenként kipróbálod és javíttatod az oldalt a saját gépeden.",
+    "Közzéteszed GitHub Pages-en, és megosztod a linket."
+  ],
+  "javaslat": {
+    "levelezes": "Készíts egy egyszerű elérhetőségi oldalt (például egy egyesületnek vagy klubnak) kitalált adatokkal kezdve.",
+    "dokumentumok": "Készíts egy egyoldalas tájékoztató oldalt egy belső folyamatról (például „Hogyan foglalj tárgyalót”), kitalált részletekkel.",
+    "kutatas": "Készíts egy oldalt, amely egy téma forrásait gyűjti össze rövid leírásokkal.",
+    "kreativ": "Készíts egy egyoldalas portfóliót a hobbidról (fotó, kézművesség, főzés) – saját képekkel.",
+    "tanulas": "Készíts egy egyoldalas jegyzetet egy témáról, amit tanulsz, egy rövid kvízzel a végén."
+  },
+  "osszefoglalo": [
+    "Egy jó oldal-leírás: cél, közönség, tartalom szakaszonként, stílus, technikai keret (egy fájl, HTML és CSS).",
+    "Lépésenként haladj: nyisd meg a böngészőben, nézd meg mobilon is, és egyszerre egy-két javítást kérj.",
+    "GitHub Pages-en ingyenesen közzéteheted; előtte nézd át a közzétételi ellenőrzőlistát – mert az oldal nyilvános lesz."
+  ],
+  "kviz": [
+    {
+      "k": "Mit érdemes kérni, ha nincs programozói tudásod?",
+      "v": [
+        "Egy bonyolult rendszert adatbázissal.",
+        "Egyetlen HTML-fájlt, beépített stílussal, külső függőség nélkül.",
+        "Egy mobilalkalmazást.",
+        "Egy szervert."
+      ],
+      "h": 1,
+      "m": "Egy önálló HTML-fájlt könnyű megnyitni, javítani és közzétenni."
+    },
+    {
+      "k": "Mi a HTML?",
+      "v": [
+        "Egy képformátum.",
+        "A weboldalak alapnyelve, amely leírja, mi van az oldalon.",
+        "Egy programozási verseny.",
+        "Egy böngésző neve."
+      ],
+      "h": 1,
+      "m": "A HTML a tartalmat írja le, a CSS a megjelenést."
+    },
+    {
+      "k": "Hogyan nézheted meg az oldalt a gépeden, mielőtt közzéteszed?",
+      "v": [
+        "Sehogy.",
+        "Megnyitod a HTML-fájlt egy böngészőben (dupla kattintás).",
+        "Csak közzététel után.",
+        "Kinyomtatod."
+      ],
+      "h": 1,
+      "m": "Egy önálló HTML-fájl közvetlenül megnyitható a böngészőben."
+    },
+    {
+      "k": "Mi a jó módja a javításnak?",
+      "v": [
+        "Egyszerre minden kérést leírni.",
+        "Egyszerre egy-két konkrét változtatást kérni, és utána megnézni.",
+        "Minden alkalommal új oldalt kérni.",
+        "Kézzel átírni mindent."
+      ],
+      "h": 1,
+      "m": "Így látod, mi változott, és könnyebb visszalépni, ha valami elromlik."
+    },
+    {
+      "k": "Mi a GitHub Pages?",
+      "v": [
+        "Egy közösségi oldal.",
+        "A GitHub szolgáltatása, amely egy tároló fájljaiból nyilvános weboldalt készít.",
+        "Egy szövegszerkesztő.",
+        "Egy fizetős tárhely, amely csak cégeknek elérhető."
+      ],
+      "h": 1,
+      "m": "Nyilvános tárolóval ingyenesen használható (2026. novemberi állapot – ellenőrizd a hivatalos oldalon)."
+    },
+    {
+      "k": "Mit ellenőrizz közzététel előtt?",
+      "v": [
+        "Semmit, az AI ellenőrizte.",
+        "Hogy nincs-e az oldalon vagy a fájlokban személyes adat, jelszó, mások képe engedély nélkül.",
+        "Csak a színeket.",
+        "Csak a címet."
+      ],
+      "h": 1,
+      "m": "A közzétett oldal és a nyilvános tároló mindenki számára látható."
+    },
+    {
+      "k": "Mit tegyél, ha az AI által írt oldal nem működik?",
+      "v": [
+        "Feladod.",
+        "Leírod pontosan, mit látsz (és ha van, a hibaüzenetet), és megkéred, hogy javítsa.",
+        "Újraindítod a gépet.",
+        "Másik böngészőt telepítesz."
+      ],
+      "h": 1,
+      "m": "A pontos hibaleírás a leggyorsabb út a javításhoz."
+    }
+  ],
+  "fejezetek": [
+    {
+      "id": "10.1",
+      "cim": "Az ötlettől a leírásig",
+      "ido": 18,
+      "hero": "img-10-1",
+      "celok": [
+        "Tudod, miből áll egy egyszerű weboldal.",
+        "Megírod az oldalad leírását a cél, a közönség és a tartalom alapján.",
+        "Az AI-tól egy önálló, kipróbálható HTML-fájlt kérsz."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Miből áll egy weboldal?",
+          "blokkok": [
+            "Egy egyszerű weboldal egyetlen fájl is lehet. Két nyelvet tartalmaz:",
+            {
+              "lista": [
+                "**[[html|HTML]]:** a tartalom – címek, bekezdések, képek, linkek.",
+                "**[[css|CSS]]:** a megjelenés – színek, betűk, elrendezés."
+              ]
+            },
+            "Ezeket nem kell megtanulnod megírni. Elég, ha tudod, mit szeretnél – az AI megírja a kódot, te pedig megnézed az eredményt a böngészőben."
+          ]
+        },
+        {
+          "cim": "Előbb gondold végig",
+          "blokkok": [
+            {
+              "szamozott": [
+                "**Cél:** mit kell elérnie az oldalnak? (Bemutatkozás, tájékoztatás, jelentkezés egy eseményre.)",
+                "**Közönség:** ki fogja nézni? Telefonon vagy gépen?",
+                "**Tartalom szakaszonként:** például fejléc, rólam, szolgáltatások, elérhetőség.",
+                "**Stílus:** hangulat, színek, betűk („nyugodt, sok fehér tér, kék és homokszín”).",
+                "**Technikai keret:** egyetlen HTML-fájl, beépített CSS-sel, külső függőség nélkül, mobilon is jól olvasható."
+              ]
+            },
+            {
+              "tipp": "Az ötödik pont a legfontosabb kezdőknek. Ha nem kéred kifejezetten, az AI néha bonyolult, több fájlból álló vagy külső eszközöket igénylő megoldást ad."
+            }
+          ]
+        },
+        {
+          "cim": "Valódi vagy kitalált tartalom?",
+          "blokkok": [
+            "Kezdd kitalált vagy helyőrző tartalommal („[ide jön a telefonszám]”), és a valódi szövegeket csak a végén írd be – ott is gondold végig, mit szeretnél nyilvánosan megosztani.",
+            {
+              "vigyazat": "Ami a weboldalra kerül, azt bárki láthatja és elmentheti. Lakcímet, magántelefonszámot, mások nevét vagy fotóját csak megfontoltan és engedéllyel tedd ki."
+            }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Oldal-leíró sablon",
+        "bevezeto": "Töltsd ki, és másold ki a kész kérést az AI-nak.",
+        "kimenetCim": "A kérésed az AI-nak",
+        "elvalaszto": "\n",
+        "mezok": [
+          {
+            "id": "cel",
+            "cimke": "Az oldal célja",
+            "elotag": "Készíts egy egyoldalas weboldalt, amelynek célja:",
+            "minta": "pl. bemutatkozás leendő ügyfeleknek",
+            "mintaErtek": "egy kezdő kertész bemutatkozása a környékbeli lakóknak."
+          },
+          {
+            "id": "kozonseg",
+            "cimke": "Közönség",
+            "elotag": "Közönség:",
+            "minta": "pl. idősebb lakók, főleg telefonról",
+            "mintaErtek": "a környék lakói, sokan telefonról nézik majd."
+          },
+          {
+            "id": "tartalom",
+            "cimke": "Tartalom szakaszonként",
+            "elotag": "Szakaszok:",
+            "minta": "pl. fejléc, rólam, szolgáltatások, elérhetőség",
+            "mintaErtek": "1) fejléc névvel és egy mondatos bemutatkozással, 2) rólam, 3) szolgáltatások (fűnyírás, sövénynyírás, ültetés) rövid leírással, 4) elérhetőség helyőrzőkkel."
+          },
+          {
+            "id": "stilus",
+            "cimke": "Stílus",
+            "opciok": [
+              "nyugodt, sok fehér tér",
+              "vidám, színes",
+              "elegáns, visszafogott",
+              "természetközeli, zöld árnyalatok"
+            ],
+            "elotag": "Stílus:",
+            "utotag": ".",
+            "mintaErtek": "természetközeli, zöld és homokszín árnyalatok, sok fehér tér, jól olvasható nagy betűk"
+          },
+          {
+            "id": "technika",
+            "cimke": "Technikai keret",
+            "elotag": "Technikai feltételek:",
+            "mintaErtek": "egyetlen index.html fájl, beépített CSS-sel, JavaScript és külső könyvtár nélkül, mobilon is jól olvasható. A valódi adatok helyére tegyél [helyőrzőt]. A kód végén röviden írd le, hogyan nyissam meg a böngészőben.",
+            "minta": "egyetlen index.html fájl, beépített CSS-sel…"
+          }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Az első változat",
+        "ido": 10,
+        "lepesek": [
+          "Töltsd ki az oldal-leíró sablont a saját egyoldalas bemutatkozó oldaladra (kitalált vagy helyőrző adatokkal).",
+          "Másold be az AI-eszközödbe. A válaszban egy kódblokkot kapsz.",
+          "Másold ki a teljes kódot (sok eszközben van „Másolás” gomb a kódblokk sarkában), nyiss egy egyszerű szövegszerkesztőt (Windows: Jegyzettömb; Mac: TextEdit, „Egyszerű szöveg” módban), illeszd be, és mentsd el index.html néven.",
+          "Kattints duplán a fájlra: megnyílik a böngészőben. Ez az első változatod."
+        ],
+        "jegyzetMinta": "Mi tetszik az első változatban, és mit változtatnék?"
+      },
+      "kviz": [
+        {
+          "k": "Mi a CSS feladata?",
+          "v": [
+            "A tartalom leírása.",
+            "A megjelenés: színek, betűk, elrendezés.",
+            "A közzététel.",
+            "A képek tárolása."
+          ],
+          "h": 1,
+          "m": "A HTML a tartalom, a CSS a kinézet."
+        },
+        {
+          "k": "Miért kérj kifejezetten „egyetlen HTML-fájlt, külső függőség nélkül”?",
+          "v": [
+            "Mert így könnyű megnyitni, javítani és közzétenni.",
+            "Mert így szebb lesz.",
+            "Mert így gyorsabban válaszol.",
+            "Nincs jelentősége."
+          ],
+          "h": 0,
+          "m": "Kezdőként ez a legegyszerűbb, legkevésbé törékeny megoldás."
+        },
+        {
+          "k": "Milyen adatot tegyél az első változatba?",
+          "v": [
+            "Minden valódi adatot.",
+            "Kitalált vagy helyőrző adatot; a valódit csak a végén, megfontoltan.",
+            "Mások adatait.",
+            "Jelszavakat."
+          ],
+          "h": 1,
+          "m": "Így nyugodtan kísérletezhetsz, és a végén tudatosan döntesz a nyilvános adatokról."
+        }
+      ],
+      "osszefoglalo": [
+        "Egy egyszerű weboldal egyetlen HTML-fájl lehet, beépített CSS-sel.",
+        "A leírás: cél, közönség, tartalom szakaszonként, stílus, technikai keret.",
+        "Kezdd helyőrző adatokkal, és nyisd meg a fájlt a böngészőben."
+      ]
+    },
+    {
+      "id": "10.2",
+      "cim": "Kipróbálás és javítás lépésenként",
+      "ido": 18,
+      "hero": "img-10-2",
+      "celok": [
+        "Rendszeresen kipróbálod az oldalt gépen és mobilnézetben.",
+        "Egyszerre egy-két konkrét javítást kérsz.",
+        "Hibánál pontos leírást adsz, és visszalépsz, ha kell."
+      ],
+      "szakaszok": [
+        {
+          "cim": "A javítás ciklusa",
+          "blokkok": [
+            {
+              "szamozott": [
+                "**Nézd meg** az oldalt a böngészőben.",
+                "**Írd le**, mit szeretnél másképp – egyszerre egy-két dolgot.",
+                "**Kérd** a teljes, javított fájlt (nem csak egy részletet).",
+                "**Mentsd** el új néven is (például index-v2.html), hogy vissza tudj lépni.",
+                "**Ellenőrizd** újra."
+              ]
+            },
+            {
+              "tipp": "Kérd így: „Add vissza a teljes, javított index.html-t, és sorold fel röviden, mit változtattál.” A teljes fájlt könnyebb kicserélni, mint részleteket beilleszteni."
+            }
+          ]
+        },
+        {
+          "cim": "Mobilnézet ellenőrzése",
+          "blokkok": [
+            "A legtöbben telefonról nézik majd az oldalt. Két egyszerű mód:",
+            {
+              "lista": [
+                "Kicsinyítsd a böngészőablakot keskenyre, és nézd meg, hogyan rendeződik át.",
+                "A böngészők fejlesztői eszközeiben (általában F12 vagy jobb klikk › Vizsgálat) van telefonos nézet."
+              ]
+            },
+            "Közzététel után a saját telefonodon is nézd meg."
+          ]
+        },
+        {
+          "cim": "Ha valami elromlik",
+          "blokkok": [
+            {
+              "lista": [
+                "**Írd le pontosan, mit látsz:** „A menü a telefonos nézetben egymásra csúszik.” – nem: „Rossz.”",
+                "**Ha van hibaüzenet**, másold be szó szerint.",
+                "**Lépj vissza** az előző, működő változathoz, ha a javítás többet rontott, mint javított.",
+                "**Ha nagyon elakadtál**, kérd meg, hogy egyszerűsítse az oldalt."
+              ]
+            },
+            {
+              "vigyazat": "Ha az AI azt javasolja, hogy telepíts programokat, futtass parancsokat vagy adj meg jelszót, állj meg. Egy egyszerű egyoldalas oldalhoz erre nincs szükség."
+            }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Melyik javítókérés a jobb?",
+        "esetek": [
+          {
+            "kontextus": "Telefonon a szolgáltatások három oszlopa túl keskeny, a szöveg olvashatatlan.",
+            "kerdes": "Mit írsz?",
+            "opciok": [
+              "„Nem jó a mobil.”",
+              "„Keskeny képernyőn (600 px alatt) a szolgáltatások egymás alatt jelenjenek meg, egy oszlopban. Add vissza a teljes fájlt, és írd le, mit változtattál.”",
+              "„Csinálj egy mobilalkalmazást.”"
+            ],
+            "helyes": 1,
+            "magyarazat": "Pontos hiba, pontos kívánság, teljes fájl és változáslista."
+          },
+          {
+            "kontextus": "A legutóbbi javítás után az egész oldal fehér lett.",
+            "kerdes": "Mit teszel először?",
+            "opciok": [
+              "Visszalépsz az előző, működő változathoz, és leírod az AI-nak, mi történt.",
+              "Kérsz még öt változtatást.",
+              "Törlöd az összes fájlt."
+            ],
+            "helyes": 0,
+            "magyarazat": "A mentett előző változat a biztonsági hálód. Utána pontos leírással kérj javítást."
+          },
+          {
+            "kontextus": "Az AI azt javasolja, hogy telepíts egy programot és futtass néhány parancsot.",
+            "kerdes": "Mit teszel?",
+            "opciok": [
+              "Azonnal megcsinálom.",
+              "Megkérem, hogy maradjunk az egyetlen HTML-fájlnál, külső eszközök nélkül.",
+              "Megadom neki a gépem jelszavát."
+            ],
+            "helyes": 1,
+            "magyarazat": "Egyoldalas oldalhoz nem kell telepítés. Ha nem érted, mit csinál egy parancs, ne futtasd."
+          }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Három javítási kör",
+        "ido": 10,
+        "lepesek": [
+          "Nyisd meg az előző fejezetben készült index.html-t, és írj le három dolgot, amit változtatnál.",
+          "Kérd az elsőt a javítókérés sablonjával; mentsd el az eredményt új néven, és nézd meg.",
+          "Ismételd meg a másik két változtatással.",
+          "Nézd meg az oldalt keskeny ablakban (mobilnézetben) is, és ha kell, kérj még egy javítást."
+        ],
+        "promptok": [
+          {
+            "cim": "Javítókérés sablon",
+            "szoveg": "Az oldalon ezt szeretném megváltoztatni: [pontos leírás]. Minden más maradjon ugyanígy. Add vissza a teljes, javított index.html-t, és sorold fel röviden, mit változtattál."
+          }
+        ]
+      },
+      "kviz": [
+        {
+          "k": "Miért mentsd el minden javítás után új néven?",
+          "v": [
+            "Hogy vissza tudj lépni, ha valami elromlik.",
+            "Hogy több helyet foglaljon.",
+            "Mert különben nem nyílik meg.",
+            "Nincs értelme."
+          ],
+          "h": 0,
+          "m": "A régi változat a biztonsági hálód."
+        },
+        {
+          "k": "Mi a jó hibaleírás?",
+          "v": [
+            "„Rossz.”",
+            "„A menü telefonos nézetben egymásra csúszik.”",
+            "„Javítsd meg.”",
+            "„Valami nem jó.”"
+          ],
+          "h": 1,
+          "m": "Konkrét: hol, mikor, mi történik."
+        },
+        {
+          "k": "Mit tegyél, ha az AI parancsok futtatását javasolja egy egyszerű oldalhoz?",
+          "v": [
+            "Futtasd le.",
+            "Kérd, hogy maradjatok az egyetlen HTML-fájlnál; amit nem értesz, ne futtasd.",
+            "Add meg a jelszavadat.",
+            "Kapcsold ki a gépet."
+          ],
+          "h": 1,
+          "m": "Egy egyszerű oldalhoz nem kell telepítés vagy parancs."
+        }
+      ],
+      "osszefoglalo": [
+        "Nézd meg, írd le, kérd a teljes fájlt, mentsd új néven, ellenőrizd.",
+        "Ellenőrizd mobilnézetben is.",
+        "Hibánál pontos leírás, szükség esetén visszalépés; parancsot, amit nem értesz, ne futtass."
+      ]
+    },
+    {
+      "id": "10.3",
+      "cim": "Közzététel: GitHub Pages és más egyszerű lehetőségek",
+      "ido": 22,
+      "hero": "img-10-3",
+      "celok": [
+        "Tudod, mi a tárhely, és milyen egyszerű lehetőségek vannak.",
+        "Lépésről lépésre közzéteszed az oldalad GitHub Pages-en.",
+        "Közzététel előtt végigmész az ellenőrzőlistán, és megosztod a linket."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Hogyan lesz a fájlból weboldal?",
+          "blokkok": [
+            "Ahhoz, hogy mások is megnyithassák az oldalt, egy [[tarhely|tárhelyre]] kell feltenni, amely az interneten elérhetővé teszi. Egyszerű, egyoldalas oldalhoz ingyenes lehetőségek is vannak.",
+            "A [[github|GitHub]] egy fájltároló és megosztó szolgáltatás. A [[github-pages|GitHub Pages]] nevű funkciója egy [[repo|tároló]] fájljaiból weboldalt készít. Nyilvános tárolóval ingyenes (2026. novemberi állapot – ellenőrizd a hivatalos oldalon)."
+          ]
+        },
+        {
+          "cim": "Lépésről lépésre",
+          "blokkok": [
+            {
+              "szamozott": [
+                "Regisztrálj a github.com oldalon (ingyenes fiók). Válassz olyan felhasználónevet, amelyet szívesen látsz a webcímben – a címed `felhasznalonev.github.io/...` formájú lesz.",
+                "Kapcsold be a fiókodon a kétlépcsős azonosítást (8.1).",
+                "Kattints a jobb felső sarokban a **+** jelre › **New repository**. Adj neki rövid nevet (például `bemutatkozas`), válaszd a **Public** lehetőséget, és kattints a **Create repository** gombra.",
+                "A tároló oldalán válaszd az **Add file › Upload files** lehetőséget (vagy az „uploading an existing file” linket), húzd be az `index.html` fájlt, és kattints a **Commit changes** gombra.",
+                "Nyisd meg a tároló **Settings** (Beállítások) fülét, a bal oldali menüben a **Pages** pontot.",
+                "A **Build and deployment** résznél a forrás legyen **Deploy from a branch**, az ág **main**, a mappa **/ (root)**, majd **Save**.",
+                "Várj egy-két percet, és frissítsd az oldalt: felül megjelenik a webcímed (például `https://felhasznalonev.github.io/bemutatkozas/`). Nyisd meg – ez a nyilvános oldalad."
+              ]
+            },
+            {
+              "tipp": "A menük neve és helye változhat. Ha valamit nem találsz, kérdezd meg az AI-t („Hol találom a GitHubon a Pages beállítást?”), vagy nézd meg a GitHub hivatalos súgóját."
+            }
+          ]
+        },
+        {
+          "cim": "Más egyszerű lehetőségek",
+          "blokkok": [
+            {
+              "lista": [
+                "**Egyéb statikus tárhelyek:** több szolgáltató is kínál ingyenes csomagot egyszerű oldalakhoz, gyakran „fájl behúzásával” működő feltöltéssel. Feltételeiket a hivatalos oldalukon nézd meg.",
+                "**Weboldal-építők:** sablonos, kattintgatós szerkesztők; kevesebb szabadság, de nem kell fájlokkal foglalkozni.",
+                "**Saját domain:** ha később saját webcímet szeretnél (például `nevem.hu`), azt külön kell megvásárolni, és a tárhelyhez lehet kötni."
+              ]
+            }
+          ]
+        },
+        {
+          "cim": "Hogyan nyílik meg másnak?",
+          "blokkok": [
+            "A webcímet bárki megnyithatja, akinek elküldöd – és bárki megtalálhatja, aki ismeri. A nyilvános tárolóban a fájljaid is láthatók.",
+            "Ha frissíteni szeretnéd az oldalt, töltsd fel újra az `index.html`-t ugyanabba a tárolóba (felülírja a régit); néhány perc múlva megjelenik a változás."
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-10-3",
+        "kotelezo": true,
+        "bevezeto": "Képernyőfelvétel: egy kitalált bemutatkozó oldal közzététele GitHub Pages-en, a regisztrációtól a működő linkig."
+      },
+      "interaktiv": {
+        "tipus": "ellenorzolista",
+        "cim": "Közzétételi ellenőrzőlista",
+        "bevezeto": "Menj végig rajta, mielőtt közzéteszed vagy megosztod a linket.",
+        "tetelek": [
+          {
+            "szoveg": "Nincs az oldalon olyan **személyes adat**, amit nem akarok nyilvánosan megosztani (lakcím, magánszám, születési dátum)."
+          },
+          {
+            "szoveg": "Nincs a fájlokban **jelszó** vagy hozzáférési kód."
+          },
+          {
+            "szoveg": "Másokról (név, fotó) csak **engedéllyel** szerepel bármi."
+          },
+          {
+            "szoveg": "A képek **saját készítésűek**, vagy jogom van használni őket; az AI-képeket jelöltem."
+          },
+          {
+            "szoveg": "Minden **[helyőrzőt]** kicseréltem vagy töröltem."
+          },
+          {
+            "szoveg": "Megnéztem az oldalt **gépen és telefonon** is."
+          },
+          {
+            "szoveg": "A linkek **működnek**."
+          },
+          {
+            "szoveg": "A GitHub-fiókomon be van kapcsolva a **kétlépcsős azonosítás**."
+          }
+        ],
+        "lezaro": "Minden rendben – oszd meg bátran a linket."
+      },
+      "gyakorlat": {
+        "cim": "Tedd közzé és oszd meg",
+        "ido": 10,
+        "lepesek": [
+          "Menj végig a közzétételi ellenőrzőlistán.",
+          "Kövesd a lépéseket a GitHub Pages-en való közzétételhez.",
+          "Nyisd meg a kapott webcímet a telefonodon is.",
+          "Küldd el a linket egy ismerősödnek, és kérj tőle egy mondatos visszajelzést."
+        ],
+        "jegyzetMinta": "Az oldalam címe:"
+      },
+      "kviz": [
+        {
+          "k": "Milyen láthatóságú tárolóval ingyenes a GitHub Pages (2026. novemberi állapot)?",
+          "v": [
+            "Csak privát.",
+            "Nyilvános (public).",
+            "Egyikkel sem.",
+            "Csak céges fiókkal."
+          ],
+          "h": 1,
+          "m": "Nyilvános tárolóval ingyenes – ellenőrizd a hivatalos oldalon az aktuális feltételeket."
+        },
+        {
+          "k": "Hol kapcsolod be a Pages funkciót?",
+          "v": [
+            "A tároló Settings › Pages menüjében.",
+            "A profilképed alatt.",
+            "Az index.html-ben.",
+            "A böngésző beállításaiban."
+          ],
+          "h": 0,
+          "m": "A tároló beállításai között, a Pages pontban."
+        },
+        {
+          "k": "Ki láthatja a nyilvános tárolóban lévő fájlokat?",
+          "v": [
+            "Csak te.",
+            "Bárki.",
+            "Csak a GitHub munkatársai.",
+            "Senki."
+          ],
+          "h": 1,
+          "m": "Ezért fontos a közzétételi ellenőrzőlista."
+        },
+        {
+          "k": "Hogyan frissíted az oldalt?",
+          "v": [
+            "Új fiókot nyitsz.",
+            "Feltöltöd újra az index.html-t ugyanabba a tárolóba.",
+            "Törlöd a tárolót.",
+            "Sehogy."
+          ],
+          "h": 1,
+          "m": "Az új fájl felülírja a régit, és néhány perc múlva megjelenik a változás."
+        }
+      ],
+      "osszefoglalo": [
+        "A tárhely teszi elérhetővé az oldalt; a GitHub Pages nyilvános tárolóval ingyenes.",
+        "Új tároló › fájl feltöltése › Settings › Pages › main / root › Save – és megvan a webcím.",
+        "Közzététel előtt ellenőrzőlista: személyes adat, jelszó, engedélyek, helyőrzők, mobilnézet."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "cel": "Megbízható információhoz jutsz az AI segítségével: tudod, mikor keress, mikor kérdezz, és hogyan ellenőrizd a választ.",
+  "utana": [
+    "Tudod, mikor jobb egy keresőmotor, és mikor egy AI-beszélgetés.",
+    "Forrást kérsz, és meg is tudod ítélni, hogy megbízható-e.",
+    "Felismered a bizonytalan válaszokat, és tudod, hogyan kérj második véleményt."
+  ],
+  "javaslat": {
+    "levelezes": "Kutass utána egy levelezési kérdésnek, amivel mostanában találkoztál (például meddig kell megőrizni egy számlát) – forrással.",
+    "dokumentumok": "Kutass utána egy irodai vagy ügyintézési szabálynak, amit gyakran használsz, és keresd meg a hivatalos forrását.",
+    "kutatas": "Válassz egy kérdést a saját szakterületedről, és kérj hozzá elsődleges forrásokat; nyisd meg és értékeld mindet.",
+    "kreativ": "Kutass utána egy kreatív munka jogi kérdésének (például szabad-e egy fotót felhasználni egy plakáton) – forrással.",
+    "tanulas": "Kutass utána egy tananyagbeli állításnak, és vesd össze az AI válaszát egy tankönyvvel vagy megbízható oktatási oldallal."
+  },
+  "osszefoglalo": [
+    "A keresőmotor forrásokat ad, az AI megfogalmazott választ – a kettő együtt a legerősebb.",
+    "Kérj forrást, nyisd meg, és nézd meg, ki írta, mikor és miért.",
+    "Ha bizonytalan a válasz, kérdezz vissza, kérj ellenérvet, és nézd meg máshol is."
+  ],
+  "kviz": [
+    { "k": "Mi a fő különbség a keresőmotor és az AI-beszélgetés között?", "v": ["Nincs különbség.", "A keresőmotor linkeket ad, amiket te olvasol; az AI kész választ fogalmaz, amelynek a forrása nem mindig látszik.", "Az AI mindig pontosabb.", "A keresőmotor nem működik telefonon."], "h": 1, "m": "Mindkettőnek megvan a helye: a keresőmotor a forrásokhoz visz, az AI megfogalmaz és összefoglal." },
+    { "k": "Mit tegyél egy AI által adott forrással?", "v": ["Elhiszed, hogy létezik.", "Megnyitod, és megnézed, hogy létezik-e, és tényleg azt állítja-e.", "Továbbküldöd.", "Kitörlöd."], "h": 1, "m": "Az AI néha kitalált vagy rossz forrást ad. Csak az számít forrásnak, amit megnyitottál és elolvastál." },
+    { "k": "Melyik a legmegbízhatóbb forrás egy jogszabály tartalmára?", "v": ["Egy közösségi médiás bejegyzés.", "A jogszabály hivatalos, közzétett szövege.", "Egy fórumhozzászólás.", "Az AI válasza forrás nélkül."], "h": 1, "m": "Az elsődleges forrás – itt a hivatalos jogszabályszöveg – a legmegbízhatóbb." },
+    { "k": "Mi jelzi, hogy egy AI-válasz bizonytalan lehet?", "v": ["Nagyon konkrét, kerek számok forrás nélkül egy ritka témában.", "Ha rövid.", "Ha udvarias.", "Ha felsorolást használ."], "h": 0, "m": "A ritka téma + konkrét adat + forráshiány tipikus hallucinációs helyzet." },
+    { "k": "Mit jelent a „második vélemény” kérése?", "v": ["Ugyanazt kérdezed meg újra, ugyanabban a beszélgetésben.", "Más forrásban, más eszközben vagy szakembernél is megnézed, vagy ellenérveket kérsz.", "Megkérdezed a szomszédot, mit gondol az AI-ról.", "Kétszer annyit fizetsz."], "h": 1, "m": "A független megerősítés számít: más forrás, más eszköz, szakember." },
+    { "k": "Mi a legjobb kérés, ha a válaszhoz forrást szeretnél?", "v": ["„Mondd meg.”", "„Válaszolj, és minden fontos állításhoz adj meg forrást linkkel. Ha egy állításhoz nincs forrásod, jelöld.”", "„Legyen hiteles.”", "„Csak igazat mondj.”"], "h": 1, "m": "Forrást kérsz állításonként, és engedélyt adsz arra, hogy jelezze a hiányt." },
+    { "k": "Miért fontos a forrás dátuma?", "v": ["Nem fontos.", "Mert az árak, szabályok, adatok változnak; egy régi forrás ma már tévedés lehet.", "Mert a régi oldalak szebbek.", "Mert az AI csak friss oldalakat olvas."], "h": 1, "m": "Időérzékeny témában mindig nézd meg, mikor írták vagy frissítették a forrást." }
+  ],
+  "fejezetek": [
+    {
+      "id": "4.1",
+      "cim": "Keresés és beszélgetés különbsége",
+      "ido": 10,
+      "hero": "img-4-1",
+      "celok": [
+        "Érted, mit ad a keresőmotor és mit az AI-beszélgetés.",
+        "Tudod, melyik feladathoz melyiket érdemes használni.",
+        "Ismered az AI-eszközök webes keresés funkcióját és korlátait."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Két különböző eszköz",
+          "blokkok": [
+            "A [[keresomotor]] kulcsszavak alapján weboldalakat talál, és listát ad róluk. A választ neked kell kiolvasnod, de mindig látod, honnan származik.",
+            "Az AI-beszélgetés kész, megfogalmazott választ ad. Kényelmes, de a válasz mögötti [[forras]] nem mindig látszik – és ahogy az 1. modulban láttad, a válasz lehet pontatlan is.",
+            { "abra": "kereses-beszelgetes", "felirat": "A keresőnél te olvasod a forrást; az AI-nál a válasz kész, de neked kell ellenőrizned." }
+          ]
+        },
+        {
+          "cim": "Mikor melyiket?",
+          "blokkok": [
+            { "tabla": [
+              ["Feladat", "Jobb választás", "Miért"],
+              ["Egy bolt nyitvatartása", "Keresőmotor / térkép", "Friss, hivatalos adat kell"],
+              ["Egy fogalom megértése", "AI", "Elmagyarázza a te szintedre"],
+              ["Hivatalos szabály, határidő", "Keresés a hivatalos oldalon", "Elsődleges forrás kell"],
+              ["Szempontok egy döntéshez", "AI", "Összegyűjti és rendezi"],
+              ["Friss hír", "Keresőmotor / hírportál", "A modell tudáshatára miatt"],
+              ["Áttekintés egy témáról, források listájával", "AI webes kereséssel + ellenőrzés", "Gyors kiindulópont"]
+            ] }
+          ]
+        },
+        {
+          "cim": "Amikor az AI is keres",
+          "blokkok": [
+            "Sok AI-eszköz ma már tud [[webes-kereses|webes keresést]] végezni: a válasz előtt megnéz néhány weboldalt, és általában linkkel jelöli őket. Ez nagyon hasznos – de két dologra figyelj:",
+            { "lista": [
+              "**Nem mindig kapcsol be magától.** Ha friss információ kell, kérd kifejezetten: „Keress rá a weben, és add meg a forrásokat.”",
+              "**A talált oldal is lehet rossz.** Az AI nem mindig válogat jól: egy reklámoldal vagy egy régi cikk is bekerülhet."
+            ] },
+            { "tipp": "A legjobb munkamenet gyakran a kettő együtt: az AI-val tisztázod a kérdést és a kulcsszavakat, a keresővel pedig megtalálod a hivatalos forrást." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Kereső vagy AI?",
+        "bevezeto": "Melyik eszközzel kezdenéd?",
+        "opciok": ["Keresőmotor", "AI-beszélgetés"],
+        "esetek": [
+          { "kontextus": "Meg akarod tudni, nyitva van-e ma este a közeli gyógyszertár.", "helyes": 0, "magyarazat": "Friss, helyi, hivatalos adat: a térkép vagy a gyógyszertár oldala a megbízható." },
+          { "kontextus": "Nem érted, mi a különbség a bruttó és a nettó bér között.", "helyes": 1, "magyarazat": "Fogalom elmagyarázása a te szintedre – ebben az AI erős. A konkrét levonási kulcsokat viszont hivatalos forrásban ellenőrizd." },
+          { "kontextus": "Tudni szeretnéd, mi a határideje idén egy hivatalos bejelentésnek.", "helyes": 0, "magyarazat": "Hivatalos határidőt a hivatalos oldalon nézz meg. Az AI segíthet megtalálni, de a forrás a hatóság oldala." },
+          { "kontextus": "Szempontokat gyűjtenél, hogy mosógépet vagy mosó-szárítógépet vegyél.", "helyes": 1, "magyarazat": "Szempontok rendezése, előnyök-hátrányok: az AI jó kiindulópont. Az árakat és típusokat viszont keresd meg külön." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Ugyanaz a kérdés kétféleképpen",
+        "ido": 8,
+        "lepesek": [
+          "Válassz egy hétköznapi kérdést, amire tényleg kíváncsi vagy (például hogyan kell helyesen tárolni a burgonyát, vagy mennyi ideig érvényes egy személyi igazolvány).",
+          "Keress rá egy keresőmotorban, és nyiss meg két találatot.",
+          "Tedd fel ugyanezt az AI-nak a sablonnal.",
+          "Hasonlítsd össze: melyik volt gyorsabb, melyik pontosabb, melyiknél láttad jobban a forrást?"
+        ],
+        "promptok": [
+          { "cim": "Sablon", "szoveg": "[kérdés] Válaszolj röviden. Ha tudsz, keress rá a weben, és add meg a forrásaidat linkkel. Ha bizonytalan vagy valamiben, jelezd." }
+        ],
+        "jegyzetMinta": "Melyik módszer volt jobb erre a kérdésre, és miért?"
+      },
+      "kviz": [
+        { "k": "Mikor jobb a keresőmotor?", "v": ["Ha friss, helyi vagy hivatalos adat kell.", "Ha egy fogalmat kell elmagyarázni.", "Ha szöveget kell átfogalmazni.", "Soha."], "h": 0, "m": "Nyitvatartás, határidő, friss hír: ezekhez a forrás közvetlenül kell." },
+        { "k": "Mire figyelj, ha az AI webes keresést használ?", "v": ["Semmire, akkor biztos jó.", "Hogy a talált oldalak is lehetnek régiek vagy megbízhatatlanok.", "Hogy lassabb.", "Hogy csak angol oldalakat talál."], "h": 1, "m": "A webes keresés segít, de a források minőségét neked kell megítélned." },
+        { "k": "Mi a jó munkamenet egy összetett kérdésnél?", "v": ["Csak az AI.", "Csak a keresőmotor.", "AI-val tisztázod a kérdést, keresővel megtalálod a hivatalos forrást.", "Megkérdezed háromszor az AI-t."], "h": 2, "m": "A két eszköz kiegészíti egymást." }
+      ],
+      "osszefoglalo": [
+        "A keresőmotor forrást ad, az AI megfogalmazott választ.",
+        "Friss, helyi, hivatalos adatnál a forrás az első; megértésnél és rendezésnél az AI.",
+        "Az AI webes keresése hasznos, de kérd kifejezetten, és nézd meg a forrásokat."
+      ]
+    },
+    {
+      "id": "4.2",
+      "cim": "Források kérése és ellenőrzése",
+      "ido": 13,
+      "hero": "img-4-2",
+      "celok": [
+        "Úgy kérsz forrást, hogy az AI jelezze a hiányt is.",
+        "Gyorsan megítéled egy forrás megbízhatóságát.",
+        "Három AI-állítást önállóan ellenőrzöl forrással."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Hogyan kérj forrást?",
+          "blokkok": [
+            { "prompt": "Válaszolj a kérdésre, és minden fontos állításhoz adj meg forrást (cím, kiadó vagy weboldal, dátum, link). Ha egy állításhoz nincs megbízható forrásod, írd mellé: forrás nélkül. Inkább mondd, hogy nem tudod, mint hogy kitalálj valamit.\n\nKérdés: [kérdés]", "cim": "Másolható forráskérés" },
+            "Az utolsó mondat fontos: ezzel kifejezetten megengeded, hogy a modell beismerje, ha valamit nem tud."
+          ]
+        },
+        {
+          "cim": "A forrás ellenőrzése négy kérdésben",
+          "blokkok": [
+            { "szamozott": [
+              "**Létezik?** Kattints rá. Ha a link nem működik, vagy az oldal nem azt írja, akkor nem forrás.",
+              "**Ki írta?** Hivatalos intézmény, szakmai szervezet, ismert kiadó – vagy névtelen blog, reklámoldal?",
+              "**Mikor?** Az árak, szabályok, adatok változnak. Nézd meg a dátumot.",
+              "**Eredeti?** A legjobb az [[elsodleges-forras|elsődleges forrás]]: maga a jogszabály, a kutatás, a gyártó leírása – nem egy cikk, amely róluk szól."
+            ] },
+            { "vigyazat": "Az AI néha valódi forrást ad meg, de olyat állít róla, ami nincs benne. A link megléte még nem elég: nézd meg, hogy az oldal tényleg azt mondja-e." }
+          ]
+        },
+        {
+          "cim": "Megbízható források a hétköznapokban",
+          "blokkok": [
+            { "lista": [
+              "Hivatalos állami és önkormányzati oldalak (ügyintézés, szabályok, határidők).",
+              "Szakmai szervezetek, egyetemek, kutatóintézetek oldalai.",
+              "Gyártók és szolgáltatók hivatalos leírásai (termékadatok, garancia).",
+              "Ismert lexikonok és nagy, szerkesztett hírportálok – a dátumra figyelve."
+            ] }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-4-2",
+        "kotelezo": true,
+        "bevezeto": "Rövid bemutató: forrás kérése, megnyitása és értékelése négy kérdéssel."
+      },
+      "interaktiv": {
+        "tipus": "allitas",
+        "cim": "Állítás-ellenőrző",
+        "bevezeto": "Három állítás, ahogy egy AI írhatná. Mindegyiknél keress egy forrást (keresőmotorral), írd be, hol nézted meg, és jelöld, mit találtál. A megoldás csak ezután jelenik meg.",
+        "allitasok": [
+          { "szoveg": "„A Balaton Közép-Európa legnagyobb tava.”", "tipp": "Keress rá egy lexikonban vagy egy hivatalos turisztikai, földrajzi oldalon.", "megoldas": "Ez általánosan elfogadott állítás: a Balaton a legnagyobb tó Közép-Európában. Figyeld meg, hogy a „Közép-Európa” meghatározása forrásonként kicsit eltérhet – ezért jó, ha a forrás is ugyanígy fogalmaz." },
+          { "szoveg": "„Egy felnőtt ember csontvázában 206 csont van.”", "tipp": "Keress egy orvosi, egészségügyi ismeretterjesztő vagy oktatási oldalt.", "megoldas": "A tankönyvek általában 206 csontot adnak meg felnőttre. (Csecsemőknél több van, mert egyes csontok később összenőnek.) Ez az állítás megerősíthető." },
+          { "szoveg": "„A Kínai Nagy Fal szabad szemmel látható a világűrből.”", "tipp": "Keress egy űrkutatási ügynökség vagy egy tudományos ismeretterjesztő oldal cikkét.", "megoldas": "Ez egy közkeletű tévhit. Az űrhajósok beszámolói és az űrügynökségek tájékoztatói szerint alacsony Föld körüli pályáról szabad szemmel gyakorlatilag nem látható. Jó példa arra, hogy egy sokszor ismételt állítás is lehet téves – és egy AI is megismételheti." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Egy valódi kérdés forrással",
+        "ido": 10,
+        "lepesek": [
+          "Válassz egy kérdést, ami tényleg érdekel, és aminek van egyértelmű, ellenőrizhető válasza.",
+          "Kérdezd meg az AI-t a forráskérő sablonnal.",
+          "Nyisd meg legalább két forrást, és tedd fel róluk a négy kérdést: létezik, ki írta, mikor, eredeti-e?",
+          "Írd le a jegyzetbe a választ és a legjobb forrást."
+        ],
+        "jegyzetMinta": "A kérdésem, a válasz és a legjobb forrás:"
+      },
+      "kviz": [
+        { "k": "Miért jó a forráskérésbe beleírni: „Inkább mondd, hogy nem tudod”?", "v": ["Mert így rövidebb a válasz.", "Mert így megengeded, hogy jelezze a hiányt, és kisebb az esély a kitalált forrásra.", "Mert így udvariasabb.", "Nincs jelentősége."], "h": 1, "m": "A modell hajlamos mindenre válaszolni. Ha kifejezetten megengeded a „nem tudom”-ot, gyakrabban él vele." },
+        { "k": "Melyik NEM tartozik a forrásellenőrzés négy kérdése közé?", "v": ["Létezik?", "Ki írta?", "Hány képet tartalmaz?", "Mikor írták?"], "h": 2, "m": "A négy kérdés: létezik, ki írta, mikor, eredeti-e." },
+        { "k": "Mi az elsődleges forrás egy termék garanciális feltételeire?", "v": ["Egy fórum.", "A gyártó vagy forgalmazó hivatalos garanciális tájékoztatója.", "Egy influenszer videója.", "Az AI válasza."], "h": 1, "m": "Az eredeti, hivatalos dokumentum az elsődleges forrás." },
+        { "k": "Elég, ha az AI linket ad egy állításhoz?", "v": ["Igen.", "Nem, meg kell nyitni és megnézni, tényleg azt állítja-e.", "Igen, ha a link hosszú.", "Csak ha .hu végű."], "h": 1, "m": "A link lehet nem létező, vagy az oldal mást mond, mint amit az AI állít róla." }
+      ],
+      "osszefoglalo": [
+        "Kérj forrást állításonként, és engedd meg a „nem tudom”-ot.",
+        "Négy kérdés: létezik, ki írta, mikor, eredeti-e?",
+        "A link nem elég: nyisd meg, és nézd meg, mit állít."
+      ]
+    },
+    {
+      "id": "4.3",
+      "cim": "Bizonytalanság felismerése, visszakérdezés, második vélemény",
+      "ido": 10,
+      "hero": "img-4-3",
+      "celok": [
+        "Felismered a bizonytalan válasz jeleit.",
+        "Célzott visszakérdezéssel kiszűröd a gyenge pontokat.",
+        "Tudod, hogyan és honnan kérj második véleményt."
+      ],
+      "szakaszok": [
+        {
+          "cim": "A bizonytalanság jelei",
+          "blokkok": [
+            { "lista": [
+              "**Ritka vagy nagyon friss téma** – kevés tanítóadat, nagyobb esély a tévedésre.",
+              "**Túl konkrét adat forrás nélkül** – pontos szám, dátum, név, ahol ez meglepő.",
+              "**Általános, kitérő válasz** – sok „általában”, „sok esetben”, kevés konkrétum.",
+              "**Ellentmondás** – a válasz egyik része ütközik a másikkal, vagy egy korábbi válasszal.",
+              "**Túl szép, hogy igaz legyen** – pontosan azt mondja, amit hallani szerettél volna."
+            ] }
+          ]
+        },
+        {
+          "cim": "Visszakérdezés, ami tényleg segít",
+          "blokkok": [
+            "A „Biztos vagy benne?” gyenge kérdés. Erősebbek:",
+            { "lista": [
+              "„Melyik állításodban vagy a legkevésbé biztos, és miért?”",
+              "„Mi szól a válaszod ellen? Írd le a legerősebb ellenérveket.”",
+              "„Milyen feltételek mellett lenne más a válasz?”",
+              "„Mit kellene még tudnod rólam vagy a helyzetről, hogy pontosabban válaszolj?”"
+            ] },
+            { "tipp": "Ha az AI túl könnyen egyetért veled, kérd meg kifejezetten: „Ne értsd velem egyet automatikusan. Ha tévedek, mondd meg.”" }
+          ]
+        },
+        {
+          "cim": "Második vélemény",
+          "blokkok": [
+            { "lista": [
+              "**Más forrás:** egy független, hivatalos vagy szakmai oldal.",
+              "**Más eszköz:** ugyanaz a kérdés egy másik AI-ban (a 9. modulban ezt részletesen is kipróbálod).",
+              "**Új beszélgetés:** előzmények nélkül, semlegesen megfogalmazva, hogy ne vezesd rá a válaszra.",
+              "**Szakember:** egészség, jog, pénz, biztonság kérdésében ez nem opció, hanem szabály."
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Gyanús vagy rendben?",
+        "bevezeto": "Kitalált AI-válaszok. Melyiknél kell külön ellenőrzés?",
+        "opciok": ["Ellenőrizni kell", "Rendben, használható"],
+        "esetek": [
+          { "kontextus": "„A 2025-ben megjelent »Kertek és évszakok« című kutatás szerint a magyar háztartások 47,3%-a termeszt fűszernövényt.”", "helyes": 0, "magyarazat": "Pontos szám, konkrét kutatás, forrás nélkül – tipikus hallucinációgyanús helyzet. Keresd meg, létezik-e a kutatás." },
+          { "kontextus": "„A levelet így is kezdheted: »Kedves Szomszédok!« – ez közvetlen, de udvarias megszólítás.”", "helyes": 1, "magyarazat": "Stílusjavaslat, nincs benne ellenőrizendő tény. Ha tetszik, használd." },
+          { "kontextus": "„Ezt a gyógyszert nyugodtan szedheted a másik mellé, nincs köztük kölcsönhatás.”", "helyes": 0, "magyarazat": "Egészségügyi kérdés, magas tét: kérdezd meg a gyógyszerészt vagy az orvost." },
+          { "kontextus": "„Három ötlet a hétvégére: kirándulás a közeli erdőben, társasjáték-délután, közös főzés.”", "helyes": 1, "magyarazat": "Ötletelés – nincs mit ellenőrizni, te válogatsz." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Ellenérvek és második vélemény",
+        "ido": 8,
+        "lepesek": [
+          "Tegyél fel egy kérdést, amelyben van mérlegelés (például: megéri-e egy háztartásban mosogatógépet venni két főre).",
+          "Kérd meg az első visszakérdező kéréssel, hogy írja le az ellenérveket.",
+          "Nyiss új beszélgetést (vagy másik eszközt), és tedd fel semlegesen ugyanazt a kérdést.",
+          "Hasonlítsd össze a válaszokat: miben egyeznek, miben térnek el?"
+        ],
+        "promptok": [
+          { "cim": "Ellenérvek", "szoveg": "Írd le a válaszod ellen szóló legerősebb érveket, és azt, hogy milyen helyzetben lenne más a javaslatod. Ne értsd velem egyet automatikusan." }
+        ]
+      },
+      "kviz": [
+        { "k": "Melyik a bizonytalanság jele?", "v": ["Pontos szám egy ritka témában, forrás nélkül.", "Rövid válasz egy egyszerű kérdésre.", "Udvarias hangnem.", "Felsorolás használata."], "h": 0, "m": "Ritka téma, konkrét adat, forrás nélkül: itt ellenőrizni kell." },
+        { "k": "Melyik visszakérdezés a leghasznosabb?", "v": ["„Biztos?”", "„Melyik állításodban vagy a legkevésbé biztos, és miért?”", "„Ugye igazam van?”", "„Ismételd meg.”"], "h": 1, "m": "Konkrétan a gyenge pontokra kérdez rá, és indoklást kér." },
+        { "k": "Miért kezdj új beszélgetést a második véleményhez?", "v": ["Mert a régi beszélgetés előzményei befolyásolhatják a választ.", "Mert olcsóbb.", "Mert az AI elfárad.", "Nincs értelme."], "h": 0, "m": "Előzmények nélkül, semleges kérdéssel kevésbé „vezeted rá” a válaszra." }
+      ],
+      "osszefoglalo": [
+        "Ritka téma, konkrét adat forrás nélkül, ellentmondás – ezek a figyelmeztető jelek.",
+        "Kérdezz rá a gyenge pontokra és az ellenérvekre, ne csak arra, hogy „biztos-e”.",
+        "Második vélemény: más forrás, más eszköz, új beszélgetés – fontos ügyben szakember."
+      ]
+    }
+  ]
+}

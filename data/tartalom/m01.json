@@ -1,0 +1,305 @@
+{
+  "cel": "Reális képet kapsz arról, mit tud és mit nem az AI – így tudod, mire bízhatod rá magad, és mire nem.",
+  "utana": [
+    "Hétköznapi szavakkal el tudod mondani, mi az a mesterséges intelligencia.",
+    "Érted, hogyan állít elő szöveget egy nyelvi modell, és ebből miért következnek a hibái.",
+    "Tudod, mikor fogadhatod el nyugodtan egy AI válaszát, és mikor kell utánanézned."
+  ],
+  "javaslat": {
+    "levelezes": "Kérdezz rá egy olyan levelezési szabályra, amit biztosan tudsz – például hogyan illik megszólítani egy ismeretlen címzettet egy hivatalos levélben –, és nézd meg, mennyire egyezik a válasz a tapasztalatoddal.",
+    "dokumentumok": "Kérdezz rá egy olyan irodai programfunkcióra, amit rendszeresen használsz (például hogyan kell sorba rendezni egy táblázatot), és vesd össze a választ azzal, ahogy te csinálod.",
+    "kutatas": "Kérdezz egy olyan tényre a saját szakterületedről, amit fejből tudsz, és figyeld meg, hol pontos és hol általánosít a válasz.",
+    "kreativ": "Kérdezz rá egy általad jól ismert regény vagy film cselekményére, és figyeld meg, keveredik-e bele kitalált részlet.",
+    "tanulas": "Kérdezz rá valamire, amit nemrég tanultál meg alaposan, és nézd meg, ugyanúgy magyarázza-e el az AI."
+  },
+  "osszefoglalo": [
+    "Az AI mintázatokat tanult rengeteg példából; nem gondolkodik úgy, mint egy ember, és nem „tudja”, hogy igazat mond-e.",
+    "A nyelvi modell a legvalószínűbb folytatást írja – ezért gördülékeny, de néha magabiztosan téved.",
+    "Ötletre, vázlatra, átfogalmazásra bátran használd; tényt, számot, forrást és fontos döntést mindig ellenőrizz."
+  ],
+  "kviz": [
+    { "k": "Melyik mondat írja le legjobban, mit csinál egy nyelvi modell?", "v": ["Egy hatalmas adatbázisban kikeresi a helyes választ.", "A tanult mintázatok alapján megjósolja, milyen szöveg következik a legvalószínűbben.", "Az interneten minden kérdésnél utánanéz a válasznak.", "Emberek írják meg a válaszokat a háttérben."], "h": 1, "m": "A modell nem kikeres, hanem szöveget állít elő a valószínű folytatás alapján. Internetes keresést csak akkor végez, ha az eszközben van ilyen funkció, és be is kapcsolódik." },
+    { "k": "Mit jelent az, hogy az AI „hallucinál”?", "v": ["Lassan válaszol.", "Magabiztosan állít olyat, ami nem igaz.", "Megtagadja a választ.", "Képet készít szöveg helyett."], "h": 1, "m": "A hallucináció a kitalált, de hihetően megfogalmazott állítás: például nem létező könyvcím, rossz évszám vagy kitalált idézet." },
+    { "k": "Miért nem tud egy modell magától a múlt heti eseményekről?", "v": ["Mert tilos neki.", "Mert a tanítóadatai egy bizonyos időpontig tartanak (tudáshatár).", "Mert csak angolul tud.", "Mert túl kevés a memóriája."], "h": 1, "m": "A modell egy adott időpontig gyűjtött szövegeken tanult. Ennél frissebb dolgokról csak akkor tud, ha az eszköz webes keresést használ, vagy te adod meg az információt." },
+    { "k": "Melyik feladatnál kell a legjobban ellenőrizned az AI válaszát?", "v": ["Ötletek egy születésnapi meglepetéshez.", "Egy e-mail barátságosabbra fogalmazása.", "Egy gyógyszer adagolásának kérdése.", "Egy bekezdés rövidítése."], "h": 2, "m": "Egészség, jog és pénz kérdésében a tévedés ára magas. Ilyenkor az AI legfeljebb a kérdéseid előkészítésében segít; a döntést szakemberrel hozd meg." },
+    { "k": "Melyik állítás igaz?", "v": ["Ha az AI magabiztosan fogalmaz, akkor biztosan igaza van.", "Az AI-nak vannak érzései, ezért udvariasnak kell vele lenni.", "A gördülékeny szöveg nem jelenti azt, hogy a tartalom pontos.", "Az AI soha nem téved számolásban."], "h": 2, "m": "A stílus és a pontosság két külön dolog. A modell ugyanolyan magabiztos hangon ír igazat és tévedést is." },
+    { "k": "Mi a legjobb első lépés, ha az AI egy konkrét számot vagy dátumot mond, amit fel akarsz használni?", "v": ["Elfogadom, hiszen gép mondta.", "Megkérdezem még egyszer, és ha ugyanazt mondja, elfogadom.", "Megnézem egy megbízható, eredeti forrásban.", "Megkérem, hogy fogalmazza meg hivatalosabban."], "h": 2, "m": "Az ismételt kérdés nem ellenőrzés: a modell könnyen ugyanazt a hibát ismétli. A szám vagy dátum ellenőrzése egy megbízható forrásban történik." },
+    { "k": "Melyik NEM erőssége ma egy csevegő AI-nak?", "v": ["Szöveg átfogalmazása más hangnemben.", "Hosszú szöveg rövid összefoglalása.", "Garantáltan hibátlan tények közlése forrás nélkül.", "Ötletek gyűjtése egy témához."], "h": 2, "m": "Az átfogalmazás, összefoglalás és ötletelés erősség. Garantált tényszerűséget viszont forrás nélkül nem várhatsz el." }
+  ],
+  "fejezetek": [
+    {
+      "id": "1.1",
+      "cim": "Mi az a mesterséges intelligencia hétköznapi nyelven",
+      "ido": 9,
+      "hero": "img-1-1",
+      "celok": [
+        "Egy-két mondatban el tudod magyarázni, mi az AI.",
+        "Meg tudod különböztetni a „régi” és az „új”, szöveget író AI-t.",
+        "Tudod, milyen hétköznapi feladatokban segíthet neked."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Egy mondatban",
+          "blokkok": [
+            "A [[ai]] olyan program, amely példákból tanult meg mintázatokat, és ezek alapján old meg feladatokat.",
+            "Nem kell hozzá varázslatot képzelni. A telefonod arcfelismerése, a leveleződ spamszűrője és a navigáció útvonaltervezése is ilyen program – csak ezeket megszoktuk."
+          ]
+        },
+        {
+          "cim": "Mi változott az elmúlt években?",
+          "blokkok": [
+            "A régebbi AI-k főleg felismertek és válogattak: ez spam, ez nem; ez egy macska, ez egy kutya.",
+            "Az újabbak – ezeket hívjuk [[generativ-ai|generatív AI-nak]] – új tartalmat is létrehoznak: levelet írnak, összefoglalnak, képet készítenek, kérdésekre válaszolnak.",
+            "Ezeket legtöbbször egy [[chatbot|csevegőfelületen]] éred el: beírod, mit szeretnél, és az AI szövegben válaszol. Ilyen a ChatGPT, a Claude és a Gemini is.",
+            { "tipp": "Nem kell érteni a technikát ahhoz, hogy jól használd – ahogy autót vezetni is lehet anélkül, hogy a motort szét tudnád szedni. Annyit viszont érdemes tudni, ami a hibáit megmagyarázza. Erről szól a következő két fejezet." }
+          ]
+        },
+        {
+          "cim": "Mire jó a hétköznapokban?",
+          "blokkok": [
+            "Néhány tipikus, kitalált példa:",
+            { "lista": [
+              "**Írás:** Kata, irodai asszisztens, egy kusza jegyzetből udvarias e-mailt kér.",
+              "**Megértés:** Gábor egy hosszú bérleti szerződés lényegét kéri öt pontban, mielőtt elolvassa az egészet.",
+              "**Ötletelés:** Anna tíz ötletet kér egy nyugdíjas búcsúztató műsorához.",
+              "**Tanulás:** Péter megkéri, hogy magyarázza el a kamatos kamatot úgy, mintha tizenkét éves lenne."
+            ] },
+            "Ami közös bennük: az AI **előkészít, gyorsít, ötletet ad**. A végső szót mindegyik példában az ember mondja ki."
+          ]
+        },
+        {
+          "cim": "Mi NEM az AI?",
+          "blokkok": [
+            { "lista": [
+              "**Nem lexikon.** Nem „kikeresi” a választ, hanem megfogalmazza – erről a következő fejezetben lesz szó.",
+              "**Nem ember.** Nincs saját véleménye, élménye vagy érzése, még ha úgy is fogalmaz.",
+              "**Nem tévedhetetlen.** Gyakran pontos, de nem mindig – és ezt magától nem mindig jelzi."
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "AI vagy nem AI?",
+        "bevezeto": "Döntsd el a kitalált helyzetekről, hogy AI dolgozik-e bennük.",
+        "kerdes": "Van benne mesterséges intelligencia?",
+        "opciok": ["Igen", "Nem"],
+        "esetek": [
+          { "kontextus": "A levelezőprogramod magától a „Spam” mappába teszi a gyanús leveleket.", "helyes": 0, "magyarazat": "A spamszűrők sok-sok példalevélből tanulták meg, milyen egy kéretlen levél. Ez klasszikus, „felismerő” AI." },
+          { "kontextus": "A konyhai időzítő 10 perc után csörög.", "helyes": 1, "magyarazat": "Ez egy egyszerű, előre beállított szabály: nincs benne tanulás vagy mintázatfelismerés." },
+          { "kontextus": "Egy alkalmazás a beírt vázlatpontjaidból kész, udvarias levelet ír.", "helyes": 0, "magyarazat": "Ez generatív AI: új szöveget hoz létre a megadott pontok alapján." },
+          { "kontextus": "A táblázatkezelő összeadja egy oszlop számait.", "helyes": 1, "magyarazat": "Ez egy pontos, előre megírt számítás (képlet), nem AI. Éppen ezért mindig ugyanazt, hibátlan eredményt adja." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Az első beszélgetésed tudatosan",
+        "ido": 6,
+        "bevezeto": "Nyiss egy új beszélgetést az AI-eszközödben. Ha még nincs fiókod, bármelyik ingyenes változat megfelel.",
+        "lepesek": [
+          "Másold be az alábbi kérést.",
+          "Olvasd el a választ, és jelöld meg magadban, melyik ötlet tűnik a leghasznosabbnak.",
+          "Írj vissza egy mondatot: „Ezt a hármat fejtsd ki bővebben, egy-egy példával: …”, és sorold fel a három kiválasztott pontot."
+        ],
+        "promptok": [
+          { "cim": "Másolható kérés", "szoveg": "Kezdő AI-felhasználó vagyok. Sorolj fel 8 konkrét, hétköznapi feladatot, amiben egy AI-asszisztens segíthet egy átlagos felnőttnek a munkában vagy otthon. Mindegyikhez írj egy mondatos példát. Ne használj szakszavakat." }
+        ],
+        "jegyzetMinta": "Melyik ötletet próbálnád ki elsőként?"
+      },
+      "kviz": [
+        { "k": "Mi a különbség a „felismerő” és a generatív AI között?", "v": ["Nincs különbség.", "A generatív AI új tartalmat hoz létre, a felismerő csak besorol vagy azonosít.", "A generatív AI csak képekkel dolgozik.", "A felismerő AI mindig pontosabb."], "h": 1, "m": "A spamszűrő besorol (felismerő), a levelet író asszisztens új szöveget hoz létre (generatív)." },
+        { "k": "Melyik példában dolgozik AI?", "v": ["Egy villanykapcsoló.", "Egy fotóalkalmazás, amely felismeri az arcokat a képeken.", "Egy papírnaptár.", "Egy egyszerű számológép."], "h": 1, "m": "Az arcfelismerés rengeteg példaképen tanult mintázatokra épül – ez AI." },
+        { "k": "Ki mondja ki a végső szót egy AI-val megírt levélnél?", "v": ["Az AI.", "Te.", "A címzett.", "A program gyártója."], "h": 1, "m": "Az AI előkészít és gyorsít, de a felelősség és a döntés a tiéd: te olvasod át és te küldöd el." }
+      ],
+      "osszefoglalo": [
+        "Az AI példákból tanult mintázatok alapján old meg feladatokat.",
+        "A generatív AI új tartalmat hoz létre – szöveget, képet, összefoglalót.",
+        "Előkészít és gyorsít; a végső szó mindig a tiéd."
+      ]
+    },
+    {
+      "id": "1.2",
+      "cim": "Hogyan „gondolkodik” egy nyelvi modell",
+      "ido": 11,
+      "hero": "img-1-2",
+      "celok": [
+        "Érted, mit jelent, hogy a modell a következő szót jósolja meg.",
+        "Tudod, honnan származik a modell „tudása”.",
+        "Ebből meg tudod magyarázni, miért gördülékeny és miért tévedhet."
+      ],
+      "szakaszok": [
+        {
+          "cim": "A következő szó megjóslása",
+          "blokkok": [
+            "A csevegő AI-k mögött egy [[nyelvi-modell]] dolgozik. Ennek egyetlen alapfeladata van: egy elkezdett szövegnek megjósolni a következő darabját.",
+            "Ha azt olvasod: „Reggel megiszom egy csésze…”, te is tudod, hogy a „kávét” vagy a „teát” a legvalószínűbb folytatás. A modell ugyanezt csinálja, csak minden lehetséges szóhoz egy [[valoszinuseg|valószínűséget]] számol, és ebből választ.",
+            "Aztán az új szót hozzáírja a szöveghez, és kezdi elölről. Szóról szóra – pontosabban szódarabról szódarabra – így születik meg egy teljes válasz."
+          ]
+        },
+        {
+          "cim": "Honnan tud ennyi mindent?",
+          "blokkok": [
+            "A modellt elképesztő mennyiségű szövegen tanították be: könyveken, cikkeken, weboldalakon, beszélgetéseken. Ez a [[tanitoadat]].",
+            "A betanítás során milliárdnyi belső számot, úgynevezett [[parameter|paramétert]] állítanak be úgy, hogy a modell egyre jobban eltalálja a következő szót. Az ilyen nagyon nagy modelleket hívják [[llm|LLM-nek]].",
+            "Közben „mellékesen” rengeteg mintázatot is megtanul: nyelvtant, stílusokat, tényeket, érvelési formákat. Ezért tud levelet írni, verset költeni vagy matematikát magyarázni."
+          ]
+        },
+        {
+          "cim": "Mi következik ebből?",
+          "blokkok": [
+            { "lista": [
+              "**Gördülékeny szöveg:** a modell nagyon jó abban, hogy természetesen hangzó mondatokat írjon.",
+              "**Nem ellenőriz:** a „valószínű” nem ugyanaz, mint az „igaz”. Ha egy hamis állítás jól hangzik, az is kijöhet.",
+              "**Minden válasz kicsit más:** ugyanarra a kérdésre kétszer kicsit eltérő választ kaphatsz, mert a modell nem mindig a legvalószínűbb szót választja.",
+              "**A kérésed számít:** amit beírsz, az a szöveg eleje, amit folytat. Minél pontosabb az eleje, annál jobb a folytatás. Ezzel foglalkozik a 2. modul."
+            ] },
+            { "tipp": "Hasznos gondolatkísérlet: képzeld el az AI-t egy nagyon olvasott, gyors segítőnek, aki mindenre válaszol, de nem mindig nézi meg, hogy jól emlékszik-e." }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-1-2",
+        "kotelezo": true,
+        "bevezeto": "Rövid, animált magyarázat arról, hogyan áll össze egy válasz szóról szóra."
+      },
+      "interaktiv": {
+        "tipus": "kovetkezoszo",
+        "cim": "Próbáld ki: szóról szóra",
+        "bevezeto": "Nyomd meg többször a gombot, és figyeld, hogyan választ a modell a lehetséges következő szavak közül.",
+        "kezdet": "Reggel megiszom egy csésze",
+        "lepesek": [
+          { "jeloltek": [["kávét", 58], ["teát", 27], ["kakaót", 7], ["vizet", 5], ["levest", 3]] },
+          { "jeloltek": [["tejjel", 31], ["és", 29], ["cukor", 16], ["a", 14], ["mielőtt", 10]] },
+          { "jeloltek": [["és", 44], [",", 30], ["mielőtt", 15], ["a", 7], ["miközben", 4]] },
+          { "jeloltek": [["elolvasom", 36], ["átnézem", 28], ["elindulok", 20], ["megnézem", 12], ["felhívom", 4]] },
+          { "jeloltek": [["a", 62], ["az", 21], ["a napi", 10], ["minden", 7]] },
+          { "jeloltek": [["híreket.", 48], ["leveleimet.", 33], ["újságot.", 15], ["naptáramat.", 4]] }
+        ],
+        "zaras": "Kész a mondat. Észrevetted? A modell mindig egy valószínű szót választott – nem azt ellenőrizte, hogy a mondat igaz-e rád."
+      },
+      "gyakorlat": {
+        "cim": "Ugyanaz a kérdés kétszer",
+        "ido": 6,
+        "lepesek": [
+          "Másold be az első kérést egy új beszélgetésbe, és olvasd el a választ.",
+          "Kattints az „Újragenerálás” (vagy hasonló, körbeforduló nyíl) gombra, vagy nyiss egy új beszélgetést, és kérdezd meg ugyanazt.",
+          "Hasonlítsd össze a két választ: mi egyezik, és mi más? Ha mindkettőben van konkrét adat, egyezik-e?",
+          "Végül másold be a második kérést is, és figyeld meg, hogyan magyarázza el saját magát."
+        ],
+        "promptok": [
+          { "cim": "1. kérés", "szoveg": "Írj egy háromsoros, vidám verset egy hétfő reggeli kávéról." },
+          { "cim": "2. kérés", "szoveg": "Magyarázd el egyszerűen, három rövid bekezdésben, hogyan állítasz elő egy választ. Kezdő felhasználónak írj, szakszavak nélkül, és mondd el azt is, miért tévedhetsz." }
+        ]
+      },
+      "kviz": [
+        { "k": "Mi a nyelvi modell alapfeladata?", "v": ["Weboldalakat keres.", "Megjósolja, mi a szöveg legvalószínűbb következő darabja.", "Ellenőrzi a tényeket.", "Lefordít mindent angolra."], "h": 1, "m": "Minden más képessége – levélírás, összefoglalás, magyarázat – erre az egy alapfeladatra épül." },
+        { "k": "Miért kaphatsz ugyanarra a kérdésre kétszer kicsit eltérő választ?", "v": ["Mert a modell hibás.", "Mert nem mindig a legvalószínűbb szót választja, hanem egy kis változatosságot is enged.", "Mert közben elfelejtette a kérdést.", "Mert más ember válaszol."], "h": 1, "m": "Ez szándékos: így természetesebb és változatosabb a szöveg. Ténykérdéseknél viszont épp ezért érdemes ellenőrizni." },
+        { "k": "Mi a tanítóadat?", "v": ["A felhasználó jelszava.", "Az a hatalmas szövegmennyiség, amelyből a modell a mintázatokat megtanulta.", "Egy tankönyv az AI-ról.", "A modell beállításai a telefonon."], "h": 1, "m": "A modell könyvekből, cikkekből, weboldalakból és más szövegekből tanult. Amit „tud”, az ebből a mintázatból származik." },
+        { "k": "Mit jelent a „valószínű” és az „igaz” különbsége?", "v": ["Ugyanazt jelentik.", "Egy jól hangzó mondat is lehet hamis.", "Ami valószínű, az mindig igaz.", "Az igaz állítások mindig rövidebbek."], "h": 1, "m": "A modell azt írja, ami a mintázatok alapján jól illik a szövegbe. Ez sokszor igaz is, de nem garantáltan." }
+      ],
+      "osszefoglalo": [
+        "A nyelvi modell szóról szóra, a legvalószínűbb folytatást írva állítja elő a választ.",
+        "Rengeteg szövegből tanult, ezért gördülékeny és sokoldalú.",
+        "A „valószínű” nem ugyanaz, mint az „igaz” – ezért a pontos kérés és az ellenőrzés a te dolgod."
+      ]
+    },
+    {
+      "id": "1.3",
+      "cim": "Miért téved az AI, és mikor bízhatsz benne",
+      "ido": 10,
+      "hero": "img-1-3",
+      "celok": [
+        "Felismered a két leggyakoribb hibatípust: a kitalált állítást és az elavult tudást.",
+        "Egy egyszerű szempontrendszerrel el tudod dönteni, mennyire bízz meg egy válaszban.",
+        "Tudod, hogyan kérdezz rá, ha gyanús egy válasz."
+      ],
+      "szakaszok": [
+        {
+          "cim": "1. hibatípus: a hallucináció",
+          "blokkok": [
+            "[[hallucinacio|Hallucinációnak]] hívjuk, amikor a modell magabiztosan állít valamit, ami nem igaz.",
+            "Ez nem „hazugság”: a modell nem tudja, hogy téved. Egyszerűen olyan szöveget írt, ami jól illik a kérdéshez – például egy hihetően hangzó könyvcímet, egy kerek évszámot vagy egy idézetet, amelyet valójában senki nem mondott.",
+            { "pelda": [
+              "*Kérdés:* Ki írta a „Csendes tavaszi reggel a Balatonon” című könyvet?",
+              "*Lehetséges AI-válasz:* „A könyvet Kovács Ilona írta 1987-ben, a balatoni nyaralók életéről szól.”",
+              "Ha ilyen könyv nem létezik, a modell akkor is könnyen ír egy hihető választ. A név és az évszám ugyanolyan magabiztos, mint egy valódi adat."
+            ], "cim": "Kitalált példa" },
+            "Hallucinációra különösen hajlamos: pontos számok, dátumok, nevek, idézetek, források és linkek, kevéssé ismert témák."
+          ]
+        },
+        {
+          "cim": "2. hibatípus: az elavult tudás",
+          "blokkok": [
+            "A modell tanítóadatai egy bizonyos időpontig tartanak. Ez a [[tudashatar]]. Ami utána történt – új törvény, új ár, friss hír –, arról magától nem tud.",
+            "Sok eszköz ma már tud [[webes-kereses|webes keresést]] is végezni, ilyenkor frissebb információt is talál. De nem mindig kapcsolja be magától, és a talált oldal sem feltétlenül megbízható.",
+            { "tipp": "Ha a válasz időérzékeny (árak, nyitvatartás, szabályok, jogszabályok), kérdezz rá: „Ez melyik időpontra érvényes? Honnan származik?”" }
+          ]
+        },
+        {
+          "cim": "Mikor bízhatsz benne?",
+          "blokkok": [
+            "Két kérdést tegyél fel magadnak: **Mekkora a tét, ha téved?** és **Mennyire kell pontos ténynek lennie?**",
+            { "abra": "bizalom-matrix", "felirat": "Minél nagyobb a tét és minél inkább tényről van szó, annál fontosabb az ellenőrzés." },
+            { "lista": [
+              "**Nyugodtan használd:** ötletelés, vázlat, átfogalmazás, összefoglaló saját magadnak.",
+              "**Használd, de olvasd át:** hivatalos levél, mások számára készülő összefoglaló.",
+              "**Nézz utána:** számok, dátumok, nevek, idézetek, szabályok.",
+              "**Szakemberrel döntsd el:** egészség, jog, pénzügyek, biztonság."
+            ] }
+          ]
+        },
+        {
+          "cim": "Ha gyanús egy válasz",
+          "blokkok": [
+            { "szamozott": [
+              "Kérd meg, hogy jelölje, miben bizonytalan.",
+              "Kérj forrást – és nyisd is meg, mert a forrás is lehet kitalált.",
+              "Nézd meg egy megbízható helyen (hivatalos oldal, szakember, lexikon)."
+            ] },
+            { "prompt": "Nézd át az előző válaszodat. Jelöld meg, mely állításokban vagy biztos, melyekben bizonytalan, és melyiket érdemes külön ellenőriznem. Ha valamit nem tudsz biztosan, mondd ki.", "cim": "Másolható visszakérdezés" },
+            { "vigyazat": "Az „Biztos vagy benne?” kérdésre a modell néha megváltoztatja a jó választ is, máskor kitart a rossz mellett. A visszakérdezés segít, de nem helyettesíti a valódi ellenőrzést." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "igazkitalalt",
+        "cim": "Igaz vagy kitalált?",
+        "bevezeto": "Hat kitalált AI-válasz. Tippeld meg mindegyikről, igaz-e vagy kitalált (hallucináció).",
+        "kartyak": [
+          { "szoveg": "A víz tengerszinten 100 °C-on forr.", "valasz": "igaz", "magyarazat": "Ez közismert, rengetegszer leírt tény – az ilyenekben a modell ritkán téved. (Magasabb helyen alacsonyabb hőmérsékleten forr.)" },
+          { "szoveg": "Magyarország legmagasabb pontja a Kékes, 1014 méterrel.", "valasz": "igaz", "magyarazat": "Igaz – de a pontos számoknál érdemes egy pillantást vetni egy megbízható forrásra, mert a modell néha egy-két méterrel melléfog." },
+          { "szoveg": "A „Kertész a felhők felett” című, 2003-as díjnyertes magyar regényt Szabó Márton írta.", "valasz": "kitalalt", "magyarazat": "Kitalált cím és szerző. Tipikus hallucináció: hihető cím, hihető név, konkrét évszám – és semmi nem igaz belőle." },
+          { "szoveg": "Erről a témáról bővebben itt olvashatsz: www.pelda-kutatointezet.hu/tanulmany-2021.pdf", "valasz": "kitalalt", "magyarazat": "A modellek gyakran gyártanak valószínűnek tűnő, de nem létező linkeket. Egy linket mindig nyiss meg, mielőtt hivatkozol rá." },
+          { "szoveg": "Egy átlagos felnőtt szíve nyugalomban percenként nagyjából 60–100-at ver.", "valasz": "igaz", "magyarazat": "Ez általánosan elfogadott tartomány. Egyéni egészségügyi kérdésben viszont orvoshoz fordulj, ne az AI-hoz." },
+          { "szoveg": "Einstein mondta: „Aki soha nem hibázott, az soha nem próbált ki semmi újat – ezért minden reggel hibázz egyet.”", "valasz": "kitalalt", "magyarazat": "Az első fele gyakran neki tulajdonított mondás (aminek eredete is vitatott), a második fele kitalált toldalék. Idézeteknél különösen gyakori a hallucináció." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Kérdezz olyat, amit te tudsz",
+        "ido": 8,
+        "bevezeto": "A legjobb módja annak, hogy megtapasztald a modell erősségeit és gyengeségeit: olyasmit kérdezel, amiben te vagy a szakértő.",
+        "lepesek": [
+          "Gondolj egy témára, amit nagyon jól ismersz: a szakmád egy részlete, a lakóhelyed, egy hobbid, egy családi recept.",
+          "Tegyél fel róla egy konkrét kérdést az AI-nak (az alábbi sablon segít).",
+          "Olvasd el a választ, és jelöld meg: mi pontos, mi pontatlan, mi általánosítás, és van-e benne kitalált részlet.",
+          "Másold be a visszakérdező kérést, és nézd meg, felismeri-e maga a bizonytalan részeket."
+        ],
+        "promptok": [
+          { "cim": "Kérdés-sablon", "szoveg": "[Írd ide a témát], és ezen belül konkrétan: [írd ide a kérdést]. Válaszolj röviden, és ha valamiben nem vagy biztos, jelezd." },
+          { "cim": "Visszakérdezés", "szoveg": "Nézd át az előző válaszodat. Melyik állításban vagy a legkevésbé biztos, és hogyan tudnám a legegyszerűbben ellenőrizni?" }
+        ],
+        "jegyzetMinta": "Mit talált el, és miben tévedett?"
+      },
+      "kviz": [
+        { "k": "Mi jellemző a hallucinációra?", "v": ["A modell bizonytalanul fogalmaz.", "A kitalált állítás ugyanolyan magabiztos, mint az igaz.", "Csak képeknél fordul elő.", "Mindig hibaüzenetet ad."], "h": 1, "m": "Éppen ez a veszélye: a hangnemből nem látszik, hogy a tartalom kitalált." },
+        { "k": "Mit jelent a tudáshatár?", "v": ["A modell nem válaszol bizonyos témákban.", "A tanítóadatok egy időpontig tartanak, az utána történtekről a modell magától nem tud.", "A válasz legfeljebb ezer szó lehet.", "A modell csak egy országról tud."], "h": 1, "m": "Ezért kérdezz rá időérzékeny információknál, hogy mikori és honnan származik." },
+        { "k": "Melyik helyzetben a legkisebb a kockázat, ha az AI téved?", "v": ["Gyógyszer adagolása.", "Egy szerződés jogi értelmezése.", "Ötletek egy hétvégi kiránduláshoz.", "Adóbevallás összegeinek kiszámítása."], "h": 2, "m": "Az ötletelésnél te válogatsz, és a tévedésnek nincs komoly következménye." },
+        { "k": "Elég-e ellenőrzésnek, ha megkérdezed: „Biztos vagy benne?”", "v": ["Igen, ha igent mond, akkor biztos.", "Nem, ez segíthet, de a valódi ellenőrzés egy megbízható forrás megnézése.", "Igen, ha háromszor megkérdezed.", "Nem, mert az AI ilyenkor mindig hazudik."], "h": 1, "m": "A visszakérdezés hasznos szűrő, de a modell erre is tévedhet. A tényt egy megbízható forrás erősíti meg." }
+      ],
+      "osszefoglalo": [
+        "A két leggyakoribb hiba: a magabiztosan kitalált állítás és az elavult tudás.",
+        "Minél nagyobb a tét és minél inkább tényről van szó, annál fontosabb az ellenőrzés.",
+        "Kérdezz vissza, kérj forrást, és nézd meg egy megbízható helyen."
+      ]
+    }
+  ]
+}

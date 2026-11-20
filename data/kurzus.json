@@ -1,0 +1,28 @@
+{
+  "cim": "AI a hétköznapokban",
+  "verzio": 1,
+  "allapot": "2026. november",
+  "megjegyzes": "A modulok sorrendje itt dől el. Minden modul tartalma (fejezetek, szövegek, kvízek, gyakorlatok) a 'fajl' mezőben megadott JSON-ban van.",
+  "modulok": [
+    { "id": "m01", "sorszam": 1, "cim": "Mi az AI és mi nem", "rovid": "Reális kép arról, mit tud és mit nem a mesterséges intelligencia.", "ido": 30, "fajl": "tartalom/m01.json" },
+    { "id": "m02", "sorszam": 2, "cim": "Jó kérés írása", "rovid": "A jó kérés öt eleme, finomítás és újrahasznosítható sablonok.", "ido": 40, "fajl": "tartalom/m02.json" },
+    { "id": "m03", "sorszam": 3, "cim": "Szövegek és dokumentumok", "rovid": "E-mailek, összefoglalók, táblázatok és fordítás gyorsabban.", "ido": 45, "fajl": "tartalom/m03.json" },
+    { "id": "m04", "sorszam": 4, "cim": "Kutatás és ellenőrzés", "rovid": "Megbízható információ: források kérése és ellenőrzése.", "ido": 35, "fajl": "tartalom/m04.json" },
+    { "id": "m05", "sorszam": 5, "cim": "Hang és fotó", "rovid": "AI telefonról: beszélgetés hangon, fotók elemzése, gyors jegyzetek.", "ido": 35, "fajl": "tartalom/m05.json" },
+    { "id": "m06", "sorszam": 6, "cim": "Képgenerálás", "rovid": "Használható képek készítése – és a korlátok, etikai szabályok.", "ido": 40, "fajl": "tartalom/m06.json" },
+    { "id": "m07", "sorszam": 7, "cim": "Videógenerálás", "rovid": "Reális elvárások a mesterséges videókkal szemben.", "ido": 35, "fajl": "tartalom/m07.json" },
+    { "id": "m08", "sorszam": 8, "cim": "Biztonság, adatvédelem, limitek", "rovid": "Mit ne másolj be, mi a token, és hogyan ismerd fel a csalásokat.", "ido": 40, "fajl": "tartalom/m08.json" },
+    { "id": "m09", "sorszam": 9, "cim": "Eszközök és saját asszisztens", "rovid": "ChatGPT, Claude, Gemini tárgyilagosan – és a saját beállításaid.", "ido": 50, "fajl": "tartalom/m09.json" },
+    { "id": "m10", "sorszam": 10, "cim": "Weboldal készítése AI-val", "rovid": "Egyszerű weboldal az ötlettől a közzétételig.", "ido": 60, "opcionalis": true, "fajl": "tartalom/m10.json" },
+    { "id": "m11", "sorszam": 11, "cim": "Claude Code és AI-ágensek", "rovid": "Mi az AI-ágens, és mikor érdemes használni.", "ido": 45, "opcionalis": true, "fajl": "tartalom/m11.json" },
+    { "id": "zp", "sorszam": 12, "cim": "Záró projekt", "rovid": "Egy saját, valódi feladat megoldása AI-val, lépésről lépésre.", "ido": 75, "fajl": "tartalom/zp.json" }
+  ],
+  "kovetkezoLepesek": [
+    { "cim": "Tegyél belőle szokást.", "szoveg": "Válassz ki egy ismétlődő heti feladatot, és a következő négy hétben minden alkalommal AI-val kezdd. A negyedik hét végén nézd meg, mennyi időt nyertél." },
+    { "cim": "Építsd fel a saját sablontáradat.", "szoveg": "A kurzusban bevált kéréseidet gyűjtsd egy jegyzetbe vagy az AI-eszköz projektjébe, és finomítsd őket használat közben." },
+    { "cim": "Állítsd be az asszisztensedet.", "szoveg": "Ha még nem tetted meg, írd meg az egyedi utasításaidat (9.3), és nézd át havonta, hogy mit jegyzett meg rólad az eszköz." },
+    { "cim": "Maradj naprakész, de ne kapkodj.", "szoveg": "Az eszközök gyorsan változnak. Negyedévente nézd meg a kedvenc eszközöd hivatalos újdonságait, és próbálj ki egy új funkciót egy valódi feladaton." },
+    { "cim": "Ellenőrizz továbbra is.", "szoveg": "A legfontosabb szokás nem változik: ami tény, szám, név vagy döntés, annak nézz utána, mielőtt felhasználod." },
+    { "cim": "Taníts meg valakit.", "szoveg": "Mutasd meg egy kollégádnak vagy családtagodnak a számodra leghasznosabb trükköt. A tanítás közben te is jobban megérted." }
+  ]
+}

@@ -1,0 +1,874 @@
+{
+  "leiras": "Médiamanifeszt. Ha egy fájl elkészült, tedd a megfelelő assets/ mappába a megadott néven, és állítsd a 'statusz' mezőt 'kesz'-re. A MEDIA-TODO.md a tools/media_todo.py futtatásával frissül.",
+  "elemek": [
+    {
+      "id": "img-1-1",
+      "tipus": "kep",
+      "fajl": "m01-1-1-hero.webp",
+      "meret": "1600x900",
+      "statusz": "kesz",
+      "hova": "1.1 fejezet – hero kép",
+      "alt": "Egy nő a konyhaasztalnál ül laptoppal, mellette bögre kávé; a képernyőn egy csevegőablak látszik.",
+      "prompt_hu": "Valósághű fotó: harmincas éveiben járó nő otthon, konyhaasztalnál ül nyitott laptoppal, reggeli természetes fény az ablakból, mellette kávésbögre és jegyzetfüzet. A képernyőn elmosódottan egy csevegőfelület. Hétköznapi, nyugodt hangulat.",
+      "prompt_en": "Photorealistic, natural-light photo of a woman in her thirties sitting at a kitchen table at home with an open laptop, soft morning window light, a coffee mug and a paper notebook beside her. The laptop screen shows a blurred, generic chat interface (no logos). Candid, everyday, calm mood, 35mm lens, shallow depth of field, true-to-life skin texture and natural hands, no text, no brand marks. 16:9."
+    },
+    {
+      "id": "img-1-2",
+      "tipus": "kep",
+      "fajl": "m01-1-2-hero.webp",
+      "meret": "1600x900",
+      "statusz": "kesz",
+      "hova": "1.2 fejezet – hero kép",
+      "alt": "Közeli kép kézről, amely telefonon gépel; a billentyűzet felett szójavaslatok látszanak.",
+      "prompt_hu": "Valósághű közeli fotó: egy ember keze okostelefonon gépel, a képernyő billentyűzete felett három szójavaslat látszik. Természetes beltéri fény, életlen háttérben kanapé.",
+      "prompt_en": "Photorealistic close-up of a person's hands typing on a smartphone, the on-screen keyboard showing three generic word suggestions above it (illegible or neutral words). Natural indoor daylight, blurred living-room sofa in the background, realistic hands with correct anatomy, no logos, no readable brand UI. 16:9."
+    },
+    {
+      "id": "vid-1-2",
+      "tipus": "video",
+      "fajl": "m01-1-2-kovetkezo-szo.mp4",
+      "statusz": "kesz",
+      "kotelezo": true,
+      "hossz": "kb. 2 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "1.2 fejezet – animált magyarázó videó",
+      "cim": "Hogyan áll össze egy válasz szóról szóra",
+      "alt": "Animált magyarázat: egy mondat szóról szóra épül fel, mellette a lehetséges következő szavak valószínűségi oszlopai.",
+      "forgatokonyv": {
+        "osszefoglalo": "Egyszerű, lapos grafikás animáció (kék–narancs színvilág), nyugodt magyar narrációval. Megmutatja a következő szó jóslását, a tanítóadatot és azt, hogy a valószínű nem mindig igaz.",
+        "jelenetek": [
+          {
+            "kep": "Üres beviteli mező, villogó kurzor.",
+            "narracio": "Amikor kérdezel valamit egy AI-tól, a válasz nem egyetlen pillanat alatt, készen születik meg. Szóról szóra épül fel."
+          },
+          {
+            "kep": "Megjelenik: „Reggel megiszom egy csésze…”, alatta oszlopdiagram: kávét, teát, kakaót.",
+            "narracio": "A nyelvi modell minden lépésben megnézi, mi lehet a szöveg következő szava, és mindegyikhez egy esélyt rendel. Itt a „kávét” a legvalószínűbb."
+          },
+          {
+            "kep": "A „kávét” beúszik a mondatba, új oszlopdiagram jelenik meg.",
+            "narracio": "A kiválasztott szó bekerül a szövegbe, és kezdődik elölről: mi jöhet ezután? Így halad, amíg a válasz el nem készül."
+          },
+          {
+            "kep": "Könyvek, cikkek, weboldalak ikonjai áramlanak egy doboz felé.",
+            "narracio": "Hogy honnan tudja, mi a valószínű? Rengeteg szövegből tanult. Ezekből a mintákból tanulta meg a nyelvtant, a stílusokat és sok tényt is."
+          },
+          {
+            "kep": "Két mondat egymás mellett: egy igaz és egy hihető, de hamis; mindkettő zöld pipával indul, majd a hamis mellé piros felkiáltójel kerül.",
+            "narracio": "Csakhogy a valószínű nem mindig igaz. Egy jól hangzó, de hamis mondat is lehet valószínű folytatás. A modell ezt magától nem mindig veszi észre."
+          },
+          {
+            "kep": "Nagyító egy szövegrész felett, mellette pipa.",
+            "narracio": "Ezért van szükség rád: pontos kéréssel jobb választ kapsz, és ami tény, azt érdemes ellenőrizned."
+          }
+        ]
+      }
+    },
+    {
+      "id": "img-1-3",
+      "tipus": "kep",
+      "fajl": "m01-1-3-hero.webp",
+      "meret": "1600x900",
+      "statusz": "kesz",
+      "hova": "1.3 fejezet – hero kép",
+      "alt": "Egy férfi az íróasztalánál összeveti a laptopján látható szöveget egy nyitott könyvvel.",
+      "prompt_hu": "Valósághű fotó: középkorú férfi otthoni íróasztalnál, egyik kezével nyitott kézikönyvben lapoz, közben a laptop képernyőjére néz, mintha összevetné a kettőt. Délutáni természetes fény, olvasólámpa, papírok.",
+      "prompt_en": "Photorealistic photo of a middle-aged man at a home desk, one hand on an open reference book, looking at his laptop screen as if comparing the two. Late-afternoon natural light, a desk lamp, a few papers. Calm, focused, authentic everyday scene, realistic hands, no visible logos or readable screen text. 16:9."
+    },
+    {
+      "id": "img-2-1",
+      "tipus": "kep",
+      "fajl": "m02-2-1-hero.webp",
+      "hova": "2.1 fejezet – hero kép",
+      "alt": "Egy ember jegyzetfüzetbe pontokba szedi, mit szeretne kérni, mellette nyitott laptop.",
+      "prompt_hu": "Valósághű fotó: egy negyvenes nő íróasztalnál kézzel ír pontokba szedett jegyzetet egy füzetbe, mellette nyitott laptop. Természetes nappali fény, rendezett, de élő munkahely, bögre, toll.",
+      "prompt_en": "Photorealistic photo of a woman in her forties at a desk handwriting a short bulleted list in a paper notebook, an open laptop next to it. Natural daylight, tidy but lived-in workspace, a mug and a pen. Authentic, unposed, realistic hands, no logos, no readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-2-2",
+      "tipus": "kep",
+      "fajl": "m02-2-2-hero.webp",
+      "hova": "2.2 fejezet – hero kép",
+      "alt": "Két papírlap egymás mellett az asztalon: az egyiken egy rövid, áthúzott mondat, a másikon egy részletes, kiegészített szöveg.",
+      "prompt_hu": "Valósághű felülnézeti fotó: két papírlap egy fa asztalon; a bal oldalin egyetlen rövid, áthúzott sor, a jobb oldalin több soros, kézzel kiegészített jegyzet. Mellette toll és szemüveg. Természetes fény.",
+      "prompt_en": "Photorealistic top-down photo of two sheets of paper on a wooden table: the left one has a single short line crossed out, the right one has several handwritten lines with additions and arrows (text not legible). A pen and reading glasses beside them. Soft natural light, realistic paper texture. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-2-2",
+      "tipus": "video",
+      "fajl": "m02-2-2-rossz-jo-keres.mp4",
+      "poster": "m02-2-2-poster.jpg",
+      "felirat_fajl": "m02-2-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 3 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "2.2 fejezet – képernyőfelvétel",
+      "cim": "Ugyanaz a feladat rossz és jó kéréssel",
+      "alt": "Képernyőfelvétel egy AI-csevegőről, amelyben előbb egy rövid, majd egy részletes kérésre érkezik válasz.",
+      "forgatokonyv": {
+        "osszefoglalo": "Képernyőfelvétel egy általános AI-csevegőfelületen (kitalált adatokkal, márka nélkül vagy semleges felülettel), nyugodt narrációval. Ugyanazt a feladatot (szabadságkérő e-mail) előbb rossz, majd jó kéréssel kérjük, és összehasonlítjuk.",
+        "jelenetek": [
+          {
+            "kep": "Üres csevegőablak.",
+            "narracio": "Nézzük meg ugyanazt a feladatot kétféleképpen. A cél: egy e-mail a vezetőnknek, hogy szabadságra mennénk."
+          },
+          {
+            "kep": "Begépelve: „Írj e-mailt a főnökömnek, hogy szabadságra mennék.” Megjelenik a válasz.",
+            "narracio": "Először röviden kérjük. A válasz udvarias, de általános: nincs benne dátum, a hangnem merev, és nem tudjuk elküldeni anélkül, hogy átírnánk."
+          },
+          {
+            "kep": "A válasz hiányzó részei kiemelve: dátum, hangnem, átadás.",
+            "narracio": "Mi hiányzott? A dátum, a viszonyunk a címzettel, és az, hogy mi lesz a munkánkkal. Ezt az AI nem tudhatta."
+          },
+          {
+            "kep": "Új beszélgetés, begépelve a részletes kérés; a cél, háttér, formátum részek színnel jelölve.",
+            "narracio": "Most adjuk meg a célt, a hátteret és a formátumot: tegeződünk, július 14–18., az ügyeket átadjuk, legfeljebb öt mondat, tárgysorral."
+          },
+          {
+            "kep": "Megjelenik a második válasz.",
+            "narracio": "A válasz konkrét, a hangnem illik a viszonyhoz, és előre megválaszolja azt a kérdést, ami a vezetőben felmerülne."
+          },
+          {
+            "kep": "A két válasz egymás mellett.",
+            "narracio": "A jobb kérés hosszabb volt, de egyetlen kör alatt elküldhető szöveget kaptunk. Ez a jó kérés lényege."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-2-3",
+      "tipus": "kep",
+      "fajl": "m02-2-3-hero.webp",
+      "hova": "2.3 fejezet – hero kép",
+      "alt": "Egy férfi a kanapén ülve laptopon gépel, és egy szövegvázlatot javít.",
+      "prompt_hu": "Valósághű fotó: harmincas férfi otthon a kanapén ül, ölében laptop, elgondolkodva gépel; mellette a kisasztalon egy nyomtatott, tollal javított lap. Esti, meleg lámpafény.",
+      "prompt_en": "Photorealistic photo of a man in his thirties sitting on a sofa at home with a laptop on his lap, typing thoughtfully; on the side table a printed page with pen corrections. Warm evening lamp light, cozy, authentic, realistic hands, no logos or readable screen text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-2-4",
+      "tipus": "kep",
+      "fajl": "m02-2-4-hero.webp",
+      "hova": "2.4 fejezet – hero kép",
+      "alt": "Egy telefon képernyőjén jegyzetalkalmazás látszik több mentett listával; a telefont egy kéz tartja egy íróasztal felett.",
+      "prompt_hu": "Valósághű fotó: egy kéz okostelefont tart egy íróasztal felett, a képernyőn egy jegyzetalkalmazás több, olvashatatlan címsorú bejegyzéssel. Háttérben életlen laptop és növény.",
+      "prompt_en": "Photorealistic photo of a hand holding a smartphone above a desk, the screen showing a generic notes app with several saved entries (titles not legible, no brand). Blurred laptop and a houseplant in the background, natural light, realistic hand anatomy. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-3-1",
+      "tipus": "kep",
+      "fajl": "m03-3-1-hero.webp",
+      "hova": "3.1 fejezet – hero kép",
+      "alt": "Egy nő az irodában a laptopja előtt ül, és egy e-mailt ír; mellette egy kinyomtatott lap kézzel írt pontokkal.",
+      "prompt_hu": "Valósághű fotó: ötvenes nő egy világos irodában laptop előtt ül, e-mailt ír; mellette kinyomtatott lap néhány kézzel írt ponttal. Természetes ablakfény, nyugodt munkahangulat.",
+      "prompt_en": "Photorealistic photo of a woman in her fifties in a bright office, sitting in front of a laptop writing an email; next to her a printed sheet with a few handwritten bullet points. Natural window light, calm working atmosphere, realistic hands, generic blurred email interface without logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-3-2",
+      "tipus": "kep",
+      "fajl": "m03-3-2-hero.webp",
+      "hova": "3.2 fejezet – hero kép",
+      "alt": "Vastag, kinyomtatott dokumentum egy asztalon, mellette laptop, amelyen egy rövid, pontokba szedett összefoglaló látszik.",
+      "prompt_hu": "Valósághű fotó: egy vastag, tűzött nyomtatott dokumentum fekszik az asztalon, mellette laptop, a képernyőn elmosódottan rövid, pontokba szedett szöveg. Kiemelőfilc, kávé, természetes fény.",
+      "prompt_en": "Photorealistic photo of a thick stapled printed document lying on a desk next to a laptop; the laptop screen shows a short, blurred bulleted summary. A highlighter pen and a coffee cup nearby, natural daylight, shallow depth of field, no readable text or logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-3-2",
+      "tipus": "video",
+      "fajl": "m03-3-2-dokumentum.mp4",
+      "poster": "m03-3-2-poster.jpg",
+      "felirat_fajl": "m03-3-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 3 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "3.2 fejezet – képernyőfelvétel",
+      "cim": "Dokumentum feltöltése és összefoglalása",
+      "alt": "Képernyőfelvétel: a kitalált házirend feltöltése egy AI-csevegőbe, majd összefoglaló és határidő-táblázat kérése.",
+      "forgatokonyv": {
+        "osszefoglalo": "Képernyőfelvétel a 3.2 fejezet kitalált házirendjével (minta-hazirend-napfeny-utca.txt). Feltöltés, kétféle összefoglaló kérése, és az ellenőrzés bemutatása az eredeti szövegben.",
+        "jelenetek": [
+          {
+            "kep": "A letöltött mintafájl a gépen, majd egy AI-csevegő üres ablaka.",
+            "narracio": "Ebben a videóban a fejezet kitalált házirendjét használjuk. Valós dokumentumnál előbb mindig gondold végig, van-e benne személyes adat."
+          },
+          {
+            "kep": "Kattintás a csatolás ikonra, a fájl kiválasztása, megjelenik a csatolmány.",
+            "narracio": "A legtöbb eszközben a gemkapocs vagy a plusz jel ikonnal tudsz fájlt csatolni. A feltöltött fájl a beszélgetés része lesz."
+          },
+          {
+            "kep": "Begépelve: „Foglald össze 5 pontban egy új lakó számára.” Megjelenik az összefoglaló.",
+            "narracio": "Először egy rövid, közérthető összefoglalót kérünk, megadva, kinek szól."
+          },
+          {
+            "kep": "Begépelve a második kérés a határidőkről és összegekről; megjelenik egy táblázat.",
+            "narracio": "Most célzottan a számokat kérjük táblázatban, és azt is, hogy ne tegyen hozzá semmit, ami nincs a szövegben."
+          },
+          {
+            "kep": "Osztott képernyő: a táblázat és az eredeti dokumentum, a megfelelő sorok kiemelve.",
+            "narracio": "És a legfontosabb lépés: ellenőrizzük az eredetiben. Megvan a 10-i befizetési határidő, a késedelmi díj, a kaució. És a felújítási kivétel? Ha kimaradt, kérjük meg, hogy pótolja."
+          },
+          {
+            "kep": "Összefoglaló kártya: feltöltés, célzott kérés, ellenőrzés.",
+            "narracio": "Három lépés: adatmentes feltöltés, célzott kérés, ellenőrzés az eredetiben."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-3-3",
+      "tipus": "kep",
+      "fajl": "m03-3-3-hero.webp",
+      "hova": "3.3 fejezet – hero kép",
+      "alt": "Laptop képernyőjén egy táblázat oszlopokkal, előtte egy kéz számológép mellett jegyzetel.",
+      "prompt_hu": "Valósághű fotó: laptop képernyőjén egy általános táblázatkezelő számokkal (olvashatatlanul), előtte egy kéz jegyzetfüzetbe ír, mellette számológép és nyugták. Otthoni asztal, esti lámpafény.",
+      "prompt_en": "Photorealistic photo of a laptop showing a generic spreadsheet with columns of numbers (not legible, no brand), in front of it a hand writing in a notebook next to a calculator and a few receipts. Home desk, warm evening lamp light, realistic hands. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-3-4",
+      "tipus": "kep",
+      "fajl": "m03-3-4-hero.webp",
+      "hova": "3.4 fejezet – hero kép",
+      "alt": "Egy férfi egy kávézóban telefonján egy idegen nyelvű üzenetet olvas, mellette egy füzet.",
+      "prompt_hu": "Valósághű fotó: hatvanas férfi egy kávézóasztalnál ül, szemüvegben a telefonját nézi, mellette egy füzet és egy csésze kávé. Nappali fény, nyugodt, hétköznapi jelenet.",
+      "prompt_en": "Photorealistic photo of a man in his sixties wearing glasses, sitting at a café table looking at his smartphone, a notebook and a cup of coffee next to him. Daylight, calm everyday scene, realistic skin and hands, no readable screen text, no logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-4-1",
+      "tipus": "kep",
+      "fajl": "m04-4-1-hero.webp",
+      "hova": "4.1 fejezet – hero kép",
+      "alt": "Egy diák a könyvtárban laptopon keres, mellette nyitott könyvek.",
+      "prompt_hu": "Valósághű fotó: húszas éveiben járó fiatal egy könyvtári asztalnál laptopon dolgozik, mellette két nyitott könyv és jegyzetek. Nagy ablakok, természetes fény, csendes hangulat.",
+      "prompt_en": "Photorealistic photo of a young adult in their twenties working on a laptop at a library table, two open books and notes beside them. Large windows, soft natural light, quiet atmosphere, authentic and unposed, no logos or readable screens. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-4-2",
+      "tipus": "kep",
+      "fajl": "m04-4-2-hero.webp",
+      "hova": "4.2 fejezet – hero kép",
+      "alt": "Közeli kép egy monitorról, amelyen két böngészőablak van egymás mellett; egy kéz egy nyomtatott lapon kipipál egy sort.",
+      "prompt_hu": "Valósághű fotó: íróasztal, monitoron két egymás melletti, elmosódott böngészőablak; előtérben egy kéz tollal kipipál egy sort egy nyomtatott listán. Természetes fény, fókusz a kézen.",
+      "prompt_en": "Photorealistic photo of a desk with a monitor showing two blurred browser windows side by side; in the foreground a hand ticks off a line on a printed checklist with a pen. Natural light, focus on the hand, realistic anatomy, no readable text or logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-4-2",
+      "tipus": "video",
+      "fajl": "m04-4-2-forrasok.mp4",
+      "poster": "m04-4-2-poster.jpg",
+      "felirat_fajl": "m04-4-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 2–3 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "4.2 fejezet – képernyőfelvétel",
+      "cim": "Forrás kérése és ellenőrzése",
+      "alt": "Képernyőfelvétel: forráskérés egy AI-csevegőben, majd a megadott linkek megnyitása és értékelése.",
+      "forgatokonyv": {
+        "osszefoglalo": "Képernyőfelvétel: egy hétköznapi kérdés (például burgonya tárolása) forráskérő sablonnal, a kapott források megnyitása és értékelése a négy kérdéssel. Egy nem létező vagy nem odaillő forrás bemutatása.",
+        "jelenetek": [
+          {
+            "kep": "AI-csevegő, begépelve a forráskérő sablon egy hétköznapi kérdéssel.",
+            "narracio": "Kérdezzünk meg valamit úgy, hogy minden állításhoz forrást kérünk, és megengedjük, hogy jelezze, ha valamit nem tud."
+          },
+          {
+            "kep": "A válasz megjelenik, alatta három link.",
+            "narracio": "Kaptunk egy választ és három forrást. Ez jó kiindulás, de még nem ellenőrzés."
+          },
+          {
+            "kep": "Az első link megnyitva: egy hivatalos, dátumozott oldal; kiemelve a releváns bekezdés.",
+            "narracio": "Nyissuk meg az elsőt. Létezik, egy szakmai szervezet oldala, tavalyi dátummal, és tényleg ezt írja. Ez jó forrás."
+          },
+          {
+            "kep": "A második link: hibaoldal vagy egészen más témájú cikk.",
+            "narracio": "A második link nem működik – vagy mást ír. Ez forrásnak nem számít, akármilyen hihetően hangzott."
+          },
+          {
+            "kep": "Négy kérdés kártyán: Létezik? Ki írta? Mikor? Eredeti?",
+            "narracio": "Minden forrásnál ugyanaz a négy kérdés: létezik, ki írta, mikor, és eredeti-e. Fél perc, és sok tévedéstől megóv."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-4-3",
+      "tipus": "kep",
+      "fajl": "m04-4-3-hero.webp",
+      "hova": "4.3 fejezet – hero kép",
+      "alt": "Két ember egy asztalnál egy telefont néz és beszélget, az egyikük kérdőn mutat a képernyőre.",
+      "prompt_hu": "Valósághű fotó: két felnőtt egy konyhaasztalnál ül, az egyikük a telefonját mutatja a másiknak, aki kérdőn, elgondolkodva néz. Hétköznapi, barátságos jelenet, természetes fény.",
+      "prompt_en": "Photorealistic photo of two adults at a kitchen table, one showing their phone to the other, who looks at it thoughtfully and questioningly. Everyday, friendly scene, natural light, realistic faces and hands, no readable screen content. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-5-1",
+      "tipus": "kep",
+      "fajl": "m05-5-1-hero.webp",
+      "hova": "5.1 fejezet – hero kép",
+      "alt": "Egy nő a konyhában főz, közben a pulton álló telefonjához beszél.",
+      "prompt_hu": "Valósághű fotó: negyvenes nő otthoni konyhában zöldséget szeletel, és közben a pulton egy állványon álló telefonhoz beszél. Meleg délutáni fény, hétköznapi, természetes jelenet.",
+      "prompt_en": "Photorealistic photo of a woman in her forties in a home kitchen chopping vegetables while speaking to a smartphone standing on the counter. Warm afternoon light, everyday natural scene, realistic hands and knife, no logos, phone screen not readable. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-5-2",
+      "tipus": "kep",
+      "fajl": "m05-5-2-hero.webp",
+      "hova": "5.2 fejezet – hero kép",
+      "alt": "Kéz telefonnal lefényképez egy étlapot egy étteremasztalon.",
+      "prompt_hu": "Valósághű fotó: egy kéz okostelefonnal felülről lefényképez egy papír étlapot egy étterem fa asztalán; a telefon képernyőjén látszik az étlap képe. Meleg éttermi fény.",
+      "prompt_en": "Photorealistic photo of a hand holding a smartphone above a paper menu on a wooden restaurant table, taking a picture; the phone screen shows the menu in the camera view. Warm restaurant lighting, realistic hand anatomy, menu text not legible, no brand marks. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-5-2",
+      "tipus": "video",
+      "fajl": "m05-5-2-foto.mp4",
+      "poster": "m05-5-2-poster.jpg",
+      "felirat_fajl": "m05-5-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 2 perc",
+      "formatum": "mp4 (H.264), 1280×720 (vagy álló 720×1280, fekvő keretben), magyar felirat (.vtt)",
+      "hova": "5.2 fejezet – telefonos képernyőfelvétel",
+      "cim": "Fotó elemzése telefonon",
+      "alt": "Telefonos képernyőfelvétel: egy kitalált étlap és egy kézírásos bevásárlólista lefényképezése és elemzése.",
+      "forgatokonyv": {
+        "osszefoglalo": "Telefonos képernyőfelvétel egy AI-alkalmazásban, két kitalált anyaggal: egy nyomtatott étlap (kitalált étterem) és egy kézírásos bevásárlólista. Bemutatja a csatolást, a célzott kérdést és az ellenőrzést.",
+        "jelenetek": [
+          {
+            "kep": "Telefon képernyője: AI-alkalmazás, új beszélgetés.",
+            "narracio": "Nézzük meg, hogyan elemez az AI egy fotót. Két kitalált anyagot használunk: egy étlapot és egy kézzel írt bevásárlólistát."
+          },
+          {
+            "kep": "Koppintás a plusz ikonra, kamera, az étlap lefényképezése.",
+            "narracio": "A plusz vagy kamera ikonnal fotót készítünk. Egyenesen, jó fényben fényképezünk, hogy minden olvasható legyen."
+          },
+          {
+            "kep": "Begépelve: „Fordítsd le angolra, és jelöld, melyik vegetáriánus.” Megjelenik a válasz.",
+            "narracio": "A kép mellé mindig írjuk oda, mit szeretnénk. A fordítás mellett jelöli a vegetáriánus ételeket is – és azt, ahol bizonytalan."
+          },
+          {
+            "kep": "Új fotó: kézírásos lista. Kérés: „Gépeld be, ahol nem tudod kiolvasni, jelöld [?]-lel.”",
+            "narracio": "Kézírásnál kérjük, hogy jelölje, amit nem tud kiolvasni. Így nem talál ki szavakat."
+          },
+          {
+            "kep": "Az eredeti lista és a begépelt változat egymás mellett, egy [?] kiemelve.",
+            "narracio": "Összevetjük az eredetivel. Egy szót nem tudott kiolvasni – ezt mi javítjuk. Ennyi az egész: fotó, kérdés, ellenőrzés."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-5-3",
+      "tipus": "kep",
+      "fajl": "m05-5-3-hero.webp",
+      "hova": "5.3 fejezet – hero kép",
+      "alt": "Egy férfi a buszmegállóban állva hangjegyzetet rögzít a telefonján.",
+      "prompt_hu": "Valósághű fotó: harmincas férfi egy városi buszmegállóban áll, a telefont a szája elé tartva hangjegyzetet mond fel. Borús nappali fény, életlen utcai háttér.",
+      "prompt_en": "Photorealistic photo of a man in his thirties standing at a city bus stop, holding his phone near his mouth recording a voice note. Overcast daylight, blurred street background, candid and authentic, no logos, realistic hands. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-6-1",
+      "tipus": "kep",
+      "fajl": "m06-6-1-hero.webp",
+      "hova": "6.1 fejezet – hero kép",
+      "alt": "Egy nő a laptopja előtt ül, a képernyőn több kis, rácsba rendezett kép látszik; mellette vázlatfüzet.",
+      "prompt_hu": "Valósághű fotó: harmincas nő otthoni íróasztalnál ül, a laptop képernyőjén elmosódott, rácsba rendezett képbélyegek; mellette nyitott vázlatfüzet ceruzával. Nappali fény, kreatív, de rendezett környezet.",
+      "prompt_en": "Photorealistic photo of a woman in her thirties at a home desk, her laptop screen showing a blurred grid of image thumbnails; an open sketchbook with a pencil beside the laptop. Daylight, creative but tidy environment, authentic, realistic hands, no logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-6-2",
+      "tipus": "kep",
+      "fajl": "m06-6-2-hero.webp",
+      "hova": "6.2 fejezet – hero kép",
+      "alt": "Egy asztalon három kinyomtatott kép fekszik ugyanarról a tájról, eltérő stílusban; egy kéz rámutat az egyikre.",
+      "prompt_hu": "Valósághű felülnézeti fotó: egy fa asztalon három kinyomtatott kép ugyanarról a dombos tájról – egy fotószerű, egy akvarell, egy egyszerű grafika –, egy kéz az egyikre mutat. Természetes fény.",
+      "prompt_en": "Photorealistic top-down photo of three printed images of the same hilly landscape lying on a wooden table – one photographic, one watercolor, one simple flat graphic – with a hand pointing at one of them. Natural light, realistic paper texture and hand. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-6-2",
+      "tipus": "video",
+      "fajl": "m06-6-2-finomitas.mp4",
+      "poster": "m06-6-2-poster.jpg",
+      "felirat_fajl": "m06-6-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 3 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "6.2 fejezet – képernyőfelvétel",
+      "cim": "Egy kép finomítása lépésről lépésre",
+      "alt": "Képernyőfelvétel: egy kitalált jelenet képe három módosítási körben, majd három stílusban.",
+      "forgatokonyv": {
+        "osszefoglalo": "Képernyőfelvétel egy képgenerálásra képes AI-eszközben. Kitalált téma (macska egy könyvhalmon az ablakpárkányon), emberek nélkül. Bemutatja a célzott módosítást, a stílusváltást és az újrakezdést javított leírással.",
+        "jelenetek": [
+          {
+            "kep": "Begépelve a 6.1 mintaleírása, megjelenik az első kép.",
+            "narracio": "Az első kép a fejezet mintaleírásából készült. Nem rossz, de a fény túl hideg, és a háttér zsúfolt."
+          },
+          {
+            "kep": "Módosító kérés: melegebb fény, egyszerűbb háttér, a macska maradjon. Új kép.",
+            "narracio": "Egyszerre két dolgot kérünk, és kimondjuk, hogy a macska maradjon. Az új kép melegebb és nyugodtabb."
+          },
+          {
+            "kep": "Kérés: 9:16-os arány. Új, álló kép.",
+            "narracio": "Ha telefonra kell, kérjük álló arányban. A téma középen marad."
+          },
+          {
+            "kep": "A három stílus kérése, három kép egymás mellett.",
+            "narracio": "Most ugyanazt kérjük háromféle stílusban. Ugyanaz a jelenet egészen más hangulatot ad fotóként, akvarellként és egyszerű grafikaként."
+          },
+          {
+            "kep": "Egy elrontott kép (furcsa mancsok), majd kérés: írj teljes, javított leírást; új beszélgetés.",
+            "narracio": "Ha valami nem sikerül, és több kör után sem javul, kérjünk egy teljes, javított leírást, és kezdjünk vele új beszélgetést."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-6-3",
+      "tipus": "kep",
+      "fajl": "m06-6-3-hero.webp",
+      "hova": "6.3 fejezet – hero kép",
+      "alt": "Egy telefon képernyőjén egy kép látszik egy „AI-val készült” címkével, a telefont egy kéz tartja.",
+      "prompt_hu": "Valósághű fotó: egy kéz telefont tart, a képernyőn egy tájkép látszik, a sarkában kis, semleges címke (olvashatatlan felirattal). Életlen beltéri háttér, természetes fény.",
+      "prompt_en": "Photorealistic photo of a hand holding a smartphone; the screen shows a landscape image with a small neutral label badge in the corner (text not legible). Blurred indoor background, natural light, realistic hand anatomy, no brand UI. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-7-1",
+      "tipus": "kep",
+      "fajl": "m07-7-1-hero.webp",
+      "hova": "7.1 fejezet – hero kép",
+      "alt": "Egy ember a kanapén ülve tableten videót néz, arcán kíváncsi, kissé kételkedő kifejezés.",
+      "prompt_hu": "Valósághű fotó: negyvenes férfi a nappaliban a kanapén ül, tableten videót néz, arcán kíváncsi, kicsit kételkedő kifejezés. A képernyő tartalma elmosódott. Esti, meleg fény.",
+      "prompt_en": "Photorealistic photo of a man in his forties sitting on a living-room sofa watching a video on a tablet, with a curious, slightly skeptical expression. The screen content is blurred. Warm evening light, natural skin texture, no logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-7-2",
+      "tipus": "kep",
+      "fajl": "m07-7-2-hero.webp",
+      "hova": "7.2 fejezet – hero kép",
+      "alt": "Egy kis forgatókönyv-vázlat egy füzetben, egyszerű rajzolt képkockákkal és nyilakkal, mellette egy telefon állványon.",
+      "prompt_hu": "Valósághű fotó: nyitott füzet egyszerű, kézzel rajzolt képkocka-vázlatokkal (storyboard), kameramozgást jelző nyilakkal; mellette kis telefonállvány telefonnal. Íróasztal, nappali fény.",
+      "prompt_en": "Photorealistic photo of an open notebook with simple hand-drawn storyboard frames and arrows indicating camera movement; next to it a small tripod holding a smartphone. Desk setting, daylight, realistic paper and pencil marks, no readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-7-2",
+      "tipus": "video",
+      "fajl": "m07-7-2-kameramozgas.mp4",
+      "poster": "m07-7-2-poster.jpg",
+      "felirat_fajl": "m07-7-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 3 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "7.2 fejezet – magyarázó videó",
+      "cim": "Ugyanaz a jelenet háromféle kameramozgással",
+      "alt": "Egy esős kávéházterasz jelenete háromszor: álló kamerával, előre kocsizással és pásztázással, mellettük a leírás szövege.",
+      "forgatokonyv": {
+        "osszefoglalo": "Magyarázó videó egy AI-videógenerátorral készült, emberek nélküli jelenettel (a 7.2 mintája: esős kávézóterasz). Ugyanaz a leírás három kameramozgással, majd egy túlbonyolított leírás rossz eredménye. Minden generált klipen 'AI-val készült' jelölés.",
+        "jelenetek": [
+          {
+            "kep": "A jelenetleírás szövege a képernyőn, az összetevők színnel jelölve.",
+            "narracio": "Ebben a videóban egyetlen jelenetleírást próbálunk ki háromféle kameramozgással. A klipek AI-val készültek, ezt a sarokban jelöljük."
+          },
+          {
+            "kep": "Álló kamerás klip: eső a teraszon.",
+            "narracio": "Először álló kamerával: csak az eső és a víz mozog. Nyugodt, egyszerű – és általában ez sikerül a legjobban."
+          },
+          {
+            "kep": "Előre kocsizó klip.",
+            "narracio": "Most lassú kocsizással előre. A kamera közelít a teraszhoz – ettől filmszerűbb lesz a jelenet."
+          },
+          {
+            "kep": "Pásztázó klip.",
+            "narracio": "Végül pásztázás balról jobbra: a kamera egy helyben fordul, és felfedi az utcát."
+          },
+          {
+            "kep": "Túlbonyolított leírás és zavaros eredmény (torzuló tárgyak).",
+            "narracio": "És mi történik, ha egyszerre túl sokat kérünk: futó embereket, változó fényt, körbeforgó kamerát? A jelenet zavaros lesz, a tárgyak torzulnak. Egy jelenet, egy fő mozgás."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-7-3",
+      "tipus": "kep",
+      "fajl": "m07-7-3-hero.webp",
+      "hova": "7.3 fejezet – hero kép",
+      "alt": "Egy nő a laptopja előtt egy előfizetési oldal árait nézi, mellette jegyzetfüzet számításokkal.",
+      "prompt_hu": "Valósághű fotó: harmincas nő a laptopja előtt elgondolkodva egy elmosódott, táblázatos oldalt néz, mellette jegyzetfüzet néhány kézzel írt számmal. Nappali fény, otthoni környezet.",
+      "prompt_en": "Photorealistic photo of a woman in her thirties at her laptop, thoughtfully looking at a blurred page with a pricing-style table, a notebook beside her with a few handwritten numbers. Daylight, home setting, realistic hands, no brand names or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-8-1",
+      "tipus": "kep",
+      "fajl": "m08-8-1-hero.webp",
+      "hova": "8.1 fejezet – hero kép",
+      "alt": "Egy kéz egy papírlapon filccel kitakar egy nevet és egy címet, mellette laptop.",
+      "prompt_hu": "Valósághű közeli fotó: egy kéz fekete filccel kisatíroz egy sort egy nyomtatott levélen (olvashatatlan szöveg), mellette nyitott laptop. Íróasztal, természetes fény.",
+      "prompt_en": "Photorealistic close-up of a hand redacting a line on a printed letter with a black marker (text not legible), an open laptop beside it. Desk setting, natural light, realistic hand anatomy, no logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-8-2",
+      "tipus": "kep",
+      "fajl": "m08-8-2-hero.webp",
+      "hova": "8.2 fejezet – hero kép",
+      "alt": "Egy hosszú, görgetett csevegésablak a laptop képernyőjén; egy ember a homlokát ráncolva görget visszafelé.",
+      "prompt_hu": "Valósághű fotó: egy nő a laptop előtt ül, és egy nagyon hosszú, elmosódott csevegőablakban görget felfelé, kissé fáradt, elgondolkodó arccal. Esti asztali lámpa.",
+      "prompt_en": "Photorealistic photo of a woman at a laptop scrolling up through a very long, blurred chat window, with a slightly tired, thoughtful expression. Evening desk lamp light, authentic, no logos or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-8-2",
+      "tipus": "video",
+      "fajl": "m08-8-2-token-kontextus.mp4",
+      "poster": "m08-8-2-poster.jpg",
+      "felirat_fajl": "m08-8-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 2 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "8.2 fejezet – animált magyarázó videó",
+      "cim": "Token és kontextusablak",
+      "alt": "Animáció: egy mondat szódarabokra bomlik, majd üzenetek töltenek meg egy keretet, a legrégebbiek kicsúsznak belőle.",
+      "forgatokonyv": {
+        "osszefoglalo": "Lapos grafikás animáció a kurzus színvilágában. A token fogalma egy magyar mondat szétbontásával, majd a kontextusablak egy kerettel, amelybe üzenetek érkeznek. Végül az átadó összefoglaló mint megoldás.",
+        "jelenetek": [
+          {
+            "kep": "Egy magyar mondat: „Holnap megszervezzük a születésnapi meglepetést.” A szavak színes darabokra bomlanak.",
+            "narracio": "A modell nem betűkben és nem egész szavakban olvas, hanem szódarabokban, ezeket hívjuk tokennek. A hosszú magyar szavak sok darabra bomlanak."
+          },
+          {
+            "kep": "Egy számláló pörög a darabok alatt.",
+            "narracio": "A szöveg hosszát, a feltölthető dokumentumok méretét és sokszor a kereteket is tokenben mérik."
+          },
+          {
+            "kep": "Egy keret jelenik meg, alulról üzenetbuborékok érkeznek.",
+            "narracio": "Minden, amit a modell egy válaszhoz lát – az üzenetek, a fájlok, az utasítások – a kontextus. Ennek van egy felső határa: a kontextusablak."
+          },
+          {
+            "kep": "A keret megtelik, a legfelső buborékok kicsúsznak és elhalványulnak.",
+            "narracio": "Ha a beszélgetés nagyon hosszú, a legrégebbi részletek kieshetnek, vagy a modell kevésbé figyel rájuk. Ezért felejti el néha a korábbi kéréseidet."
+          },
+          {
+            "kep": "Egy összefoglaló kártya kerül egy új, üres keretbe.",
+            "narracio": "A megoldás egyszerű: kérj egy átadó összefoglalót, és azzal kezdj új beszélgetést. Tiszta lap, de a lényeg megmarad."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-8-3",
+      "tipus": "kep",
+      "fajl": "m08-8-3-hero.webp",
+      "hova": "8.3 fejezet – hero kép",
+      "alt": "Egy idős nő a nappaliban a telefonját nézi gyanakvó arccal, mellette a fia figyel.",
+      "prompt_hu": "Valósághű fotó: hetvenes nő a nappaliban ül, a telefonján egy üzenetet néz gyanakodva; mellette ülő felnőtt fia odahajol, és a képernyőre mutat. Természetes délutáni fény, meleg, családias hangulat.",
+      "prompt_en": "Photorealistic photo of a woman in her seventies sitting in her living room looking suspiciously at a message on her phone; her adult son sitting beside her leans in and points at the screen. Natural afternoon light, warm family atmosphere, realistic faces and hands, screen not readable. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-9-1",
+      "tipus": "kep",
+      "fajl": "m09-9-1-hero.webp",
+      "hova": "9.1 fejezet – hero kép",
+      "alt": "Egy asztalon egymás mellett laptop, tablet és telefon, mindegyiken elmosódott csevegőfelület.",
+      "prompt_hu": "Valósághű fotó: egy világos fa asztalon egymás mellett laptop, tablet és okostelefon, mindegyik képernyőjén elmosódott, általános csevegőfelület márkajelzés nélkül. Természetes fény, rendezett kompozíció.",
+      "prompt_en": "Photorealistic photo of a laptop, a tablet and a smartphone side by side on a light wooden table, each screen showing a blurred, generic chat interface without any brand marks or logos. Natural light, tidy composition, realistic reflections. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-9-2",
+      "tipus": "kep",
+      "fajl": "m09-9-2-hero.webp",
+      "hova": "9.2 fejezet – hero kép",
+      "alt": "Egy férfi két monitor előtt ül, mindkettőn egy-egy szöveg; kezében toll, előtte pontozólap.",
+      "prompt_hu": "Valósághű fotó: harmincas-negyvenes férfi két monitor előtt ül, mindkettőn elmosódott szövegblokk; kezében toll, előtte papír pontozólap. Irodai nappali fény, összpontosító arckifejezés.",
+      "prompt_en": "Photorealistic photo of a man in his late thirties sitting in front of two monitors each showing a blurred block of text; he holds a pen over a paper scoring sheet. Office daylight, focused expression, realistic hands, no logos or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-9-2",
+      "tipus": "video",
+      "fajl": "m09-9-2-osszehasonlitas.mp4",
+      "poster": "m09-9-2-poster.jpg",
+      "felirat_fajl": "m09-9-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 4 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "9.2 fejezet – képernyőfelvétel",
+      "cim": "Ugyanaz a kérés három eszközben",
+      "alt": "Képernyőfelvétel: ugyanaz a kérés három AI-eszközben, a válaszok egymás mellett, értékelés öt szempont szerint.",
+      "forgatokonyv": {
+        "osszefoglalo": "Képernyőfelvétel a ChatGPT, a Claude és a Gemini felületén, ugyanazzal a kitalált feladattal (lakóközösségi üzenet a kerékpártároló takarításáról). A felvétel napján érvényes állapotot mutatja, ezt a videó elején dátummal jelezni kell. Tárgyilagos, nem eladó hangvétel; nem hirdet győztest.",
+        "jelenetek": [
+          {
+            "kep": "Dátum a képernyőn (a felvétel napja), a feladat szövege.",
+            "narracio": "Ez a felvétel egy adott napon készült; az eszközök azóta változhattak. Ugyanazt a kérést másoljuk be három eszközbe, mindenhol új beszélgetésben."
+          },
+          {
+            "kep": "A kérés beillesztése az első eszközbe, a válasz megjelenik.",
+            "narracio": "Az első eszköz válasza. Még nem értékelünk, csak gyűjtünk."
+          },
+          {
+            "kep": "Ugyanez a második és harmadik eszközben.",
+            "narracio": "Ugyanaz a kérés szó szerint a másik két eszközben is."
+          },
+          {
+            "kep": "A három válasz egymás mellett, alatta az öt szempont.",
+            "narracio": "Most jön az értékelés öt szempont szerint: pontosság, követte-e a kérést, érthetőség, hasznosság, őszinteség."
+          },
+          {
+            "kep": "Egy kitöltött értékelő táblázat, eltérő pontokkal; egy hiba kiemelve az egyik válaszban.",
+            "narracio": "Ezen az egy feladaton ez lett az eredmény. Egy másik feladaton más is lehetne – ezért a saját, valódi feladataidon érdemes elvégezni ezt a próbát."
+          },
+          {
+            "kep": "Összefoglaló kártya: ugyanaz a kérés, új beszélgetés, előre rögzített szempontok.",
+            "narracio": "Ugyanaz a kérés, új beszélgetés, előre rögzített szempontok – és a döntés a tiéd."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-9-3",
+      "tipus": "kep",
+      "fajl": "m09-9-3-hero.webp",
+      "hova": "9.3 fejezet – hero kép",
+      "alt": "Egy nő a telefonja beállításait nézi egy kávé mellett, a háttérben nyitott laptop.",
+      "prompt_hu": "Valósághű fotó: harmincas nő reggel a konyhapultnál áll, kezében telefon, egy beállítási menüt görget (elmosódott), mellette kávé, háttérben nyitott laptop. Reggeli természetes fény.",
+      "prompt_en": "Photorealistic photo of a woman in her thirties standing at a kitchen counter in the morning, scrolling through a blurred settings menu on her phone, a coffee cup beside her and an open laptop in the background. Morning natural light, authentic, no logos. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-10-1",
+      "tipus": "kep",
+      "fajl": "m10-10-1-hero.webp",
+      "hova": "10.1 fejezet – hero kép",
+      "alt": "Papírra rajzolt egyszerű weboldal-vázlat dobozokkal, mellette laptop és ceruza.",
+      "prompt_hu": "Valósághű felülnézeti fotó: egy papíron kézzel rajzolt, egyszerű weboldal-vázlat (fejléc, három doboz, lábléc), mellette ceruza, radír és egy nyitott laptop sarka. Természetes fény, fa asztal.",
+      "prompt_en": "Photorealistic top-down photo of a simple hand-drawn website wireframe on paper (header, three boxes, footer), with a pencil, an eraser and the corner of an open laptop beside it. Natural light, wooden desk, realistic pencil strokes, no readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-10-2",
+      "tipus": "kep",
+      "fajl": "m10-10-2-hero.webp",
+      "hova": "10.2 fejezet – hero kép",
+      "alt": "Egy nő a laptopján egy egyszerű weboldalt néz, kezében telefon, amelyen ugyanaz az oldal mobilnézetben látszik.",
+      "prompt_hu": "Valósághű fotó: harmincas nő az asztalnál ül, a laptop képernyőjén egy egyszerű, világos weboldal (elmosódott), a kezében tartott telefonon ugyanaz az oldal mobilnézetben. Nappali fény.",
+      "prompt_en": "Photorealistic photo of a woman in her thirties at a desk; her laptop shows a simple, light-colored web page (blurred) and the phone in her hand shows the same page in mobile view. Daylight, authentic, realistic hands, no logos or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-10-3",
+      "tipus": "video",
+      "fajl": "m10-10-3-github-pages.mp4",
+      "poster": "m10-10-3-poster.jpg",
+      "felirat_fajl": "m10-10-3.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 4 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "10.3 fejezet – képernyőfelvétel",
+      "cim": "Közzététel GitHub Pages-en",
+      "alt": "Képernyőfelvétel: új GitHub-tároló létrehozása, az index.html feltöltése, a Pages bekapcsolása és a kész oldal megnyitása.",
+      "forgatokonyv": {
+        "osszefoglalo": "Képernyőfelvétel egy erre a célra létrehozott, kitalált nevű GitHub-fiókkal (valódi személyes adat nélkül). A 10.1 kitalált kertész-bemutatkozó oldalát tesszük közzé. A felvétel dátumát jelezni kell, mert a GitHub felülete változhat.",
+        "jelenetek": [
+          {
+            "kep": "A felvétel dátuma, majd a github.com bejelentkezett kezdőoldala.",
+            "narracio": "Ezen a napon készült a felvétel; a GitHub felülete azóta kicsit változhatott. Egy ingyenes fiókkal dolgozunk."
+          },
+          {
+            "kep": "Plusz jel, New repository, név: bemutatkozas, Public, Create repository.",
+            "narracio": "Új tárolót hozunk létre. Rövid nevet adunk, nyilvánosra állítjuk, és létrehozzuk."
+          },
+          {
+            "kep": "Add file, Upload files, az index.html behúzása, Commit changes.",
+            "narracio": "Feltöltjük az index.html fájlt: behúzzuk, majd a Commit changes gombbal mentjük."
+          },
+          {
+            "kep": "Settings, Pages, Deploy from a branch, main, root, Save.",
+            "narracio": "A beállításoknál a Pages pontban kiválasztjuk a main ágat és a gyökérmappát, majd mentünk."
+          },
+          {
+            "kep": "Frissítés után megjelenik a webcím; kattintás, megnyílik az oldal. Utána telefonon is.",
+            "narracio": "Egy-két perc múlva megjelenik a webcím. Megnyitjuk: ez a nyilvános oldalunk. Nézzük meg telefonon is."
+          },
+          {
+            "kep": "Az index.html módosítása, újrafeltöltés, a változás megjelenik.",
+            "narracio": "Ha frissíteni akarjuk, egyszerűen feltöltjük újra a fájlt ugyanabba a tárolóba. Közzététel előtt pedig mindig menjünk végig az ellenőrzőlistán."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-10-3",
+      "tipus": "kep",
+      "fajl": "m10-10-3-hero.webp",
+      "hova": "10.3 fejezet – hero kép",
+      "alt": "Egy férfi mosolyogva mutatja a telefonján megnyitott saját weboldalát egy barátjának.",
+      "prompt_hu": "Valósághű fotó: két felnőtt barát egy kávézóban; az egyik mosolyogva mutatja a telefonján egy egyszerű weboldalt (elmosódott), a másik érdeklődve nézi. Természetes fény, barátságos hangulat.",
+      "prompt_en": "Photorealistic photo of two adult friends in a café; one smiles while showing a simple website on his phone (blurred), the other looks on with interest. Natural light, friendly atmosphere, realistic faces and hands, no logos or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-11-1",
+      "tipus": "kep",
+      "fajl": "m11-11-1-hero.webp",
+      "hova": "11.1 fejezet – hero kép",
+      "alt": "Egy laptop képernyőjén sötét hátterű szöveges ablak (terminál) látszik, mellette egy jegyzetfüzet lépések listájával.",
+      "prompt_hu": "Valósághű fotó: laptop egy íróasztalon, a képernyőn sötét hátterű, elmosódott szöveges terminálablak; mellette nyitott jegyzetfüzet kézzel írt, számozott lépésekkel (olvashatatlanul). Esti lámpafény, nyugodt hangulat.",
+      "prompt_en": "Photorealistic photo of a laptop on a desk showing a dark, blurred text terminal window; beside it an open notebook with handwritten numbered steps (not legible). Evening desk-lamp light, calm mood, no logos or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-11-2",
+      "tipus": "kep",
+      "fajl": "m11-11-2-hero.webp",
+      "hova": "11.2 fejezet – hero kép",
+      "alt": "Egy férfi a laptop előtt ülve egy jóváhagyó kérdést olvas a képernyőn, keze az egér felett.",
+      "prompt_hu": "Valósághű fotó: negyvenes férfi otthoni dolgozószobában ül a laptop előtt, figyelmesen olvas egy (elmosódott) párbeszédablakot, keze az egér felett, mintha döntene. Természetes nappali fény.",
+      "prompt_en": "Photorealistic photo of a man in his forties in a home office, sitting at a laptop and attentively reading a blurred dialog on screen, hand hovering over the mouse as if deciding. Natural daylight, authentic, realistic hands, no logos or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "vid-11-2",
+      "tipus": "video",
+      "fajl": "m11-11-2-agens-munkamenet.mp4",
+      "poster": "m11-11-2-poster.jpg",
+      "felirat_fajl": "m11-11-2.hu.vtt",
+      "kotelezo": true,
+      "hossz": "kb. 4 perc",
+      "formatum": "mp4 (H.264), 1280×720, magyar felirat (.vtt)",
+      "hova": "11.2 fejezet – képernyőfelvétel",
+      "cim": "Egy ágenses munkamenet Claude Code-ban",
+      "alt": "Képernyőfelvétel: Claude Code a terminálban egy próbamappán; kérés, terv, két jóváhagyás, módosítás és ellenőrzés a böngészőben.",
+      "forgatokonyv": {
+        "osszefoglalo": "Valódi képernyőfelvétel Claude Code-dal egy próbamappán, amelyben csak a 10. modul kitalált kertész-oldalának index.html-je van. Ugyanaz a forgatókönyv, mint a 11.2 szimulációjában. A felvétel dátumát jelezni kell; a felület változhat. Semmilyen személyes adat vagy valódi fiókadat ne látsszon.",
+        "jelenetek": [
+          {
+            "kep": "A felvétel dátuma; egy próbamappa egyetlen index.html-lel; a terminál megnyitása ebben a mappában.",
+            "narracio": "Egy próbamappában dolgozunk, amelyben csak a kitalált bemutatkozó oldalunk van. A felvétel ezen a napon készült; a felület azóta változhatott."
+          },
+          {
+            "kep": "Claude Code elindítása, a kérés begépelése (ugyanaz, mint a szimulációban).",
+            "narracio": "Leírjuk a feladatot: mit, hova, milyen stílusban – és kérjük, hogy előbb mutassa meg a tervet."
+          },
+          {
+            "kep": "Az ágens beolvassa a fájlt, majd kiírja a tervet.",
+            "narracio": "Az ágens körülnéz: beolvassa a fájlt, majd terv formájában leírja, mit fog csinálni."
+          },
+          {
+            "kep": "A terv módosítása egy kérdés cseréjével, majd jóváhagyás.",
+            "narracio": "A tervbe belejavítunk: egy kérdést kicserélünk. Az ágens módosítja a tervet, mi pedig jóváhagyjuk."
+          },
+          {
+            "kep": "Fájlmódosítási engedélykérés a változtatások összefoglalójával; engedélyezés.",
+            "narracio": "Mielőtt a fájlhoz nyúlna, engedélyt kér, és megmutatja, mit változtat. Elolvassuk, és csak utána engedélyezzük."
+          },
+          {
+            "kep": "Az ágens összefoglalja a változásokat; az oldal megnyitása a böngészőben, majd mobilnézetben.",
+            "narracio": "A végén felsorolja, mit csinált. Az ellenőrzés viszont a miénk: megnyitjuk az oldalt, és telefonos nézetben is megnézzük."
+          }
+        ]
+      },
+      "statusz": "hianyzik"
+    },
+    {
+      "id": "img-11-3",
+      "tipus": "kep",
+      "fajl": "m11-11-3-hero.webp",
+      "hova": "11.3 fejezet – hero kép",
+      "alt": "Egy külső merevlemez egy laptophoz csatlakoztatva, a képernyőn egy mappa másolása folyik.",
+      "prompt_hu": "Valósághű fotó: egy kis külső merevlemez kábellel laptophoz csatlakozik egy íróasztalon, a képernyőn elmosódott másolási folyamatjelző. Mellette egy cetli egy kézzel rajzolt pipával. Természetes fény.",
+      "prompt_en": "Photorealistic photo of a small external hard drive connected by cable to a laptop on a desk, the screen showing a blurred file-copy progress indicator; next to it a sticky note with a hand-drawn check mark. Natural light, realistic details, no logos or readable text. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-z-1",
+      "tipus": "kep",
+      "fajl": "zp-z-1-hero.webp",
+      "hova": "Z.1 fejezet – hero kép",
+      "alt": "Egy nő egy füzetben három ötletet ír fel és bekarikázza az egyiket, mellette laptop.",
+      "prompt_hu": "Valósághű fotó: negyvenes nő egy konyhaasztalnál, füzetben három rövid sort írt fel, és az egyiket tollal bekarikázza; mellette nyitott laptop és egy bögre tea. Délelőtti természetes fény.",
+      "prompt_en": "Photorealistic photo of a woman in her forties at a kitchen table, circling one of three short handwritten lines in a notebook with a pen (not legible); an open laptop and a mug of tea beside her. Late-morning natural light, authentic, realistic hands. 16:9.",
+      "statusz": "kesz",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-z-2",
+      "tipus": "kep",
+      "fajl": "zp-z-2-hero.webp",
+      "hova": "Z.2 fejezet – hero kép",
+      "alt": "Egy férfi a laptopján dolgozik, mellette kinyomtatott ellenőrzőlista, amelyen már több pont ki van pipálva.",
+      "prompt_hu": "Valósághű fotó: ötvenes férfi otthoni asztalnál laptopon dolgozik, mellette kinyomtatott ellenőrzőlista, több sora tollal kipipálva. Délutáni fény, koncentrált, nyugodt hangulat.",
+      "prompt_en": "Photorealistic photo of a man in his fifties working on a laptop at a home desk, a printed checklist beside him with several lines ticked off in pen. Afternoon light, focused and calm mood, realistic hands, no readable text or logos. 16:9.",
+      "statusz": "hianyzik",
+      "meret": "1600x900"
+    },
+    {
+      "id": "img-z-3",
+      "tipus": "kep",
+      "fajl": "zp-z-3-hero.webp",
+      "hova": "Z.3 fejezet – hero kép",
+      "alt": "Egy ember az ablak mellett ülve egy csésze kávéval a kezében elégedetten néz egy füzetet.",
+      "prompt_hu": "Valósághű fotó: harmincas-negyvenes ember egy ablak melletti fotelben ül, kezében kávé, az ölében nyitott füzet; elégedett, elgondolkodó arckifejezés. Lágy reggeli fény.",
+      "prompt_en": "Photorealistic photo of a person in their late thirties sitting in an armchair by a window, holding a coffee cup, an open notebook on their lap, with a content, reflective expression. Soft morning light, authentic, realistic skin and hands. 16:9.",
+      "statusz": "hianyzik",
+      "meret": "1600x900"
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "cel": "Okosan és biztonságosan használod az AI-t: tudod, mit ne adj ki a kezedből, miért „telik meg” egy beszélgetés, és hogyan ismered fel a csalásokat.",
+  "utana": [
+    "Tudod, milyen adatot ne másolj be soha, és mit állíts be az adatvédelemhez.",
+    "Érted, mi a token és a kontextus, és tudod, mikor kezdj új beszélgetést.",
+    "Felismered a hamis hangot, képet, videót és az adathalász üzeneteket."
+  ],
+  "javaslat": {
+    "levelezes": "Nézd át a postafiókodban az utolsó gyanús levelet a 8.3 jelei alapján.",
+    "dokumentumok": "Nézd meg, hogy a munkahelyeden van-e szabály arra, milyen dokumentumot szabad AI-eszközbe feltölteni.",
+    "kutatas": "Nézd meg az általad használt AI-eszköz adatvédelmi tájékoztatójában, mit tárol és mire használja a beszélgetéseidet.",
+    "kreativ": "Nézd meg, hogy a közösségi platformok, ahol posztolsz, hogyan jelölik az AI-tartalmat.",
+    "tanulas": "Kérd meg az AI-t, hogy magyarázza el a saját adatvédelmi beállításainak lényegét – majd ellenőrizd az eszköz hivatalos súgójában."
+  },
+  "osszefoglalo": [
+    "Jelszót, azonosítót, bankadatot, egészségügyi és mások személyes adatait ne másold be; állítsd be az adatvédelmi opciókat.",
+    "A beszélgetésnek véges a kontextusa: hosszú témánál kérj összefoglalót, és kezdj újat.",
+    "Sürgetés, pénz, titkolózás, szokatlan csatorna: ezek a csalás jelei – hívd vissza ismert számon."
+  ],
+  "kviz": [
+    { "k": "Melyiket NE másold be egy AI-eszközbe?", "v": ["Egy általános receptkérdést.", "A netbankos jelszavadat.", "Egy kitalált levélvázlatot.", "Egy nyilvános cikk összefoglalását."], "h": 1, "m": "Jelszó, PIN-kód, bankkártyaadat soha nem kerülhet AI-eszközbe – és sehova máshova sem, ahol nem kifejezetten azt kérik." },
+    { "k": "Mi a token?", "v": ["Egy jelszótípus.", "Szódarab, amilyen egységekben a modell a szöveget feldolgozza.", "Egy fizetőeszköz.", "Egy képformátum."], "h": 1, "m": "A beszélgetés hossza és a keretek tokenben mérhetők." },
+    { "k": "Miért „felejt” az AI egy nagyon hosszú beszélgetésben?", "v": ["Mert elfárad.", "Mert a kontextusablak véges, a régebbi részek kieshetnek vagy elmosódhatnak.", "Mert szándékosan.", "Mert lejárt az előfizetés."], "h": 1, "m": "Ilyenkor kérj összefoglalót, és kezdj vele új beszélgetést." },
+    { "k": "Egy hívásban a „bankod” azt kéri, hogy azonnal utald át a pénzed egy „biztonsági számlára”. Mit teszel?", "v": ["Utalok, mert sürgős.", "Leteszem, és a kártyám hátulján lévő hivatalos számon visszahívom a bankot.", "Megadom a kártyaadatokat ellenőrzésre.", "Megkérdezem, mi a neve, és utalok."], "h": 1, "m": "A bank soha nem kér ilyet. A sürgetés és a „biztonsági számla” klasszikus csalás." },
+    { "k": "Mit jelent, ha egy AI-eszközben kikapcsolod, hogy a beszélgetéseiddel tanítsák a modellt?", "v": ["Az AI nem fog működni.", "A beszélgetéseidet a szolgáltató (a feltételei szerint) nem használja fel a modell továbbfejlesztésére.", "Minden adatod azonnal törlődik.", "Semmit."], "h": 1, "m": "Ez egy fontos adatvédelmi beállítás; a pontos jelentését az eszköz tájékoztatójában nézd meg." },
+    { "k": "Melyik a hamisított hang (deepfake) elleni legjobb védekezés családon belül?", "v": ["Semmi, nem lehet ellene tenni.", "Egy előre megbeszélt családi jelszó, és visszahívás ismert számon.", "Ha hangosabban beszél.", "Ha a hívó sír."], "h": 1, "m": "A közös jelszó és a visszahívás olyan ellenőrzés, amit egy csaló nem tud kijátszani." },
+    { "k": "Hogyan ellenőrizd a munkahelyi AI-használatot?", "v": ["Bármit feltölthetsz, ha munkáról van szó.", "Nézd meg, van-e munkahelyi szabály, és melyik eszköz engedélyezett ügyféladathoz.", "Kérdezd meg az AI-t, szabad-e.", "Csak éjjel használd."], "h": 1, "m": "Sok munkahely kifejezetten szabályozza, milyen eszközbe milyen adat kerülhet." },
+    { "k": "Mit tegyél, ha véletlenül bemásoltál egy személyes adatot egy beszélgetésbe?", "v": ["Semmit.", "Töröld a beszélgetést, nézd meg az eszköz adattörlési lehetőségeit, és ha jelszó volt, azonnal változtasd meg.", "Írd be még egyszer.", "Kérd meg az AI-t, hogy felejtse el."], "h": 1, "m": "A beszélgetés törlése és a jelszócsere a gyors, valódi lépés; az AI-nak mondott „felejtsd el” nem törli az adatot a szolgáltatónál." }
+  ],
+  "fejezetek": [
+    {
+      "id": "8.1",
+      "cim": "Mit ne másolj be – adatvédelmi alapok",
+      "ido": 14,
+      "hero": "img-8-1",
+      "celok": [
+        "Ismered azokat az adattípusokat, amelyek nem valók AI-eszközbe.",
+        "Tudod, hogyan anonimizálj egy szöveget, mielőtt bemásolod.",
+        "Megtalálod és beállítod az eszközöd legfontosabb adatvédelmi opcióit."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Hová kerül, amit beírsz?",
+          "blokkok": [
+            "Amit egy AI-eszközbe írsz vagy feltöltesz, az a szolgáltató szervereire kerül. Hogy ott mi történik vele – meddig tárolják, ki láthatja, felhasználják-e a modell fejlesztésére –, az a szolgáltató szabályaitól és a te beállításaidtól függ.",
+            "Ez nem ok a félelemre, de ok az óvatosságra: **úgy kezeld, mintha egy idegen szolgáltatónak küldenél e-mailt.**"
+          ]
+        },
+        {
+          "cim": "A „soha” lista",
+          "blokkok": [
+            { "lista": [
+              "**Jelszavak, PIN-kódok, biztonsági kódok** – soha, semmilyen formában.",
+              "**Bankkártya- és bankszámla-adatok.**",
+              "**Azonosító számok:** személyi igazolvány, útlevél, adóazonosító, TAJ-szám.",
+              "**Egészségügyi adatok** a neveddel együtt.",
+              "**Mások [[szemelyes-adat|személyes adatai]]:** ügyfelek, kollégák, családtagok neve, címe, telefonszáma, ügyei.",
+              "**Munkahelyi titkok:** szerződések, belső számok, stratégiák – hacsak a munkahelyed kifejezetten nem engedélyezi az adott eszközt."
+            ] },
+            "Az Európai Unióban a [[gdpr|GDPR]] szabályozza a személyes adatok kezelését. Ha munkában mások adatait másolod be egy nem engedélyezett eszközbe, az adatvédelmi szabálysértés is lehet."
+          ]
+        },
+        {
+          "cim": "Anonimizálás: így is megy",
+          "blokkok": [
+            "A legtöbb feladathoz nincs szükség a valódi adatokra. Cseréld le őket:",
+            { "pelda": ["**Előtte:** „Kovács Péter (Budapest, Fő utca 12., tel. 06-30-…) panaszt tett, mert a 2026/1187-es számlája hibás.”", "**Utána:** „Egy ügyfél panaszt tett, mert a számlája hibás.”"], "cim": "Kitalált példa" },
+            { "tipp": "Használj helyettesítőket: [ÜGYFÉL], [CÍM], [ÖSSZEG]. Az AI ugyanúgy megírja a levelet, te pedig a végén visszaírod a valódi adatokat a saját gépeden." }
+          ]
+        },
+        {
+          "cim": "Beállítások, amelyeket érdemes megnézni",
+          "blokkok": [
+            "Az eszközök adatvédelmi beállításai eltérnek és változnak (2026. novemberi állapot – nézd meg a sajátodét a beállítások vagy az adatvédelem menüben). Tipikusan ezeket találod:",
+            { "lista": [
+              "**Modelltanítás:** felhasználhatják-e a beszélgetéseidet a modell fejlesztésére? Ezt sok eszközben ki lehet kapcsolni.",
+              "**Előzmények és törlés:** hogyan törölhetsz egy beszélgetést vagy az összeset.",
+              "**[[memoria|Memória]]:** mit jegyzett meg rólad az eszköz, és hogyan törölheted.",
+              "**Ideiglenes beszélgetés:** egyes eszközökben van mentés nélküli mód.",
+              "**Fiókvédelem:** kapcsold be a [[ketlepcsos|kétlépcsős azonosítást]]."
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Megoszthatom ezt?",
+        "bevezeto": "Nyolc kitalált helyzet. Bemásolnád egy általános AI-eszközbe?",
+        "opciok": ["Igen, nyugodtan", "Csak anonimizálva", "Nem"],
+        "esetek": [
+          { "kontextus": "Egy saját, kitalált meghívószöveg, hogy javítsa ki a helyesírást.", "helyes": 0, "magyarazat": "Nincs benne személyes vagy bizalmas adat." },
+          { "kontextus": "Egy ügyfél panaszlevele, a nevével, címével és számlaszámával, hogy válaszlevelet írjon rá.", "helyes": 1, "magyarazat": "A tartalom nélkülözhetetlen, de a név, cím, számlaszám nem. Cseréld le őket helyettesítőkre – és nézd meg a munkahelyi szabályt." },
+          { "kontextus": "A netbankod jelszava, hogy segítsen megjegyezni.", "helyes": 2, "magyarazat": "Jelszót soha. Erre egy jelszókezelő való." },
+          { "kontextus": "Egy nyilvános, a hivatal honlapjáról letöltött tájékoztató, hogy foglalja össze.", "helyes": 0, "magyarazat": "Nyilvános dokumentum – nyugodtan." },
+          { "kontextus": "A saját laborleleted a neveddel és a TAJ-számoddal, hogy magyarázza el az értékeket.", "helyes": 1, "magyarazat": "Ha mégis segítséget kérsz az értelmezéshez, előbb vágd le a nevet és az azonosítókat – és a végső értelmezést kérd az orvosodtól." },
+          { "kontextus": "A cég következő negyedéves, még nem nyilvános üzleti terve.", "helyes": 2, "magyarazat": "Bizalmas üzleti információ – csak a munkahelyed által kifejezetten engedélyezett eszközbe, ha egyáltalán." },
+          { "kontextus": "A szomszéd gyerekének fotója, hogy készítsen belőle rajzfilmfigurát.", "helyes": 2, "magyarazat": "Más gyermekének képe a szülők beleegyezése nélkül nem való AI-eszközbe." },
+          { "kontextus": "Egy saját, kitalált adatokkal kitöltött Excel-tábla, hogy segítsen képletet írni.", "helyes": 0, "magyarazat": "Kitalált adatokkal nyugodtan – a valódi táblán pedig te futtatod a képletet." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Az adatvédelmi beállításaid átnézése",
+        "ido": 8,
+        "lepesek": [
+          "Nyisd meg az AI-eszközöd beállításait (általában a profilképed vagy a neved alatt).",
+          "Keresd meg az adatvédelem / adatkezelés részt. Nézd meg, használhatják-e a beszélgetéseidet a modell fejlesztésére, és döntsd el, szeretnéd-e.",
+          "Nézd meg, hogyan lehet egy beszélgetést törölni, és van-e memória funkció.",
+          "Ellenőrizd, be van-e kapcsolva a kétlépcsős azonosítás a fiókodon."
+        ],
+        "jegyzetMinta": "Mit állítottam át?"
+      },
+      "kviz": [
+        { "k": "Hogyan kezeld, amit egy AI-eszközbe írsz?", "v": ["Mintha senki nem látná.", "Mintha egy idegen szolgáltatónak küldenéd e-mailben.", "Mintha a naplódba írnád.", "Mintha nyilvános posztot tennél közzé."], "h": 1, "m": "Ez a józan középút: nem kell pánik, de nem is titkos napló." },
+        { "k": "Mi az anonimizálás?", "v": ["A szöveg törlése.", "A személyes adatok kicserélése általános helyettesítőkre.", "A szöveg lefordítása.", "A fájl jelszóval védése."], "h": 1, "m": "Így a feladat elvégezhető, de azonosítható adat nem kerül ki." },
+        { "k": "Melyik beállítást érdemes megnézni?", "v": ["A betűszínt.", "Hogy felhasználhatják-e a beszélgetéseidet a modell fejlesztésére.", "A háttérképet.", "A hangerőt."], "h": 1, "m": "Ez az egyik legfontosabb adatvédelmi döntés, és sok eszközben te választhatsz." },
+        { "k": "Mit tegyél egy mások adatait tartalmazó munkahelyi dokumentummal?", "v": ["Bármelyik AI-ba feltöltheted.", "Csak a munkahelyed által engedélyezett eszközbe, a szabályok szerint – vagy anonimizálva.", "Kinyomtatod és lefényképezed.", "Elküldöd egy ismerősnek."], "h": 1, "m": "A munkahelyi szabályok és az adatvédelmi előírások az irányadók." }
+      ],
+      "osszefoglalo": [
+        "Úgy kezeld az AI-eszközt, mint egy idegen szolgáltatót: jelszót, azonosítót, mások adatait ne add meg.",
+        "Anonimizálj: cseréld a neveket és számokat helyettesítőkre.",
+        "Nézd át a modelltanítás, a törlés és a memória beállításait, és kapcsold be a kétlépcsős azonosítást."
+      ]
+    },
+    {
+      "id": "8.2",
+      "cim": "Mi az a token és a kontextus, és mikor kezdj új beszélgetést",
+      "ido": 12,
+      "hero": "img-8-2",
+      "celok": [
+        "Érted, mi a token, és miért ebben mérik a szöveget.",
+        "Érted, mi a kontextusablak, és mi történik, ha „megtelik”.",
+        "Tudod, mikor és hogyan kezdj új beszélgetést."
+      ],
+      "szakaszok": [
+        {
+          "cim": "A token",
+          "blokkok": [
+            "A modell nem betűkben és nem is egész szavakban olvas, hanem szódarabokban. Ezeket hívjuk [[token|tokennek]].",
+            "Egy rövid, gyakori angol szó gyakran egyetlen token; egy hosszú magyar szó, mint a „megszentségteleníthetetlenség”, sok tokenből áll. A magyar szöveg ezért általában több tokent „fogyaszt”, mint ugyanannyi angol.",
+            "Miért fontos ez neked? Mert a beszélgetések hossza, a feltölthető dokumentumok mérete és sokszor a használati keretek is tokenben vannak megadva."
+          ]
+        },
+        {
+          "cim": "A kontextus és a kontextusablak",
+          "blokkok": [
+            "A [[kontextus]] minden, amit a modell egy válasz megírásakor „lát”: az utasítások, a beszélgetés összes eddigi üzenete, a feltöltött fájlok.",
+            "Ennek van egy felső határa, a [[kontextusablak]]. A mai eszközökben ez nagy – sokszor egy teljes könyvnyi szöveg is belefér –, de nem végtelen.",
+            { "abra": "kontextus-ablak", "felirat": "Ha a beszélgetés túl hosszú, a legrégebbi részletek kieshetnek, vagy a modell kevésbé figyel rájuk." },
+            "Már jóval a határ előtt is előfordulhat, hogy egy nagyon hosszú beszélgetésben a modell a korábbi kéréseidet kevésbé veszi figyelembe, vagy összekeveri a részleteket."
+          ]
+        },
+        {
+          "cim": "Mikor kezdj új beszélgetést?",
+          "blokkok": [
+            { "lista": [
+              "**Új téma:** ha már nem ugyanarról a feladatról van szó.",
+              "**„Felejtés”:** az AI nem tartja be a korábban megbeszélt szabályokat (hangnem, formátum).",
+              "**Ismétlődő hibák:** ugyanazt a tévedést újra és újra elköveti.",
+              "**Nagyon hosszú szál:** sok fájl, sok oda-vissza üzenet után.",
+              "**Keret:** az eszköz jelzi, hogy elérted a beszélgetés vagy a használat korlátját."
+            ] },
+            { "prompt": "Foglald össze ezt a beszélgetést úgy, hogy egy új beszélgetésben folytatni tudjam: mi a feladat, mit döntöttünk el eddig, milyen szabályokat kértem (hangnem, formátum), és mi a következő lépés. Legfeljebb 15 sor.", "cim": "Átadó összefoglaló" },
+            { "tipp": "Az átadó összefoglalót másold be az új beszélgetés elejére. Így tiszta lappal, de a lényeget megtartva folytathatod." }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-8-2",
+        "kotelezo": true,
+        "bevezeto": "Rövid, animált magyarázat a tokenről és a kontextusablakról."
+      },
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Új beszélgetés vagy folytatás?",
+        "opciok": ["Folytatom", "Új beszélgetést kezdek"],
+        "esetek": [
+          { "kontextus": "Egy levelet írtatok, és szeretnéd még egy kicsit rövidebbre.", "helyes": 0, "magyarazat": "Ugyanaz a feladat, rövid finomítás – folytasd." },
+          { "kontextus": "Két órája egy hosszú dokumentumon dolgoztok, és az AI már harmadszor felejti el, hogy magázó hangnemet kértél.", "helyes": 1, "magyarazat": "A felejtés jele. Kérj átadó összefoglalót, és kezdj újat." },
+          { "kontextus": "Egy receptkérdés után most az adóbevallásodról kérdeznél.", "helyes": 1, "magyarazat": "Új téma – tiszta kontextusban pontosabb lesz a válasz." },
+          { "kontextus": "Az előző válasz egyik pontját szeretnéd bővebben.", "helyes": 0, "magyarazat": "Közvetlenül kapcsolódik – folytasd." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Átadó összefoglaló a gyakorlatban",
+        "ido": 7,
+        "lepesek": [
+          "Nyiss meg egy korábbi, hosszabb beszélgetést (vagy folytass egy most indított témát néhány üzenetig).",
+          "Másold be az átadó összefoglaló kérését.",
+          "Nyiss egy új beszélgetést, illeszd be az összefoglalót, és folytasd a munkát.",
+          "Figyeld meg: tartja-e az új beszélgetés a korábbi szabályaidat?"
+        ]
+      },
+      "kviz": [
+        { "k": "Miért fogyaszt a magyar szöveg általában több tokent, mint az angol?", "v": ["Mert a magyar szavak gyakran hosszabbak és több szódarabból állnak.", "Mert a magyar betűk nagyobbak.", "Mert a magyar drágább.", "Nem fogyaszt többet."], "h": 0, "m": "A hosszú, ragozott magyar szavakat a modell több darabra bontja." },
+        { "k": "Mi tartozik a kontextusba?", "v": ["Csak az utolsó üzenet.", "Az utasítások, a beszélgetés eddigi üzenetei és a feltöltött fájlok.", "A számítógéped összes fájlja.", "Az internet egésze."], "h": 1, "m": "Mindaz, amit a modell az adott válaszhoz „lát”." },
+        { "k": "Mi az átadó összefoglaló célja?", "v": ["Hogy töröld a beszélgetést.", "Hogy új beszélgetésben a lényeget megtartva, tiszta kontextussal folytasd.", "Hogy kinyomtasd.", "Hogy megoszd a főnököddel."], "h": 1, "m": "Ezzel a felejtés problémája megoldható." }
+      ],
+      "osszefoglalo": [
+        "A token szódarab; a szöveg hosszát és a kereteket ebben mérik.",
+        "A kontextusablak véges: hosszú beszélgetésben a régi részletek kieshetnek.",
+        "Új téma vagy „felejtés” esetén kérj átadó összefoglalót, és kezdj új beszélgetést."
+      ]
+    },
+    {
+      "id": "8.3",
+      "cim": "Csalások és hamisított tartalmak felismerése",
+      "ido": 14,
+      "hero": "img-8-3",
+      "celok": [
+        "Ismered a hamis hang, kép, videó és adathalász üzenet jeleit.",
+        "Van egy egyszerű, mindig működő ellenőrzési módszered.",
+        "Átnézed a saját szokásaidat egy ellenőrzőlistával."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Az AI a csalók kezében",
+          "blokkok": [
+            "Ugyanazok az eszközök, amelyekkel te leveleket írsz, a csalóknak is segítenek: hibátlan magyarságú [[adathalaszat|adathalász]] leveleket, valódinak tűnő képeket, sőt ismerős hangot utánzó hívásokat is készíthetnek.",
+            "A régi jel – „hibás magyarság, furcsa megfogalmazás” – ezért ma már nem elég. A jó hír: **a csalások szerkezete nem változott**, és ez felismerhető."
+          ]
+        },
+        {
+          "cim": "A csalás öt jele",
+          "blokkok": [
+            { "szamozott": [
+              "**Sürgetés:** „Azonnal”, „még ma”, „különben letiltjuk”.",
+              "**Pénz vagy adat kérése:** utalás, kártyaadat, kód, jelszó, belépés egy linken.",
+              "**Titkolózás:** „Ne szólj senkinek”, „ez maradjon köztünk”.",
+              "**Szokatlan csatorna vagy kérés:** a „főnököd” hirtelen üzenetben kér utalást; a „gyereked” új számról ír.",
+              "**Túl szép vagy túl ijesztő:** nyeremény, befektetés garantált hozammal; baleset, letartóztatás."
+            ] }
+          ]
+        },
+        {
+          "cim": "Hamis hang, kép, videó",
+          "blokkok": [
+            { "lista": [
+              "**Hang:** néhány másodpercnyi felvételből – például egy közösségi videóból – utánozható egy ismerős hangja. Ha egy „rokon” bajban van és pénzt kér, tedd le, és hívd vissza a megszokott számán.",
+              "**Kép:** hamis „bizonyíték”, hamis termékfotó, hamis hírkép. Nézd meg, hol jelent meg még, és ki tette közzé.",
+              "**Videó:** híresség „ajánl” egy befektetést – ez szinte mindig [[deepfake]] csalás."
+            ] },
+            { "tipp": "Beszéljetek meg a családban egy **közös jelszót**, amit vészhelyzetben kérdezni lehet. Egy csaló nem fogja tudni." }
+          ]
+        },
+        {
+          "cim": "A mindig működő módszer",
+          "blokkok": [
+            "**Állj meg – ellenőrizd másik csatornán – csak utána cselekedj.**",
+            { "lista": [
+              "Ne kattints a linkre: írd be magad a bank vagy szolgáltató címét, vagy használd az alkalmazását.",
+              "Ne a kapott számot hívd vissza, hanem a már ismertet (kártya hátulja, hivatalos oldal, telefonkönyv).",
+              "Kérdezz meg valakit, akiben megbízol. A csaló pont ezt akarja megakadályozni."
+            ] },
+            { "vigyazat": "Ha már utaltál vagy megadtad az adataidat: azonnal hívd a bankodat a hivatalos számon, és tegyél rendőrségi bejelentést." }
+          ]
+        }
+      ],
+      "interaktiv": [
+        {
+          "tipus": "valasztos",
+          "cim": "Csalásfelismerő",
+          "bevezeto": "Kitalált üzenetek. Csalás vagy rendben?",
+          "opciok": ["Valószínűleg csalás", "Valószínűleg rendben"],
+          "esetek": [
+            { "kontextus": "SMS: „Csomagja a vámon fennakadt. A kézbesítéshez fizessen 490 Ft-ot 24 órán belül: [link]”", "helyes": 0, "magyarazat": "Sürgetés, kis összeg, link – klasszikus adathalászat. Ha vársz csomagot, a futárcég hivatalos oldalán nézd meg." },
+            { "kontextus": "Hívás egy ismerős hangú „unokától”: „Mama, balesetem volt, azonnal kell 300 ezer, egy ügyvéd megy érte, ne szólj anyának!”", "helyes": 0, "magyarazat": "Sürgetés, pénz, titkolózás – és a hang is utánozható. Tedd le, és hívd vissza az unokát vagy a szülőt a megszokott számon." },
+            { "kontextus": "E-mail a „vezérigazgatótól”: „Bizalmas akvizíció, ma délig utalj 2,4 millió Ft-ot erre a számlára. Ne beszélj róla senkivel.”", "helyes": 0, "magyarazat": "Szokatlan kérés, sürgetés, titkolózás. Ellenőrizd a megszokott belső csatornán vagy személyesen." },
+            { "kontextus": "Videó a közösségi oldalon: egy ismert műsorvezető lelkesen ajánl egy „garantáltan havi 30%-ot hozó” befektetést.", "helyes": 0, "magyarazat": "Garantált magas hozam + híresség = szinte biztosan deepfake befektetési csalás." },
+            { "kontextus": "A fogorvosi rendelő SMS-ben emlékeztet a holnapi időpontodra, link és fizetés nélkül.", "helyes": 1, "magyarazat": "Nincs benne kérés, pénz, link vagy sürgetés – egy egyszerű emlékeztető. Ha bizonytalan vagy, hívd a rendelőt az ismert számán." },
+            { "kontextus": "A bankod alkalmazásában – amit te nyitottál meg – értesítés jelenik meg egy új funkcióról.", "helyes": 1, "magyarazat": "Te nyitottad meg a hivatalos alkalmazást, nem egy kapott linket. Ez a biztonságos csatorna." }
+          ]
+        },
+        {
+          "tipus": "ellenorzolista",
+          "cim": "A saját szokásaim – ellenőrzőlista",
+          "bevezeto": "Pipáld ki, ami már igaz rád. Ami még nincs kipipálva, az a teendőlistád.",
+          "tetelek": [
+            { "szoveg": "Nem másolok be jelszót, kártyaadatot, azonosító számot AI-eszközbe." },
+            { "szoveg": "Mások adatait anonimizálom, mielőtt bemásolok egy szöveget." },
+            { "szoveg": "Átnéztem az AI-eszközöm adatvédelmi beállításait (modelltanítás, előzmények, memória)." },
+            { "szoveg": "A fiókjaimon be van kapcsolva a kétlépcsős azonosítás." },
+            { "szoveg": "Hosszú beszélgetésnél átadó összefoglalóval kezdek újat." },
+            { "szoveg": "Ismerem a csalás öt jelét, és pénzkérésnél mindig visszahívok ismert számon." },
+            { "szoveg": "Van családi jelszavunk vészhelyzetre.", "miert": "Ha nincs, ma beszéljétek meg." },
+            { "szoveg": "Tudom, hogy a munkahelyemen milyen AI-eszközt és milyen adatokkal használhatok." }
+          ],
+          "lezaro": "Minden pont kipipálva – a szokásaid biztonságosak."
+        }
+      ],
+      "gyakorlat": {
+        "cim": "Szokásaid átnézése",
+        "ido": 8,
+        "lepesek": [
+          "Töltsd ki őszintén a fenti ellenőrzőlistát.",
+          "Válassz ki egy kipipálatlan pontot, és intézd el most (például kapcsold be a kétlépcsős azonosítást, vagy írj a családnak a közös jelszóról).",
+          "Gondolj vissza egy gyanús üzenetre, amit az elmúlt hónapokban kaptál: melyik jelét ismered fel most?",
+          "Ha szeretnéd, mutasd meg a csalásfelismerő feladatot egy idősebb családtagodnak."
+        ],
+        "jegyzetMinta": "Mit intéztem el most?"
+      },
+      "kviz": [
+        { "k": "Miért nem elég ma a „hibás magyarság” jel a csalásoknál?", "v": ["Mert a csalók is AI-val írnak hibátlan szöveget.", "Mert mindenki hibásan ír.", "Mert ez sosem volt jel.", "Mert a csalók csak angolul írnak."], "h": 0, "m": "A szöveg minősége már nem árulkodó – a csalás szerkezete (sürgetés, pénz, titok) viszont igen." },
+        { "k": "Melyik NEM a csalás jele?", "v": ["Sürgetés.", "Titkolózás kérése.", "Egy emlékeztető, amely semmit nem kér tőled.", "Kártyaadat kérése egy linken."], "h": 2, "m": "Kérés, pénz, link, sürgetés nélküli üzenet nem tipikus csalás." },
+        { "k": "Mi a mindig működő módszer?", "v": ["Gyorsan cselekedni.", "Megállni, másik, ismert csatornán ellenőrizni, csak utána cselekedni.", "A kapott számot visszahívni.", "Megkérdezni a hívót, hogy igazat mond-e."], "h": 1, "m": "A független csatornán történő ellenőrzés ellen a csaló nem tud mit tenni." },
+        { "k": "Mire jó a családi jelszó?", "v": ["A wifihez.", "Hogy egy „bajban lévő” rokon hívásakor ellenőrizni tudd, valóban ő-e.", "A netbankhoz.", "Semmire."], "h": 1, "m": "A hangutánzás ellen ez egyszerű és hatékony védekezés." }
+      ],
+      "osszefoglalo": [
+        "A csalók is használják az AI-t: a hibátlan szöveg és az ismerős hang ma már nem garancia.",
+        "Öt jel: sürgetés, pénz/adat kérése, titkolózás, szokatlan csatorna, túl szép vagy túl ijesztő.",
+        "Állj meg, ellenőrizd másik, ismert csatornán, és csak utána cselekedj."
+      ]
+    }
+  ]
+}

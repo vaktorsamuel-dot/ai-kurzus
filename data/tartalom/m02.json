@@ -1,0 +1,346 @@
+{
+  "cel": "Megtanulsz úgy kérni, hogy elsőre is használható választ kapj – és tudod, hogyan finomítsd, ha nem.",
+  "utana": [
+    "A jó kérés öt elemével bármilyen feladatot világosan meg tudsz fogalmazni.",
+    "Egy rossz kérést néhány perc alatt jóvá tudsz írni.",
+    "Van néhány saját, újrahasználható sablonod a gyakori feladataidhoz."
+  ],
+  "javaslat": {
+    "levelezes": "Válassz egy levelet, amit a héten meg kell írnod (például egy időpont-egyeztetést), és arra építsd fel a kérést – kitalált nevekkel.",
+    "dokumentumok": "Válassz egy rendszeres dokumentumfeladatot (például heti jelentés vázlata), és arra építsd fel a kérést.",
+    "kutatas": "Építs kérést egy olyan témára, aminek utána akarsz nézni: kérj belőle egy áttekintést és egy listát arról, mit érdemes ellenőrizni.",
+    "kreativ": "Építs kérést egy kreatív feladathoz: például egy rövid köszöntő vagy egy közösségi bejegyzés ötleteire.",
+    "tanulas": "Építs kérést egy olyan téma elmagyarázására, amit most tanulsz – add meg, mennyit tudsz már róla."
+  },
+  "osszefoglalo": [
+    "A jó kérés öt eleme: cél, háttér, szerep, formátum, példa – nem kell mind, de minél több, annál jobb.",
+    "Az első válasz csak kiindulópont: finomíts, kérj változatot, és kérd meg, hogy kérdezzen vissza.",
+    "Ami beválik, azt mentsd el sablonként, és használd újra."
+  ],
+  "kviz": [
+    { "k": "Melyik NEM tartozik a jó kérés öt eleme közé?", "v": ["Cél", "Háttér", "Jelszó", "Formátum"], "h": 2, "m": "Az öt elem: cél, háttér, szerep, formátum, példa. Jelszót soha ne írj be AI-eszközbe." },
+    { "k": "Mire jó a „háttér” megadása?", "v": ["Hogy hosszabb legyen a kérés.", "Hogy az AI tudja, milyen helyzetre szabja a választ.", "Hogy az AI gyorsabban válaszoljon.", "Semmire, az AI úgyis kitalálja."], "h": 1, "m": "Az AI nem ismeri a helyzetedet. A háttérből tudja meg, kinek, miért és milyen körülmények között készül a válasz." },
+    { "k": "Mit érdemes tenni, ha az első válasz túl hosszú és túl általános?", "v": ["Új beszélgetést kezdeni ugyanazzal a kéréssel.", "Feladni.", "Ugyanabban a beszélgetésben konkrét visszajelzést adni: rövidebben, ezekre a pontokra figyelve.", "Csupa nagybetűvel újraírni."], "h": 2, "m": "A beszélgetés folytatható: a konkrét visszajelzés („felére rövidítsd”, „a második pontot hagyd ki”) a leggyorsabb út." },
+    { "k": "Mit érsz el a „Kérdezz vissza, mielőtt válaszolsz” kéréssel?", "v": ["Az AI megtagadja a választ.", "Az AI előbb tisztázza a hiányzó részleteket, így pontosabb lesz a válasz.", "Az AI gyorsabban válaszol.", "Az AI elfelejti a kérést."], "h": 1, "m": "Ha nem tudod pontosan, mit kell megadnod, hagyd, hogy az AI kérdezze meg. Ez különösen összetett feladatoknál hasznos." },
+    { "k": "Melyik kérés a legjobb?", "v": ["„Írj egy levelet.”", "„Írj egy rövid, udvarias e-mailt a lakóközösségnek arról, hogy szombaton 9 és 12 között nincs víz. Tegező hangnem, legfeljebb 5 mondat.”", "„Levelet kérek a vízről!!!”", "„Te vagy a legjobb levélíró, írj!”"], "h": 1, "m": "Tartalmaz célt, hátteret, hangnemet és formátumot – az AI-nak semmit nem kell találgatnia." },
+    { "k": "Mire jó a példa megadása?", "v": ["Hogy az AI pontosan lemásolja.", "Hogy megmutasd a kívánt stílust vagy szerkezetet.", "Hogy az AI ellenőrizze a helyesírásodat.", "Semmire."], "h": 1, "m": "Egy minta sokszor többet mond hosszú magyarázatnál: mutatja a hangnemet, a hosszt, a szerkezetet." },
+    { "k": "Mi a sablon előnye?", "v": ["Minden alkalommal nulláról kell kezdeni.", "A bevált kérést újra használhatod, csak a változó részeket kell kicserélni.", "Az AI csak sablonokra válaszol.", "A sablon garantálja a hibátlan választ."], "h": 1, "m": "A sablon időt spórol és egyenletes minőséget ad. A választ ettől még át kell olvasni." }
+  ],
+  "fejezetek": [
+    {
+      "id": "2.1",
+      "cim": "A jó kérés öt eleme: cél, háttér, szerep, formátum, példa",
+      "ido": 11,
+      "hero": "img-2-1",
+      "celok": [
+        "Ismered és meg tudod nevezni a jó kérés öt elemét.",
+        "Tudod, melyik elem mit javít a válaszon.",
+        "Egy űrlap segítségével összerakod az első teljes kérésedet."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Miért számít a kérés?",
+          "blokkok": [
+            "Az 1. modulban láttad: a modell az általad írt szöveget folytatja. A [[prompt|kérés]] tehát nem csak egy kérdés – ez az a kiindulópont, amelyből az egész válasz kinő.",
+            "Képzeld el, hogy egy új, nagyon ügyes kollégának adsz feladatot, aki semmit nem tud rólad, a munkádról vagy a helyzetről. Mit mondanál el neki? Pontosan ezt kell az AI-nak is."
+          ]
+        },
+        {
+          "cim": "Az öt elem",
+          "blokkok": [
+            { "abra": "prompt-elemek", "felirat": "Nem kell mind az öt minden alkalommal – de minél több van, annál kevesebbet kell találgatnia az AI-nak." },
+            { "lista": [
+              "**Cél – mit szeretnél?** „Írj egy e-mailt, amelyben elhalasztom a csütörtöki megbeszélést.”",
+              "**Háttér – mit kell tudnia?** „A megbeszélést egy ügyféllel tartjuk, már egyszer halasztottunk, kínos.”",
+              "**Szerep – kinek a szemével?** „Írj úgy, mint egy tapasztalt, diplomatikus projektvezető.” Ezt hívjuk [[szerep|szerep megadásának]].",
+              "**Formátum – milyen alakban?** „Legfeljebb 6 mondat, a végén két új időpont-javaslattal.”",
+              "**Példa – mihez hasonlót?** „Ilyen hangnemben: »Sajnálattal jelzem, hogy…«”"
+            ] }
+          ]
+        },
+        {
+          "cim": "Ugyanaz a feladat, három szinten",
+          "blokkok": [
+            { "pelda": ["„Írj valamit a csapatépítőről.”"], "cim": "Gyenge" },
+            { "pelda": ["„Írj egy rövid meghívót a pénteki csapatépítőre.”"], "cim": "Közepes" },
+            { "pelda": ["„Írj egy rövid, vidám meghívó e-mailt egy 12 fős irodai csapatnak a péntek délutáni csapatépítőre (16 órától, bowling, utána közös vacsora). Kérd, hogy szerdáig jelezzenek vissza. Tegező hangnem, legfeljebb 5 mondat, egy találó tárgysorral.”"], "cim": "Jó" },
+            "A jó kérés hosszabb – de összességében mégis gyorsabb, mert nem kell háromszor visszaírnod."
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Prompt-építő",
+        "bevezeto": "Töltsd ki az öt mezőt, és az oldal összerakja belőle a kérést. Nem kell minden mezőt kitölteni. A „Kitöltés mintával” gomb egy kitalált példát mutat.",
+        "kimenetCim": "Az összerakott kérés",
+        "elvalaszto": "\n",
+        "mezok": [
+          { "id": "cel", "cimke": "Cél", "sugo": "mit szeretnél kapni?", "minta": "pl. Írj egy e-mailt, amelyben…", "mintaErtek": "Írj egy e-mailt, amelyben elhalasztom a csütörtöki megbeszélést." },
+          { "id": "hatter", "cimke": "Háttér", "sugo": "mit kell tudnia a helyzetről?", "elotag": "Háttér:", "minta": "pl. kinek szól, mi történt eddig", "mintaErtek": "Egy ügyféllel találkoztunk volna; már egyszer halasztottunk, ezért szeretném, ha nem tűnne udvariatlannak." },
+          { "id": "szerep", "cimke": "Szerep", "sugo": "kinek a szemével írjon?", "elotag": "Írj úgy, mint", "utotag": ".", "opciok": ["egy tapasztalt projektvezető", "egy barátságos ügyfélszolgálatos", "egy türelmes tanár", "egy szigorú szerkesztő"], "mintaErtek": "egy tapasztalt, diplomatikus projektvezető" },
+          { "id": "formatum", "cimke": "Formátum", "sugo": "hosszúság, szerkezet, hangnem", "elotag": "Formátum:", "opciok": ["legfeljebb 5 mondat", "felsorolás pontokba szedve", "táblázat", "tárgysorral együtt"], "mintaErtek": "legfeljebb 6 mondat, magázó hangnem, a végén két új időpont-javaslattal." },
+          { "id": "pelda", "cimke": "Példa", "sugo": "milyen stílusra gondolsz?", "elotag": "Ehhez hasonló stílusban:", "minta": "pl. egy mondat a kívánt hangnemben", "mintaErtek": "„Sajnálattal jelzem, hogy közbejött egy halaszthatatlan ügy…”" }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Az első öt elemes kérésed",
+        "ido": 8,
+        "lepesek": [
+          "Gondolj egy valódi, de adatmentes feladatra a következő napjaidból (levél, lista, terv, magyarázat).",
+          "Töltsd ki vele a fenti prompt-építőt, legalább a cél, a háttér és a formátum mezőt.",
+          "Másold ki az összerakott kérést, és illeszd be az AI-eszközödbe.",
+          "Nézd meg: kellett-e utána még javítást kérned? Ha igen, melyik elem hiányzott?"
+        ],
+        "jegyzetMinta": "Melyik elem hozta a legnagyobb javulást?"
+      },
+      "kviz": [
+        { "k": "Melyik elemhez tartozik ez: „Legfeljebb 5 mondat, felsorolás nélkül”?", "v": ["Cél", "Háttér", "Formátum", "Szerep"], "h": 2, "m": "A hosszúság, a szerkezet és a hangnem mind a formátumhoz tartozik." },
+        { "k": "Melyik elemhez tartozik ez: „A címzett az új szomszédom, még nem ismerjük egymást”?", "v": ["Háttér", "Példa", "Formátum", "Szerep"], "h": 0, "m": "Ez a helyzet leírása – a háttér. Ebből tudja az AI, milyen közvetlen lehet a hangnem." },
+        { "k": "Miért hasznos az AI-t „egy új kollégaként” elképzelni?", "v": ["Mert az AI tényleg ember.", "Mert így eszedbe jut, hogy minden fontos részletet el kell mondanod neki.", "Mert így udvariasabb lesz.", "Mert így ingyenes lesz."], "h": 1, "m": "Az AI semmit nem tud a helyzetedről, amit nem írsz le neki – ahogy egy új kolléga sem." }
+      ],
+      "osszefoglalo": [
+        "A kérés a válasz kiindulópontja: amit kihagysz, azt az AI találgatja.",
+        "Öt elem: cél, háttér, szerep, formátum, példa.",
+        "A hosszabb, pontos kérés összességében gyorsabb."
+      ]
+    },
+    {
+      "id": "2.2",
+      "cim": "Rossz és jó kérés egymás mellett",
+      "ido": 10,
+      "hero": "img-2-2",
+      "celok": [
+        "Felismered a rossz kérés tipikus hibáit.",
+        "Egy rossz kérést lépésenként jóvá tudsz alakítani.",
+        "Látod, mennyit változik a válasz a kérés javításával."
+      ],
+      "szakaszok": [
+        {
+          "cim": "A rossz kérés öt tipikus hibája",
+          "blokkok": [
+            { "lista": [
+              "**Túl rövid:** „Recept.” – Milyen? Kinek? Mennyi időre?",
+              "**Hiányzik a cél:** „Itt egy szöveg.” – Mit csináljon vele?",
+              "**Hiányzik a közönség:** „Magyarázd el az inflációt.” – Egy közgazdásznak vagy egy gyereknek?",
+              "**Több feladat egyben, sorrend nélkül:** „Fordítsd le, rövidítsd, és írj hozzá egy levelet, meg egy listát is.”",
+              "**Homályos elvárás:** „Legyen jó.” – Mit jelent a jó?"
+            ] }
+          ]
+        },
+        {
+          "cim": "Egy átírás lépésről lépésre",
+          "blokkok": [
+            "Kiindulás: **„Írj valamit a nagymamám születésnapjára.”**",
+            { "szamozott": [
+              "**Cél:** egy rövid köszöntő, amit a családi ebéden felolvasok.",
+              "**Háttér:** 80 éves lesz, szeret kertészkedni, és mindig süteménnyel vár.",
+              "**Formátum:** 6–8 sor, meleg, kicsit humoros, nem giccses.",
+              "**Példa:** „Olyan hangulatban, mint amikor elmeséljük a közös nyarakat.”"
+            ] },
+            { "prompt": "Írj egy rövid köszöntőt, amit a nagymamám 80. születésnapján, a családi ebéden olvasok fel. Szeret kertészkedni, és mindig süteménnyel vár minket. 6–8 sor legyen, meleg és kicsit humoros, de ne giccses. Olyan hangulatban, mint amikor a közös nyarakat meséljük.", "cim": "A kész, jó kérés" }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-2-2",
+        "kotelezo": true,
+        "bevezeto": "Képernyőfelvétel: ugyanaz a feladat rossz és jó kéréssel, élő eszközben."
+      },
+      "interaktiv": {
+        "tipus": "elotteutana",
+        "cim": "Előtte / utána",
+        "bevezeto": "Húzd a csúszkát, és nézd meg, mit ad az AI a rossz és mit a jó kérésre. (Kitalált, szemléltető válaszok.)",
+        "elotteCim": "Rossz kérés",
+        "utanaCim": "Jó kérés",
+        "elotte": [
+          "**Kérés:** „Írj e-mailt a főnökömnek, hogy szabadságra mennék.”",
+          "**Válasz:** „Tisztelt Főnök Úr! Ezúton szeretném jelezni, hogy szabadságra szeretnék menni. Kérem, tájékoztasson, hogy lehetséges-e. Köszönettel: [Név]”",
+          "Általános, merev, nincs benne dátum, és a megszólítás sem illik a valódi viszonyhoz."
+        ],
+        "utana": [
+          "**Kérés:** „Írj egy rövid, közvetlen hangú e-mailt a csoportvezetőmnek (tegeződünk), amelyben jelzem, hogy július 14–18. között szabadságra mennék. Írd bele, hogy a folyamatban lévő ügyeimet átadom a kollégámnak, és a sürgős dolgokat előtte lezárom. Legfeljebb 5 mondat, tárgysorral.”",
+          "**Válasz:** „Tárgy: Szabadság július 14–18. – Szia! Július 14. és 18. között szabadságra mennék, ha neked is megfelel. A sürgős ügyeimet előtte lezárom, a folyamatban lévőket átadom Bencének, és mindent dokumentálok. Ha valami miatt nem alkalmas az időpont, szólj, és keresünk másikat. Köszönöm!”",
+          "Konkrét, a viszonyhoz illő hangnemű, és válaszol arra a kérdésre is, ami a vezetőben felmerülne."
+        ],
+        "megjegyzes": "Mindkét válasz kitalált, a különbség szemléltetésére."
+      },
+      "gyakorlat": {
+        "cim": "Írd át a rossz kérést",
+        "ido": 9,
+        "lepesek": [
+          "Válassz egyet az alábbi rossz kérések közül.",
+          "Írd át az öt elem segítségével (a 2.1-es prompt-építőt is használhatod).",
+          "Próbáld ki élő eszközben előbb a rossz, aztán a jó változatot – két külön beszélgetésben.",
+          "Hasonlítsd össze a két választ: melyik használható azonnal?"
+        ],
+        "promptok": [
+          { "cim": "1. rossz kérés", "szoveg": "Adj receptet." },
+          { "cim": "2. rossz kérés", "szoveg": "Magyarázd el a nyugdíjat." },
+          { "cim": "3. rossz kérés", "szoveg": "Írj valamit a közös képviselőnek a lépcsőházról." }
+        ],
+        "jegyzetMinta": "Melyik kérést írtad át, és mi lett belőle?"
+      },
+      "kviz": [
+        { "k": "Mi a fő hibája ennek a kérésnek: „Magyarázd el az inflációt.”?", "v": ["Túl udvarias.", "Nem derül ki, kinek és milyen részletességgel szóljon a magyarázat.", "Túl hosszú.", "Az AI nem tud ilyet."], "h": 1, "m": "A közönség és a mélység hiányzik: egy gyereknek és egy szakembernek egészen mást kell mondani." },
+        { "k": "Mit tegyél, ha egy kérésben több feladat van?", "v": ["Írd egy mondatba, vesszővel elválasztva.", "Szedd sorrendbe és számozd meg őket, vagy kérd egyenként.", "Hagyd ki a felét.", "Csak az utolsót írd le."], "h": 1, "m": "A számozott lépések vagy a külön kérések átláthatóbbak – az AI is könnyebben követi." },
+        { "k": "Mi tette jobbá a szabadságkérő levelet a példában?", "v": ["A hosszabb megszólítás.", "A konkrét dátum, a viszonyhoz illő hangnem és az átadás megemlítése.", "A sok felkiáltójel.", "Az angol kifejezések."], "h": 1, "m": "Konkrétumok és a címzett szempontjainak előre megválaszolása – ettől lett azonnal elküldhető." }
+      ],
+      "osszefoglalo": [
+        "A rossz kérés tipikusan túl rövid, cél- vagy közönség nélküli, vagy homályos.",
+        "Az öt elemmel bármelyik rossz kérés néhány perc alatt jóvá alakítható.",
+        "A különbség a válaszban látszik: a jó kérésre adott válasz azonnal használható."
+      ]
+    },
+    {
+      "id": "2.3",
+      "cim": "Finomítás, visszakérdezés, folytatás",
+      "ido": 10,
+      "hero": "img-2-3",
+      "celok": [
+        "Az első választ kiindulópontként kezeled, és célzottan finomítod.",
+        "Ismersz néhány bevált finomító mondatot.",
+        "Tudod, mikor kérd az AI-t, hogy előbb kérdezzen vissza."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Az első válasz csak vázlat",
+          "blokkok": [
+            "Ritkán tökéletes az első válasz – és ez rendben van. A beszélgetés előnye, hogy folytatható: az AI emlékszik arra, amit előtte írtatok, így elég rövid visszajelzést adnod.",
+            "A jó visszajelzés **konkrét**: nem azt mondja, hogy „jobbat kérek”, hanem azt, hogy **mit** változtasson."
+          ]
+        },
+        {
+          "cim": "Bevált finomító mondatok",
+          "blokkok": [
+            { "tabla": [
+              ["Ha ez a gond…", "…ezt írd"],
+              ["túl hosszú", "„Rövidítsd a felére, a lényeg maradjon meg.”"],
+              ["túl hivatalos", "„Közvetlenebb, barátságosabb hangnemben, de udvariasan.”"],
+              ["túl általános", "„Adj konkrét példát mindegyik ponthoz.”"],
+              ["nem tetszik, de nem tudod, mit szeretnél", "„Írj három nagyon különböző változatot.”"],
+              ["egy része jó", "„A második bekezdés maradjon, a többit írd újra ebben a stílusban.”"],
+              ["nem érted", "„Magyarázd el egyszerűbben, egy hétköznapi hasonlattal.”"]
+            ] }
+          ]
+        },
+        {
+          "cim": "„Kérdezz vissza, mielőtt válaszolsz”",
+          "blokkok": [
+            "Néha te sem tudod pontosan, mit kell megadnod. Ilyenkor fordítsd meg a helyzetet: kérd meg az AI-t, hogy **előbb kérdezzen**.",
+            { "prompt": "Segíts megtervezni egy hétvégi családi programot. Mielőtt bármit javasolnál, tegyél fel nekem legfeljebb 5 kérdést, ami alapján személyre szabhatod a tervet. Várd meg a válaszaimat.", "cim": "Másolható kérés" },
+            "Ez különösen jól működik összetettebb feladatoknál: tervezés, döntés-előkészítés, hosszabb szöveg.",
+            { "tipp": "Ha egy beszélgetés már nagyon hosszú, és az AI kezdi „elfelejteni” a korábbi kéréseidet, kérj egy összefoglalót, és azzal kezdj új beszélgetést. Ennek okáról a 8. modulban lesz szó." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Melyik finomítás segít?",
+        "bevezeto": "Minden helyzethez válaszd ki a leghasznosabb visszajelzést.",
+        "esetek": [
+          { "kontextus": "Egy termékleírást kértél a kézműves szappanjaidhoz. A válasz jó, de 300 szó, te 80-at szeretnél.", "kerdes": "Mit írsz vissza?", "opciok": ["„Rossz.”", "„Rövidítsd 80 szóra, a természetes összetevők és az illat maradjon benne.”", "„Írd újra.”"], "helyes": 1, "magyarazat": "Konkrét hossz és konkrét megtartandó tartalom – így pontosan tudja, mit kell tennie." },
+          { "kontextus": "Kértél ötleteket egy osztálytalálkozó helyszínére, de mind drága étterem.", "kerdes": "Mit írsz vissza?", "opciok": ["„Más ötletek kellenének.”", "„Kérek 5 új ötletet, fejenként legfeljebb 5000 Ft-ból, és legyen köztük szabadtéri is.”", "„Ezek nem jók, mert drágák, de mindegy.”"], "helyes": 1, "magyarazat": "A hiányzó feltételt (keret, típus) pótolod – a következő kör már ezzel számol." },
+          { "kontextus": "Egy bonyolult szerződési fogalom magyarázatát kaptad, de nem érted.", "kerdes": "Mit írsz vissza?", "opciok": ["„Magyarázd el egyszerűbben, egy hétköznapi példával, mintha nem lenne jogi előképzettségem.”", "„Nem értem.”", "Új beszélgetést kezdesz ugyanazzal a kérdéssel."], "helyes": 0, "magyarazat": "Megadod a szintet és a formát (példa, egyszerű nyelv). Az új beszélgetés ugyanazt a választ adhatja." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Három kör finomítás",
+        "ido": 8,
+        "lepesek": [
+          "Másold be a kiinduló kérést.",
+          "Az első válaszra adj egy konkrét visszajelzést a táblázatból.",
+          "A második válaszra kérj három, egymástól nagyon különböző változatot.",
+          "Válaszd ki a legjobbat, és kérd meg, hogy abból készítse el a végleges változatot."
+        ],
+        "promptok": [
+          { "cim": "Kiinduló kérés", "szoveg": "Írj egy rövid bemutatkozást, amit egy új munkahelyen a csapatnak küldök e-mailben. Kedves, de nem túl személyes legyen." }
+        ],
+        "jegyzetMinta": "Melyik finomító mondat működött a legjobban?"
+      },
+      "kviz": [
+        { "k": "Miért nem kell egy beszélgetésben újra leírni a teljes kérést, ha finomítani akarsz?", "v": ["Mert az AI a beszélgetés korábbi részét is látja.", "Mert az AI kitalálja a gondolataidat.", "Mert minden válasz ugyanaz.", "Mert a finomítás nem működik."], "h": 0, "m": "A beszélgetés korábbi üzenetei a kontextus részei, ezért elég a változtatást leírni." },
+        { "k": "Melyik a legjobb visszajelzés?", "v": ["„Jobbat kérek.”", "„Nem tetszik.”", "„A hangnem legyen közvetlenebb, és a végére tegyél egy kérdést.”", "„Hmm.”"], "h": 2, "m": "Konkrétan megmondja, mit változtasson." },
+        { "k": "Mikor különösen hasznos a „Kérdezz vissza, mielőtt válaszolsz”?", "v": ["Egyszerű ténykérdésnél.", "Összetett feladatnál, amikor nem tudod, mit kellene megadnod.", "Soha.", "Ha siet az ember."], "h": 1, "m": "Az AI kérdései megmutatják, milyen információ hiányzik a jó válaszhoz." }
+      ],
+      "osszefoglalo": [
+        "Az első válasz vázlat: konkrét visszajelzéssel gyorsan jobb lesz.",
+        "Rövidítés, hangnem, példák, változatok – néhány bevált mondat a legtöbb esetre elég.",
+        "Összetett feladatnál kérd, hogy az AI előbb kérdezzen vissza."
+      ]
+    },
+    {
+      "id": "2.4",
+      "cim": "Újrahasznosítható sablonok",
+      "ido": 9,
+      "hero": "img-2-4",
+      "celok": [
+        "Tudod, mitől jó egy sablon, és hol érdemes tárolni.",
+        "Van legalább három kész sablonod a gyakori feladataidhoz.",
+        "Egy bevált kérésből saját sablont tudsz készíteni."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Mi a sablon?",
+          "blokkok": [
+            "A [[sablon|kérés-sablon]] egy bevált kérés, amelyben a változó részeket szögletes zárójel jelöli. Használatkor csak ezeket cseréled ki.",
+            "Így nem kell minden alkalommal nulláról megfogalmazni, és a válaszok minősége is egyenletesebb."
+          ]
+        },
+        {
+          "cim": "Öt kezdő sablon",
+          "blokkok": [
+            { "prompt": "Írj egy [rövid / részletes] e-mailt [címzett és viszonyotok] részére, amelyben [mi a cél]. Háttér: [1-2 mondat]. Hangnem: [tegező / magázó], [barátságos / hivatalos]. Legfeljebb [szám] mondat, tárgysorral.", "cim": "E-mail" },
+            { "prompt": "Foglald össze az alábbi szöveget [szám] pontban, [kinek] szólóan. A végén írd le külön, ha van benne határidő, összeg vagy teendő.\n\n[szöveg]", "cim": "Összefoglaló" },
+            { "prompt": "Magyarázd el, mi az a [fogalom], úgy, hogy [kinek, milyen előismerettel]. Használj egy hétköznapi hasonlatot, és a végén tegyél fel egy kérdést, amivel ellenőrizhetem, hogy megértettem.", "cim": "Magyarázat" },
+            { "prompt": "Gyűjts [szám] ötletet ehhez: [téma]. Feltételek: [keret, idő, létszám, egyéb]. Az ötleteket csoportosítsd [szempont] szerint, és mindegyikhez írj egy mondatot.", "cim": "Ötletelés" },
+            { "prompt": "Segíts dönteni: [döntés leírása]. A lehetőségek: [A], [B]. Nekem ezek a fontosak: [szempontok]. Készíts egy táblázatot előnyökkel és hátrányokkal, de a döntést hagyd rám. Ha hiányzik információ, kérdezz.", "cim": "Döntés-előkészítés" }
+          ]
+        },
+        {
+          "cim": "Hol tárold?",
+          "blokkok": [
+            { "lista": [
+              "Egy egyszerű jegyzetben a telefonodon vagy a gépeden.",
+              "Az AI-eszköz saját funkcióiban (például [[projekt|projektekben]] vagy mentett utasításokban) – erről a 9. modulban lesz szó.",
+              "A legjobbakat érdemes megosztani a kollégákkal is."
+            ] },
+            { "vigyazat": "A sablonba soha ne írj be fixen személyes adatot vagy jelszót. A változó részeket mindig az adott helyzetben töltsd ki, és ott is csak annyit, amennyi szükséges." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Saját sablon készítése",
+        "bevezeto": "Írj egy saját sablont egy olyan feladatra, amit rendszeresen elvégzel. A változó részeket tedd szögletes zárójelbe.",
+        "kimenetCim": "A sablonod",
+        "elvalaszto": "\n",
+        "mezok": [
+          { "id": "nev", "cimke": "A sablon neve", "minta": "pl. Heti összefoglaló a csapatnak", "mintaErtek": "Heti összefoglaló a csapatnak", "elotag": "Sablon neve:" },
+          { "id": "kerdes", "cimke": "A kérés szövege, [változókkal]", "minta": "pl. Foglald össze a [hét] eseményeit…", "mintaErtek": "Foglald össze az alábbi jegyzetekből a [hét száma]. hét fontos eseményeit 5 pontban a csapatom számára. Külön emeld ki a jövő heti teendőket és határidőket.\n\n[jegyzetek]" },
+          { "id": "megjegyzes", "cimke": "Megjegyzés magadnak", "elotag": "Megjegyzés:", "minta": "pl. mire figyelj a válasz átnézésekor", "mintaErtek": "A határidőket mindig vessem össze a naptárammal." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Három sablon a saját feladataidra",
+        "ido": 10,
+        "lepesek": [
+          "Írj le három feladatot, amit hetente vagy havonta elvégzel, és amiben az AI segíthetne.",
+          "Mindháromhoz válaszd ki a legközelebbi kezdő sablont, és igazítsd a saját helyzetedhez.",
+          "Próbáld ki az egyiket élő eszközben kitalált vagy adatmentes tartalommal.",
+          "Mentsd el a három sablont egy jegyzetbe, ahol később is megtalálod."
+        ],
+        "jegyzetMinta": "A három sablonom neve:"
+      },
+      "kviz": [
+        { "k": "Mit jelölnek a szögletes zárójelek egy sablonban?", "v": ["Kötelezően beírandó jelszót.", "A változó részeket, amelyeket használatkor kicserélsz.", "Megjegyzést az AI-nak.", "Semmit, díszítés."], "h": 1, "m": "A [téma], [címzett] és hasonló részeket mindig az adott helyzetre írod át." },
+        { "k": "Mit NE tegyél bele fixen egy sablonba?", "v": ["A kívánt formátumot.", "A hangnemet.", "Személyes adatot vagy jelszót.", "A cél leírását."], "h": 2, "m": "Személyes adat és jelszó nem való sablonba – és általában AI-eszközbe sem." },
+        { "k": "Miért jó a döntés-előkészítő sablonban, hogy „a döntést hagyd rám”?", "v": ["Mert az AI úgysem tud dönteni.", "Mert így az AI a szempontokat rendezi, a felelős döntés pedig nálad marad.", "Mert így rövidebb a válasz.", "Mert különben drágább."], "h": 1, "m": "Az AI jó a szempontok összegyűjtésében és rendezésében, de a döntés következményeit te viseled." }
+      ],
+      "osszefoglalo": [
+        "A sablon egy bevált kérés, amelyben csak a változó részeket kell kicserélni.",
+        "Öt kezdő sablon: e-mail, összefoglaló, magyarázat, ötletelés, döntés-előkészítés.",
+        "Tárold kéznél, és ne tegyél bele személyes adatot."
+      ]
+    }
+  ]
+}

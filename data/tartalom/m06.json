@@ -1,0 +1,261 @@
+{
+  "cel": "Használható képeket készítesz AI-val – és ismered azokat a korlátokat és szabályokat, amelyek miatt nem minden kép való elkészítésre vagy megosztásra.",
+  "utana": [
+    "Pontos képleírást írsz: téma, hangulat, fény, stílus, képarány.",
+    "Egy elkészült képet célzottan módosíttatsz és finomíttatsz.",
+    "Tudod, mit nem szabad generálni, hogyan jelöld az AI-képet, és mire figyelj a jogoknál."
+  ],
+  "javaslat": {
+    "levelezes": "Készíts egy egyszerű, szöveg nélküli fejlécképet egy hírlevélhez vagy meghívóhoz.",
+    "dokumentumok": "Készíts egy semleges illusztrációt egy belső prezentáció címlapjára (emberek arca nélkül).",
+    "kutatas": "Próbáld ki, mennyire pontosan tud egy képgenerátor egy ismert tárgyat vagy épülettípust ábrázolni, és figyeld meg, hol tér el a valóságtól.",
+    "kreativ": "Készíts egy képsorozatot ugyanarról a témáról háromféle stílusban (fotó, akvarell, lapos grafika).",
+    "tanulas": "Készíts egy szemléltető illusztrációt egy tananyaghoz – és ellenőrizd, nem tartalmaz-e szakmailag hibás részletet."
+  },
+  "osszefoglalo": [
+    "A jó képleírás konkrét: mi van a képen, milyen a hangulat, a fény, a stílus és az arány.",
+    "Módosításnál egyszerre egy-két dolgot változtass, és mondd meg, mi maradjon.",
+    "Valódi személyről, megtévesztő vagy jogsértő képet ne készíts, és jelöld, ha egy kép AI-val készült."
+  ],
+  "kviz": [
+    { "k": "Melyik képleírás ad jobb eredményt?", "v": ["„Egy kutya.”", "„Egy idős, barna tacskó alszik egy kockás takarón, reggeli napfény szűrődik be az ablakon, valósághű fotó, 4:3.”", "„A legszebb kutya a világon.”", "„Kutya, de jó.”"], "h": 1, "m": "Téma, részletek, fény, stílus és arány – az eszköznek semmit nem kell találgatnia." },
+    { "k": "Mi a képarány?", "v": ["A kép fájlmérete.", "A kép szélességének és magasságának aránya.", "A színek száma.", "A kép élessége."], "h": 1, "m": "Például 16:9 fekvő, 1:1 négyzet, 9:16 álló (telefonos)." },
+    { "k": "Mit tegyél, ha a kép majdnem jó, csak a háttér zavaró?", "v": ["Kezdd újra egy teljesen új leírással.", "Kérd, hogy csak a hátteret változtassa meg, minden más maradjon.", "Fogadd el.", "Töröld a fiókodat."], "h": 1, "m": "A célzott módosítás megtartja azt, ami már jó." },
+    { "k": "Készíthetsz-e valósághű képet egy valódi, ismert személyről, amint olyat tesz, amit soha nem tett?", "v": ["Igen, ha vicces.", "Nem: ez megtévesztő lehet, sértheti a személyiségi jogait, és a legtöbb eszköz szabályzata is tiltja.", "Igen, ha nem osztod meg.", "Igen, ha fekete-fehér."], "h": 1, "m": "Valódi személyekről megtévesztő képet ne készíts – ez a deepfake egyik formája." },
+    { "k": "Miért jelöld, ha egy kép AI-val készült?", "v": ["Mert így szebb.", "Hogy a nézők ne higgyék valódi fotónak, és tisztességes legyen a felhasználás.", "Mert különben nem tölthető fel.", "Nincs értelme."], "h": 1, "m": "A jelölés átláthatóvá teszi, mit látnak mások – egyes platformok és szabályok elő is írják." },
+    { "k": "Mire figyelj egy AI-kép üzleti felhasználásánál?", "v": ["Semmire.", "Az eszköz felhasználási feltételeire, és arra, hogy ne hasonlítson védett karakterre, logóra vagy egy élő alkotó jellegzetes művére.", "Csak a méretre.", "Hogy színes legyen."], "h": 1, "m": "A jogi helyzet országonként és eszközönként eltér, és változik – fontos felhasználásnál nézd meg a feltételeket, szükség esetén kérdezz szakembert." }
+  ],
+  "fejezetek": [
+    {
+      "id": "6.1",
+      "cim": "Alapok: hogyan írj le egy képet",
+      "ido": 13,
+      "hero": "img-6-1",
+      "celok": [
+        "Ismered a képleírás öt összetevőjét.",
+        "Tudod, mire képes jól egy képgenerátor, és mire kevésbé.",
+        "Megírod és kipróbálod az első részletes képleírásodat."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Hogyan működik?",
+          "blokkok": [
+            "A [[kepgenerator]] szöveges leírásból készít képet. Sok csevegő AI-ban beépítve is elérhető: egyszerűen leírod, mit szeretnél látni.",
+            "Ahogy a szöveges modell a valószínű szavakat, a képgenerátor a leírásodhoz illő képet „rakja össze” a rengeteg kép alapján, amelyen tanult. Ezért ami a leírásból kimarad, azt a saját „átlagos elképzelése” szerint tölti ki."
+          ]
+        },
+        {
+          "cim": "A képleírás öt összetevője",
+          "blokkok": [
+            { "lista": [
+              "**Téma:** ki vagy mi van a képen, és mit csinál? „Egy idős férfi egy kerti padon újságot olvas.”",
+              "**Környezet és hangulat:** hol, milyen napszakban, milyen érzés? „Őszi park, nyugodt, kicsit melankolikus.”",
+              "**Fény:** „Lágy délutáni napfény, hosszú árnyékok.”",
+              "**Stílus:** „Valósághű fotó”, „akvarell”, „lapos, egyszerű grafika”, „ceruzarajz”.",
+              "**[[keparany|Képarány]] és nézőpont:** „16:9, közeli”, „1:1, felülnézet”."
+            ] },
+            { "pelda": ["„Egy idős férfi egy kerti padon újságot olvas, őszi parkban. Nyugodt, kicsit melankolikus hangulat, lágy délutáni napfény, hosszú árnyékok. Valósághű fotó, természetes színek, 16:9, közepes távolság.”"], "cim": "Az öt összetevő együtt" }
+          ]
+        },
+        {
+          "cim": "Erősségek és gyengeségek",
+          "blokkok": [
+            { "lista": [
+              "**Jól megy:** hangulatos jelenetek, tájak, tárgyak, illusztrációk, stílusutánzás általános stílusokban.",
+              "**Gyakran hibázik:** szöveg a képen (feliratok, táblák), pontos számú tárgy („pontosan hét alma”), kezek és ujjak részletei, bonyolult térbeli viszonyok.",
+              "**Szakmai pontosság:** műszaki rajz, anatómia, térkép – a kép mutatós lehet, de tartalmilag hibás."
+            ] },
+            { "tipp": "Ha szöveg kell a képre (például meghívó), készíttesd el a képet szöveg nélkül, és a feliratot egy egyszerű szerkesztőprogramban írd rá." }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "epito",
+        "cim": "Képleírás-építő",
+        "bevezeto": "Válassz vagy írj be az öt összetevőhöz, és másold ki a kész leírást.",
+        "kimenetCim": "A képleírásod",
+        "elvalaszto": " ",
+        "mezok": [
+          { "id": "tema", "cimke": "Téma", "sugo": "ki/mi van a képen, mit csinál?", "minta": "pl. egy vörös macska alszik egy könyvhalmon", "mintaErtek": "Egy vörös macska alszik egy könyvhalmon egy nappali ablakpárkányán.", "utotag": "" },
+          { "id": "hangulat", "cimke": "Környezet és hangulat", "opciok": ["nyugodt", "vidám", "titokzatos", "nosztalgikus", "energikus"], "elotag": "Hangulat:", "utotag": ".", "mintaErtek": "nyugodt, otthonos" },
+          { "id": "feny", "cimke": "Fény", "opciok": ["lágy reggeli fény", "erős déli napfény", "aranyóra (naplemente)", "esti lámpafény", "borús, szórt fény"], "elotag": "Fény:", "utotag": ".", "mintaErtek": "lágy reggeli fény az ablakból" },
+          { "id": "stilus", "cimke": "Stílus", "opciok": ["valósághű fotó", "akvarell", "lapos, egyszerű grafika", "ceruzarajz", "olajfestmény"], "elotag": "Stílus:", "utotag": ".", "mintaErtek": "valósághű fotó, természetes színek" },
+          { "id": "arany", "cimke": "Képarány, nézőpont", "opciok": ["16:9 fekvő", "1:1 négyzet", "9:16 álló", "4:3"], "elotag": "Képarány:", "utotag": ".", "mintaErtek": "4:3, közeli nézet" }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Az első részletes képed",
+        "ido": 10,
+        "bevezeto": "Képgenerálást a legtöbb csevegő AI ingyenes változata is tud, de a napi keret korlátozott lehet (2026. novemberi állapot – nézd meg az eszközödnél).",
+        "lepesek": [
+          "Gondold ki, milyen képet szeretnél – lehetőleg olyat, amit tényleg felhasználnál (meghívó háttér, saját illusztráció, kép egy bejegyzéshez). Valódi személyek nélkül.",
+          "Írd meg a leírást a képleírás-építővel.",
+          "Másold be az AI-eszközödbe: „Készíts egy képet: …”",
+          "Nézd meg: mit talált el, mit nem? Mi hiányzott a leírásból?"
+        ],
+        "jegyzetMinta": "Mit talált el, és mit kellett volna pontosabban leírnom?"
+      },
+      "kviz": [
+        { "k": "Mi történik azzal, ami a képleírásból kimarad?", "v": ["A kép üres marad ott.", "A generátor a saját „átlagos” elképzelése szerint tölti ki.", "Hibaüzenetet kapsz.", "Megkérdez minden részletre."], "h": 1, "m": "Ezért éri meg a fontos részleteket megadni." },
+        { "k": "Miben hibázik gyakran egy képgenerátor?", "v": ["Tájképekben.", "Szövegben a képen és a kezek részleteiben.", "Színekben.", "Hangulatban."], "h": 1, "m": "A felirat és az ujjak a klasszikus gyenge pontok – bár az eszközök javulnak." },
+        { "k": "Mi tartozik a stílushoz?", "v": ["„16:9”", "„Akvarell”", "„Egy macska”", "„Reggel”"], "h": 1, "m": "Az akvarell stílus; a 16:9 képarány, a macska téma, a reggel napszak." }
+      ],
+      "osszefoglalo": [
+        "A képgenerátor a leírásodhoz illő képet állít elő; amit kihagysz, azt kitalálja.",
+        "Öt összetevő: téma, környezet és hangulat, fény, stílus, képarány.",
+        "Szöveget, pontos darabszámot, szakmai részletet ne várj tőle hibátlanul."
+      ]
+    },
+    {
+      "id": "6.2",
+      "cim": "Stílus, módosítás, finomítás",
+      "ido": 13,
+      "hero": "img-6-2",
+      "celok": [
+        "Egy kész képet célzottan módosíttatsz.",
+        "Ugyanazt a témát több stílusban is elkészítteted.",
+        "Tudod, mikor jobb újrakezdeni, mint tovább javítani."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Módosítás lépésenként",
+          "blokkok": [
+            "Ahogy szövegnél, képnél is folytathatod a beszélgetést. A legjobb módszer: **egyszerre egy-két dolgot változtass, és mondd meg, mi maradjon.**",
+            { "lista": [
+              "„Ugyanez, de a háttér legyen egy tengerpart. A macska és a fény maradjon.”",
+              "„Tedd melegebbé a színeket.”",
+              "„Készítsd el álló, 9:16-os arányban, a téma maradjon középen.”",
+              "„Vedd ki a jobb sarokban lévő növényt.”"
+            ] },
+            "Egyes eszközökben a kép egy részét ki is jelölheted, és csak azt íratod át. Ennek neve és helye eszközönként eltér."
+          ]
+        },
+        {
+          "cim": "Stílusok kipróbálása",
+          "blokkok": [
+            "Ugyanaz a téma egészen más hatást kelt más stílusban. Érdemes egyszerre többet kérni:",
+            { "prompt": "Készítsd el ezt a jelenetet háromféle stílusban: 1) valósághű fotó, 2) akvarell, 3) lapos, egyszerű vektorgrafika. A jelenet: [leírás].", "cim": "Három stílus egyszerre" },
+            { "vigyazat": "Ne kérj képet „egy adott élő művész stílusában”. Ez jogilag és etikailag is vitatott, sok eszköz nem is teljesíti. Írd le inkább a stílus jellemzőit: „élénk színek, vastag ecsetvonások, egyszerű formák”." }
+          ]
+        },
+        {
+          "cim": "Mikor kezdj újra?",
+          "blokkok": [
+            "Ha 3–4 kör után sem közelít a kép ahhoz, amit szeretnél, gyakran gyorsabb egy új beszélgetésben, javított, teljes leírással újrakezdeni. Írd bele mindazt, amit a próbálkozások közben megtanultál.",
+            { "tipp": "Kérd meg az AI-t, hogy a próbálkozásaitok alapján írjon egy jobb, teljes képleírást – és azzal kezdj új beszélgetést." }
+          ]
+        }
+      ],
+      "video": {
+        "media": "vid-6-2",
+        "kotelezo": true,
+        "bevezeto": "Képernyőfelvétel: egy kép három lépésben finomítva, majd három stílusban."
+      },
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Melyik módosító kérés a jobb?",
+        "esetek": [
+          { "kontextus": "Kész a kép egy kávézó teraszáról, de túl sötét, és a székek furcsák.", "kerdes": "Mit írsz?", "opciok": ["„Javítsd meg.”", "„Legyen világosabb, délelőtti napfény, és a székek legyenek egyszerű fa bisztrószékek. A többi maradjon.”", "„Teljesen más képet kérek.”"], "helyes": 1, "magyarazat": "Két konkrét változtatás, és kimondod, hogy a többi maradjon." },
+          { "kontextus": "Négy kör után sem sikerült olyan képet kapni, amilyet szeretnél.", "kerdes": "Mit teszel?", "opciok": ["Még tíz kört próbálkozol ugyanígy.", "Kéred, hogy írjon egy teljes, javított leírást, és azzal új beszélgetést kezdesz.", "Feladod a képgenerálást örökre."], "helyes": 1, "magyarazat": "A tanulságokat egy tiszta leírásba sűríted – új beszélgetésben ez gyakran gyorsabb." },
+          { "kontextus": "Egy ismert, élő illusztrátor stílusára emlékeztető képet szeretnél.", "kerdes": "Hogyan kéred?", "opciok": ["„[Művész neve] stílusában.”", "Leírod a jellemzőit: „élénk színek, egyszerű formák, vastag körvonalak, papírtextúra”.", "Feltöltöd a művész egyik képét, és azt kéred, hogy másolja le."], "helyes": 1, "magyarazat": "A stílusjegyek leírása tisztességes és működik; élő alkotó művének másolása vagy nevének használata nem." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Három kör finomítás és három stílus",
+        "ido": 10,
+        "lepesek": [
+          "Vedd elő a 6.1-ben készült képedet (vagy készíts egy újat).",
+          "Kérj egy célzott módosítást (egy-két változtatás + mi maradjon).",
+          "Kérd el ugyanezt a jelenetet három stílusban a fenti kéréssel.",
+          "Válaszd ki a kedvencedet, és írd le, miért az lett."
+        ]
+      },
+      "kviz": [
+        { "k": "Mi a jó módosítási módszer?", "v": ["Egyszerre minden változtatás.", "Egyszerre egy-két változtatás, és megmondod, mi maradjon.", "Mindig új beszélgetés.", "Csak a színeken változtatni."], "h": 1, "m": "Így a már jó részek nem vesznek el." },
+        { "k": "Hogyan kérj egy stílust tisztességesen?", "v": ["Egy élő művész nevével.", "A stílus jellemzőinek leírásával.", "Egy védett kép feltöltésével és lemásoltatásával.", "Sehogy."], "h": 1, "m": "Színek, formák, technika – ezek leírása működik, és nem sérti mások munkáját." },
+        { "k": "Mikor érdemes újrakezdeni?", "v": ["Az első kép után mindig.", "Ha több kör után sem közelít a kép, egy javított, teljes leírással.", "Soha.", "Ha túl jó a kép."], "h": 1, "m": "A tanulságokat összegyűjtve egy tiszta, új kezdés gyakran gyorsabb." }
+      ],
+      "osszefoglalo": [
+        "Egyszerre egy-két dolgot módosíts, és mondd meg, mi maradjon.",
+        "Kérj több stílust egyszerre, de élő művész neve helyett a jellemzőket írd le.",
+        "Ha elakadtál, javított teljes leírással kezdj újra."
+      ]
+    },
+    {
+      "id": "6.3",
+      "cim": "Etika és biztonság: valódi személyek, hamisítás, jelölés, jogok",
+      "ido": 12,
+      "hero": "img-6-3",
+      "celok": [
+        "Tudod, milyen képeket nem szabad generálni.",
+        "Jelölöd az AI-val készült képeidet.",
+        "Ismered a felhasználási jogok alapkérdéseit."
+      ],
+      "szakaszok": [
+        {
+          "cim": "Valódi személyek",
+          "blokkok": [
+            "A legfontosabb szabály: **valódi, felismerhető személyről ne készíts olyan képet, amely megtévesztő, sértő vagy az ő beleegyezése nélkül készült.** Ez vonatkozik ismert emberekre és magánszemélyekre – barátra, kollégára, szomszédra – egyaránt.",
+            "Az ilyen képeket hívják [[deepfake|deepfake-nek]]. Sérthetik a személyiségi jogokat, rágalmazásnak minősülhetnek, és a legtöbb AI-eszköz szabályzata is tiltja őket.",
+            { "vigyazat": "Gyerekekről, valódi személyekről intim vagy megalázó helyzetben, illetve bárkiről megtévesztő „bizonyítékként” készült kép súlyos jogsértés lehet. Ilyet ne készíts, és ne terjessz." }
+          ]
+        },
+        {
+          "cim": "Hamisítás és jelölés",
+          "blokkok": [
+            "Egy valósághű AI-kép könnyen valódi fotónak tűnhet. Ezért:",
+            { "lista": [
+              "**Jelöld:** ha megosztasz egy AI-képet, írd mellé, hogy AI-val készült (például „AI-val generált illusztráció”).",
+              "**Ne használd bizonyítékként:** eseményről, termékről, helyszínről ne mutass AI-képet valódi fotóként.",
+              "**Ismerd a rejtett jelöléseket:** egyes eszközök [[vizjel|láthatatlan vízjelet vagy tartalomjelölést]] tesznek a képbe; ezt ne próbáld eltávolítani."
+            ] }
+          ]
+        },
+        {
+          "cim": "Jogok és felhasználás",
+          "blokkok": [
+            "Az AI-képek szerzői jogi helyzete országonként eltér, és még alakul (2026. novemberi állapot). Néhány biztos pont:",
+            { "lista": [
+              "Nézd meg az eszköz **felhasználási feltételeit**: mire használhatod a képeket (magáncélra, üzleti célra).",
+              "Ne kérj **védett karaktert, logót, márkát**, és ne másoltass le meglévő műveket.",
+              "Üzleti, nagy nyilvánosságú felhasználásnál (reklám, termékcsomagolás) kérj jogi tanácsot."
+            ] }
+          ]
+        }
+      ],
+      "interaktiv": {
+        "tipus": "valasztos",
+        "cim": "Rendben van ez?",
+        "bevezeto": "Kitalált helyzetek – döntsd el, rendben van-e.",
+        "opciok": ["Rendben", "Nem rendben"],
+        "esetek": [
+          { "kontextus": "Egy akvarell stílusú, kitalált tájképet készítesz a saját szülinapi meghívódra.", "helyes": 0, "magyarazat": "Kitalált téma, magáncél – nyugodtan. Ha nyilvánosan megosztod, jelöld, hogy AI-val készült." },
+          { "kontextus": "Valósághű képet készítesz a kollégádról, amint elalszik egy értekezleten, és elküldöd a csapatnak viccként.", "helyes": 1, "magyarazat": "Valódi személyről, beleegyezés nélkül, megtévesztő helyzetben – ez sértő és jogsértő lehet, akkor is, ha viccnek szánod." },
+          { "kontextus": "Egy termékhirdetésben AI-képet használsz a termékről, amely szebbnek mutatja, mint a valóságban, jelölés nélkül.", "helyes": 1, "magyarazat": "Ez a vásárlók megtévesztése. Termékről valós képet használj, illusztrációnál pedig jelöld az AI-t." },
+          { "kontextus": "Egy blogbejegyzéshez illusztrációt készítesz, és alá írod: „AI-val generált illusztráció”.", "helyes": 0, "magyarazat": "Átlátható, tisztességes felhasználás – ha az eszköz feltételei is megengedik." }
+        ]
+      },
+      "gyakorlat": {
+        "cim": "Saját képleírás – tisztességesen",
+        "ido": 8,
+        "lepesek": [
+          "Írj egy képleírást egy valódi felhasználási célra (bejegyzés, meghívó, prezentáció) – valódi személyek és védett karakterek nélkül.",
+          "Készíttesd el, és ha kell, finomíttasd.",
+          "Írd meg mellé a jelölést, amit megosztáskor használnál.",
+          "Nézd meg az eszközöd felhasználási feltételeiben, mire használhatod a képet."
+        ],
+        "jegyzetMinta": "A jelölés, amit használni fogok:"
+      },
+      "kviz": [
+        { "k": "Mi a deepfake?", "v": ["Egy képszerkesztő program.", "AI-val készült hamis kép, hang vagy videó, amelyen valaki olyat tesz vagy mond, amit valójában soha.", "Egy fényképezőgép-típus.", "Egy képarány."], "h": 1, "m": "A deepfake megtévesztésre is alkalmas – ezért kezeld nagy óvatossággal, és ne készíts ilyet valódi személyről." },
+        { "k": "Mit tegyél, ha AI-képet osztasz meg nyilvánosan?", "v": ["Semmit.", "Jelöld, hogy AI-val készült.", "Vágd le a sarkát.", "Állítsd, hogy te fotóztad."], "h": 1, "m": "A jelölés tisztességes, és egyre több helyen elvárás." },
+        { "k": "Hol nézd meg, mire használhatod a generált képet?", "v": ["Egy fórumon.", "Az eszköz felhasználási feltételeiben.", "Sehol, mindenre szabad.", "A kép fájlnevében."], "h": 1, "m": "A feltételek eszközönként eltérnek; üzleti felhasználásnál jogi tanács is ajánlott." }
+      ],
+      "osszefoglalo": [
+        "Valódi személyről megtévesztő vagy beleegyezés nélküli képet ne készíts.",
+        "Jelöld az AI-képet, és ne mutasd valódi fotóként.",
+        "Nézd meg a felhasználási feltételeket; védett karaktert, logót ne kérj."
+      ]
+    }
+  ]
+}
