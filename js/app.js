@@ -1,23 +1,23 @@
 // Belépési pont: betöltés, hash-alapú útválasztás, közös keret. Nincs zárolás: minden oldal közvetlen linkről is megnyílik.
 
-import { loadCourse, course, getCourseStats } from './data.js?v=6bcb5a28';
-import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings, setReturnTo } from './store.js?v=6bcb5a28';
-import { moduleHash } from './progress.js?v=6bcb5a28';
-import { esc, icon, initGlobalHandlers, toast } from './util.js?v=6bcb5a28';
-import { viewHome } from './views/home.js?v=6bcb5a28';
-import { viewIntro, viewProfile } from './views/onboarding.js?v=6bcb5a28';
-import { viewModule } from './views/module.js?v=6bcb5a28';
-import { viewChapter } from './views/chapter.js?v=6bcb5a28';
-import { viewClosing } from './views/closing.js?v=6bcb5a28';
-import { viewFinish } from './views/finish.js?v=6bcb5a28';
-import { viewAssess, viewAssessResult } from './views/szintfelmeres.js?v=6bcb5a28';
-import { viewKezelo, viewKezeloCert } from './views/kezelo.js?v=6bcb5a28';
-import { initFeedbackSync } from './feedback.js?v=6bcb5a28';
-import { viewSettings } from './views/settings.js?v=6bcb5a28';
-import { viewHelp, viewGlossary } from './views/help.js?v=6bcb5a28';
-import { fxPage, initFx } from './fx.js?v=6bcb5a28';
-import { initMediaZoom } from './components/media.js?v=6bcb5a28';
-import { initStepFigures } from './components/stepfigure.js?v=6bcb5a28';
+import { loadCourse, course, getCourseStats } from './data.js?v=991a70c2';
+import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings, setReturnTo } from './store.js?v=991a70c2';
+import { moduleHash } from './progress.js?v=991a70c2';
+import { esc, icon, initGlobalHandlers, toast } from './util.js?v=991a70c2';
+import { viewHome } from './views/home.js?v=991a70c2';
+import { viewIntro, viewProfile } from './views/onboarding.js?v=991a70c2';
+import { viewModule } from './views/module.js?v=991a70c2';
+import { viewChapter } from './views/chapter.js?v=991a70c2';
+import { viewClosing } from './views/closing.js?v=991a70c2';
+import { viewFinish } from './views/finish.js?v=991a70c2';
+import { viewAssess, viewAssessResult } from './views/szintfelmeres.js?v=991a70c2';
+import { viewKezelo, viewKezeloCert } from './views/kezelo.js?v=991a70c2';
+import { initFeedbackSync } from './feedback.js?v=991a70c2';
+import { viewSettings } from './views/settings.js?v=991a70c2';
+import { viewHelp, viewGlossary } from './views/help.js?v=991a70c2';
+import { fxPage, initFx } from './fx.js?v=991a70c2';
+import { initMediaZoom } from './components/media.js?v=991a70c2';
+import { initStepFigures } from './components/stepfigure.js?v=991a70c2';
 
 let flash = null;
 export function setFlash(msg) { flash = msg; }

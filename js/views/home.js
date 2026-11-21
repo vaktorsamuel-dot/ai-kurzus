@@ -1,11 +1,11 @@
-import { course } from '../data.js?v=6bcb5a28';
-import { getProfile, getProgress } from '../store.js?v=6bcb5a28';
+import { course } from '../data.js?v=991a70c2';
+import { getProfile, getProgress } from '../store.js?v=991a70c2';
 import {
   coursePct, modulesDone, modulePct, moduleStatus, resumeTarget, recommendedModule, chapterHash, closingHash, moduleHash, chapterPct,
-} from '../progress.js?v=6bcb5a28';
-import { certificateAvailable } from './finish.js?v=6bcb5a28';
-import { getRecs, recommendedOrder } from '../assess.js?v=6bcb5a28';
-import { esc, icon, statusBadge, progressBar, fmtDateTime, fmtMin, moduleIcon } from '../util.js?v=6bcb5a28';
+} from '../progress.js?v=991a70c2';
+import { certificateAvailable } from './finish.js?v=991a70c2';
+import { getRecs, recommendedOrder } from '../assess.js?v=991a70c2';
+import { esc, icon, statusBadge, progressBar, fmtDateTime, fmtMin, moduleIcon } from '../util.js?v=991a70c2';
 
 function certCard() {
   if (certificateAvailable()) {

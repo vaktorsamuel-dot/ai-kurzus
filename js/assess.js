@@ -2,8 +2,8 @@
 // Az eredmény a haladással együtt mentődik (getProgress().szintfelmeres), így az export/import is tartalmazza.
 // A modulokat stabil azonosítóval (m01 …) kezeljük, a megjelenő sorszám a kurzus sorrendjéből számolódik.
 
-import { course } from './data.js?v=6bcb5a28';
-import { getProgress, saveProgress } from './store.js?v=6bcb5a28';
+import { course } from './data.js?v=991a70c2';
+import { getProgress, saveProgress } from './store.js?v=991a70c2';
 
 export const QUESTIONS = [
   {

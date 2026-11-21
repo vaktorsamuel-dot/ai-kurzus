@@ -2,8 +2,8 @@
 // (nincs külső könyvtár). Apa oldala csak LÉTREHOZ bejegyzést; olvasni csak a kezelő tud (Firebase Auth).
 // Hálózati hiba esetén a bejegyzés helyben vár, és később automatikusan újrapróbálódik.
 
-import { FIREBASE } from './firebase-config.js?v=6bcb5a28';
-import { getProgress, saveProgress } from './store.js?v=6bcb5a28';
+import { FIREBASE } from './firebase-config.js?v=991a70c2';
+import { getProgress, saveProgress } from './store.js?v=991a70c2';
 
 export const MAX_TEXT = 500;
 export const ERTEKEK = { igen: 'Igen', reszben: 'Részben', nem_ertem: 'Nem értem' };

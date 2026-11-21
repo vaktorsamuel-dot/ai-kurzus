@@ -1,10 +1,10 @@
 // Szintfelmérő nézetek: bevezető + kérdések egyenként (#/szintfelmeres) és eredmény (#/szintfelmeres/eredmeny).
 // Nem vizsga: nem zár le és nem teljesít semmit, csak az ajánlott sorrendet és az „Ajánlott következő” jelzést állítja.
 
-import { QUESTIONS, LABELS, saveAssessment, skipAssessment, getRecs, hasAnswers, recommendedOrder } from '../assess.js?v=6bcb5a28';
-import { chapterHash, moduleHash, moduleClosed, resumeTarget } from '../progress.js?v=6bcb5a28';
-import { esc, icon, progressBar } from '../util.js?v=6bcb5a28';
-import { go } from '../app.js?v=6bcb5a28';
+import { QUESTIONS, LABELS, saveAssessment, skipAssessment, getRecs, hasAnswers, recommendedOrder } from '../assess.js?v=991a70c2';
+import { chapterHash, moduleHash, moduleClosed, resumeTarget } from '../progress.js?v=991a70c2';
+import { esc, icon, progressBar } from '../util.js?v=991a70c2';
+import { go } from '../app.js?v=991a70c2';
 
 export function viewAssess() {
   return {

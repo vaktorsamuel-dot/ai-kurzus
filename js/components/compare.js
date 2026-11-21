@@ -1,8 +1,8 @@
 // Egymás melletti összehasonlító: ugyanaz a kérés ChatGPT-ben és Claude-ban.
 // Az adatok a data/osszehasonlitas.json fájlból jönnek; üres mintaválasznál csak a kérés és a gombok látszanak.
 
-import { course } from '../data.js?v=6bcb5a28';
-import { esc, promptBox, fmtDate } from '../util.js?v=6bcb5a28';
+import { course } from '../data.js?v=991a70c2';
+import { esc, promptBox, fmtDate } from '../util.js?v=991a70c2';
 
 function answerCol(name, text, model) {
   const body = (text || '').trim()

@@ -1,8 +1,8 @@
 // Haladás, zárolás és százalékszámítás – egyetlen forrás minden nézet számára.
 
-import { course, media } from './data.js?v=6bcb5a28';
-import { getProgress, saveProgress, chapterState, moduleState } from './store.js?v=6bcb5a28';
-import { recommendedOrder, getRecs } from './assess.js?v=6bcb5a28';
+import { course, media } from './data.js?v=991a70c2';
+import { getProgress, saveProgress, chapterState, moduleState } from './store.js?v=991a70c2';
+import { recommendedOrder, getRecs } from './assess.js?v=991a70c2';
 
 export const QUIZ_PASS = 0.6;
 export const VIDEO_PASS = 0.9;

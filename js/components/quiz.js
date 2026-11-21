@@ -1,7 +1,7 @@
 // Kvíz: azonnali, magyarázatos visszajelzés, korlátlan újrapróbálkozás, legjobb eredmény mentése.
 
-import { QUIZ_PASS } from '../progress.js?v=6bcb5a28';
-import { esc, md, icon } from '../util.js?v=6bcb5a28';
+import { QUIZ_PASS } from '../progress.js?v=991a70c2';
+import { esc, md, icon } from '../util.js?v=991a70c2';
 
 let quizSeq = 0;
 

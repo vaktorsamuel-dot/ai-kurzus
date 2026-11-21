@@ -2,8 +2,8 @@
 // Típusok: igazkitalalt, kovetkezoszo, epito, elotteutana, valasztos, allitas, lepesek, ertekelo,
 //          ellenorzolista, agens, letoltes, osszevetes, otletlista
 
-import { getProfile } from '../store.js?v=6bcb5a28';
-import { esc, md, icon, promptBox, promptActions, downloadFile, toast } from '../util.js?v=6bcb5a28';
+import { getProfile } from '../store.js?v=991a70c2';
+import { esc, md, icon, promptBox, promptActions, downloadFile, toast } from '../util.js?v=991a70c2';
 
 let seq = 0;
 const uid = (p) => p + '-' + (++seq);
