@@ -1,7 +1,7 @@
-import { course, getCourseStats } from '../data.js?v=9852283a';
-import { getProfile, setProfile, isLoggedIn, login, takeReturnTo } from '../store.js?v=9852283a';
-import { esc, icon, toast, moduleIcon } from '../util.js?v=9852283a';
-import { go } from '../app.js?v=9852283a';
+import { course, getCourseStats } from '../data.js?v=6bcb5a28';
+import { getProfile, setProfile, isLoggedIn, login, takeReturnTo } from '../store.js?v=6bcb5a28';
+import { esc, icon, toast, moduleIcon } from '../util.js?v=6bcb5a28';
+import { go } from '../app.js?v=6bcb5a28';
 
 export const CELOK = [
   { id: 'levelezes', label: 'Levelezés, e-mailek' },

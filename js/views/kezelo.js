@@ -2,11 +2,11 @@
 // bejelentkezés (e-mail + jelszó) és a Firestore szabályai védik, nem a kliensoldali kód. A jelszó sehol nincs a forrásban.
 // #/kezelo/oklevel: a tanúsítvány előnézete példanévvel; semmit nem ment, a haladást nem érinti.
 
-import { course } from '../data.js?v=9852283a';
-import { FIREBASE } from '../firebase-config.js?v=9852283a';
-import { isConfigured, docsUrl, COLLECTION, ERTEKEK } from '../feedback.js?v=9852283a';
-import { certificateHtml, printCertificate } from './finish.js?v=9852283a';
-import { esc, icon, fmtDateTime } from '../util.js?v=9852283a';
+import { course } from '../data.js?v=6bcb5a28';
+import { FIREBASE } from '../firebase-config.js?v=6bcb5a28';
+import { isConfigured, docsUrl, COLLECTION, ERTEKEK } from '../feedback.js?v=6bcb5a28';
+import { certificateHtml, printCertificate } from './finish.js?v=6bcb5a28';
+import { esc, icon, fmtDateTime } from '../util.js?v=6bcb5a28';
 
 const TOKEN_KEY = 'aikurzus.v1.kezelo.token'; // csak sessionStorage: a lap/böngésző bezárásakor megszűnik
 let mem = null;

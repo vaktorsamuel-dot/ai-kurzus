@@ -17,3 +17,14 @@ A kurzusoldal statikus (GitHub Pages), ezért a visszajelzéseket egy ingyenes F
 - Nyilvános oldalról bárki küldhet bejegyzést (ezt a szabályok mező- és hosszkorlátokkal szűkítik). Spam esetén a Firestore konzolban törölhetsz.
 - A Spark csomag ingyenes; a napi kvótája (50 000 olvasás, 20 000 írás) ennél a használatnál bőven elég.
 - A haladás exportja tartalmazza a még el nem küldött visszajelzéseket is, így nem veszik el.
+
+## Feladat a Chrome-Claude-nak (a végén ezt írja le)
+
+Csináld végig az 1–6. lépést a böngészőben. A jelszót **te (Samu) add meg** a Firebase űrlapján, azt ne kérd el és ne írd le sehova. A végén írd ki **pontosan ennyit**, másolható blokkban:
+
+```
+projectId: ...
+apiKey: ...
+```
+
+Erősítsd meg azt is, hogy: a Firestore-szabályok közzé vannak téve (a SAMU_UID helyén a valódi UID-vel), az E-mail/jelszó belépés engedélyezve van, és a felhasználó létrejött. Az UID-t nem kell visszaírnod.

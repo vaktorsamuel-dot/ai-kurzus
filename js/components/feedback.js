@@ -1,7 +1,7 @@
 // „Hasznos volt ez a fejezet?” blokk a fejezet végén. Nincs név, nincs kötelező szöveg; többször is küldhető.
 
-import { addFeedback, feedbackFor, ERTEKEK, MAX_TEXT, isConfigured } from '../feedback.js?v=9852283a';
-import { esc, icon, fmtDateTime } from '../util.js?v=9852283a';
+import { addFeedback, feedbackFor, ERTEKEK, MAX_TEXT, isConfigured } from '../feedback.js?v=6bcb5a28';
+import { esc, icon, fmtDateTime } from '../util.js?v=6bcb5a28';
 
 export function feedbackBlock() {
   return '<section class="card feedback-card no-print" id="visszajelzes" aria-labelledby="fb-title">' +

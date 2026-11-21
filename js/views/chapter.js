@@ -1,19 +1,19 @@
 // Fejezetoldal – a fő sablon (leírás 6. pontja).
 
-import { course } from '../data.js?v=9852283a';
-import { chapterState, getProgress, saveProgress, getProfile } from '../store.js?v=9852283a';
+import { course } from '../data.js?v=6bcb5a28';
+import { chapterState, getProgress, saveProgress, getProfile } from '../store.js?v=6bcb5a28';
 import {
   chapterPct, modulePct, missingForClose, canCloseChapter, chapterHash, moduleHash, closingHash, nextChapterOf, prevChapterOf, videoRequired,
-} from '../progress.js?v=9852283a';
-import { esc, md, icon, progressBar, fmtMin, promptBox, toast } from '../util.js?v=9852283a';
-import { image, bindImageFallbacks } from '../components/media.js?v=9852283a';
-import { renderPlayer } from '../components/player.js?v=9852283a';
-import { renderQuiz } from '../components/quiz.js?v=9852283a';
-import { diagram } from '../components/diagrams.js?v=9852283a';
-import { stepFigure } from '../components/stepfigure.js?v=9852283a';
-import { renderCompare } from '../components/compare.js?v=9852283a';
-import { toolName } from './onboarding.js?v=9852283a';
-import { feedbackBlock, mountFeedback } from '../components/feedback.js?v=9852283a';
+} from '../progress.js?v=6bcb5a28';
+import { esc, md, icon, progressBar, fmtMin, promptBox, toast } from '../util.js?v=6bcb5a28';
+import { image, bindImageFallbacks } from '../components/media.js?v=6bcb5a28';
+import { renderPlayer } from '../components/player.js?v=6bcb5a28';
+import { renderQuiz } from '../components/quiz.js?v=6bcb5a28';
+import { diagram } from '../components/diagrams.js?v=6bcb5a28';
+import { stepFigure } from '../components/stepfigure.js?v=6bcb5a28';
+import { renderCompare } from '../components/compare.js?v=6bcb5a28';
+import { toolName } from './onboarding.js?v=6bcb5a28';
+import { feedbackBlock, mountFeedback } from '../components/feedback.js?v=6bcb5a28';
 
 // Újrahasznosítható „Ellenőrizd!” figyelmeztető doboz (ikon + 1-2 mondat).
 export function ellenorizd(text) {
