@@ -1,6 +1,6 @@
 // Közös segédfüggvények: HTML-építés, szövegjelölés, formázás, ikonok, értesítés, másolás.
 
-import { course } from './data.js?v=6dc27975';
+import { course } from './data.js?v=9852283a';
 
 export function esc(s) {
   return String(s == null ? '' : s)

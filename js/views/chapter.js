@@ -1,18 +1,19 @@
 // Fejezetoldal – a fő sablon (leírás 6. pontja).
 
-import { course } from '../data.js?v=6dc27975';
-import { chapterState, getProgress, saveProgress, getProfile } from '../store.js?v=6dc27975';
+import { course } from '../data.js?v=9852283a';
+import { chapterState, getProgress, saveProgress, getProfile } from '../store.js?v=9852283a';
 import {
   chapterPct, modulePct, missingForClose, canCloseChapter, chapterHash, moduleHash, closingHash, nextChapterOf, prevChapterOf, videoRequired,
-} from '../progress.js?v=6dc27975';
-import { esc, md, icon, progressBar, fmtMin, promptBox, toast } from '../util.js?v=6dc27975';
-import { image, bindImageFallbacks } from '../components/media.js?v=6dc27975';
-import { renderPlayer } from '../components/player.js?v=6dc27975';
-import { renderQuiz } from '../components/quiz.js?v=6dc27975';
-import { diagram } from '../components/diagrams.js?v=6dc27975';
-import { stepFigure } from '../components/stepfigure.js?v=6dc27975';
-import { renderCompare } from '../components/compare.js?v=6dc27975';
-import { toolName } from './onboarding.js?v=6dc27975';
+} from '../progress.js?v=9852283a';
+import { esc, md, icon, progressBar, fmtMin, promptBox, toast } from '../util.js?v=9852283a';
+import { image, bindImageFallbacks } from '../components/media.js?v=9852283a';
+import { renderPlayer } from '../components/player.js?v=9852283a';
+import { renderQuiz } from '../components/quiz.js?v=9852283a';
+import { diagram } from '../components/diagrams.js?v=9852283a';
+import { stepFigure } from '../components/stepfigure.js?v=9852283a';
+import { renderCompare } from '../components/compare.js?v=9852283a';
+import { toolName } from './onboarding.js?v=9852283a';
+import { feedbackBlock, mountFeedback } from '../components/feedback.js?v=9852283a';
 
 // Újrahasznosítható „Ellenőrizd!” figyelmeztető doboz (ikon + 1-2 mondat).
 export function ellenorizd(text) {
@@ -129,6 +130,7 @@ export function viewChapter(ch) {
       '<div class="quiz-fold-body">' + quiz.html + '</div></details>') : '') +
     sec('osszefoglalo', 'Összefoglalva', '<ul class="summary">' + ch.osszefoglalo.map((s) => '<li>' + md(s) + '</li>').join('') + '</ul>', 'summary-sec') +
     '<div id="read-sentinel" aria-hidden="true"></div>' +
+    feedbackBlock() +
     '<nav class="ch-nav card no-print" aria-label="Fejezet navigáció">' +
     '<div class="ch-nav-row">' +
     (prev ? '<a class="btn btn-ghost" href="' + chapterHash(prev) + '">' + icon('arrowLeft') + 'Előző fejezet</a>' : '<a class="btn btn-ghost" href="' + moduleHash(mod) + '">' + icon('arrowLeft') + 'Modul áttekintő</a>') +
@@ -172,6 +174,7 @@ export function viewChapter(ch) {
       const cleanups = [];
       if (player) cleanups.push(player.mount(root, refresh));
       if (quiz) quiz.mount(root);
+      mountFeedback(root, ch);
 
       const note = root.querySelector('#ex-note');
       if (note) note.addEventListener('input', () => { st.szovegek.jegyzet = note.value; saveProgress(); });

@@ -3,7 +3,7 @@
 Magyar nyelvű, önálló tanulásra épülő kurzusweboldal kezdő–haladó felnőtteknek: modulokra és fejezetekre bontva (a pontos számot az oldal maga számolja a `data/` mappából), mini kvízekkel, modulkvízekkel, gyakorlatokkal, interaktív elemekkel és nyomtatható oklevéllel.
 
 - Tiszta HTML + CSS + JavaScript, **build-eszköz nélkül** – GitHub Pages-en közvetlenül fut.
-- Nincs bejelentkezés, szerver vagy adatbázis. A haladás a böngésző `localStorage`-ében mentődik (`aikurzus.v1.profil`, `aikurzus.v1.haladas`, `aikurzus.v1.beallitasok`), exportálható és importálható.
+- Nincs saját szerver. (Opcionális: a fejezet végi visszajelzések Firebase Firestore-ba mennek, lásd `FIREBASE-BEALLITAS.md`.) A haladás a böngésző `localStorage`-ében mentődik (`aikurzus.v1.profil`, `aikurzus.v1.haladas`, `aikurzus.v1.beallitasok`), exportálható és importálható.
 - Minden szöveg JSON-ban van, egy közös sablon rendereli – a tartalom kód nélkül is javítható.
 
 ---
@@ -170,3 +170,13 @@ python3 tools/stamp.py           # gyorsítótár-verzió (?v=kivonat) a css/js 
 - **Összehasonlító (ChatGPT / Claude):** a mintaválaszok a `data/osszehasonlitas.json` fájlba kerülnek (üresen is hibátlan).
 - **Lépés-ábrák:** `data/lepesabrak.json`; a fejezetben `{ "lepesabra": "azonosító" }` blokkal hívhatók.
 - **Ne töltsd fel** a közzétett oldalra: `media-prompts/`, `Pictures/`, `BRIEF.md`, `valtoztatasok.md`.
+
+
+---
+
+## 8. Szintfelmérő, visszajelzés, kezelő, tanúsítvány
+
+- **Szintfelmérő** (`#/szintfelmeres`, `js/assess.js`): első megnyitáskor jelenik meg („Kihagyom” gombbal), a Beállításokban „Szintfelmérő újra”. Csak az ajánlott sorrendet és az „Ajánlott következő” jelzést módosítja, semmit nem zár le. Mentés: `haladas.szintfelmeres` (a haladás exportjában is benne van). Adatverzió: 3, a régi mentések migrálódnak, mezőt nem töröltünk.
+- **Visszajelzés** (`js/feedback.js`, `js/components/feedback.js`): minden fejezet végén. Helyi sor a haladásban, Firestore REST-tel küldi, hálózati hiba után újrapróbál. Beállítás: `FIREBASE-BEALLITAS.md`, szabályok: `firestore.rules`.
+- **Kezelő** (`#/kezelo`, rejtett, nincs rá link): Firebase e-mail/jelszó belépés után modul → fejezet bontású összesítés, szűrők, olvasott/kezelve jelölő. `#/kezelo/oklevel`: tanúsítvány előnézete (nem ment semmit).
+- **Tanúsítvány**: csak 100%-os haladásnál; a „100%-ban teljesítve” sor a számított értékből jön. A készítő neve csak akkor jelenik meg, ha a `data/kurzus.json`-ban van `"keszito"` mező.

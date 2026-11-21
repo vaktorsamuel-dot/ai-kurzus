@@ -1,10 +1,11 @@
-import { course } from '../data.js?v=6dc27975';
-import { getProfile, getProgress } from '../store.js?v=6dc27975';
+import { course } from '../data.js?v=9852283a';
+import { getProfile, getProgress } from '../store.js?v=9852283a';
 import {
   coursePct, modulesDone, modulePct, moduleStatus, resumeTarget, recommendedModule, chapterHash, closingHash, moduleHash, chapterPct,
-} from '../progress.js?v=6dc27975';
-import { certificateAvailable } from './finish.js?v=6dc27975';
-import { esc, icon, statusBadge, progressBar, fmtDateTime, fmtMin, moduleIcon } from '../util.js?v=6dc27975';
+} from '../progress.js?v=9852283a';
+import { certificateAvailable } from './finish.js?v=9852283a';
+import { getRecs, recommendedOrder } from '../assess.js?v=9852283a';
+import { esc, icon, statusBadge, progressBar, fmtDateTime, fmtMin, moduleIcon } from '../util.js?v=9852283a';
 
 function certCard() {
   if (certificateAvailable()) {
@@ -21,6 +22,7 @@ export function viewHome() {
   const md = modulesDone();
   const t = resumeTarget();
   const rec = recommendedModule();
+  const recs = getRecs();
 
   let resume;
   if (t.tipus === 'fejezet') {
@@ -39,11 +41,13 @@ export function viewHome() {
 
   const last = p.utoljara ? '<p class="muted small last-visit">Utoljára itt jártál: <a href="' + esc(p.utoljara.hash) + '">' + esc(p.utoljara.cim) + '</a> · ' + fmtDateTime(p.utoljara.ido) + '</p>' : '';
 
-  const cards = course.modulok.map((m) => {
+  const cards = recommendedOrder().map((m) => {
     const st = moduleStatus(m);
     const mp = modulePct(m);
     const tags = (m.halado ? '<span class="tag">Haladó</span> ' : '') + (m.id === 'zp' ? '<span class="tag">Záró projekt</span> ' : '') +
-      (rec && rec.id === m.id && st !== 'kesz' ? '<span class="tag tag-next">Ajánlott következő</span>' : '');
+      (rec && rec.id === m.id && st !== 'kesz' ? '<span class="tag tag-next">Ajánlott következő</span> ' : '') +
+      (recs && recs[m.id] && recs[m.id].allapot === 'ismeros' && st !== 'kesz' ? '<span class="tag">Ismerős, átugorhatod</span> ' : '') +
+      (recs && recs[m.id] && recs[m.id].allapot === 'erdekelhet' && st !== 'kesz' ? '<span class="tag">Érdekelhet</span>' : '');
     const tag = tags ? '<p class="mcard-tags">' + tags + '</p>' : '';
     const inner = '<div class="mcard-top"><span class="mcard-ids"><span class="mnum" aria-hidden="true">' + (m.id === 'zp' ? 'Z' : m.sorszam) + '</span>' + moduleIcon(m) + '</span>' +
       statusBadge(st) + '</div>' +
@@ -66,7 +70,7 @@ export function viewHome() {
       '<p class="muted">' + md.kesz + ' / ' + md.osszes + ' modul kész</p></div></div>' +
       '</div></section>' +
       '<section class="section"><div class="wrap">' + certCard() + '<h2>Modul-térkép</h2>' +
-      '<p class="muted">Bármelyik modult megnyithatod bármikor. A jelölt sorrend csak ajánlás, hogy az új dolgok egymásra épüljenek.</p>' +
+      '<p class="muted">Bármelyik modult megnyithatod bármikor. A jelölt sorrend csak ajánlás, hogy az új dolgok egymásra épüljenek.' + (recs ? ' A sorrendet a szintfelmérőd alapján állítottuk össze (<a href="#/szintfelmeres/eredmeny">részletek</a>).' : '') + '</p>' +
       '<ol class="module-map">' + cards + '</ol></div></section>',
   };
 }

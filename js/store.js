@@ -52,8 +52,9 @@ export const DEFAULT_SETTINGS = {
   feliratok: true,
 };
 
-// A mentett haladás formátumának verziója. 1: eredeti; 2: nincs „kihagyva”, completedAt, oklevelNev.
-export const DATA_VERSION = 2;
+// A mentett haladás formátumának verziója. 1: eredeti; 2: nincs „kihagyva”, completedAt, oklevelNev;
+// 3: szintfelmeres (kezdő szintfelmérő), visszajelzesek (fejezetenkénti visszajelzések, helyi sor).
+export const DATA_VERSION = 3;
 
 // Régi (1-es verziójú) haladás átalakítása; adatot nem töröl, csak átnevez / elhagy elavult jelzőt.
 export function migrateProgress(h) {
@@ -67,6 +68,9 @@ export function migrateProgress(h) {
   }
   if (out.completedAt === undefined) out.completedAt = null;
   if (out.oklevelNev === undefined) out.oklevelNev = null;
+  // 3-as verzió: csak új mezők, a régieket nem érintjük.
+  if (out.szintfelmeres === undefined) out.szintfelmeres = null; // null = még nem kérdeztük; {kihagyva|valaszok, ido}
+  if (!Array.isArray(out.visszajelzesek)) out.visszajelzesek = [];
   out.verzio = DATA_VERSION;
   return out;
 }
@@ -80,6 +84,8 @@ function emptyProgress() {
     utoljara: null,  // { ido, hash, cim }
     completedAt: null,  // amikor a haladás először érte el a 100%-ot (az oklevél dátuma)
     oklevelNev: null,   // az oklevélen szereplő név (külön szerkeszthető)
+    szintfelmeres: null, // kezdő szintfelmérő: null | { kihagyva:true, ido } | { valaszok:{k1..k7}, ido }
+    visszajelzesek: [],  // [{ id, modul, fejezet, ertek, szoveg, ido, elkuldve }]
     letrehozva: new Date().toISOString(),
   };
 }
@@ -119,7 +125,7 @@ export function logout() {
 const RETURN_KEY = PREFIX + 'vissza';
 let returnMem = null;
 export function setReturnTo(hash) {
-  if (!/^#\/(m\/|oklevel|beallitasok|sugo|szoszedet)/.test(hash || '')) return;
+  if (!/^#\/(m\/|oklevel|beallitasok|sugo|szoszedet|szintfelmeres)/.test(hash || '')) return;
   returnMem = hash;
   try { sessionStorage.setItem(RETURN_KEY, hash); } catch (e) { /* memóriás tartalék */ }
 }

@@ -1,6 +1,7 @@
-import { getSettings, setSettings, getProfile, exportData, exportCode, importAny, resetAll, isPersistent } from '../store.js?v=6dc27975';
-import { esc, icon, toast, downloadFile } from '../util.js?v=6dc27975';
-import { go } from '../app.js?v=6dc27975';
+import { getSettings, setSettings, getProfile, exportData, exportCode, importAny, resetAll, isPersistent } from '../store.js?v=9852283a';
+import { esc, icon, toast, downloadFile, fmtDate } from '../util.js?v=9852283a';
+import { go } from '../app.js?v=9852283a';
+import { getAssessment } from '../assess.js?v=9852283a';
 
 function radios(name, opts, cur) {
   return '<div class="choices choices-inline">' + opts.map(([v, l]) =>
@@ -23,6 +24,8 @@ export function viewSettings(sub) {
       '<label class="check-item"><input type="checkbox" name="autoplay"' + (s.autoplay ? ' checked' : '') + '><span>Automatikus lejátszás, amikor megnyitok egy videót</span></label>' +
       '<label class="check-item"><input type="checkbox" name="feliratok"' + (s.feliratok ? ' checked' : '') + '><span>Feliratok alapértelmezetten bekapcsolva</span></label></fieldset>' +
       '</form>' +
+      '<section class="card"><h2 class="h-small">Szintfelmérő</h2><p>' + (() => { const a = getAssessment(); return a && a.valaszok ? 'Kitöltötted (' + esc(fmtDate(a.ido)) + '). Az eredmény az ajánlott sorrendet adja meg, semmit nem zár le.' : 'Még nem töltötted ki. Hét rövid kérdés, nem vizsga.'; })() + '</p>' +
+      '<div class="row"><a class="btn btn-primary" href="#/szintfelmeres">Szintfelmérő újra</a>' + (getAssessment() && getAssessment().valaszok ? '<a class="btn btn-ghost" href="#/szintfelmeres/eredmeny">Az eredményem</a>' : '') + '</div></section>' +
       (p ? '<section class="card"><h2 class="h-small">Profil</h2><p>' + icon('user') + ' ' + esc(p.nev) + '</p><a class="btn btn-ghost" href="#/profil">Profil szerkesztése</a></section>' : '') +
       '<section class="card" id="haladas" tabindex="-1"><h2 class="h-small">Haladás exportálása és importálása</h2>' +
       '<p>Ha másik eszközön (például telefonon) folytatnád, itt mentheted ki a haladásodat, majd ott beolvashatod.' + (isPersistent() ? '' : ' <strong>Most nincs helyi mentés, ezért érdemes exportálni, mielőtt bezárod a lapot.</strong>') + '</p>' +

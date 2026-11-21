@@ -1,7 +1,8 @@
 // Haladás, zárolás és százalékszámítás – egyetlen forrás minden nézet számára.
 
-import { course, media } from './data.js?v=6dc27975';
-import { getProgress, saveProgress, chapterState, moduleState } from './store.js?v=6dc27975';
+import { course, media } from './data.js?v=9852283a';
+import { getProgress, saveProgress, chapterState, moduleState } from './store.js?v=9852283a';
+import { recommendedOrder, getRecs } from './assess.js?v=9852283a';
 
 export const QUIZ_PASS = 0.6;
 export const VIDEO_PASS = 0.9;
@@ -89,7 +90,8 @@ export function modulePct(mod) {
   const items = mod.fejezetek.map(chapterPct);
   // A modulkvíz (vagy a lezárás, ha nincs kvíz) egy további tétel; csak lezáráskor lesz 100.
   items.push(0);
-  return Math.round(items.reduce((a, b) => a + b, 0) / items.length);
+  // 100% csak akkor, ha a modul valóban kész (lezárva); kerekítés miatt nem lehet 99,5 → 100.
+  return Math.min(99, Math.round(items.reduce((a, b) => a + b, 0) / items.length));
 }
 
 export function moduleStatus(mod) {
@@ -118,7 +120,9 @@ function countedModules() { return course.modulok; }
 export function coursePct() {
   const mods = countedModules();
   if (!mods.length) return 0;
-  return Math.round(mods.reduce((a, m) => a + modulePct(m), 0) / mods.length);
+  // A kurzus haladása pontosan akkor 100%, ha minden kész (isCourseComplete); egyébként legfeljebb 99%.
+  if (isCourseComplete()) return 100;
+  return Math.min(99, Math.round(mods.reduce((a, m) => a + modulePct(m), 0) / mods.length));
 }
 export function modulesDone() {
   const mods = countedModules();
@@ -131,13 +135,20 @@ export function resumeTarget() {
   if (p.aktualis && course.fejezetById[p.aktualis] && !chapterState(p.aktualis).kesz) {
     return { tipus: 'fejezet', ch: course.fejezetById[p.aktualis] };
   }
-  for (const mod of course.modulok) {
-    if (moduleFinished(mod)) continue;
-    const ch = mod.fejezetek.find((f) => !chapterState(f.id).kesz);
-    if (ch) return { tipus: 'fejezet', ch };
-    return { tipus: 'zaro', mod };
-  }
-  return { tipus: 'kesz' };
+  // A szintfelmérő szerinti ajánlott sorrendben haladunk; az „Ismerős” modulokat előbb átugorjuk (de nem zárjuk le).
+  const recs = getRecs() || {};
+  const order = recommendedOrder();
+  const next = (skipFamiliar) => {
+    for (const mod of order) {
+      if (moduleFinished(mod)) continue;
+      if (skipFamiliar && recs[mod.id] && recs[mod.id].allapot === 'ismeros') continue;
+      const ch = mod.fejezetek.find((f) => !chapterState(f.id).kesz);
+      if (ch) return { tipus: 'fejezet', ch };
+      return { tipus: 'zaro', mod };
+    }
+    return null;
+  };
+  return next(true) || next(false) || { tipus: 'kesz' };
 }
 
 // Az „Ajánlott következő” jelzés modulja.

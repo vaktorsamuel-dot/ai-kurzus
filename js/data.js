@@ -11,11 +11,11 @@ async function getJSON(url) {
 export async function loadCourse() {
   const [kurzus, media, szoszedet, ossze, abrak] = await Promise.all([
 
-    getJSON('data/kurzus.json?v=6dc27975'),
-    getJSON('data/media.json?v=6dc27975'),
-    getJSON('data/szoszedet.json?v=6dc27975'),
-    getJSON('data/osszehasonlitas.json?v=6dc27975').catch(() => ({ peldak: [] })),
-    getJSON('data/lepesabrak.json?v=6dc27975').catch(() => ({})),
+    getJSON('data/kurzus.json?v=9852283a'),
+    getJSON('data/media.json?v=9852283a'),
+    getJSON('data/szoszedet.json?v=9852283a'),
+    getJSON('data/osszehasonlitas.json?v=9852283a').catch(() => ({ peldak: [] })),
+    getJSON('data/lepesabrak.json?v=9852283a').catch(() => ({})),
   ]);
   course.lepesabrak = abrak;
   course.osszehasonlitas = ossze.peldak || [];

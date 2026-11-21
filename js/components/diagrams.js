@@ -1,6 +1,6 @@
 // Saját, kézzel rajzolt SVG ábrák (nem helyőrzők). A színeket CSS-osztályok adják, így sötét témában is olvashatók.
 
-import { course } from '../data.js?v=6dc27975';
+import { course } from '../data.js?v=9852283a';
 
 function box(x, y, w, h, label, cls = 'd-box', sub = '') {
   return '<g><rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="12" class="' + cls + '"/>' +

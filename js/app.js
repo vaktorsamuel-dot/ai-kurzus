@@ -1,20 +1,23 @@
 // Belépési pont: betöltés, hash-alapú útválasztás, közös keret. Nincs zárolás: minden oldal közvetlen linkről is megnyílik.
 
-import { loadCourse, course, getCourseStats } from './data.js?v=6dc27975';
-import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings, setReturnTo } from './store.js?v=6dc27975';
-import { moduleHash } from './progress.js?v=6dc27975';
-import { esc, icon, initGlobalHandlers, toast } from './util.js?v=6dc27975';
-import { viewHome } from './views/home.js?v=6dc27975';
-import { viewIntro, viewProfile } from './views/onboarding.js?v=6dc27975';
-import { viewModule } from './views/module.js?v=6dc27975';
-import { viewChapter } from './views/chapter.js?v=6dc27975';
-import { viewClosing } from './views/closing.js?v=6dc27975';
-import { viewFinish } from './views/finish.js?v=6dc27975';
-import { viewSettings } from './views/settings.js?v=6dc27975';
-import { viewHelp, viewGlossary } from './views/help.js?v=6dc27975';
-import { fxPage, initFx } from './fx.js?v=6dc27975';
-import { initMediaZoom } from './components/media.js?v=6dc27975';
-import { initStepFigures } from './components/stepfigure.js?v=6dc27975';
+import { loadCourse, course, getCourseStats } from './data.js?v=9852283a';
+import { getProfile, isLoggedIn, logout, getProgress, saveProgress, isPersistent, applySettings, setReturnTo } from './store.js?v=9852283a';
+import { moduleHash } from './progress.js?v=9852283a';
+import { esc, icon, initGlobalHandlers, toast } from './util.js?v=9852283a';
+import { viewHome } from './views/home.js?v=9852283a';
+import { viewIntro, viewProfile } from './views/onboarding.js?v=9852283a';
+import { viewModule } from './views/module.js?v=9852283a';
+import { viewChapter } from './views/chapter.js?v=9852283a';
+import { viewClosing } from './views/closing.js?v=9852283a';
+import { viewFinish } from './views/finish.js?v=9852283a';
+import { viewAssess, viewAssessResult } from './views/szintfelmeres.js?v=9852283a';
+import { viewKezelo, viewKezeloCert } from './views/kezelo.js?v=9852283a';
+import { initFeedbackSync } from './feedback.js?v=9852283a';
+import { viewSettings } from './views/settings.js?v=9852283a';
+import { viewHelp, viewGlossary } from './views/help.js?v=9852283a';
+import { fxPage, initFx } from './fx.js?v=9852283a';
+import { initMediaZoom } from './components/media.js?v=9852283a';
+import { initStepFigures } from './components/stepfigure.js?v=9852283a';
 
 let flash = null;
 export function setFlash(msg) { flash = msg; }
@@ -56,13 +59,15 @@ export function parse(hash) {
 
 export function resolve(parts) {
   const profil = getProfile();
-  const open = ['bevezeto', 'sugo', 'szoszedet', 'beallitasok'];
+  const open = ['bevezeto', 'sugo', 'szoszedet', 'beallitasok', 'kezelo'];
   if ((!profil || !isLoggedIn()) && !open.includes(parts[0])) {
     // Belépés nélkül megnyitott (mély)link: belépés után ide visszük vissza.
     setReturnTo(location.hash);
     return { redirect: '#/bevezeto' };
   }
 
+  // Első megnyitáskor (még nem töltötte ki, és nem is hagyta ki) a szintfelmérő jön; mélylinket nem érint.
+  if (!parts.length && getProgress().szintfelmeres === null) return { redirect: '#/szintfelmeres' };
   if (!parts.length) return { view: viewHome };
   switch (parts[0]) {
     case 'bevezeto': return { view: viewIntro };
@@ -72,6 +77,8 @@ export function resolve(parts) {
     case 'szoszedet': return { view: viewGlossary };
     case 'kesz': return { redirect: '#/oklevel' }; // régi cím
     case 'oklevel': return { view: viewFinish };
+    case 'szintfelmeres': return { view: parts[1] === 'eredmeny' ? viewAssessResult : viewAssess };
+    case 'kezelo': return { view: parts[1] === 'oklevel' ? viewKezeloCert : viewKezelo };
     case 'm': {
       const mod = course.modulById[parts[1]];
       if (!mod) { setFlash('Ezt az oldalt nem találtam. Visszavittelek a főképernyőre.'); return { redirect: '#/' }; }
@@ -140,6 +147,7 @@ async function start() {
     return;
   }
   window.addEventListener('hashchange', render);
+  initFeedbackSync();
   render();
 }
 

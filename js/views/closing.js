@@ -1,10 +1,10 @@
 // Modulzáró oldal: összefoglalás, modulkvíz, lezárás, gratuláló kártya.
 
-import { course } from '../data.js?v=6dc27975';
-import { moduleState, chapterState, saveProgress } from '../store.js?v=6dc27975';
-import { moduleQuizPassed, moduleClosed, moduleHash, chapterHash, canCloseModule, markCompletionIfDone } from '../progress.js?v=6dc27975';
-import { esc, md, icon } from '../util.js?v=6dc27975';
-import { renderQuiz } from '../components/quiz.js?v=6dc27975';
+import { course } from '../data.js?v=9852283a';
+import { moduleState, chapterState, saveProgress } from '../store.js?v=9852283a';
+import { moduleQuizPassed, moduleClosed, moduleHash, chapterHash, canCloseModule, markCompletionIfDone } from '../progress.js?v=9852283a';
+import { esc, md, icon } from '../util.js?v=9852283a';
+import { renderQuiz } from '../components/quiz.js?v=9852283a';
 
 export function viewClosing(mod) {
   const ms = moduleState(mod.id);

@@ -1,7 +1,7 @@
 import {
   modulePct, moduleStatus, chapterStatus, chapterPct, chapterHash, closingHash, allChaptersDone, moduleClosed, recommendedModule,
-} from '../progress.js?v=6dc27975';
-import { esc, icon, statusBadge, progressBar, fmtMin, moduleIcon } from '../util.js?v=6dc27975';
+} from '../progress.js?v=9852283a';
+import { esc, icon, statusBadge, progressBar, fmtMin, moduleIcon } from '../util.js?v=9852283a';
 
 export function viewModule(mod) {
   const pct = modulePct(mod);

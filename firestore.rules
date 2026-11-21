@@ -1,0 +1,26 @@
+rules_version = '2';
+// Visszajelzések: apa oldala (belépés nélkül) csak LÉTREHOZHAT, szigorúan ellenőrzött mezőkkel.
+// Olvasni és az „olvasva” / „kezelve” jelölőt átírni csak Samu fiókja tud.
+// A SAMU_UID helyére a Firebase Authentication › Users listából a saját "User UID" kerül (nem titok, de a fiókhoz tartozik).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function admin() {
+      return request.auth != null && request.auth.uid == 'SAMU_UID';
+    }
+    match /visszajelzesek/{id} {
+      allow create: if request.resource.data.keys().hasOnly(['modul', 'fejezet', 'ertek', 'szoveg', 'ido', 'olvasva', 'kezelve'])
+        && request.resource.data.keys().hasAll(['modul', 'fejezet', 'ertek', 'szoveg', 'ido', 'olvasva', 'kezelve'])
+        && request.resource.data.modul is string && request.resource.data.modul.size() <= 20
+        && request.resource.data.fejezet is string && request.resource.data.fejezet.size() <= 20
+        && request.resource.data.ertek in ['igen', 'reszben', 'nem_ertem']
+        && request.resource.data.szoveg is string && request.resource.data.szoveg.size() <= 500
+        && request.resource.data.ido is timestamp
+        && request.resource.data.olvasva == false
+        && request.resource.data.kezelve == false;
+      allow read: if admin();
+      allow update: if admin()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['olvasva', 'kezelve']);
+      allow delete: if false;
+    }
+  }
+}
